@@ -1,0 +1,202 @@
+# Marcopper Settlement Fund tracker.
+# Rules: every figure and event must cite at least one entry in `sources`.
+# Quote all dates ('YYYY', 'YYYY-MM', or 'YYYY-MM-DD') so YAML keeps them as text.
+# Update `lastUpdated` whenever anything changes.
+
+title: Marcopper Settlement Fund
+lastUpdated: '2026-11-04'
+currency: USD
+total: 100000000
+
+summary: >-
+  In April 2025 the Provincial Government of Marinduque and Barrick (which
+  acquired Marcopper's former stakeholder Placer Dome) signed a US$100-million
+  settlement, without admission of liability, ending the Writ of Kalikasan case
+  over the Marcopper mining disasters. The Court of Appeals approved it on
+  October 3, 2025. The money is paid to the provincial treasury over three
+  years and must be used for lawful purposes for the benefit of the province.
+
+summaryTl: >-
+  Noong Abril 2025, pumirma ang Pamahalaang Panlalawigan ng Marinduque at ang
+  Barrick sa US$100-milyong settlement para sa pinsalang dulot ng Marcopper.
+  Inaprubahan ito ng Court of Appeals noong Oktubre 3, 2025. Ayon sa ulat,
+  natanggap na ng lalawigan ang unang bayad na humigit-kumulang US$50.71 milyon
+  (mga ₱3.2 bilyon) noong Oktubre 16, 2026. Ang natitirang US$50 milyon ay
+  babayaran nang tatlong hulog sa susunod na tatlong taon. Wala pang
+  inilalabas na opisyal na plano o ulat kung paano gagastusin ang pondo, at
+  may kasong nakabinbin sa Korte Suprema tungkol sa 25% na bayad sa dating
+  abogado ng lalawigan.
+
+# Money coming in to the province.
+inflows:
+  - label: Initial payment (released from escrow)
+    amount: 50710000
+    status: received
+    date: '2026-10-16'
+    note: >-
+      Reported as transferred to the provincial trust fund account (about
+      ₱3.2 billion). Barrick originally deposited US$50 million in escrow.
+    sources: [tribune-2026-10-23-payout, tribune-2026-09-28]
+  - label: 1st annual installment
+    amount: 17000000
+    status: scheduled
+    due: 1st anniversary of the initial payment
+    sources: [inquirer-ca-approval]
+  - label: 2nd annual installment
+    amount: 17000000
+    status: scheduled
+    due: 2nd anniversary of the initial payment
+    sources: [inquirer-ca-approval]
+  - label: 3rd annual installment
+    amount: 16000000
+    status: scheduled
+    due: 3rd anniversary of the initial payment
+    sources: [inquirer-ca-approval]
+
+# Claims against the fund that are not yet resolved.
+claims:
+  - label: 25% contingency legal fee (former counsel SEDALAW)
+    amount: 25000000
+    status: disputed
+    note: >-
+      Under a 23 March 2022 legal services agreement. The Court of Appeals
+      upheld the fee as "reasonable, valid, and binding"; the Province calls it
+      excessive and has petitioned the Supreme Court. The Province says about
+      ₱800 million in received funds is exposed to a writ of garnishment; it
+      has not been established that any amount was paid.
+    sources: [tribune-2026-10-16-sc, tribune-2026-10-23-payout]
+
+# Money going out. Add entries only from official documents (SP resolutions,
+# appropriation ordinances, trust fund reports, COA reports).
+outflows: []
+
+timeline:
+  - date: '1993-12-06'
+    title: Maguila-guila siltation dam collapses
+    description: Flooding in Mogpog; two children were killed.
+    sources: [rva-denr-release]
+  - date: '1996-03-24'
+    title: Marcopper tailings spill
+    description: Mine tailings flood the Boac River system.
+    sources: [inquirer-rally]
+  - date: '2006'
+    title: Barrick acquires Placer Dome
+    description: Placer Dome was a major stakeholder of Marcopper Mining Corporation.
+    sources: [inquirer-denr-release]
+  - date: '2011'
+    title: Writ of Kalikasan filed
+    description: >-
+      Petitioners Eliza Hernandez, Godofredo Manoy, and Mamerto Lanete; the
+      Province later joined as intervenor.
+    sources: [inquirer-escrow, tribune-2026-10-23-rehab]
+  - date: '2022-03-23'
+    title: Legal services agreement signed
+    description: The Province engages SEDALAW on a 25% contingency fee.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2025-04-04'
+    title: Settlement signed
+    description: US$100 million over three years, without admission of liability.
+    sources: [tribune-2026-09-28]
+  - date: '2025-05-30'
+    title: Fee arrangement in provincial ordinance
+    description: >-
+      According to the Province, the previous Sangguniang Panlalawigan passed an
+      ordinance incorporating the 25% fee.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2025-10-03'
+    title: Court of Appeals approves settlement
+    description: The Writ of Kalikasan case is dismissed with prejudice.
+    sources: [inquirer-ca-approval]
+  - date: '2026-04'
+    title: US$50 million placed in escrow
+    description: Barrick deposits half of the settlement with the escrow agent.
+    sources: [tribune-2026-09-28]
+  - date: '2026-04-27'
+    title: Province contests legal fee
+    description: The Provincial Legal Officer contests the fee at a Court of Appeals hearing.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2026-09-28'
+    title: Rally at the Provincial Capitol
+    description: >-
+      More than 1,000 residents, church, and civil society groups urge DENR to
+      issue its required communication before the October 4 deadline.
+    sources: [inquirer-rally]
+  - date: '2026-10-02'
+    title: DENR communication released
+    description: Reported by MACEC; its contents have not been made public.
+    sources: [inquirer-denr-release]
+  - date: '2026-10-04'
+    title: Escrow termination date
+    description: After this date, release required only Barrick's instruction.
+    sources: [tribune-2026-10-23-payout]
+  - date: '2026-10'
+    title: Supreme Court petition on legal fee
+    description: The Province says it filed; case number and filing date not disclosed.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2026-10-16'
+    title: Initial payment transferred
+    description: About US$50.71 million reaches the provincial trust fund account.
+    sources: [tribune-2026-10-23-payout]
+  - date: '2026-11-04'
+    title: Ombudsman complaints filed
+    description: >-
+      The Governor files complaints against a former vice governor and eight
+      Provincial Board members over the legal fee deal. No finding of wrongdoing
+      has been made.
+    sources: [tribune-2026-11-04-ombudsman]
+
+# Things residents should be able to see but that are not yet public.
+openQuestions:
+  - An official budget or spending plan for the settlement money.
+  - A timetable for environmental rehabilitation (the Governor has named Mogpog as a priority).
+  - Whether the settlement allows direct financial assistance to affected households.
+  - The contents of the DENR communication.
+  - The Supreme Court case number and status of the legal fee dispute.
+  - Who will oversee the fund, including the role of civil society groups such as MACEC.
+
+sources:
+  inquirer-ca-approval:
+    title: 30-year legal battle over Marcopper mine disaster impact ends
+    publisher: Philippine Daily Inquirer
+    url: https://newsinfo.inquirer.net/2122454/30-year-legal-battle-over-marcopper-mine-disaster-impact-ends
+  inquirer-escrow:
+    title: Barrick Gold deposits $50-M as payment for Marcopper disaster
+    publisher: Philippine Daily Inquirer
+    url: https://newsinfo.inquirer.net/2216041/barrick-gold-deposits-50-m-in-escrow-1st-payment-in-marcopper-mining-mishap
+  inquirer-rally:
+    title: Over 1,000 Marinduqueños rally to save Marcopper rehab deal
+    publisher: Philippine Daily Inquirer
+    url: https://newsinfo.inquirer.net/2314613/over-1000-marinduquenos-rally-to-save-100m-marcopper-disaster-rehab-deal
+  inquirer-denr-release:
+    title: DENR releases communication on $100-M Marcopper settlement
+    publisher: Philippine Daily Inquirer
+    url: https://newsinfo.inquirer.net/2315796/denr-releases-communication-on-100-m-marcopper-disaster-settlement
+  rva-denr-release:
+    title: Philippine Church welcomes release of mining settlement document
+    publisher: Radio Veritas Asia
+    url: https://www.rvasia.org/asian-news/philippine-church-welcomes-release-mining-settlement-document
+  tribune-2026-09-28:
+    title: Boac bishop presses DENR to unlock $100M Marcopper settlement
+    publisher: Daily Tribune
+    date: '2026-09-28'
+    url: https://tribune.net.ph/2026/09/28/boac-bishop-presses-denr-to-unlock-100m-marcopper-settlement
+  tribune-2026-10-16-sc:
+    title: Marinduque takes Marcopper legal fee dispute to Supreme Court
+    publisher: Daily Tribune
+    date: '2026-10-16'
+    url: https://tribune.net.ph/2026/10/15/marinduque-takes-marcopper-legal-fee-dispute-to-supreme-court
+  tribune-2026-10-23-payout:
+    title: Marinduque governor denies blocking ₱3.2B Marcopper payout
+    publisher: Daily Tribune
+    date: '2026-10-23'
+    url: https://tribune.net.ph/2026/10/23/marinduque-governor-denies-blocking-32b-marcopper-payout
+  tribune-2026-10-23-rehab:
+    title: Mel Go seeks clarity on Marcopper rehabilitation, compensation
+    publisher: Daily Tribune
+    date: '2026-10-23'
+    url: https://tribune.net.ph/2026/10/23/mel-go-seeks-clarity-on-marcopper-rehabilitation-compensation
+  tribune-2026-11-04-ombudsman:
+    title: Marinduque governor files graft raps over P1.5-B legal fee deal
+    publisher: Daily Tribune
+    date: '2026-11-04'
+    url: https://tribune.net.ph/2026/11/04/marinduque-governor-files-graft-raps-over-p15-b-legal-fee-deal

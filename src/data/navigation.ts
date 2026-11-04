@@ -25,6 +25,10 @@ export const mainNavigation: NavigationItem[] = [
     label: 'Government',
     href: '/government/departments',
   },
+  {
+    label: 'Transparency',
+    href: '/transparency',
+  },
 ];
 
 export const footerNavigation = {
@@ -33,6 +37,7 @@ export const footerNavigation = {
       title: 'About',
       links: [
         { label: 'About the Portal', href: '/#about' },
+        { label: 'Transparency', href: '/transparency' },
         { label: 'Hotlines', href: '/#hotlines' },
       ],
     },

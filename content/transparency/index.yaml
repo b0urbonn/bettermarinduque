@@ -1,0 +1,25 @@
+# Trackers listed on /transparency. Each `slug` needs a matching
+# content/transparency/{slug}.yaml registered in src/data/transparency.ts.
+trackers:
+  - slug: marcopper-fund
+    name: Marcopper Settlement Fund
+    description: >-
+      The US$100-million settlement between the Province and Barrick over the
+      Marcopper mining disasters — payments received, scheduled installments,
+      contested claims, and how the money is used.
+    icon: Scale
+
+# Official places to look for documents that are not yet tracked here.
+officialSources:
+  - name: Full Disclosure Policy Portal (DILG)
+    description: Budgets, procurement, and financial reports LGUs must post.
+    url: https://fdpp.dilg.gov.ph
+  - name: Commission on Audit
+    description: Annual audit reports for provincial and municipal governments.
+    url: https://www.coa.gov.ph
+  - name: PhilGEPS
+    description: Government procurement notices and contract awards.
+    url: https://www.philgeps.gov.ph
+  - name: Freedom of Information
+    description: Request documents that have not been published.
+    url: https://www.foi.gov.ph

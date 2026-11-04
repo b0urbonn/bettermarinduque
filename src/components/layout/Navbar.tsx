@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { LANGUAGES } from '../../i18n/languages';
 import { isMeilisearchEnabled } from '../../lib/meilisearch';
 import Logo from '../brand/Logo';
+import Wordmark from '../brand/Wordmark';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -90,9 +91,7 @@ const Navbar: React.FC = () => {
             <Link to="/" className="flex items-center">
               <Logo className="h-10 md:h-12 w-auto mr-3 shrink-0" />
               <div>
-                <div className="font-display font-bold text-primary-900 text-lg leading-tight">
-                  {t('site_name')}
-                </div>
+                <Wordmark className="block text-lg leading-tight" />
                 <div className="text-xs text-gray-600">{t('site_tagline')}</div>
               </div>
             </Link>

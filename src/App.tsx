@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
 import Search from './pages/Search';
+import Transparency from './pages/Transparency';
 import { isMeilisearchEnabled } from './lib/meilisearch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
@@ -33,6 +34,8 @@ function App() {
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}
               />
+              <Route path="/transparency" element={<Transparency />} />
+              <Route path="/transparency/:slug" element={<Transparency />} />
               {isMeilisearchEnabled && (
                 <Route path="/search" element={<Search />} />
               )}

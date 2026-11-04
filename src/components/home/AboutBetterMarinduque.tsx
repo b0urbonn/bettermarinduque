@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import Section from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
+import Wordmark from '../brand/Wordmark';
 
 const portalLinks = [
   { label: 'Service guides', to: '/services' },
@@ -16,7 +17,7 @@ export default function AboutBetterMarinduque() {
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
         <div className="max-w-xl">
           <Heading level={2} className="text-white mb-2">
-            About BetterMarinduque
+            About <Wordmark />
           </Heading>
           <Text className="text-white/80">
             A community portal that makes local government information easier to

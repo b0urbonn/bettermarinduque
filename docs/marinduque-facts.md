@@ -34,6 +34,23 @@ social-media pages; always show them with a "verify before relying on it" note.
 - Province profile: 3 government-owned hospitals; 3 major seaports; 1 domestic airport.
   [marinduque.gov.ph socio-economic profile]
 
+## Marcopper settlement (checked 2026-11-04)
+
+Full sourced data lives in `content/transparency/marcopper-fund.yaml` (shown at
+/transparency/marcopper-fund). Key points:
+
+- US$100M settlement between the Province and Barrick, signed 4 April 2025 without
+  admission of liability; CA approved 3 October 2025 (Writ of Kalikasan dismissed
+  with prejudice). Paid over 3 years: $50M initial, then $17M, $17M, $16M on the
+  1st–3rd anniversaries of the initial payment. [Inquirer; Daily Tribune]
+- About US$50.71M (~₱3.2B) reported transferred to the provincial trust fund
+  account on 16 October 2026. [Daily Tribune, 23 Oct 2026]
+- 25% contingency fee (~$25M) claimed by former counsel SEDALAW: upheld by the CA,
+  challenged by the Province before the Supreme Court. Ombudsman complaints filed
+  4 Nov 2026; no finding of wrongdoing. [Daily Tribune]
+- No official spending plan or report published as of this date.
+- Write about this neutrally and attribute claims ("the Province says…").
+
 ## Culture
 
 - Moryonan (Moriones Lenten Rites) is a week-long Holy Week religious practice.

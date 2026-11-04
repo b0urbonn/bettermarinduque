@@ -4,6 +4,7 @@ import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import Logo from '../brand/Logo';
+import Wordmark from '../brand/Wordmark';
 
 const socialLinks = [
   {
@@ -41,7 +42,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-3 mb-4">
               <Logo variant="light" className="h-10 w-auto" />
               <div>
-                <div className="font-display font-bold">{t('site_name')}</div>
+                <Wordmark className="block" />
                 <div className="text-xs text-white/60">{t('site_tagline')}</div>
               </div>
             </div>
