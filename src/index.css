@@ -8,18 +8,18 @@
 @theme {
   --font-serif: Georgia, 'Times New Roman', serif;
 
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-display: var(--font-kapwa-sans);
 
-  --color-primary-50: #e6f4f3;
-  --color-primary-100: #c2e5e2;
-  --color-primary-200: #8fd0ca;
-  --color-primary-300: #55b5ad;
-  --color-primary-400: #23968e;
-  --color-primary-500: #0d7c75;
-  --color-primary-600: #0a655f;
-  --color-primary-700: #0b504c;
-  --color-primary-800: #0c3f3c;
-  --color-primary-900: #082a28;
+  --color-primary-50: #eef4ff;
+  --color-primary-100: #dbe7fe;
+  --color-primary-200: #bbd2fd;
+  --color-primary-300: #90b5fa;
+  --color-primary-400: #6194f2;
+  --color-primary-500: #3272de;
+  --color-primary-600: #1758cc;
+  --color-primary-700: #1246af;
+  --color-primary-800: #14398d;
+  --color-primary-900: #122c64;
 
   --color-secondary-50: #fdecec;
   --color-secondary-100: #f9d0d0;
@@ -87,12 +87,13 @@
   --color-gray-800: #343a40;
   --color-gray-900: #212529;
 
-  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-fade-in: fadeIn 180ms ease-out;
   --animate-slide-in: slideIn 0.5s ease-out;
+  --animate-skeleton-pulse: skeleton-pulse 1.4s ease-in-out 150ms 3;
 
   @keyframes fadeIn {
     0% {
-      opacity: 0;
+      opacity: 0.8;
     }
     100% {
       opacity: 1;
@@ -109,6 +110,12 @@
       opacity: 1;
     }
   }
+
+  @keyframes skeleton-pulse {
+    50% {
+      opacity: 0.55;
+    }
+  }
 }
 
 @theme inline {
@@ -116,34 +123,46 @@
   --font-mono: var(--font-kapwa-mono);
 }
 
-/* Festive divider: thin banderitas stripe of triangles */
-.banderitas {
-  height: 8px;
-  background-image:
-    conic-gradient(
-      from -45deg at 50% 100%,
-      var(--color-secondary-500) 90deg,
-      transparent 0
-    ),
-    conic-gradient(
-      from -45deg at 50% 100%,
-      var(--color-accent-400) 90deg,
-      transparent 0
-    ),
-    conic-gradient(
-      from -45deg at 50% 100%,
-      var(--color-primary-500) 90deg,
-      transparent 0
-    );
-  background-size:
-    24px 8px,
-    24px 8px,
-    24px 8px;
-  background-position:
-    0 0,
-    8px 0,
-    16px 0;
-  background-repeat: repeat-x;
+.portal-container {
+  width: min(100% - 2rem, 78rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .portal-container {
+    width: min(100% - 3rem, 78rem);
+  }
+}
+
+main[id],
+section[id],
+footer[id] {
+  scroll-margin-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  main[id],
+  section[id],
+  footer[id] {
+    scroll-margin-top: 8rem;
+  }
+}
+
+@layer base {
+  :where(a, button, input, select, summary):focus-visible {
+    outline: 2px solid var(--color-primary-700);
+    outline-offset: 3px;
+  }
+}
+
+.portal-link {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.portal-link:hover {
+  color: var(--color-primary-900);
 }
 
 /* Checklist styling */

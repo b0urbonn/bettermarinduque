@@ -1,0 +1,49 @@
+@media (prefers-reduced-motion: no-preference) {
+  .transparency-amount-bar > div {
+    transform-origin: left center;
+    transition: transform 550ms cubic-bezier(0.2, 0.65, 0.3, 1);
+  }
+
+  .transparency-amount-bar[data-revealed='false'] > div {
+    transform: scaleX(0);
+  }
+
+  .transparency-graphic-bar {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+    animation: transparency-graphic-grow 480ms ease-out both;
+  }
+
+  .transparency-graphic-bar:nth-child(2) {
+    animation-delay: 90ms;
+  }
+
+  .transparency-graphic-bar:nth-child(3) {
+    animation-delay: 180ms;
+  }
+
+  .transparency-graphic-line {
+    stroke-dasharray: 1;
+    animation: transparency-graphic-draw 520ms ease-out 180ms both;
+  }
+}
+
+@keyframes transparency-graphic-grow {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes transparency-graphic-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

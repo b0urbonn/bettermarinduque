@@ -1,0 +1,241 @@
+# Selected public records. Describe what each amount measures and cite its source.
+- slug: budgets
+  name: Budgets and revenue
+  description: Explore provincial revenue, national budget items for Marinduque, and local budget sources.
+  icon: Wallet
+  records:
+    - title: Provincial General Fund revenue
+      period: CY 2024
+      description: >-
+        The province's annual report compares actual General Fund income with its
+        estimate. The National Tax Allotment is included in the reported total.
+      comparison:
+        title: Reported versus estimated income
+        figures:
+          - label: Reported General Fund income
+            amount: 1147549906.38
+          - label: Estimated General Fund income
+            amount: 1070165714.00
+      figures:
+        - label: National Tax Allotment received
+          amount: 1032987782.00
+      source:
+        title: 2024 Annual Accomplishment Report, p. 7 (PDF)
+        publisher: Provincial Government of Marinduque
+        url: https://marinduque.gov.ph/wp-content/uploads/2026/04/2024-PGM-Annual-Accomplishment-Report_compressed-1.pdf
+    - title: Final National Tax Allotment memorandum
+      period: FY 2026
+      description: >-
+        DBM's memorandum sets out the final national allotment and includes
+        a regional breakdown. Use COMPASS to look up individual LGUs.
+      source:
+        title: Local Budget Memorandum No. 92B
+        publisher: Department of Budget and Management
+        url: https://www.dbm.gov.ph/index.php/local-budget-memorandum?catid=402&id=3765&view=article
+    - title: Marinduque Circumferential Road appropriation
+      period: FY 2026 enacted budget
+      description: >-
+        The national General Appropriations Act lists this DPWH line item
+        under MIMAROPA for the section from K0090+865 to K0091+130.
+      figures:
+        - label: Enacted national appropriation
+          amount: 92386000
+      source:
+        title: FY 2026 General Appropriations Act, Volume I-C, p. 167 (PDF)
+        publisher: Department of Budget and Management
+        url: https://www.dbm.gov.ph/wp-content/uploads/GAA/GAA2026/DBM-OFFICIAL-GAZETTE-FY-2026_VOLUME-1-C.pdf
+    - title: Marinduque Circumferential Road proposal
+      period: FY 2027 House budget bill
+      description: >-
+        BetterGov.ph identifies this DPWH line item for the section from
+        K0032+423 to K0032+873 in House Bill 10858. The amount reflects
+        the House version of the national budget.
+      figures:
+        - label: Proposed amount in the House bill
+          amount: 70000000
+      source:
+        title: FY 2027 House budget bill comparison, item 714
+        publisher: BetterGov.ph Budget
+        url: https://budget.bettergov.ph/hgab/2027/we-are-not-ignorant
+  nextSteps: >-
+    For an approved annual budget or a statement of receipts and expenditures,
+    search the DILG Full Disclosure Policy Portal by local government unit and year.
+    The BetterGov.ph GAA Explorer covers enacted national appropriations.
+  directories:
+    - name: DILG Full Disclosure Policy Portal
+      description: Look up local budgets and financial disclosures.
+      url: https://fdpp.dilg.gov.ph/
+    - name: DBM COMPASS National Tax Allotment
+      description: Browse published allotment data by fiscal year.
+      url: https://compass.dbm.gov.ph/nta
+    - name: BetterGov.ph GAA Explorer
+      description: Browse enacted national budget data published by DBM.
+      url: https://budget.bettergov.ph/gaa
+
+- slug: procurement
+  name: Bids and awards
+  description: Read selected provincial bid notices and contract award records.
+  icon: ClipboardList
+  records:
+    - title: Maybo sanitary landfill improvements
+      period: July 2026
+      description: >-
+        The province invited bids for work on the sanitary landfill in Barangay
+        Maybo, Boac. PhilGEPS lists the invitation as closed. Solicitation
+        Infra 049-2026, reference 13126542.
+      figures:
+        - label: Approved budget for the contract
+          amount: 4999992.15
+      source:
+        title: PhilGEPS bid notice 13126542
+        publisher: Provincial Government of Marinduque via PhilGEPS
+        url: https://notices.philgeps.gov.ph/GEPSNONPILOT/Tender/PrintableBidNoticeAbstractUI.aspx?refid=13126542
+    - title: Rice for the provincial food distribution program
+      period: May 2026 solicitation
+      description: >-
+        The province used negotiated procurement under Sagip Saka to buy rice
+        for its distribution program for low-income households. The listing includes
+        the notice of award and contract for reference 300-26-04-039.
+      figures:
+        - label: Approved budget for the contract
+          amount: 33999750.00
+        - label: Published award amount
+          amount: 33999750.00
+      source:
+        title: Procurement record 300-26-04-039
+        publisher: Department of Agriculture, FFEDIS
+        url: https://ffedis.da.gov.ph/negotiated-procurement/public/view/568
+  nextSteps: >-
+    Search PhilGEPS by procuring entity or reference number. The notice of award
+    identifies the winning supplier and price. Delivery and payment records show
+    what the agency received and paid for.
+  directories:
+    - name: PhilGEPS public notices
+      description: Search bid opportunities and award notices.
+      url: https://notices.philgeps.gov.ph/
+
+- slug: infrastructure
+  name: Infrastructure projects
+  description: Look up selected public works, their locations and published costs.
+  icon: HardHat
+  records:
+    - title: Caganhao–Amoingon–Maybo farm-to-market road
+      period: June 2025
+      description: >-
+        The Department of Agriculture reported the opening of the upgraded
+        5.125-kilometer road connecting three barangays in Boac.
+      figures:
+        - label: Reported project cost (rounded)
+          amount: 103400000
+      source:
+        title: PRDP in Focus, June 2025 (PDF)
+        publisher: Department of Agriculture, Philippine Rural Development Project
+        url: https://prdp.da.gov.ph/wp-content/uploads/2025/08/PSOSL_inFOCUS_June-2025.pdf
+    - title: Marinduque Convention Center rehabilitation
+      period: FY 2025 plan
+      description: >-
+        Phase 2 rehabilitation at the Capitol Compound in Barangay Bangbangalon,
+        Boac. DPWH project ID 25EA0020.
+      figures:
+        - label: Estimated budget in the procurement plan
+          amount: 128546720.00
+      source:
+        title: FY 2025 Civil Works Procurement Plan, p. 4 (PDF)
+        publisher: DPWH Marinduque District Engineering Office
+        url: https://www.dpwh.gov.ph/dpwh/sites/default/files/GAA/APP/fy_2025_app_cw_updated_as_of_june_11_2025.pdf#page=4
+    - title: Marlangga flood control structure
+      period: FY 2025 plan
+      description: >-
+        Flood control works in Barangay Marlangga, Torrijos. DPWH project ID
+        25EA0019.
+      figures:
+        - label: Estimated budget in the procurement plan
+          amount: 34298000.00
+      source:
+        title: FY 2025 Civil Works Procurement Plan, p. 3 (PDF)
+        publisher: DPWH Marinduque District Engineering Office
+        url: https://www.dpwh.gov.ph/dpwh/sites/default/files/GAA/APP/fy_2025_app_cw_updated_as_of_june_11_2025.pdf#page=3
+    - title: Marinduque Circumferential Road rehabilitation
+      period: FY 2025 contract
+      description: >-
+        DPWH project 25EA0006 covers slope and landslide repairs along the
+        circumferential road. BetterGov.ph lists the project under the
+        Marinduque District Engineering Office. The DPWH monitoring report
+        gives the contract cost to the centavo.
+      figures:
+        - label: Contract cost in the DPWH monitoring report
+          amount: 8484093.20
+      source:
+        title: DPWH project listing, search for 25EA0006
+        publisher: BetterGov.ph Transparency
+        url: https://transparency.bettergov.ph/dpwh/categories/GAA%202025%20OO-1
+      relatedSources:
+        - title: DPWH procurement monitoring report (PDF)
+          publisher: DPWH Marinduque District Engineering Office
+          url: https://www.dpwh.gov.ph/dpwh/sites/default/files/pmr/pmr20242ndsemcw.pdf
+    - title: Sibuyao National High School classrooms
+      period: FY 2019 contract
+      description: >-
+        DPWH contract 19EA0106 covers a three-storey, six-classroom building
+        in Torrijos. BetterGov.ph records a September 2019 award and a
+        July 2020 completion date.
+      figures:
+        - label: Published award amount
+          amount: 14192297.48
+      source:
+        title: DPWH project record 19EA0106
+        publisher: BetterGov.ph Transparency
+        url: https://transparency.bettergov.ph/dpwh/projects/19EA0106
+  nextSteps: >-
+    Search the DPWH portal by project ID for contract details and progress.
+    For a provincial project, ask the implementing office for its latest
+    progress or completion report.
+  directories:
+    - name: DPWH Infrastructure Projects Portal
+      description: Look up contracts and reported progress for DPWH projects.
+      url: https://transparency.dpwh.gov.ph/
+    - name: BetterGov.ph DPWH project browser
+      description: Browse records under the Marinduque District Engineering Office.
+      url: https://transparency.bettergov.ph/dpwh/provinces/Marinduque%20DEO
+
+- slug: audits
+  name: Audits and reports
+  description: Find COA audits and the province's annual accomplishment reports.
+  icon: FileCheck
+  records:
+    - title: Marinduque annual audit executive summary
+      period: CY 2024
+      description: Commission on Audit executive summary for the provincial government.
+      source:
+        title: Marinduque Executive Summary 2024
+        publisher: Commission on Audit
+        url: https://www.coa.gov.ph/wpfd_file/marinduque-executive-summary-2024/
+    - title: Special Education Fund compliance audit
+      period: CY 2024
+      description: >-
+        COA's management letter on how the province allocates, uses and monitors
+        its Special Education Fund.
+      source:
+        title: Marinduque Compliance Audit Report 2024
+        publisher: Commission on Audit
+        url: https://www.coa.gov.ph/wpfd_file/marinduque-compliance-audit-report-2024/
+    - title: Provincial accomplishment report
+      period: CY 2024
+      description: >-
+        The province's own account of its finances, programs and project
+        accomplishments during the year.
+      source:
+        title: 2024 Annual Accomplishment Report (PDF)
+        publisher: Provincial Government of Marinduque
+        url: https://marinduque.gov.ph/wp-content/uploads/2026/04/2024-PGM-Annual-Accomplishment-Report_compressed-1.pdf
+  nextSteps: >-
+    In the COA archive, choose a year, then look under MIMAROPA for the
+    province or municipality. Look for audit observations, recommendations,
+    and any updates on how the local government addressed them.
+  directories:
+    - name: COA annual audit reports for local governments
+      description: Browse audit reports by year and region.
+      url: https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/
+    - name: Marinduque provincial annual reports
+      description: Browse the province's accomplishment reports by year.
+      url: https://marinduque.gov.ph/provincial-annual-report/

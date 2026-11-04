@@ -20,13 +20,7 @@ export default function Section({
       id={id}
     >
       {decoration}
-      <div
-        className={cn(
-          'container mx-auto px-4',
-          decoration && 'relative',
-          className
-        )}
-      >
+      <div className={cn('portal-container', decoration && 'relative')}>
         {children}
       </div>
     </section>

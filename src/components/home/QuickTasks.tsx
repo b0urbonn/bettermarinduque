@@ -1,57 +1,59 @@
+import { ArrowRight, FileText, Landmark, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router';
-import { FileText, Wallet, Megaphone, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const tasks = [
-  {
-    verb: 'Apply',
-    title: 'Apply for a business permit',
-    href: '/services/business/apply-for-barangay-clearance-and-mayors-business-permits',
-    Icon: FileText,
-  },
-  {
-    verb: 'Pay',
-    title: 'Renew permits & pay local taxes',
-    href: '/services/business/renew-permits-and-pay-local-business-taxes',
-    Icon: Wallet,
-  },
-  {
-    verb: 'Report',
-    title: 'Report illegal dumping',
-    href: '/services/garbage-waste-disposal/report-illegal-dumping-or-waste-management-violations',
-    Icon: Megaphone,
-  },
-  {
-    verb: 'Find',
-    title: 'Find a government office',
-    href: '/government/departments',
-    Icon: MapPin,
-  },
+  { key: 'emergency', to: '/#hotlines', Icon: Phone },
+  { key: 'town', to: '/#municipalities', Icon: MapPin },
+  { key: 'offices', to: '/government', Icon: Landmark },
+  { key: 'funds', to: '/transparency', Icon: FileText },
 ];
 
 export default function QuickTasks() {
+  const { t, i18n } = useTranslation();
+
   return (
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 -mt-10 md:-mt-14 relative z-10">
-        {tasks.map(({ verb, title, href, Icon }) => (
-          <Link
-            key={verb}
-            to={href}
-            className="group rounded-xl bg-white border border-gray-200 shadow-md p-5 flex items-start gap-4 transition-all duration-200 motion-safe:hover:-translate-y-1 hover:shadow-lg hover:border-accent-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-          >
-            <span className="rounded-full bg-primary-50 p-2.5 text-primary-600 shrink-0">
-              <Icon className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <span>
-              <span className="block text-xs font-bold uppercase tracking-wider text-secondary-500">
-                {verb}
+    <section
+      aria-labelledby="quick-tasks-heading"
+      lang={i18n.resolvedLanguage}
+      className="portal-container py-7 sm:py-9"
+    >
+      <h2 id="quick-tasks-heading" className="text-xl font-bold tracking-tight">
+        {t('quickTasks.heading')}
+      </h2>
+      <ul className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+        {tasks.map(({ key, to, Icon }) => (
+          <li key={key}>
+            <Link
+              to={to}
+              className="group flex h-full items-center gap-3 rounded-md border border-gray-300 bg-white p-3.5 hover:border-primary-500 hover:bg-primary-50 motion-safe:transition-colors motion-safe:duration-150"
+            >
+              <Icon
+                size={22}
+                aria-hidden="true"
+                className={
+                  key === 'emergency'
+                    ? 'shrink-0 text-secondary-600'
+                    : 'shrink-0 text-primary-700'
+                }
+              />
+              <span className="min-w-0 flex-1">
+                <span className="block font-semibold text-primary-900 group-hover:underline">
+                  {t(`quickTasks.${key}.title`)}
+                </span>
+                <span className="mt-0.5 block text-sm leading-snug text-gray-700">
+                  {t(`quickTasks.${key}.description`)}
+                </span>
               </span>
-              <span className="block text-sm font-medium text-gray-900 group-hover:text-primary-700 transition-colors">
-                {title}
-              </span>
-            </span>
-          </Link>
+              <ArrowRight
+                size={17}
+                aria-hidden="true"
+                className="shrink-0 text-gray-700"
+              />
+            </Link>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }

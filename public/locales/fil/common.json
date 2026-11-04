@@ -1,0 +1,242 @@
+{
+  "hero": {
+    "subtitle": "Hanapin ang mga serbisyo ng pamahalaan, mga numero ng tanggapan sa bayan, at mga pampublikong tala.",
+    "stats": {
+      "population": "Populasyon",
+      "municipalities": "Mga bayan",
+      "barangays": "Mga barangay",
+      "capital": "Kabisera"
+    },
+    "heading": "Maghanap ng serbisyo at tulong sa Marinduque",
+    "searchLabel": "Maghanap ng gabay sa serbisyo",
+    "searchPlaceholder": "Halimbawa: hospital o business permit",
+    "searchButton": "Maghanap",
+    "popular": "Mga madalas hanaping serbisyo",
+    "topics": {
+      "business": "Permit sa negosyo",
+      "health": "Serbisyong pangkalusugan",
+      "scholarships": "Mga scholarship"
+    },
+    "provinceFacts": "Mga pangunahing datos ng Marinduque",
+    "censusSource": "Senso 2024 · PSA",
+    "psgcSource": "Mga bayan at barangay · PSA"
+  },
+  "navbar": {
+    "home": "Tahanan",
+    "services": "Mga Serbisyo",
+    "transparency": "Transparensiya",
+    "government": "Pamahalaan",
+    "about": "Tungkol",
+    "emergency": "Mga hotline",
+    "menu": "Menu",
+    "skip": "Lumaktaw sa pangunahing nilalaman",
+    "official": "Opisyal na website ng lalawigan",
+    "language": "Wika ng interface",
+    "mainNavigation": "Pangunahing menu"
+  },
+  "quickTasks": {
+    "heading": "Mga madalas hanapin",
+    "emergency": {
+      "title": "Mga numerong pang-emergency",
+      "description": "Hanapin ang mga hotline na maaaring tawagan."
+    },
+    "town": {
+      "title": "Hanapin ang iyong bayan",
+      "description": "Tingnan ang mga barangay at numero ng tanggapan."
+    },
+    "offices": {
+      "title": "Mga tanggapan ng pamahalaan",
+      "description": "Hanapin ang mga opisyal at tanggapan."
+    },
+    "funds": {
+      "title": "Paggasta ng pamahalaan",
+      "description": "Tingnan ang mga pondo at pinagmulan ng datos."
+    }
+  },
+  "towns": {
+    "heading": "Hanapin ang iyong bayan",
+    "description": "Pumili ng bayan sa listahan o mapa. Tingnan ang mga numero ng tanggapan, barangay, at lugar na maaaring bisitahin.",
+    "selectLabel": "Pumili ng bayan",
+    "provinceMap": "Marinduque sa Google Maps",
+    "openGuide": "Tingnan ang gabay sa bayan",
+    "openMap": "Google Maps",
+    "capital": "Kabisera ng lalawigan",
+    "municipality": "Bayan",
+    "details": "Mga halal na opisyal at detalye ng bayan",
+    "selected": "Napiling bayan: {{name}}, may {{population}} residente at {{barangays}} barangay."
+  },
+  "government": {
+    "province": "Lalawigan ng Marinduque",
+    "title": "Pamahalaang panlalawigan",
+    "description": "Alamin ang estruktura ng pamahalaang panlalawigan, kung sino ang mga namumuno rito, at kung saan makikita ang mga tanggapan.",
+    "structure": "Estruktura ng pamahalaan",
+    "structureDescription": "Pumili ng sangay upang makita ang mga opisyal nito.",
+    "executive": {
+      "branch": "Sangay na tagapagpaganap",
+      "title": "Tanggapan ng Gobernador",
+      "link": "Tingnan ang mga pinuno ng lalawigan"
+    },
+    "legislative": {
+      "branch": "Sangay na tagapagbatas",
+      "title": "Sangguniang Panlalawigan",
+      "link": "Tingnan ang mga kasapi ng sanggunian"
+    },
+    "roles": {
+      "governor": {
+        "title": "Gobernador",
+        "description": "Namumuno sa pamahalaang panlalawigan at nagpapatupad ng mga programa nito."
+      },
+      "departments": {
+        "title": "Mga tanggapan ng lalawigan",
+        "description": "Nagbibigay ng mga serbisyo sa kalusugan, agrikultura, at kapakanang panlipunan."
+      },
+      "viceGovernor": {
+        "title": "Bise gobernador",
+        "description": "Namumuno sa mga sesyon ng Sangguniang Panlalawigan."
+      },
+      "board": {
+        "title": "Mga kasapi ng sanggunian",
+        "description": "Nagpapasa ng mga ordinansa at nag-aapruba ng badyet ng lalawigan."
+      },
+      "representative": {
+        "title": "Kinatawan ng Nag-iisang Distrito",
+        "description": "Kumakatawan sa Marinduque sa pambansang Kapulungan ng mga Kinatawan."
+      }
+    },
+    "source": "Kodigo ng Pamahalaang Lokal (RA 7160)",
+    "resources": "Mga tanggapan at serbisyo",
+    "links": {
+      "offices": {
+        "title": "Talaan ng mga tanggapan ng lalawigan",
+        "description": "Hanapin ang mga opisyal na numero ng telepono at email address."
+      },
+      "charter": {
+        "title": "Citizen’s Charter",
+        "description": "Alamin ang mga hakbang at kinakailangan sa mga serbisyo ng lalawigan."
+      },
+      "towns": {
+        "title": "Mga kontak sa bayan",
+        "description": "Hanapin ang tanggapan ng munisipyo at mga lokal na numerong matatawagan."
+      }
+    },
+    "navigation": "Menu ng pamahalaan",
+    "nav": {
+      "overview": "Pangkalahatan",
+      "offices": "Mga tanggapan",
+      "executive": "Mga pinuno",
+      "legislative": "Sangguniang Panlalawigan"
+    },
+    "findOffice": "Maghanap ng tanggapan",
+    "officesTitle": "Mga tanggapan ng pamahalaan",
+    "officesDescription": "Hanapin ang mga kontak ng mga tanggapan ng lalawigan at mga munisipyo sa anim na bayan ng Marinduque.",
+    "provincialOffices": "Mga tanggapan ng lalawigan",
+    "officeIntro": "Maghanap ayon sa pangalan ng tanggapan o uri ng tulong na kailangan mo.",
+    "fullDirectory": "Kumpletong opisyal na talaan",
+    "searchOffices": "Maghanap ng tanggapan ng lalawigan",
+    "officePlaceholder": "Halimbawa: buwis, pagsasaka, o turismo",
+    "officeCount_one": "{{count}} tanggapan",
+    "officeCount_other": "{{count}} tanggapan",
+    "noOffices": "Walang tumugmang tanggapan. Gumamit ng mas pangkalahatang salita o tingnan ang opisyal na talaan.",
+    "email": "Email",
+    "emailOffice": "Mag-email sa {{name}}",
+    "municipalIntro": "Tumawag sa munisipyo o buksan ang gabay sa bayan para sa iba pang lokal na kontak.",
+    "municipalSource": "Talaan ng mga munisipyo ng DILG",
+    "serviceHelp": "Kailangan ang mga rekisito para sa serbisyo ng lalawigan?",
+    "office": {
+      "governor": {
+        "name": "Tanggapan ng Gobernador",
+        "description": "Mga programa ng lalawigan at pangkalahatang katanungan."
+      },
+      "planning": {
+        "name": "Tanggapan ng Pagpaplano at Pagpapaunlad ng Lalawigan",
+        "description": "Mga plano sa pagpapaunlad, lokal na datos, at koordinasyon ng mga proyekto."
+      },
+      "treasury": {
+        "name": "Tanggapan ng Ingat-yaman ng Lalawigan",
+        "description": "Mga buwis, bayarin, at pagbabayad sa lalawigan."
+      },
+      "assessment": {
+        "name": "Tanggapan ng Tagatasa ng Lalawigan",
+        "description": "Pagtatasa ng ari-arian, mga rekord ng lupa, at deklarasyon ng buwis."
+      },
+      "agriculture": {
+        "name": "Tanggapan ng Agrikultura ng Lalawigan",
+        "description": "Mga programa, pagsasanay, at teknikal na tulong sa pagsasaka at pangingisda."
+      },
+      "tourism": {
+        "name": "Tanggapan ng Turismo ng Lalawigan",
+        "description": "Impormasyon para sa mga bisita, mga pasyalan, at mga programa sa turismo."
+      },
+      "environment": {
+        "name": "Tanggapan ng Kapaligiran at Likas na Yaman ng Lalawigan",
+        "description": "Mga programang pangkapaligiran at likas na yaman."
+      },
+      "health": {
+        "name": "Tanggapan ng Kalusugan ng Lalawigan",
+        "description": "Mga programa sa pampublikong kalusugan, pagbabakuna, at serbisyong pangkomunidad."
+      },
+      "welfare": {
+        "name": "Tanggapan ng Kagalingang Panlipunan at Pagpapaunlad ng Lalawigan",
+        "description": "Tulong panlipunan, suporta sa pamilya, at mga programa sa kapakanan."
+      },
+      "engineering": {
+        "name": "Tanggapan ng Inhinyeriya ng Lalawigan",
+        "description": "Mga kalsada, tulay, at proyektong pampubliko ng lalawigan."
+      },
+      "employment": {
+        "name": "Tanggapan ng Serbisyo sa Pagtatrabaho",
+        "description": "Mga bakanteng trabaho, referral, at programa sa pagtatrabaho."
+      },
+      "veterinary": {
+        "name": "Tanggapan ng Beterinaryo ng Lalawigan",
+        "description": "Mga serbisyo sa kalusugan ng hayop, programa sa paghahayupan, at tulong beterinaryo."
+      }
+    },
+    "boardDescription": "Hanapin ang mga kasapi ng Sangguniang Panlalawigan ayon sa distrito, kasama ang namumunong opisyal at mga kasaping ex officio.",
+    "officialRoster": "Opisyal na talaan ng mga kasapi",
+    "presidingOfficer": "Namumunong opisyal",
+    "boardSections": "Pumunta sa pangkat ng mga kasapi",
+    "boardGroups": {
+      "district1": {
+        "title": "Unang Distrito",
+        "description": "Boac, Mogpog, at Gasan"
+      },
+      "district2": {
+        "title": "Ikalawang Distrito",
+        "description": "Santa Cruz, Torrijos, at Buenavista"
+      },
+      "exOfficio": {
+        "title": "Mga kasaping ex officio",
+        "description": "Mga kasaping kabilang dahil sa iba pa nilang katungkulan"
+      }
+    },
+    "executiveTitle": "Mga pinuno ng lalawigan",
+    "executiveDescription": "Kilalanin ang gobernador, bise gobernador, at kinatawan ng Marinduque sa Kongreso.",
+    "officialExecutive": "Opisyal na pahina ng ehekutibo",
+    "electedLeaders": "Mga halal na opisyal",
+    "leadershipLoading": "Kinukuha ang detalye ng mga pinuno…",
+    "leadershipUnavailable": "Pansamantalang hindi makuha ang detalye ng mga pinuno.",
+    "capitol": "Kapitolyo ng Lalawigan",
+    "unavailableTitle": "Hindi makita ang pahina ng pamahalaan",
+    "unavailableDescription": "Tingnan ang estruktura ng pamahalaan, maghanap ng tanggapan, o kilalanin ang mga pinuno.",
+    "backToGovernment": "Bumalik sa pahina ng pamahalaan",
+    "serviceGuides": "Mga gabay sa serbisyo"
+  },
+  "directory": {
+    "heading": "Maghanap ng serbisyo ng pamahalaan",
+    "description": "Alamin kung aling tanggapan ang lalapitan, ano ang ihahanda, at saan kukumpirmahin ang mga kinakailangan.",
+    "category": "Uri ng serbisyo",
+    "allCategories": "Lahat ng uri",
+    "resultCount_one": "{{count}} gabay ang nahanap",
+    "resultCount_other": "{{count}} gabay ang nahanap",
+    "loading": "Kinukuha ang mga gabay…",
+    "clear": "Alisin ang mga filter",
+    "guides": "Mga gabay sa serbisyo",
+    "noResults": "Walang tumugmang gabay. Subukang gumamit ng mas maikling salita o pumili ng ibang uri.",
+    "officialResources": "Mga opisyal na sanggunian",
+    "charter": "Citizen’s Charter ng lalawigan",
+    "officeDirectory": "Talaan ng mga tanggapan ng lalawigan",
+    "departments": "Mga tanggapan ng pamahalaan",
+    "englishGuides": "Nasa Ingles ang mga gabay at pangalan ng mga kategorya."
+  }
+}

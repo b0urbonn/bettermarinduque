@@ -1,136 +1,363 @@
-import Section from '../ui/Section';
-import { Heading } from '../ui/Heading';
-import { Text } from '../ui/Text';
-import { MapPin } from 'lucide-react';
-import MarinduqueMap from '../brand/MarinduqueMap';
+import { ArrowRight, ArrowUpRight, ChevronDown, MapPin } from 'lucide-react';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router';
+import { useTranslation } from 'react-i18next';
+import MunicipalityGuide from './MunicipalityGuide';
+import { municipalityBoundaries } from '../../data/municipalityBoundaries';
+import { populationSource, provincePSGC } from '../../data/province';
 
-interface Municipality {
-  name: string;
-  description: string;
-  mayor: string;
-  population: string;
-  barangays: number;
-  phone?: { label: string; number: string };
-  capital?: boolean;
+const boundariesSource =
+  'https://github.com/faeldon/philippines-json-maps/blob/master/latest/geojson/provdists/lowres/municities-provdist-1704000000.0.001.json';
+const officialsSource =
+  'https://www.foi.gov.ph/agencies/dilg/list-of-elected-local-officials/';
+
+const municipalities = [
+  {
+    slug: 'boac',
+    name: 'Boac',
+    population: '54,365',
+    barangays: 61,
+    code: '1704001000',
+    mayor: 'Armi Carrion',
+    viceMayor: 'Mark Anthony Seño',
+    incomeClass: '1st',
+    description: 'The provincial capital and home of the Marinduque Museum.',
+  },
+  {
+    slug: 'buenavista',
+    name: 'Buenavista',
+    population: '24,136',
+    barangays: 15,
+    code: '1704002000',
+    mayor: 'Eduard Siena',
+    viceMayor: 'David Vitto',
+    incomeClass: '4th',
+    description:
+      'A town at the foot of Mount Malindig, overlooking the Tablas Strait.',
+  },
+  {
+    slug: 'gasan',
+    name: 'Gasan',
+    population: '35,315',
+    barangays: 25,
+    code: '1704003000',
+    mayor: 'James Marty Lim',
+    viceMayor: 'Lidany Baldo',
+    incomeClass: '2nd',
+    description:
+      'Home of the kalutang musical tradition and the gateway to the Tres Reyes Islands.',
+  },
+  {
+    slug: 'mogpog',
+    name: 'Mogpog',
+    population: '32,577',
+    barangays: 37,
+    code: '1704004000',
+    mayor: 'Senen Livelo Jr.',
+    viceMayor: 'Augusto Leo Livelo',
+    incomeClass: '2nd',
+    description:
+      'Home to Balanacan Port and Station Balanacan, the origin of the Luzon Datum of 1911.',
+  },
+  {
+    slug: 'santa-cruz',
+    name: 'Santa Cruz',
+    population: '51,594',
+    barangays: 55,
+    code: '1704005000',
+    mayor: 'Marisa Red-Martinez',
+    viceMayor: 'Medwin “Bobs” Manuel',
+    incomeClass: '1st',
+    description:
+      'Marinduque’s largest municipality by land area and a gateway to Maniwaya and Polo islands.',
+  },
+  {
+    slug: 'torrijos',
+    name: 'Torrijos',
+    population: '28,535',
+    barangays: 25,
+    code: '1704006000',
+    mayor: 'Joey Peñaflor',
+    viceMayor: 'Edmar Frias',
+    incomeClass: '2nd',
+    description:
+      'Known for Poctoy White Beach on the eastern coast of Marinduque.',
+  },
+] as const;
+
+function googleMaps(place: string) {
+  return (
+    'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent(place)
+  );
 }
 
-const municipalities: Municipality[] = [
-  {
-    name: 'Boac',
-    description:
-      'Seat of the provincial government and the center of commerce and education.',
-    mayor: 'Mayor Armi Carrion',
-    population: '57,283',
-    barangays: 61,
-    phone: { label: 'Municipal Hall', number: '(042) 311-1378' },
-    capital: true,
-  },
-  {
-    name: 'Mogpog',
-    description:
-      'Primary gateway via Balanacan Port and the origin of the Moriones (1807).',
-    mayor: 'Mayor Senen Livelo Jr.',
-    population: '34,516',
-    barangays: 37,
-    phone: { label: 'Municipal Hall', number: '(042) 332-1249' },
-  },
-  {
-    name: 'Santa Cruz',
-    description: 'Largest by land area; gateway to Maniwaya and Polo islands.',
-    mayor: 'Mayor Marisa Red-Martinez',
-    population: '54,692',
-    barangays: 55,
-    phone: { label: 'Municipal Hall', number: '(042) 5047-001' },
-  },
-  {
-    name: 'Torrijos',
-    description:
-      'The “summer capital,” known for Poctoy White Beach and locally grown strawberries.',
-    mayor: 'Mayor Joey Peñaflor',
-    population: '30,476',
-    barangays: 25,
-    phone: { label: 'Tourism Office', number: '0963-689-5699' },
-  },
-  {
-    name: 'Buenavista',
-    description:
-      'The smallest municipality, at the foot of Mt. Malindig overlooking Tablas Strait.',
-    mayor: 'Mayor Eduard Siena',
-    population: '26,043',
-    barangays: 15,
-    phone: { label: 'Municipal Hall', number: '(042) 704-0062' },
-  },
-  {
-    name: 'Gasan',
-    description:
-      'The “cultural nerve center” — home of the kalutang, facing the Tres Reyes Islands.',
-    mayor: 'Mayor James Marty Lim',
-    population: '36,197',
-    barangays: 25,
-    phone: { label: 'Municipal Hall', number: '(042) 342-1074' },
-  },
-];
-
 export default function Municipalities() {
+  const { t, i18n } = useTranslation();
+  const [params] = useSearchParams();
+  const { hash } = useLocation();
+  const navigate = useNavigate();
+  const town =
+    municipalities.find(item => item.slug === params.get('municipality')) ??
+    municipalities[0];
+
+  const selectTown = (slug: string) => {
+    if (slug === town.slug) return;
+    const next = new URLSearchParams(params);
+    next.set('municipality', slug);
+    void navigate(
+      { search: next.toString(), hash },
+      { preventScrollReset: true }
+    );
+  };
+
   return (
-    <Section
+    <section
       id="municipalities"
-      decoration={
-        <MarinduqueMap className="hidden md:block absolute -right-24 -top-10 h-[560px] w-[560px] text-primary-700/10 pointer-events-none" />
-      }
+      lang={i18n.resolvedLanguage}
+      aria-labelledby="municipality-heading"
+      className="portal-container border-t border-gray-300 py-8 md:py-10"
     >
-      <Heading level={2}>Municipalities</Heading>
-      <Text className="text-gray-600 mb-6">
-        The six municipalities of the Province of Marinduque. Populations from
-        the 2020 Census.
-      </Text>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {municipalities.map(m => (
-          <div
-            key={m.name}
-            className="rounded-xl bg-white border border-gray-200 p-6 flex flex-col"
+      <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2
+            id="municipality-heading"
+            className="text-2xl font-bold tracking-tight"
           >
-            <div className="flex items-center gap-3 mb-3">
-              <span className="rounded-full bg-primary-50 p-2.5 text-primary-600 shrink-0">
-                <MapPin className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <h3 className="font-display text-lg font-semibold text-gray-900">
-                {m.name}
-                {m.capital && (
-                  <span className="ml-2 rounded-full bg-accent-100 px-2 py-0.5 text-xs font-semibold text-accent-800 align-middle">
-                    Capital
-                  </span>
-                )}
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 mb-3">{m.description}</p>
-            <dl className="mt-auto text-sm space-y-1">
-              <div className="flex justify-between gap-2">
-                <dt className="text-gray-500">Mayor</dt>
-                <dd className="font-medium text-gray-900 text-right">
-                  {m.mayor.replace(/^Mayor /, '')}
+            {t('towns.heading')}
+          </h2>
+          <p className="mt-3 text-gray-700">{t('towns.description')}</p>
+        </div>
+        <a
+          href={googleMaps('Marinduque, Philippines')}
+          className="inline-flex min-h-11 items-center gap-2 rounded-md border border-gray-400 px-3 text-sm font-semibold text-primary-700 hover:bg-primary-50"
+        >
+          <MapPin size={17} aria-hidden="true" /> {t('towns.provinceMap')}
+          <ArrowUpRight size={14} aria-hidden="true" />
+        </a>
+      </div>
+      <div className="rounded-lg border border-gray-300 bg-gray-50 p-4 sm:p-5">
+        <div className="mb-4 sm:max-w-sm">
+          <label
+            htmlFor="municipality-picker"
+            className="mb-1.5 block text-sm font-semibold"
+          >
+            {t('towns.selectLabel')}
+          </label>
+          <select
+            id="municipality-picker"
+            value={town.slug}
+            onChange={event => selectTown(event.target.value)}
+            className="min-h-11 w-full rounded-md border border-gray-400 bg-white px-3 text-base text-gray-900"
+          >
+            {municipalities.map(({ slug, name }) => (
+              <option key={slug} value={slug}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="grid items-start gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="relative min-w-0 rounded-md bg-primary-50">
+            <span
+              className="absolute left-3 top-3 text-xs font-medium text-gray-700"
+              aria-label="North"
+            >
+              N ↑
+            </span>
+            <svg
+              viewBox="0 0 440 440"
+              role="group"
+              aria-label="Map of Marinduque municipalities"
+              className="mx-auto block w-full max-w-[20rem] lg:max-w-[26rem]"
+            >
+              {municipalities.map(({ code, slug, name }) => {
+                const { path, label } = municipalityBoundaries[code];
+                const isSelected = town.slug === slug;
+                return (
+                  <g
+                    key={code}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={name}
+                    aria-pressed={isSelected}
+                    className="group cursor-pointer focus-visible:outline-none"
+                    onClick={() => selectTown(slug)}
+                    onKeyDown={event => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        selectTown(slug);
+                      }
+                    }}
+                  >
+                    <path
+                      d={path}
+                      fillRule="evenodd"
+                      strokeWidth={2}
+                      strokeLinejoin="round"
+                      className={`stroke-white group-focus-visible:stroke-primary-900 group-focus-visible:stroke-[3] ${isSelected ? 'fill-primary-700' : 'fill-slate-300 group-hover:fill-primary-200'}`}
+                    />
+                    <text
+                      x={label[0]}
+                      y={label[1]}
+                      dominantBaseline="central"
+                      textAnchor="middle"
+                      aria-hidden="true"
+                      className={`pointer-events-none text-[15px] font-semibold ${isSelected ? 'fill-white' : 'fill-slate-900'}`}
+                    >
+                      {name}
+                    </text>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
+          <div
+            className="rounded-md border border-gray-300 bg-white p-4 sm:p-5"
+            aria-label="Municipality information"
+          >
+            <p className="font-mono text-xs uppercase tracking-widest text-primary-700">
+              {t(town.slug === 'boac' ? 'towns.capital' : 'towns.municipality')}
+            </p>
+            <h3 className="mt-2 text-2xl font-bold text-primary-700">
+              {town.name}
+            </h3>
+            <p lang="en" className="mt-2 text-sm leading-relaxed text-gray-700">
+              {town.description}
+            </p>
+            <dl className="my-4 grid grid-cols-2 gap-4 border-y border-gray-300 py-3">
+              <div>
+                <dt className="text-sm text-gray-700">
+                  {t('hero.stats.population')}
+                </dt>
+                <dd className="mt-1 text-2xl font-bold tabular-nums text-primary-700">
+                  {town.population}
                 </dd>
+                <dd className="text-xs text-gray-700">1 July 2024</dd>
               </div>
-              <div className="flex justify-between gap-2">
-                <dt className="text-gray-500">Population (2020)</dt>
-                <dd className="font-medium text-gray-900">{m.population}</dd>
+              <div>
+                <dt className="text-sm text-gray-700">
+                  {t('hero.stats.barangays')}
+                </dt>
+                <dd className="mt-1 text-2xl font-bold tabular-nums text-primary-700">
+                  {town.barangays}
+                </dd>
+                <dd className="text-xs text-gray-700">PSGC</dd>
               </div>
-              <div className="flex justify-between gap-2">
-                <dt className="text-gray-500">Barangays</dt>
-                <dd className="font-medium text-gray-900">{m.barangays}</dd>
+            </dl>
+            <div className="flex flex-wrap gap-2">
+              <Link
+                to={{ search: params.toString(), hash: '#town-guide' }}
+                className="inline-flex min-h-11 items-center gap-2 rounded-md bg-primary-700 px-3 font-semibold text-white hover:bg-primary-800"
+              >
+                {t('towns.openGuide')}{' '}
+                <ArrowRight size={17} aria-hidden="true" />
+              </Link>
+              <a
+                href={googleMaps(`${town.name}, Marinduque, Philippines`)}
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-gray-400 px-3 text-sm font-semibold text-primary-800 hover:bg-primary-50"
+              >
+                <MapPin size={16} aria-hidden="true" /> {t('towns.openMap')}
+                <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            </div>
+            <details lang="en" className="group mt-4 border-t border-gray-300">
+              <summary
+                lang={i18n.resolvedLanguage}
+                className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-2 py-2 text-sm font-semibold [&::-webkit-details-marker]:hidden"
+              >
+                {t('towns.details')}
+                <ChevronDown
+                  size={18}
+                  aria-hidden="true"
+                  className="shrink-0 group-open:rotate-180"
+                />
+              </summary>
+              <div className="mb-5">
+                <h4 className="text-sm font-semibold text-gray-900">
+                  Elected officials{' '}
+                  <span className="font-normal text-gray-700">· 2025–2028</span>
+                </h4>
+                <dl className="mt-2 grid grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <dt className="text-gray-700">Mayor</dt>
+                    <dd className="mt-0.5 font-semibold">{town.mayor}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-gray-700">Vice mayor</dt>
+                    <dd className="mt-0.5 font-semibold">{town.viceMayor}</dd>
+                  </div>
+                </dl>
               </div>
-              {m.phone && (
-                <div className="flex justify-between gap-2">
-                  <dt className="text-gray-500">{m.phone.label}</dt>
-                  <dd className="font-medium text-primary-700">
-                    {m.phone.number}
+              <dl className="mb-5 grid grid-cols-2 gap-3 border-t border-gray-300 pt-4 text-sm">
+                <div>
+                  <dt className="text-gray-700">Income class</dt>
+                  <dd className="mt-0.5 font-semibold">
+                    {town.incomeClass} class
                   </dd>
                 </div>
-              )}
-            </dl>
+                <div>
+                  <dt className="text-gray-700">PSGC code</dt>
+                  <dd className="mt-0.5 font-semibold tabular-nums">
+                    {town.code}
+                  </dd>
+                </div>
+              </dl>
+              <p className="mt-3 text-xs leading-relaxed text-gray-700">
+                <a href={populationSource} className="portal-link">
+                  2024 Census
+                </a>
+                {' · '}
+                <a
+                  href={`https://psa.gov.ph/classification/psgc/barangays/${town.code}`}
+                  className="portal-link"
+                >
+                  PSA barangay directory
+                </a>
+                {' · '}
+                <a href={provincePSGC} className="portal-link">
+                  PSA province profile
+                </a>
+                {' · '}
+                <a href={officialsSource} className="portal-link">
+                  DILG officials directory
+                </a>
+                {' · '}
+                <Link to="/government" className="portal-link">
+                  Provincial leadership
+                </Link>
+              </p>
+            </details>
           </div>
-        ))}
+        </div>
       </div>
-    </Section>
+      <p lang="en" className="mt-3 text-xs text-gray-700">
+        Simplified municipal boundaries for general reference. Data from NAMRIA
+        and PSA via OCHA COD-AB, prepared by{' '}
+        <a href={boundariesSource} className="portal-link">
+          Philippines JSON Maps
+        </a>
+        {' · '}
+        <a
+          href="https://creativecommons.org/licenses/by/3.0/igo/"
+          className="portal-link"
+        >
+          CC BY 3.0 IGO
+        </a>
+        .
+      </p>
+      <MunicipalityGuide
+        key={town.slug}
+        name={town.name}
+        slug={town.slug}
+        code={town.code}
+      />
+      <p className="sr-only" role="status">
+        {t('towns.selected', {
+          name: town.name,
+          population: town.population,
+          barangays: town.barangays,
+        })}
+      </p>
+    </section>
   );
 }

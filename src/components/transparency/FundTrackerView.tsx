@@ -16,6 +16,7 @@ import {
   fundTotals,
 } from '../../lib/transparencyFormat';
 import { cn } from '../../lib/utils';
+import AmountBar from './AmountBar';
 
 const REPO_URL = 'https://github.com/b0urbonn/bettermarinduque';
 
@@ -78,6 +79,10 @@ export default function FundTrackerView({
   const order = Object.fromEntries(sourceIds.map((id, i) => [id, i + 1]));
   const pipeline = totals.received + totals.scheduled || 1;
   const receivedPct = (totals.received / pipeline) * 100;
+  const largestPayment = Math.max(
+    0,
+    ...tracker.inflows.map(entry => entry.amount)
+  );
 
   const stats = [
     {
@@ -150,16 +155,17 @@ export default function FundTrackerView({
           </span>
         </div>
         <div
-          className="h-3 w-full overflow-hidden rounded-full bg-gray-200"
           role="progressbar"
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={Math.round(receivedPct)}
           aria-label="Share of settlement payments received"
         >
-          <div
-            className="h-full rounded-full bg-success-500"
-            style={{ width: `${receivedPct}%` }}
+          <AmountBar
+            amount={totals.received}
+            maximum={pipeline}
+            className="h-3"
+            fillClassName="bg-success-500"
           />
         </div>
 
@@ -181,6 +187,10 @@ export default function FundTrackerView({
               />
               Money in
             </Heading>
+            <p className="mb-3 text-sm text-gray-700">
+              Bars compare received and scheduled payments on the same US dollar
+              scale.
+            </p>
             <ul className="space-y-3">
               {tracker.inflows.map(e => (
                 <li
@@ -199,13 +209,16 @@ export default function FundTrackerView({
                     </div>
                     <div className="text-right shrink-0">
                       <div
-                        className="font-display text-lg font-bold text-gray-900"
+                        className="font-display text-lg font-bold tabular-nums text-gray-900"
                         title={formatMoney(e.amount, currency, false)}
                       >
                         {money(e.amount)}
                       </div>
                       <StatusBadge status={e.status} />
                     </div>
+                  </div>
+                  <div className="mt-3">
+                    <AmountBar amount={e.amount} maximum={largestPayment} />
                   </div>
                   {e.note && (
                     <p className="text-sm text-gray-600 mt-2">{e.note}</p>

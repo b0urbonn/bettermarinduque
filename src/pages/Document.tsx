@@ -1,8 +1,10 @@
 import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import PageHeader from '../components/ui/PageHeader';
+import PageGraphic from '../components/brand/PageGraphic';
+import { ArticleSkeleton } from '../components/ui/LoadingSkeleton';
 import { Banner } from '@bettergov/kapwa/banner';
-import { useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -28,7 +30,12 @@ interface DocumentProps {
   categoryType?: 'service' | 'government';
 }
 
-export default function Document({
+export default function Document(props: DocumentProps) {
+  const { pathname } = useLocation();
+  return <DocumentContent key={pathname} {...props} />;
+}
+
+function DocumentContent({
   theme: initialTheme = 'default',
   categoryType,
 }: DocumentProps) {
@@ -37,7 +44,7 @@ export default function Document({
     useState<MarkdownContent | null>(null);
   const [nestedIndex, setNestedIndex] = useState<CategoryIndex | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   const markdownComponents = createMarkdownComponents(
     getTypographyTheme(initialTheme)
@@ -48,17 +55,10 @@ export default function Document({
   ]);
 
   useEffect(() => {
-    if (!documentSlug || !category || !categoryType) {
-      setError('No document specified');
-      setLoading(false);
-      return;
-    }
+    if (!documentSlug || !category || !categoryType) return;
 
     const loadContent = async () => {
       try {
-        setLoading(true);
-        setError(null);
-
         const isGovernment = categoryType === 'government';
         const categories = isGovernment
           ? governmentCategories.categories
@@ -112,7 +112,7 @@ export default function Document({
           },
         ]);
       } catch (err) {
-        setError(
+        setLoadError(
           err instanceof Error ? err.message : 'Failed to load document'
         );
       } finally {
@@ -123,14 +123,10 @@ export default function Document({
     loadContent();
   }, [documentSlug, category, categoryType]);
 
-  if (loading) {
-    return (
-      <Section className="p-3 mb-12">
-        <Banner type="info" description="Loading document..." />
-      </Section>
-    );
-  }
-
+  const error =
+    documentSlug && category && categoryType
+      ? loadError
+      : 'No document specified';
   if (error) {
     return (
       <Section className="p-3 mb-12">
@@ -145,16 +141,25 @@ export default function Document({
     );
   }
 
+  if (loading) {
+    return (
+      <Section className="mb-12 py-8 md:py-10">
+        <ArticleSkeleton label="Loading document…" />
+      </Section>
+    );
+  }
+
   if (nestedIndex) {
     const nestedPages: Subcategory[] = nestedIndex.pages;
     return (
       <>
         <SEO
-          title={documentSlug}
+          title={nestedIndex.title || documentSlug}
           keywords={`${documentSlug}, government services, local government`}
         />
         <PageHeader
           title={nestedIndex.title || documentSlug || 'Documents'}
+          illustration={<PageGraphic key={documentSlug} kind="document" />}
           description={nestedIndex.description}
           breadcrumbItems={breadcrumbs}
         />
@@ -215,11 +220,12 @@ export default function Document({
       />
       <PageHeader
         title={markdownContent.title || documentSlug || 'Document'}
+        illustration={<PageGraphic key={documentSlug} kind="document" />}
         description={markdownContent.description}
         breadcrumbItems={breadcrumbs}
       />
       <Section className="py-10 mb-12">
-        <Card className="mb-8 markdown-content max-w-[72ch]">
+        <Card className="mb-8 markdown-content max-w-[72ch] motion-safe:animate-fade-in">
           <CardHeader>
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}

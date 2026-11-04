@@ -16,9 +16,9 @@ social-media pages; always show them with a "verify before relying on it" note.
 - Founded as a province: February 21, 1921 (separated from Tayabas/Quezon in 1920);
   founding anniversary celebrated every February 21. [marinduque.gov.ph socio-economic profile; PIA]
 - Land area: 952.58 km². 6 municipalities, 218 barangays. [Wikipedia / PSA]
-- Population: 239,207 (2020 Census of Population, PSA). [Wikipedia table]
-- Municipal populations (2020): Boac 57,283; Santa Cruz 54,692; Gasan 36,197;
-  Mogpog 34,516; Torrijos 30,476; Buenavista 26,043.
+- Population: 226,522 as of July 1, 2024. [PSA 2024 Census of Population](https://rssomimaropa.psa.gov.ph/content/official-population-count-province-marinduque-2024-census-population)
+- Municipal populations (2024): Boac 54,365; Santa Cruz 51,594; Gasan 35,315;
+  Mogpog 32,577; Torrijos 28,535; Buenavista 24,136.
 - Barangays per municipality: Boac 61, Santa Cruz 55, Mogpog 37, Gasan 25,
   Torrijos 25, Buenavista 15.
 - Legislative board districts: 1st District = Boac, Mogpog, Gasan;
@@ -87,6 +87,22 @@ Full sourced data lives in `content/transparency/marcopper-fund.yaml` (shown at
 
 (Municipal hall numbers: marinduqueguide.com/lgu, checked Nov 2026 — verify.)
 
+The municipality explorer links to the [PSA province profile](https://psa.gov.ph/classification/psgc/citimuni/1704000000)
+and each town’s PSGC barangay directory for official names, codes, and July 1, 2024
+populations. Its local contact numbers come from the [DILG MIMAROPA directory](https://mimaropa.dilg.gov.ph/contact-us/field-office/)
+and the [provincial emergency directory](https://marinduque.gov.ph/emergency-contacts/).
+Torrijos municipal government mobile: 0908-608-4894 (DILG directory; verify before relying on it).
+
+- Places added to the town guides: Boac Cathedral, Malbog Hot Spring in
+  Buenavista, St. Joseph Parish Church in Gasan, Kawa-Kawa Falls in Santa Cruz,
+  and the Pulang Lupa Battlefield in Torrijos.
+  [Provincial tourism guide](https://marinduque.gov.ph/places-of-interest-and-contact-persons/);
+  [DOST MIMAROPA](https://region4b.dost.gov.ph/drying-with-hot-water-food-dehydrator-in-marinduque-utilizes-heat-from-malbog-hot-spring/);
+  [NHCP registry](https://philhistoricsites.nhcp.gov.ph/registry_database/ang-labanan-sa-pulang-lupa/).
+- Town celebrations: Bila-bila (Boac), Tubaan (Buenavista), Gasang-gasang (Gasan),
+  Kangga (Mogpog), Seafood Festival (Santa Cruz), and Torrijos Festival.
+  [Philippine Information Agency](https://pia.gov.ph/news/marinduque-offers-more-than-moryonan-says-tourism-office/).
+
 ## Elected officials, 2025–2028 term (May 12, 2025 elections) [Wikipedia; Rappler/COMELEC; Inquirer; Daily Tribune]
 
 - Governor: Melecio "Mel" J. Go (PDP–Laban) — won by 389 votes over Lord Allan Velasco;
@@ -128,7 +144,8 @@ Full sourced data lives in `content/transparency/marcopper-fund.yaml` (shown at
 ## Emergency and public-safety contacts (show with verification note)
 
 - National Emergency Hotline: 911 (official, e911.gov.ph)
-- Philippine Red Cross: 143 (official)
+- Philippine Red Cross: 143 (national), 0917-826-1395 (Marinduque Chapter).
+  [Provincial emergency directory](https://marinduque.gov.ph/emergency-contacts/)
 - Marinduque PDRRMO (Provincial Capitol, Boac): 0968-226-5727 (from the office's public
   page listing; verify). Facebook: facebook.com/PDRRMOMarinduqueOfficial
 - PNP municipal police stations (PNP mobile series; directory + station posts, verify):

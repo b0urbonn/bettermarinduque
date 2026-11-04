@@ -6,24 +6,44 @@ title: 'Sangguniang Panlalawigan (Provincial Board)'
 description: 'The Sangguniang Panlalawigan (Provincial Board) of Marinduque has 13 members for 2025–2028: 10 elected board members and 3 ex officio members, presided over by the Vice Governor.'
 pages:
   - name: 'Vice Governor Dr. Romulo “Doc” Bacorro Jr.'
+    group: presiding
     description: 'Presiding Officer of the Sangguniang Panlalawigan'
   - name: 'Mark Julius Caballes'
+    group: district1
     description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
   - name: 'Antonio Mangcucang III'
+    group: district1
     description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
   - name: 'Gilbert Daquioag'
+    group: district1
     description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
   - name: 'Aurelio Leva III'
+    group: district1
     description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
   - name: 'John R. Pelaez'
+    group: district1
     description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
   - name: 'Joam Morales'
+    group: district2
     description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
   - name: 'Danilo Red'
+    group: district2
     description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
   - name: 'Mercedes Rejano'
+    group: district2
     description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
   - name: 'Primo Pamintuan'
+    group: district2
     description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
   - name: 'Ishmael Lim'
+    group: district2
     description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
+  - name: 'Mark Angelo Jinang'
+    group: exOfficio
+    description: 'Philippine Councilors League, Marinduque chapter'
+  - name: 'Carlos Deperalta'
+    group: exOfficio
+    description: 'Liga ng mga Barangay, Marinduque chapter'
+  - name: 'Bertinus Valencia'
+    group: exOfficio
+    description: 'Provincial Sangguniang Kabataan Federation'

@@ -1,77 +1,277 @@
-import Section from '../ui/Section';
-import * as LucideIcons from 'lucide-react';
-import { Heading } from '../ui/Heading';
-import { Text } from '../ui/Text';
-import { useTranslation } from '../../hooks/useTranslation';
-import { Link } from 'react-router';
+import { useEffect, useState } from 'react';
+import { ArrowRight, ArrowUpRight, Search } from 'lucide-react';
+import { Link, useLocation, useSearchParams } from 'react-router';
+import { useTranslation } from 'react-i18next';
+import { ResultsSkeleton } from '../ui/LoadingSkeleton';
+import PageGraphic from '../brand/PageGraphic';
+import { citizenCharter, provincialWebsite } from '../../data/province';
+import {
+  getCategorySubcategories,
+  serviceCategories,
+} from '../../data/yamlLoader';
 
-import { serviceCategories } from '../../data/yamlLoader';
+const categories = serviceCategories.categories;
 
-interface Subcategory {
-  name: string;
-  slug: string;
+async function loadGuides() {
+  const indexes = await Promise.all(
+    categories.map(category => getCategorySubcategories(category.slug))
+  );
+  return indexes.flatMap((index, position) =>
+    index.pages.map(page => ({ ...page, category: categories[position] }))
+  );
 }
 
-interface Category {
-  category: string;
-  slug: string;
-  subcategories: Subcategory[];
-  description: string;
-  icon: string;
+type ServiceGuide = Awaited<ReturnType<typeof loadGuides>>[number];
+
+function normalizeSearch(text: string) {
+  return text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
 }
 
-export default function ServicesSection({
-  title,
-  description,
-}: {
-  title?: string;
-  description?: string;
-}) {
-  const { t } = useTranslation();
+export default function ServicesSection() {
+  const { t, i18n } = useTranslation();
+  const [params, setParams] = useSearchParams();
+  const { state } = useLocation();
+  const focusGuide =
+    typeof state?.focusGuide === 'string' ? state.focusGuide : undefined;
+  const [guides, setGuides] = useState<ServiceGuide[]>();
+  const query = params.get('q') ?? '';
+  const activeCategory = categories.find(
+    category => category.slug === params.get('category')
+  );
+  const words = normalizeSearch(query).split(/\s+/).filter(Boolean);
+  const results = guides?.filter(guide => {
+    if (activeCategory && guide.category !== activeCategory) return false;
+    const text = normalizeSearch(
+      `${guide.name} ${guide.description ?? ''} ${guide.category.category}`
+    );
+    return words.every(word => text.includes(word));
+  });
 
-  const getIcon = (category: string) => {
-    const IconComponent = LucideIcons[
-      category as keyof typeof LucideIcons
-    ] as React.ComponentType<{ className?: string }>;
-    return IconComponent ? (
-      <IconComponent className="h-6 w-6" aria-hidden="true" />
-    ) : null;
-  };
+  useEffect(() => {
+    let current = true;
+    void loadGuides().then(result => {
+      if (current) setGuides(result);
+    });
+    return () => {
+      current = false;
+    };
+  }, []);
 
-  const displayedCategories = serviceCategories.categories as Category[];
+  useEffect(() => {
+    if (!guides || !focusGuide) return;
+    const link = document.getElementById(`service-result-${focusGuide}`);
+    link?.focus({ preventScroll: true });
+    link?.scrollIntoView({ block: 'center' });
+  }, [guides, focusGuide]);
+
+  function updateFilter(name: string, value: string) {
+    const next = new URLSearchParams(params);
+    if (value) next.set(name, value);
+    else next.delete(name);
+    setParams(next, { replace: true, preventScrollReset: true });
+  }
+
+  function clearFilters() {
+    const next = new URLSearchParams(params);
+    next.delete('q');
+    next.delete('category');
+    setParams(next, { replace: true, preventScrollReset: true });
+    document.getElementById('service-search')?.focus();
+  }
 
   return (
-    <Section>
-      <Heading level={2}>{title || t('services.title')}</Heading>
-      <Text className="text-gray-600 mb-6">
-        {description || t('services.description')}
-      </Text>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {displayedCategories.map(category => (
-          <Link
-            key={category.slug}
-            to={`/services/${category.slug}`}
-            className="group rounded-xl bg-white border border-gray-200 border-t-4 border-t-accent-400 p-6 flex flex-col h-full transition-all duration-200 motion-safe:hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-          >
-            <div className="rounded-full bg-primary-50 p-3 text-primary-600 self-start mb-4">
-              {getIcon(category.icon)}
+    <div
+      lang={i18n.resolvedLanguage}
+      className="portal-container py-8 md:py-10"
+    >
+      <header className="flex items-start justify-between gap-3 sm:items-center sm:gap-8">
+        <div className="min-w-0">
+          <h1 className="text-3xl font-bold tracking-tight motion-safe:animate-fade-in md:text-4xl">
+            {t('directory.heading')}
+          </h1>
+          <p className="mt-3 max-w-3xl leading-relaxed text-gray-700">
+            {t('directory.description')}
+          </p>
+          {i18n.resolvedLanguage === 'fil' && (
+            <p className="mt-2 text-sm text-gray-700">
+              {t('directory.englishGuides')}
+            </p>
+          )}
+        </div>
+        <PageGraphic kind="services" />
+      </header>
+      <div
+        role="search"
+        aria-label={t('hero.searchLabel')}
+        className="mt-6 rounded-lg border border-gray-300 bg-gray-50 p-4 sm:p-5"
+      >
+        <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(12rem,0.5fr)]">
+          <div>
+            <label
+              htmlFor="service-search"
+              className="mb-1.5 block text-sm font-semibold"
+            >
+              {t('hero.searchLabel')}
+            </label>
+            <div className="relative">
+              <Search
+                size={19}
+                aria-hidden="true"
+                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"
+              />
+              <input
+                id="service-search"
+                type="search"
+                value={query}
+                onChange={event => updateFilter('q', event.target.value)}
+                placeholder={t('hero.searchPlaceholder')}
+                className="min-h-11 w-full rounded-md border border-gray-400 bg-white py-2 pl-10 pr-3 text-base placeholder:text-gray-700"
+              />
             </div>
-            <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-primary-700 transition-colors">
-              {category.category}
-            </h3>
-            <Text className="text-gray-600 text-sm line-clamp-3 mb-4">
-              {category.description}
-            </Text>
-            <span className="mt-auto text-primary-700 font-medium text-sm inline-flex items-center">
-              Explore
-              <span className="ml-1" aria-hidden="true">
-                →
-              </span>
-            </span>
-          </Link>
-        ))}
+          </div>
+          <div>
+            <label
+              htmlFor="service-category"
+              className="mb-1.5 block text-sm font-semibold"
+            >
+              {t('directory.category')}
+            </label>
+            <select
+              id="service-category"
+              value={activeCategory?.slug ?? ''}
+              onChange={event => updateFilter('category', event.target.value)}
+              className="min-h-11 w-full rounded-md border border-gray-400 bg-white px-3 text-base"
+            >
+              <option value="">{t('directory.allCategories')}</option>
+              {categories.map(({ category, slug }) => (
+                <option key={slug} value={slug} lang="en">
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="mt-2 flex min-h-11 flex-wrap items-center justify-between gap-x-3">
+          <p role="status" className="text-sm text-gray-700">
+            {results
+              ? t('directory.resultCount', { count: results.length })
+              : t('directory.loading')}
+          </p>
+          {(query || activeCategory) && (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="min-h-11 rounded-sm px-1 text-sm font-semibold text-primary-700 underline underline-offset-4"
+            >
+              {t('directory.clear')}
+            </button>
+          )}
+        </div>
       </div>
-    </Section>
+      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_15rem] lg:gap-10">
+        <section aria-labelledby="service-results-heading">
+          <h2
+            id="service-results-heading"
+            className="border-b border-gray-300 pb-3 text-xl font-bold tracking-tight"
+          >
+            {t('directory.guides')}
+          </h2>
+          {results?.length === 0 && (
+            <p className="py-5 text-gray-700">{t('directory.noResults')}</p>
+          )}
+          {!results && (
+            <div className="mt-3">
+              <ResultsSkeleton />
+            </div>
+          )}
+          <ul
+            lang="en"
+            hidden={!results?.length}
+            className="mt-3 space-y-2.5 motion-safe:animate-fade-in"
+          >
+            {results?.map(({ name, slug, category, description }) => {
+              const guideKey = `${category.slug}/${slug}`;
+              return (
+                <li key={guideKey}>
+                  <Link
+                    id={`service-result-${guideKey}`}
+                    aria-labelledby={`service-title-${guideKey}`}
+                    to={`/services/${guideKey}`}
+                    state={{ serviceSearch: params.toString() }}
+                    className="group flex min-h-14 items-center justify-between gap-3 rounded-md border border-gray-300 px-4 py-3.5 hover:border-primary-500 hover:bg-primary-50 active:bg-primary-100 motion-safe:transition-colors motion-safe:duration-150"
+                  >
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium text-gray-700">
+                        {category.category}
+                      </p>
+                      <h3
+                        id={`service-title-${guideKey}`}
+                        className="mt-1 text-base leading-snug font-bold text-primary-800 group-hover:underline"
+                      >
+                        {name}
+                      </h3>
+                      {description && (
+                        <p className="mt-1.5 text-sm leading-relaxed text-gray-700">
+                          {description}
+                        </p>
+                      )}
+                    </div>
+                    <ArrowRight
+                      size={19}
+                      className="shrink-0 text-primary-700"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+        <aside
+          aria-labelledby="official-resources-heading"
+          className="self-start rounded-md border border-gray-300 bg-gray-50 p-4"
+        >
+          <h2 id="official-resources-heading" className="font-bold">
+            {t('directory.officialResources')}
+          </h2>
+          <ul className="mt-2 text-sm">
+            <li>
+              <a
+                href={citizenCharter}
+                className="portal-link inline-flex min-h-11 items-center gap-1"
+              >
+                {t('directory.charter')}{' '}
+                <ArrowUpRight
+                  size={14}
+                  className="shrink-0"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href={provincialWebsite + '/contact-us/'}
+                className="portal-link inline-flex min-h-11 items-center gap-1"
+              >
+                {t('directory.officeDirectory')}{' '}
+                <ArrowUpRight
+                  size={14}
+                  className="shrink-0"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+            <li>
+              <Link
+                to="/government"
+                className="portal-link inline-flex min-h-11 items-center"
+              >
+                {t('directory.departments')}
+              </Link>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
   );
 }

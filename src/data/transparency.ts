@@ -1,8 +1,9 @@
 import * as yaml from 'js-yaml';
 import transparencyIndexYaml from '../../content/transparency/index.yaml?raw';
+import disclosureTopicsYaml from '../../content/transparency/disclosures.yaml?raw';
 import marcopperFundYaml from '../../content/transparency/marcopper-fund.yaml?raw';
 
-export interface TrackerSummary {
+interface TopicSummary {
   slug: string;
   name: string;
   description: string;
@@ -16,7 +17,7 @@ export interface OfficialSource {
 }
 
 export interface TransparencyIndex {
-  trackers: TrackerSummary[];
+  trackers: TopicSummary[];
   officialSources: OfficialSource[];
 }
 
@@ -44,6 +45,25 @@ export interface Source {
   url: string;
 }
 
+interface DisclosureRecord {
+  title: string;
+  period: string;
+  description: string;
+  figures?: { label: string; amount: number }[];
+  comparison?: {
+    title: string;
+    figures: { label: string; amount: number }[];
+  };
+  source: Source;
+  relatedSources?: Source[];
+}
+
+export interface DisclosureTopic extends TopicSummary {
+  records: DisclosureRecord[];
+  nextSteps: string;
+  directories: OfficialSource[];
+}
+
 export interface FundTracker {
   title: string;
   lastUpdated: string;
@@ -62,6 +82,10 @@ export interface FundTracker {
 export const transparencyIndex = yaml.load(
   transparencyIndexYaml
 ) as TransparencyIndex;
+
+export const disclosureTopics = yaml.load(
+  disclosureTopicsYaml
+) as DisclosureTopic[];
 
 const trackerMap: Record<string, string> = {
   'marcopper-fund': marcopperFundYaml,

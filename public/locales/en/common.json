@@ -4,10 +4,29 @@
   "site_description": "Find service guides, government offices, and emergency contacts in one place.",
   "hero": {
     "title": "BetterMarinduque",
-    "subtitle": "Find out how to apply for local services, what to bring, and which office to contact.",
+    "subtitle": "Look up government services, municipal contacts, and public records in one place.",
+    "stats": {
+      "population": "Population",
+      "municipalities": "Municipalities",
+      "barangays": "Barangays",
+      "capital": "Capital"
+    },
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
-    "businessRegistration": "Business Registration"
+    "businessRegistration": "Business Registration",
+    "heading": "Find services and local help in Marinduque",
+    "searchLabel": "Search service guides",
+    "searchPlaceholder": "Try hospital or business permit",
+    "searchButton": "Search",
+    "popular": "Popular service topics",
+    "topics": {
+      "business": "Business permits",
+      "health": "Health services",
+      "scholarships": "Scholarships"
+    },
+    "provinceFacts": "Marinduque at a glance",
+    "censusSource": "2024 census · PSA",
+    "psgcSource": "Municipalities and barangays · PSA"
   },
   "services": {
     "title": "Services & Information",
@@ -37,7 +56,13 @@
     "services": "Services",
     "transparency": "Transparency",
     "hotlines": "Hotlines",
-    "holidays": "Holidays"
+    "holidays": "Holidays",
+    "emergency": "Emergency contacts",
+    "menu": "Menu",
+    "skip": "Skip to main content",
+    "official": "Official provincial website",
+    "language": "Interface language",
+    "mainNavigation": "Main navigation"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
@@ -51,5 +76,209 @@
     "or": "or",
     "joinDiscord": "Join Discord",
     "features": "🚀 Infrastructure • 💡 Mentorship • 🤝 Community • 🏢 Office Space"
+  },
+  "quickTasks": {
+    "heading": "Quick links",
+    "emergency": {
+      "title": "Emergency contacts",
+      "description": "Find hotlines you can call."
+    },
+    "town": {
+      "title": "Find your town",
+      "description": "Look up barangays and local contacts."
+    },
+    "offices": {
+      "title": "Government offices",
+      "description": "Find officials and office directories."
+    },
+    "funds": {
+      "title": "Public spending",
+      "description": "Follow local funds and their sources."
+    }
+  },
+  "towns": {
+    "heading": "Find your town",
+    "description": "Choose a town from the list or select it on the map. See local contacts, barangays, and places to visit.",
+    "selectLabel": "Choose a municipality",
+    "provinceMap": "Marinduque on Google Maps",
+    "openGuide": "View town guide",
+    "openMap": "Google Maps",
+    "capital": "Provincial capital",
+    "municipality": "Municipality",
+    "details": "Elected officials and municipal details",
+    "selected": "Selected town {{name}}, population {{population}}, {{barangays}} barangays."
+  },
+  "government": {
+    "province": "Province of Marinduque",
+    "title": "Provincial government",
+    "description": "See how the province is organized, who leads it, and where to find government offices.",
+    "structure": "Government structure",
+    "structureDescription": "Choose a branch to see the officials who serve in it.",
+    "executive": {
+      "branch": "Executive branch",
+      "title": "Office of the Governor",
+      "link": "View provincial leadership"
+    },
+    "legislative": {
+      "branch": "Legislative branch",
+      "title": "Sangguniang Panlalawigan",
+      "link": "View Provincial Board members"
+    },
+    "roles": {
+      "governor": {
+        "title": "Governor",
+        "description": "Leads the provincial government and implements its programs."
+      },
+      "departments": {
+        "title": "Provincial departments",
+        "description": "Deliver services such as health, agriculture, and social welfare."
+      },
+      "viceGovernor": {
+        "title": "Vice Governor",
+        "description": "Presides over the Sangguniang Panlalawigan."
+      },
+      "board": {
+        "title": "Provincial Board members",
+        "description": "Pass provincial ordinances and approve the provincial budget."
+      },
+      "representative": {
+        "title": "Lone District Representative",
+        "description": "Represents Marinduque in the national House of Representatives."
+      }
+    },
+    "source": "Local Government Code (RA 7160)",
+    "resources": "Offices and services",
+    "links": {
+      "offices": {
+        "title": "Provincial office directory",
+        "description": "Find official phone numbers and email addresses."
+      },
+      "charter": {
+        "title": "Citizen’s Charter",
+        "description": "Check the steps and requirements for provincial services."
+      },
+      "towns": {
+        "title": "Municipal contacts",
+        "description": "Find the municipal office and local contacts for your town."
+      }
+    },
+    "navigation": "Government navigation",
+    "nav": {
+      "overview": "Overview",
+      "offices": "Offices",
+      "executive": "Leadership",
+      "legislative": "Provincial Board"
+    },
+    "findOffice": "Find an office",
+    "officesTitle": "Government offices",
+    "officesDescription": "Find contact details for provincial departments and the municipal halls serving Marinduque’s six towns.",
+    "provincialOffices": "Provincial offices",
+    "officeIntro": "Find a contact by office name or by the kind of help you need.",
+    "fullDirectory": "Full official directory",
+    "searchOffices": "Search provincial offices",
+    "officePlaceholder": "Try property tax, farming, or tourism",
+    "officeCount_one": "{{count}} office",
+    "officeCount_other": "{{count}} offices",
+    "noOffices": "No offices match your search. Try a broader term or check the full official directory.",
+    "email": "Email",
+    "emailOffice": "Email {{name}}",
+    "municipalIntro": "Call your municipal hall or open the town guide for more local contacts.",
+    "municipalSource": "DILG municipal directory",
+    "serviceHelp": "Need requirements for a provincial service?",
+    "office": {
+      "governor": {
+        "name": "Office of the Governor",
+        "description": "Provincial programs and general inquiries."
+      },
+      "planning": {
+        "name": "Provincial Planning and Development Office",
+        "description": "Development plans, local data, and project coordination."
+      },
+      "treasury": {
+        "name": "Provincial Treasurer’s Office",
+        "description": "Provincial taxes, fees, and payments."
+      },
+      "assessment": {
+        "name": "Provincial Assessor’s Office",
+        "description": "Property assessment, land records, and tax declarations."
+      },
+      "agriculture": {
+        "name": "Provincial Agriculture Office",
+        "description": "Farming and fisheries programs, training, and technical support."
+      },
+      "tourism": {
+        "name": "Provincial Tourism Office",
+        "description": "Visitor information, local attractions, and tourism programs."
+      },
+      "environment": {
+        "name": "Provincial Environment and Natural Resources Office",
+        "description": "Environmental programs and natural resources."
+      },
+      "health": {
+        "name": "Provincial Health Office",
+        "description": "Public health programs, immunization, and community health services."
+      },
+      "welfare": {
+        "name": "Provincial Social Welfare and Development Office",
+        "description": "Social assistance, family support, and welfare programs."
+      },
+      "engineering": {
+        "name": "Provincial Engineering Office",
+        "description": "Provincial roads, bridges, and public works."
+      },
+      "employment": {
+        "name": "Public Employment Service Office",
+        "description": "Job listings, referrals, and employment programs."
+      },
+      "veterinary": {
+        "name": "Provincial Veterinary Office",
+        "description": "Animal health services, livestock programs, and veterinary assistance."
+      }
+    },
+    "boardDescription": "Find the members of Marinduque’s Provincial Board by district, along with its presiding officer and ex officio members.",
+    "officialRoster": "Official board roster",
+    "presidingOfficer": "Presiding officer",
+    "boardSections": "Jump to a board group",
+    "boardGroups": {
+      "district1": {
+        "title": "1st District",
+        "description": "Boac, Mogpog, and Gasan"
+      },
+      "district2": {
+        "title": "2nd District",
+        "description": "Santa Cruz, Torrijos, and Buenavista"
+      },
+      "exOfficio": {
+        "title": "Ex officio members",
+        "description": "Members who serve by virtue of another office"
+      }
+    },
+    "executiveTitle": "Provincial leadership",
+    "executiveDescription": "Meet the Governor, Vice Governor, and Marinduque’s representative in Congress.",
+    "officialExecutive": "Official executive page",
+    "electedLeaders": "Elected officials",
+    "leadershipLoading": "Loading leadership details…",
+    "leadershipUnavailable": "Leadership details are temporarily unavailable.",
+    "capitol": "Provincial Capitol",
+    "unavailableTitle": "Government page unavailable",
+    "unavailableDescription": "Explore the government structure, find an office, or browse the leadership pages.",
+    "backToGovernment": "Go to Government overview",
+    "serviceGuides": "Service guides"
+  },
+  "directory": {
+    "heading": "Find a government service",
+    "description": "Find the right office, what to bring, and where to confirm current requirements.",
+    "category": "Service category",
+    "allCategories": "All categories",
+    "resultCount_one": "{{count}} guide found",
+    "resultCount_other": "{{count}} guides found",
+    "loading": "Loading guides…",
+    "clear": "Clear filters",
+    "guides": "Service guides",
+    "noResults": "No guides match. Try a shorter term or choose a different category.",
+    "officialResources": "Official resources",
+    "charter": "Provincial Citizen’s Charter",
+    "officeDirectory": "Provincial office directory",
+    "departments": "Government departments"
   }
 }

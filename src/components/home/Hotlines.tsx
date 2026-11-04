@@ -1,90 +1,73 @@
-import Section from '../ui/Section';
-import { Heading } from '../ui/Heading';
-import { Phone } from 'lucide-react';
+import { ArrowUpRight, HeartPulse, Phone, Siren } from 'lucide-react';
+import { emergencyDirectory } from '../../data/province';
 
-interface Hotline {
-  name: string;
-  number: string;
-  tel: string;
-}
-
-const groups: { label: string; hotlines: Hotline[] }[] = [
+const hotlines = [
   {
-    label: 'National',
-    hotlines: [
-      { name: 'National Emergency Hotline', number: '911', tel: '911' },
-      { name: 'Philippine Red Cross', number: '143', tel: '143' },
-    ],
+    name: 'National Emergency Hotline',
+    description: 'Police, fire, and medical emergencies',
+    number: '911',
+    Icon: Phone,
   },
   {
-    label: 'Provincial',
-    hotlines: [
-      {
-        name: 'Marinduque PDRRMO (Provincial Capitol, Boac)',
-        number: '0968-226-5727',
-        tel: '09682265727',
-      },
-      {
-        name: 'Santa Cruz MDRRMO',
-        number: '0920-455-4034',
-        tel: '09204554034',
-      },
-    ],
+    name: 'Marinduque PDRRMO',
+    description: 'Disaster response and rescue',
+    number: '0968-226-5727',
+    Icon: Siren,
   },
   {
-    label: 'Police stations',
-    hotlines: [
-      { name: 'PNP Boac', number: '0998-598-5802', tel: '09985985802' },
-      { name: 'PNP Mogpog', number: '0998-598-5807', tel: '09985985807' },
-      { name: 'PNP Gasan', number: '0998-598-5803', tel: '09985985803' },
-      { name: 'PNP Buenavista', number: '0998-598-5804', tel: '09985985804' },
-      { name: 'PNP Torrijos', number: '0998-598-5805', tel: '09985985805' },
-      { name: 'PNP Santa Cruz', number: '0998-598-5806', tel: '09985985806' },
-    ],
+    name: 'Philippine Red Cross',
+    description: 'Marinduque Chapter',
+    number: '0917-826-1395',
+    Icon: HeartPulse,
   },
 ];
 
 export default function Hotlines() {
   return (
-    <Section
+    <section
       id="hotlines"
-      className="bg-secondary-50 border-y border-secondary-100"
+      aria-labelledby="hotlines-heading"
+      className="portal-container border-t border-gray-300 py-8 md:py-10"
     >
-      <Heading level={2}>Emergency Hotlines</Heading>
-      {groups.map(group => (
-        <div key={group.label} className="mb-6">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-secondary-600 mb-3">
-            {group.label}
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {group.hotlines.map(h => (
-              <div
-                key={h.name}
-                className="rounded-xl bg-white border border-secondary-100 p-5 flex items-start gap-3"
-              >
-                <span className="rounded-full bg-secondary-50 p-2 text-secondary-500 shrink-0">
-                  <Phone className="h-4 w-4" aria-hidden="true" />
-                </span>
-                <div>
-                  <div className="text-sm font-medium text-gray-900">
-                    {h.name}
-                  </div>
-                  <a
-                    href={`tel:${h.tel}`}
-                    className="text-lg font-bold text-secondary-600 hover:text-secondary-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 rounded-sm"
-                  >
-                    {h.number}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-      <p className="text-xs text-gray-500">
-        Local numbers are compiled from public directories and office pages
-        (November 2026). If a line doesn't connect, dial 911.
+      <h2 id="hotlines-heading" className="text-2xl font-bold tracking-tight">
+        Emergency contacts
+      </h2>
+      <p className="mt-2 text-gray-700">
+        Call 911 for an emergency. Use the local numbers for disaster response
+        and Red Cross assistance.
       </p>
-    </Section>
+      <ul className="mt-5 grid gap-3 md:grid-cols-3">
+        {hotlines.map(({ name, description, number, Icon }) => (
+          <li
+            key={name}
+            className="flex gap-3 rounded-md border border-gray-300 p-4"
+          >
+            <span className="self-start rounded-lg bg-gray-50 p-2.5 text-primary-700">
+              <Icon size={22} aria-hidden="true" />
+            </span>
+            <div>
+              <h3 className="font-bold">{name}</h3>
+              <p className="mt-1 text-sm text-gray-700">{description}</p>
+              <a
+                href={`tel:${number.replaceAll('-', '')}`}
+                aria-label={`${name}, ${number}`}
+                className="portal-link mt-1 inline-flex min-h-11 items-center gap-1.5 text-lg font-bold tabular-nums"
+              >
+                Call {number}
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-5 text-sm text-gray-700">
+        <a
+          href={emergencyDirectory}
+          className="portal-link inline-flex items-center gap-1"
+        >
+          Verify numbers in the provincial emergency directory{' '}
+          <ArrowUpRight size={14} aria-hidden="true" />
+        </a>
+      </p>
+    </section>
   );
 }

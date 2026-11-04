@@ -1,78 +1,35 @@
-import type { NavigationItem } from '../types';
-import { serviceCategories as servicesData } from './yamlLoader';
+import { provincialWebsite } from './province';
 
-interface Subcategory {
-  name: string;
-  slug: string;
-}
-
-interface Category {
-  category: string;
-  slug: string;
-  subcategories: Subcategory[];
-}
-
-export const mainNavigation: NavigationItem[] = [
-  {
-    label: 'Services',
-    href: '/services',
-    children: (servicesData.categories as Category[]).map(category => ({
-      label: category.category,
-      href: `/services/${category.slug}`,
-    })),
-  },
-  {
-    label: 'Government',
-    href: '/government/departments',
-  },
-  {
-    label: 'Transparency',
-    href: '/transparency',
-  },
+export const mainNavigation = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Transparency', href: '/transparency' },
+  { label: 'Government', href: '/government' },
+  { label: 'About', href: '/about' },
 ];
 
-export const footerNavigation = {
-  mainSections: [
-    {
-      title: 'About',
-      links: [
-        { label: 'About the Portal', href: '/#about' },
-        { label: 'Transparency', href: '/transparency' },
-        { label: 'Hotlines', href: '/#hotlines' },
-      ],
-    },
-    {
-      title: 'Services',
-      links: [
-        { label: 'All Services', href: '/services' },
-        ...(servicesData.categories as Category[])
-          .slice(0, 6)
-          .map(category => ({
-            label: category.category,
-            href: `/services/${category.slug}`,
-          })),
-      ],
-    },
-    {
-      title: 'Government',
-      links: [
-        { label: 'Open Data', href: 'https://data.gov.ph' },
-        { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
-        {
-          label: 'Contact Center',
-          href: 'https://contactcenterngbayan.gov.ph',
-        },
-        {
-          label: 'Official Gazette',
-          href: 'https://www.officialgazette.gov.ph',
-        },
-      ],
-    },
-  ],
-  socialLinks: [
-    { label: 'Facebook', href: 'https://facebook.com/govph' },
-    { label: 'Twitter', href: 'https://twitter.com/govph' },
-    { label: 'Instagram', href: 'https://instagram.com/govph' },
-    { label: 'YouTube', href: 'https://youtube.com/govph' },
-  ],
-};
+export const projectRepository = 'https://github.com/b0urbonn/bettermarinduque';
+
+export const footerNavigation = [
+  { title: 'Explore', links: mainNavigation },
+  {
+    title: 'The project',
+    links: [
+      { label: 'About this project', href: '/about' },
+      { label: 'Emergency hotlines', href: '/#hotlines' },
+      { label: 'Photo credits', href: '/image-credits.html' },
+    ],
+  },
+  {
+    title: 'Official sources & partners',
+    links: [
+      { label: 'Provincial government', href: provincialWebsite },
+      {
+        label: 'Provincial office directory',
+        href: provincialWebsite + '/contact-us/',
+      },
+      { label: 'BetterGov.ph', href: 'https://bettergov.ph/' },
+      { label: 'BetterLGU community', href: 'https://lgu.bettergov.ph/' },
+    ],
+  },
+];

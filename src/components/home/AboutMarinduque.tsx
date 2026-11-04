@@ -1,190 +1,126 @@
-import {
-  Compass,
-  Landmark,
-  Music,
-  PartyPopper,
-  Sprout,
-  TreePalm,
-} from 'lucide-react';
-import Section from '../ui/Section';
-import { Heading } from '../ui/Heading';
-import { Text } from '../ui/Text';
-import MarinduqueMap from '../brand/MarinduqueMap';
-import morionesParade from '../../assets/marinduque-moriones-parade.jpg';
-import maniwayaIsland from '../../assets/maniwaya-island-shore.jpg';
-import mountMalindig from '../../assets/mount-malindig.jpg';
+import { Drama, Music } from 'lucide-react';
 
-const quickFacts = [
-  { label: 'Capital', value: 'Boac' },
-  { label: 'Region', value: 'MIMAROPA' },
-  { label: 'Founded', value: 'Feb 21, 1921' },
-  { label: 'Population (2020)', value: '239,207' },
-  { label: 'Land area', value: '952.58 km²' },
-  { label: 'Municipalities', value: '6 · 218 barangays' },
+const milestones = [
+  {
+    year: '1911',
+    title: 'Station Balanacan anchors the Luzon Datum',
+    description:
+      'A survey point on Mount Mataas in Mogpog became the origin of the Luzon Datum, a reference for mapping and surveying in the Philippines.',
+    source: 'NHCP · Station Balanacan',
+    url: 'https://philhistoricsites.nhcp.gov.ph/registry_database/station-balanacan/',
+  },
+  {
+    year: '1920',
+    title: 'A separate province again',
+    description:
+      'Act No. 2880 authorized Marinduque’s separation from Tayabas and named Boac as its capital.',
+    source: 'Act No. 2880 · Lawphil',
+    url: 'https://lawphil.net/statutes/acts/act1920/act_2880_1920.html',
+  },
+  {
+    year: '1921',
+    title: 'Provincial founding anniversary',
+    description:
+      'The provincial government records February 21, 1921 as Marinduque’s establishment date.',
+    source: 'Province of Marinduque · Socio-economic profile',
+    url: 'https://marinduque.gov.ph/socio-economic-profile/',
+  },
 ];
 
-const featured = [
+const heritage = [
   {
+    Icon: Drama,
     title: 'Moryonan',
-    subtitle: 'Moriones Lenten Rites',
-    image: morionesParade,
+    detail: 'Holy Week',
     description:
-      'A week-long Holy Week tradition of carved masks, Roman soldier garb, and the reenactment of Longinus. For many morions, it is a personal panata (vow).',
-    note: 'Ask before close-up photos, and never lift a mask.',
+      'During the Lenten rites, participants wear carved masks and Roman soldier costumes. For many, taking part is a panata, or personal vow.',
+    url: 'https://www.nationalmuseum.gov.ph/exhibitions/nm-marinduque-romblon-area-museum/moryonan/',
   },
   {
-    title: 'Island getaways',
-    subtitle: 'Maniwaya, Polo & Mongpong',
-    image: maniwayaIsland,
-    description:
-      'White-sand islands off Santa Cruz in the northeast, with the Tres Reyes and Elephant Island off the southwest coast.',
-  },
-  {
-    title: 'Mt. Malindig',
-    subtitle: '1,157 m · Buenavista',
-    image: mountMalindig,
-    description:
-      'The highest point of the island, a potentially active stratovolcano at the southern tip overlooking Tablas Strait.',
-  },
-];
-
-const prideItems = [
-  {
-    icon: TreePalm,
-    title: 'Poctoy White Beach',
-    description:
-      'Torrijos, the “summer capital,” also known for locally grown strawberries.',
-  },
-  {
-    icon: Music,
+    Icon: Music,
     title: 'Kalutang',
+    detail: 'Traditional music',
     description:
-      'Gasan’s two-stick percussion instrument, cited by the NCCA as intangible cultural heritage.',
-  },
-  {
-    icon: Landmark,
-    title: 'Luzon Datum of 1911',
-    description:
-      'Station Balanacan on Mt. Mataas, Mogpog — the reference point for Philippine maps, with an NHCP marker.',
-  },
-  {
-    icon: PartyPopper,
-    title: 'Festivals',
-    description:
-      'Mogpog’s Kangga Festival, the Bila-Bila Festival, and the province’s founding anniversary every February 21.',
-  },
-  {
-    icon: Compass,
-    title: 'Caves & heritage',
-    description:
-      'Bathala Cave in Santa Cruz, Tarug Caves in Mogpog, and the Marinduque Museum in Boac.',
-  },
-  {
-    icon: Sprout,
-    title: 'Crafts & livelihood',
-    description:
-      'Handicrafts, butterfly farming, coconut, rice, and fishing sustain island communities.',
+      'Musicians strike pairs of wooden sticks to make melodies. The tradition is closely associated with Gasan.',
+    url: 'https://www.nationalmuseum.gov.ph/2022/04/29/kalutang-marinduques-traditional-musical-instrument/',
   },
 ];
 
 export default function AboutMarinduque() {
   return (
-    <Section
-      id="about-marinduque"
+    <section
+      id="history"
+      aria-labelledby="history-heading"
       className="bg-gray-50"
-      decoration={
-        <MarinduqueMap className="hidden lg:block absolute -left-32 top-16 h-[620px] w-[620px] text-primary-700/[0.07] pointer-events-none" />
-      }
     >
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start mb-12">
-        <div className="lg:col-span-3">
-          <span className="inline-flex items-center rounded-full bg-secondary-50 border border-secondary-100 px-3 py-1 text-xs font-semibold text-secondary-600 mb-4">
-            <span
-              className="inline-block h-1.5 w-1.5 rounded-full bg-accent-500 mr-1.5"
-              aria-hidden="true"
-            />
-            Heart of the Philippines
-          </span>
-          <Heading level={2}>About Marinduque</Heading>
-          <Text className="text-gray-700 mb-4">
-            Marinduque is a heart-shaped island province at the geographic
-            center of the Philippine archipelago. It became its own province on
-            February 21, 1921, after separating from Tayabas (now Quezon).
-          </Text>
-          <Text className="text-gray-600">
-            Its people speak Marinduque Tagalog, a dialect known for its archaic
-            features. Most residents live by farming, fishing, and handicrafts,
-            and tourism peaks every Holy Week during the Moryonan.
-          </Text>
-        </div>
-        <dl className="lg:col-span-2 grid grid-cols-2 gap-3">
-          {quickFacts.map(f => (
-            <div
-              key={f.label}
-              className="rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200 p-4"
-            >
-              <dt className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                {f.label}
-              </dt>
-              <dd className="font-display text-lg font-semibold text-primary-800 mt-1">
-                {f.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-
-      <Heading level={3} className="text-gray-900">
-        What Marinduque is proud of
-      </Heading>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {featured.map(item => (
-          <article
-            key={item.title}
-            className="overflow-hidden rounded-xl bg-white border border-gray-200 flex flex-col"
-          >
-            <img
-              src={item.image}
-              alt={item.subtitle}
-              loading="lazy"
-              decoding="async"
-              className="h-44 w-full object-cover"
-            />
-            <div className="p-5 flex flex-col flex-1">
-              <div className="text-xs font-semibold uppercase tracking-wider text-accent-700">
-                {item.subtitle}
-              </div>
-              <h4 className="font-display text-lg font-semibold text-gray-900 mt-1 mb-2">
-                {item.title}
-              </h4>
-              <p className="text-sm text-gray-600">{item.description}</p>
-              {item.note && (
-                <p className="mt-3 rounded-lg bg-accent-50 px-3 py-2 text-xs text-accent-900">
-                  {item.note}
-                </p>
-              )}
-            </div>
-          </article>
-        ))}
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {prideItems.map(({ icon: Icon, title, description }) => (
-          <div
-            key={title}
-            className="flex gap-4 rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200 p-5"
-          >
-            <span className="rounded-full bg-primary-50 p-2.5 text-primary-600 h-fit shrink-0">
-              <Icon className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <div>
-              <h4 className="font-display font-semibold text-gray-900">
-                {title}
-              </h4>
-              <p className="text-sm text-gray-600 mt-1">{description}</p>
+      <div className="portal-container py-10 md:py-12">
+        <h2 id="history-heading" className="text-2xl font-bold tracking-tight">
+          History and culture
+        </h2>
+        <p className="mt-3 text-gray-700">
+          Explore the events that shaped Marinduque and the traditions that its
+          communities carry on today.
+        </p>
+        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:gap-12">
+          <div>
+            <h3 className="mb-5 text-xl font-bold">Milestones through time</h3>
+            <ol className="ml-2 space-y-7 border-l-2 border-gray-300">
+              {milestones.map(({ year, title, description, source, url }) => (
+                <li
+                  key={year}
+                  className="relative pl-6 before:absolute before:-left-[9px] before:top-2 before:size-4 before:rounded-full before:border-2 before:border-primary-600 before:bg-gray-50"
+                >
+                  <p className="text-2xl font-bold tabular-nums text-primary-700">
+                    {year}
+                  </p>
+                  <h4 className="mt-2 font-bold">{title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                    {description}
+                  </p>
+                  <a
+                    href={url}
+                    className="portal-link mt-2 inline-block text-sm"
+                  >
+                    {source}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <h3 className="mb-5 text-xl font-bold">Living heritage</h3>
+            <div className="space-y-4">
+              {heritage.map(({ Icon, title, detail, description, url }) => (
+                <article
+                  key={title}
+                  className="rounded border border-gray-300 bg-white p-5 sm:p-6"
+                >
+                  <h4 className="flex items-center gap-2.5 font-bold">
+                    <Icon
+                      size={21}
+                      aria-hidden="true"
+                      className="text-primary-700"
+                    />
+                    {title}
+                  </h4>
+                  <p className="mt-3 text-xl font-bold text-primary-700">
+                    {detail}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                    {description}
+                  </p>
+                  <a
+                    href={url}
+                    className="portal-link mt-3 inline-block text-sm"
+                  >
+                    National Museum · {title}
+                  </a>
+                </article>
+              ))}
             </div>
           </div>
-        ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }
