@@ -1,165 +1,36 @@
-# Your Mayor
+# The Governor and Vice Governor
 
-Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's Community Assistance Program, mayoral history, and information about other historic roles in the local government unit.
+Meet the elected leaders of the {GOVERNMENT_NAME} for the 2025–2028 term — the Governor, the Vice Governor, the lone district's Representative, and the six municipal mayors.
 
----
+## Provincial leadership ({YEAR_ELECTED}–2028)
 
-# Your Mayor and Vice Mayor
+- **Governor: {GOVERNOR}** — the province's chief executive. He won the May 12, 2025 election by 389 votes over Lord Allan Velasco, succeeding Governor Presbitero Velasco Jr. (2019–2025). He previously served as a Sangguniang Panlalawigan member for the 1st District.
+- **Vice Governor: {VICE_GOVERNOR}** — presiding officer of the Sangguniang Panlalawigan (Provincial Board) and assumes the governorship when needed. He previously served as governor (2019) and vice governor.
+- **Representative, Lone District: {REPRESENTATIVE}** — represents Marinduque's single at-large congressional district in the House of Representatives.
 
-The **Mayor** is the chief executive official of the **Local Government Unit of {GOVERNMENT_NAME}**. The Mayor is elected by residents during the **Philippine National and Local Elections**, which are held every three years.
+## What the Governor and Vice Governor do
 
-The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Panlungsod / Sangguniang Bayan (City or Municipal Council)**.
+The **Governor** is the chief executive of the province: he exercises general supervision over provincial offices and programs — including the provincial hospitals, provincial roads and engineering, agriculture and veterinary extension, disaster risk reduction, and tourism — and implements provincial ordinances and the budget.
 
-The Mayor’s duties include representing the LGU during official functions, leading local development programs, overseeing city or municipal services, and ensuring that public services are effectively delivered to residents.
+The **Vice Governor** presides over the **Sangguniang Panlalawigan** (Provincial Board), which enacts provincial ordinances and approves the budget. He also serves as Acting Governor whenever the Governor is unable to serve.
 
-The **current Mayor is {MAYOR}.**
+## Municipal mayors and vice mayors ({YEAR_ELECTED}–2028)
 
-**Mayor {MAYOR}** was elected as **Mayor of {GOVERNMENT_NAME}** during the **{YEAR_ELECTED} National and Local Elections**.
+| Municipality   | Mayor               | Vice Mayor           |
+| -------------- | ------------------- | -------------------- |
+| Boac (capital) | Armi Carrion        | Mark Anthony Seño    |
+| Mogpog         | Senen Livelo Jr.    | Augusto Leo Livelo   |
+| Gasan          | James Marty Lim     | Lidany Baldo         |
+| Santa Cruz     | Marisa Red-Martinez | Medwin “Bobs” Manuel |
+| Torrijos       | Joey Peñaflor       | Edmar Frias          |
+| Buenavista     | Eduard Siena        | David Vitto          |
 
----
+## Contact
 
-## Mayor of {GOVERNMENT_NAME}
+- **Provincial Capitol** — Capitol Compound, Brgy. Santol, Boac 4900. Office hours: Monday to Friday, 8:00 AM–5:00 PM.
+- **Official website** — [marinduque.gov.ph](https://marinduque.gov.ph); [Provincial Citizen's Charter](https://marinduque.gov.ph/citizens-charter/) for frontline services.
+- **Facebook** — [Provincial Government of Marinduque](https://facebook.com/provincialgovernmentofmarinduque)
 
-**Image Caption**
+## Related links
 
-Mayor of **{GOVERNMENT_NAME}**, **{MAYOR}**
-
----
-
-### Biography of the Mayor
-
-Mayor **{MAYOR}** has been serving the people of **{GOVERNMENT_NAME}** since **{YEAR_ELECTED}**.
-
-Mayor **{MAYOR}** is known for championing initiatives related to:
-
-- Local economic development
-- Public health and social services
-- Infrastructure and urban development
-- Community empowerment and participation
-
-Outside of official duties, Mayor **{MAYOR}** works closely with barangay leaders, civic organizations, and private sector partners to support programs that benefit the community.
-
----
-
-### Mayor's Community Assistance Program
-
-During the current term, Mayor **{MAYOR}** supports several initiatives aimed at improving the welfare of residents under the theme **"[PROGRAM THEME]"**.
-
-Programs supported include:
-
-- **[PROGRAM NAME 1]** – Supporting education and youth development
-- **[PROGRAM NAME 2]** – Providing livelihood assistance to families
-- **[PROGRAM NAME 3]** – Strengthening disaster preparedness and community resilience
-
-You can read more about these initiatives on the **Mayor's Community Programs page**.
-
----
-
-# Vice Mayor
-
----
-
-## Biography of the Vice Mayor
-
-**{VICE_MAYOR}** currently serves as the **Vice Mayor of {GOVERNMENT_NAME}**.
-
-The Vice Mayor presides over the **Sangguniang Panlungsod / Sangguniang Bayan**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
-
-Vice Mayor **{VICE_MAYOR}** was elected during the **{YEAR_ELECTED} National and Local Elections**.
-
-Vice Mayor **{VICE_MAYOR}** supports initiatives focused on:
-
-- community welfare
-- legislative development
-- economic and social progress
-
----
-
-# About the Office of the Vice Mayor
-
-The **Vice Mayor** performs legislative functions and presides over meetings of the **City or Municipal Council**.
-
-When the Mayor is unable to perform official duties due to travel, illness, or other official commitments, the **Vice Mayor assumes responsibilities as Acting Mayor**, in accordance with Philippine local government laws.
-
-The Vice Mayor may also represent the city or municipality in official functions, civic ceremonies, and community events when designated by the Mayor.
-
----
-
-# Invite the Mayor to Your Event
-
-Residents, organizations, and institutions may invite the Mayor to attend official community activities such as:
-
-- community celebrations
-- school programs
-- civic ceremonies
-- government events
-
-To request the Mayor’s attendance, please submit a formal invitation to the **Office of the Mayor**.
-
-Required information:
-
-- Name of organization
-- Event title
-- Date and time
-- Event location
-- Contact person and details
-
----
-
-# Mayor's Events and News
-
-Stay updated with the latest activities of the Mayor, including:
-
-- community visits
-- project launches
-- public consultations
-- official ceremonies
-
-Updates will be posted regularly on the **official website and social media channels of {GOVERNMENT_NAME}**.
-
----
-
-# Mayoral History and Key Facts
-
-The Office of the Mayor plays a vital role in guiding the development of **{GOVERNMENT_NAME}**.
-
-Key responsibilities include:
-
-- implementing local development plans
-- overseeing local government operations
-- managing emergency and disaster response
-- representing the LGU in regional and national engagements
-
-A historical list of previous mayors and key milestones of the city or municipality can be found on the **Mayoral History page**.
-
----
-
-# Other Historic Roles in the LGU
-
-The local government also recognizes other important civic and ceremonial roles that have contributed to the history of **{GOVERNMENT_NAME}**, including:
-
-- former municipal presidents
-- distinguished public servants
-- honorary community leaders
-
-These roles reflect the legacy of leadership and public service within the community.
-
----
-
-# Contact the Mayor's Office
-
-**Office of the Mayor**
-City/Municipal Hall of **{GOVERNMENT_NAME}**
-
-**Address:**
-[STREET ADDRESS]
-[CITY / PROVINCE / POSTAL CODE]
-
-**Telephone:**
-[PHONE NUMBER]
-
-**Email:**
-[EMAIL ADDRESS]
-
-**Website:**
-[OFFICIAL WEBSITE URL]
+- [Legislative — Sangguniang Panlalawigan](/government/departments/legislative)

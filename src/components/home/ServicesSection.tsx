@@ -3,7 +3,6 @@ import * as LucideIcons from 'lucide-react';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
-import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Link } from 'react-router';
 
 import { serviceCategories } from '../../data/yamlLoader';
@@ -34,7 +33,9 @@ export default function ServicesSection({
     const IconComponent = LucideIcons[
       category as keyof typeof LucideIcons
     ] as React.ComponentType<{ className?: string }>;
-    return IconComponent ? <IconComponent className="h-6 w-6" /> : null;
+    return IconComponent ? (
+      <IconComponent className="h-6 w-6" aria-hidden="true" />
+    ) : null;
   };
 
   const displayedCategories = serviceCategories.categories as Category[];
@@ -48,29 +49,27 @@ export default function ServicesSection({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {displayedCategories.map(category => (
-          <Card
+          <Link
             key={category.slug}
-            hoverable
-            className="border-t-4 border-primary-500"
+            to={`/services/${category.slug}`}
+            className="group rounded-xl bg-white border border-gray-200 border-t-4 border-t-accent-400 p-6 flex flex-col h-full transition-all duration-200 motion-safe:hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           >
-            <Link
-              to={`/services/${category.slug}`}
-              className="mt-auto text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center"
-            >
-              <CardContent className="flex flex-col h-full p-6">
-                <div className="flex gap-2">
-                  <div className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start">
-                    {getIcon(category.icon)}
-                  </div>
-
-                  <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
-                    {category.category}
-                  </h3>
-                </div>
-                <Text className="text-gray-800">{category.description}</Text>
-              </CardContent>
-            </Link>
-          </Card>
+            <div className="rounded-full bg-primary-50 p-3 text-primary-600 self-start mb-4">
+              {getIcon(category.icon)}
+            </div>
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-primary-700 transition-colors">
+              {category.category}
+            </h3>
+            <Text className="text-gray-600 text-sm line-clamp-3 mb-4">
+              {category.description}
+            </Text>
+            <span className="mt-auto text-primary-700 font-medium text-sm inline-flex items-center">
+              Explore
+              <span className="ml-1" aria-hidden="true">
+                →
+              </span>
+            </span>
+          </Link>
         ))}
       </div>
     </Section>

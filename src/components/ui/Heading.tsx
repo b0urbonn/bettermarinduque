@@ -17,7 +17,10 @@ const headingStyles = {
 };
 
 export function Heading({ level = 1, children, className }: HeadingProps) {
-  const baseClasses = headingStyles[level];
+  const baseClasses = cn(
+    headingStyles[level],
+    level <= 2 && 'font-display text-gray-900'
+  );
   const combinedClasses = cn(baseClasses, className);
 
   const HeadingTag = `h${level}`;

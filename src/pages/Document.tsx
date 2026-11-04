@@ -1,7 +1,6 @@
 import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
-import { Heading } from '../components/ui/Heading';
-import { Text } from '../components/ui/Text';
+import PageHeader from '../components/ui/PageHeader';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
@@ -92,6 +91,12 @@ export default function Document({
           category,
           categoryType
         );
+        // The page header renders the title as h1; drop the duplicate from the body
+        if (content.title) {
+          content.content = content.content
+            .replace(/^#\s+.+$/m, '')
+            .replace(/^\n+/, '');
+        }
         setMarkdownContent(content);
 
         setBreadcrumbs([
@@ -148,16 +153,12 @@ export default function Document({
           title={documentSlug}
           keywords={`${documentSlug}, government services, local government`}
         />
-        <Section className="p-3 mb-12">
-          <Breadcrumbs className="mb-8" items={breadcrumbs} />
-          {nestedIndex.title && (
-            <Heading level={2}>{nestedIndex.title}</Heading>
-          )}
-          {nestedIndex.description && (
-            <Text className="text-gray-600 mb-4">
-              {nestedIndex.description}
-            </Text>
-          )}
+        <PageHeader
+          title={nestedIndex.title || documentSlug || 'Documents'}
+          description={nestedIndex.description}
+          breadcrumbItems={breadcrumbs}
+        />
+        <Section className="py-10 mb-12">
           {nestedIndex.layout === 'grid' ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {nestedPages.map((page, i) => (
@@ -212,13 +213,14 @@ export default function Document({
         }
         keywords={`${documentSlug}, government services, public services, local government`}
       />
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" items={breadcrumbs} />
-        <Card className="mb-8 markdown-content">
+      <PageHeader
+        title={markdownContent.title || documentSlug || 'Document'}
+        description={markdownContent.description}
+        breadcrumbItems={breadcrumbs}
+      />
+      <Section className="py-10 mb-12">
+        <Card className="mb-8 markdown-content max-w-[72ch]">
           <CardHeader>
-            {markdownContent.description && (
-              <CardContent>{markdownContent.description}</CardContent>
-            )}
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={markdownComponents}

@@ -2,6 +2,7 @@ import Section from '../components/ui/Section';
 import { useParams, Link } from 'react-router';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
+import PageHeader from '../components/ui/PageHeader';
 import {
   serviceCategories,
   getCategorySubcategories,
@@ -12,7 +13,6 @@ import * as LucideIcons from 'lucide-react';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
-import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
 
@@ -49,12 +49,12 @@ const Services: React.FC = () => {
       <>
         <SEO
           title="Services"
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
-          keywords="government services, public services, local government, civic services"
+          description="All provincial services of Marinduque. Find what you need for business, health, social welfare, and more."
+          keywords="Marinduque services, government services, public services, provincial government"
         />
         <ServicesSection
-          title={`All local government services`}
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          title="All provincial services"
+          description="All services provided by the Province of Marinduque. Find what you need for business, health, social welfare, and more."
         />
       </>
     );
@@ -78,14 +78,19 @@ const Services: React.FC = () => {
       <SEO
         title={categoryData.category || category}
         description={categoryData.description}
-        keywords={`${categoryData.category}, government services, public services, local government`}
+        keywords={`${categoryData.category}, Marinduque, government services, public services`}
       />
-      <Section className="p-3 mb-12">
-        <Breadcrumbs className="mb-8" />
-        <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
-        <Heading>{categoryData.category || category}</Heading>
-        <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
-
+      <PageHeader
+        title={categoryData.category || category}
+        description={categoryData.description}
+      >
+        {Icon && (
+          <span className="inline-flex rounded-full bg-white border border-primary-100 p-3 text-primary-600 mb-4">
+            <Icon className="h-8 w-8" aria-hidden="true" />
+          </span>
+        )}
+      </PageHeader>
+      <Section className="py-10 mb-12">
         {loading ? (
           <div className="flex justify-center items-center p-8">
             <Text>Loading services...</Text>
@@ -106,25 +111,19 @@ const Services: React.FC = () => {
                   <Link
                     key={subcategory.slug}
                     to={`/services/${category}/${subcategory.slug}`}
+                    className="group rounded-xl bg-white border border-gray-200 border-t-4 border-t-accent-400 p-5 transition-all duration-200 motion-safe:hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                   >
-                    <Card
-                      hoverable
-                      className="h-full border-t-4 border-primary-500"
-                    >
-                      <CardContent>
-                        <h4 className="text-lg font-medium text-gray-900">
-                          {subcategory.name}
-                        </h4>
-                        {subcategory.description && (
-                          <p className="mt-2 text-sm text-gray-600">
-                            {subcategory.description}
-                          </p>
-                        )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
-                          {categoryData.category || category}
-                        </span>
-                      </CardContent>
-                    </Card>
+                    <h4 className="text-lg font-medium text-gray-900 group-hover:text-primary-700 transition-colors">
+                      {subcategory.name}
+                    </h4>
+                    {subcategory.description && (
+                      <p className="mt-2 text-sm text-gray-600">
+                        {subcategory.description}
+                      </p>
+                    )}
+                    <span className="inline-block px-2 py-1 mt-3 text-xs font-medium rounded-sm bg-primary-50 text-primary-700">
+                      {categoryData.category || category}
+                    </span>
                   </Link>
                 ))}
               </div>
@@ -134,22 +133,19 @@ const Services: React.FC = () => {
                   <Link
                     key={subcategory.slug}
                     to={`/services/${category}/${subcategory.slug}`}
+                    className="group block rounded-xl bg-white border border-gray-200 border-l-4 border-l-accent-400 p-5 transition-all duration-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                   >
-                    <Card hoverable className="mb-4">
-                      <CardContent>
-                        <h4 className="text-lg font-medium text-gray-900">
-                          {subcategory.name}
-                        </h4>
-                        {subcategory.description && (
-                          <p className="mt-2 text-sm text-gray-600">
-                            {subcategory.description}
-                          </p>
-                        )}
-                        <span className="inline-block px-2 py-1 mt-2 text-xs font-medium rounded-sm bg-gray-100 text-gray-800">
-                          {categoryData.category || category}
-                        </span>
-                      </CardContent>
-                    </Card>
+                    <h4 className="text-lg font-medium text-gray-900 group-hover:text-primary-700 transition-colors">
+                      {subcategory.name}
+                    </h4>
+                    {subcategory.description && (
+                      <p className="mt-2 text-sm text-gray-600">
+                        {subcategory.description}
+                      </p>
+                    )}
+                    <span className="inline-block px-2 py-1 mt-3 text-xs font-medium rounded-sm bg-primary-50 text-primary-700">
+                      {categoryData.category || category}
+                    </span>
                   </Link>
                 ))}
               </div>

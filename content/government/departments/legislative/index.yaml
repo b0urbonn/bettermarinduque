@@ -1,9 +1,29 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
+# Legislative Department Pages
+# The Sangguniang Panlalawigan (Provincial Board) of Marinduque, 2025–2028 term
 #
 layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
+title: 'Sangguniang Panlalawigan (Provincial Board)'
+description: 'The Sangguniang Panlalawigan (Provincial Board) of Marinduque has 13 members for 2025–2028: 10 elected board members and 3 ex officio members, presided over by the Vice Governor.'
 pages:
-  - name: 'Councilor A'
-    description: 'Description'
+  - name: 'Vice Governor Dr. Romulo “Doc” Bacorro Jr.'
+    description: 'Presiding Officer of the Sangguniang Panlalawigan'
+  - name: 'Mark Julius Caballes'
+    description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
+  - name: 'Antonio Mangcucang III'
+    description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
+  - name: 'Gilbert Daquioag'
+    description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
+  - name: 'Aurelio Leva III'
+    description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
+  - name: 'John R. Pelaez'
+    description: 'Board Member, 1st District (Boac, Mogpog, Gasan)'
+  - name: 'Joam Morales'
+    description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
+  - name: 'Danilo Red'
+    description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
+  - name: 'Mercedes Rejano'
+    description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
+  - name: 'Primo Pamintuan'
+    description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'
+  - name: 'Ishmael Lim'
+    description: 'Board Member, 2nd District (Santa Cruz, Torrijos, Buenavista)'

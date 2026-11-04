@@ -1,81 +1,37 @@
-# Join Health Programs — Lapu-Lapu City (Nutrition, Dengue Control, TB Treatment)
+# Join Health Programs (Nutrition, Dengue Control, TB Treatment)
 
-Below are city-led and national programs you can join through your **Barangay Health Center** and the **City Health Office (CHO)**.
+Public health programs in Marinduque — nutrition, dengue prevention, TB treatment, and immunization drives — and how to join them.
 
----
+## Who can use this
 
-## 1) Nutrition Programs
+All residents, especially parents of young children, TB patients, and families in communities covered by health drives.
 
-**What’s offered**
+## Where to go
 
-- Supplementary feeding for day-care children.
-- Community nutrition activities such as breastfeeding promotion, growth monitoring, and health education.
-- Special events during Nutrition Month (July) and city-wide wellness programs.
+- **Rural Health Unit (RHU) / Municipal Health Office** — runs the day-to-day programs: TB-DOTS treatment, immunization campaigns, deworming, and dengue prevention activities in your municipality.
+- **Barangay health station** — nutrition monitoring and feeding activities for children; barangay health workers do home visits.
+- **Provincial Health Office** — Capitol Compound, Brgy. Santol, Boac. Coordinates province-wide programs.
+- **Provincial Nutrition Office** — also at the Capitol, for nutrition-specific programs.
+- **Marinduque Provincial DOH Office** — the DOH Center for Health Development MIMAROPA maintains a provincial office for DOH programs.
 
-**Who can join**
+## What to bring
 
-- Day-care children and families identified by barangays or CSWD.
-- Residents may also take part in open city nutrition events.
+- [ ] Valid ID and proof of residency
+- [ ] Child's growth/immunization record for nutrition programs
+- [ ] Sputum test or referral results for TB-DOTS enrollment (the RHU arranges testing)
 
-**How to join**
+## Steps
 
-1. Visit your **Barangay Health Center** or ask the **Barangay Nutrition Scholar (BNS)** about ongoing feeding programs.
-2. Join community activities and city-wide nutrition events announced by the **City Health Office (CHO)** or City Information Office.
+1. Ask your barangay health station or RHU which programs are currently running — many are scheduled per month or per quarter.
+2. Enroll with the midwife or program coordinator.
+3. For TB: get tested at the RHU; TB-DOTS treatment, including medicines, is provided free through the program.
+4. For dengue: join barangay clean-up and search-and-destroy activities for mosquito breeding sites, and seek care early for fever.
 
-**Cost:** Free for eligible beneficiaries.
+## Fees
 
----
+Enrollment in these public health programs — including TB medicines — is free.
 
-## 2) Dengue Control Programs
+## Related links
 
-**What’s offered**
-
-- Community clean-up drives under the **ABKD (Aksyon Barangay Kontra Dengue)** program.
-- Daily “4 o’clock habit” — searching and destroying mosquito breeding sites.
-- Misting, fogging, and entomological surveys led by the CHO.
-- Information campaigns during Dengue Awareness Month and rainy season.
-
-**How to join**
-
-1. Take part in barangay clean-up drives and follow the **4S strategy** (Search & Destroy, Self-protection, Seek early consultation, Support fogging/misting).
-2. Cooperate when CHO teams conduct **misting** or **house-to-house larval checks**.
-
-**Cost:** Free; no registration needed.
-
----
-
-## 3) TB Treatment (NTP TB-DOTS)
-
-**What’s offered**
-
-- Free consultations, diagnostic tests, and full course of anti-TB medicines under the **National Tuberculosis Program (NTP)**.
-- Supervised treatment through the **Directly Observed Therapy Short-course (DOTS)** approach.
-
-**Where**
-
-- Lapu-Lapu City Health Office (DOTS facility) and affiliated barangay health centers.
-
-**How to join**
-
-1. Go to your **Barangay Health Center** or the **CHO DOTS Clinic** for TB screening.
-2. If diagnosed, you will be enrolled in DOTS — treatment and medicines are given for free.
-3. Regular follow-up visits will be scheduled to monitor your recovery.
-
-**Cost:** Free for all TB patients.
-
----
-
-## Contact & Updates
-
-- **Barangay Health Centers** — First point of contact for nutrition, dengue, and TB programs.
-- **Lapu-Lapu City Health Office (CHO)** — Main office for program schedules and services.
-- **City Information Office** — Posts updates on city-wide campaigns and health events.
-
----
-
-### Quick Tips
-
-- Bring a **valid ID** and your **barangay health record** (if you already have one).
-- For TB symptoms (cough for 2 weeks or more, weight loss, night sweats), seek screening immediately.
-- Join community clean-up drives and practice the 4 o’clock habit to prevent dengue.
-- Attend barangay nutrition events and feeding programs for your children’s growth and wellness.
+- [Get free check-ups, basic medicines, and vaccines](/services/health-services/get-free-check-ups-basic-medicines-and-vaccines)
+- [Provincial Citizen's Charter](https://marinduque.gov.ph/citizens-charter/)

@@ -1,68 +1,72 @@
 import React from 'react';
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  CheckCircle2,
-} from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import Logo from '../brand/Logo';
+
+const socialLinks = [
+  {
+    label: 'Facebook',
+    url: import.meta.env.VITE_FACEBOOK_URL,
+    Icon: Facebook,
+  },
+  {
+    label: 'Instagram',
+    url: import.meta.env.VITE_INSTAGRAM_URL,
+    Icon: Instagram,
+  },
+  {
+    label: 'YouTube',
+    url: import.meta.env.VITE_YOUTUBE_URL,
+    Icon: Youtube,
+  },
+  {
+    label: 'Twitter',
+    url: import.meta.env.VITE_TWITTER_URL,
+    Icon: Twitter,
+  },
+].filter(link => Boolean(link.url));
 
 const Footer: React.FC = () => {
   const { t } = useTranslation('common');
-
-  const getSocialIcon = (label: string) => {
-    switch (label) {
-      case 'Facebook':
-        return <Facebook className="h-5 w-5" />;
-      case 'Twitter':
-        return <Twitter className="h-5 w-5" />;
-      case 'Instagram':
-        return <Instagram className="h-5 w-5" />;
-      case 'YouTube':
-        return <Youtube className="h-5 w-5" />;
-      default:
-        return null;
-    }
-  };
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-primary-900 text-white">
+      <div className="banderitas" aria-hidden="true" />
       <div className="container mx-auto px-4 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-4">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
-              /> */}
-
+            <div className="flex items-center gap-3 mb-4">
+              <Logo variant="light" className="h-10 w-auto" />
               <div>
-                <div className="font-bold">{t('site_name')}</div>
-                <div className="text-xs text-gray-400">BetterGov.ph Portal</div>
+                <div className="font-display font-bold">{t('site_name')}</div>
+                <div className="text-xs text-white/60">
+                  Province of Marinduque
+                </div>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              A community portal providing Philippine citizens, businesses, and
-              visitors with information and services.
+            <p className="text-white/70 text-sm mb-4">
+              A community-run portal for the Province of Marinduque — the Heart
+              of the Philippines.
             </p>
-            <div className="flex space-x-4">
-              {footerNavigation.socialLinks.map(link => (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {getSocialIcon(link.label)}
-                </Link>
-              ))}
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="flex space-x-4">
+                {socialLinks.map(({ label, url, Icon }) => (
+                  <a
+                    key={label}
+                    href={url}
+                    aria-label={label}
+                    className="text-white/60 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 rounded-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {footerNavigation.mainSections.map(section => (
@@ -73,7 +77,7 @@ const Footer: React.FC = () => {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
+                      className="text-white/70 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 rounded-sm"
                     >
                       {link.label}
                     </Link>
@@ -84,41 +88,28 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-white/10 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              {t('footer.copyright')}
+            <p className="text-white/60 text-sm mb-4 md:mb-0">
+              © {year} Better Marinduque. Community-run; not an official
+              government website unless stated.
             </p>
-            <div className="flex space-x-6">
-              {/* <a
-                href="/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+            <div className="flex items-center gap-4">
+              <a
+                href="/image-credits.html"
+                className="text-white/60 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 rounded-sm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Privacy Policy
+                Photo credits
               </a>
               <a
-                href="/terms"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Terms of Use
-              </a> */}
-              <Link
-                to="https://github.com/bettergovph/bettergov"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                href="https://github.com/bettergovph/bettergov"
+                className="text-white/60 hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 rounded-sm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Contribute at GitHub
-              </Link>
-              <Link
-                to="/sitemap"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Sitemap
-              </Link>
-              <a
-                href="/accessibility"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Accessibility
               </a>
             </div>
           </div>

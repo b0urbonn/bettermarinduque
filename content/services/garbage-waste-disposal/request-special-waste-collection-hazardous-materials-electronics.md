@@ -1,67 +1,36 @@
-# Request Special Collection Services for Hazardous Waste & E-Waste — Lapu-Lapu City
+# Request Special Waste Collection (Hazardous Materials, Electronics)
 
-Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The City Environment and Natural Resources Office (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
+How to dispose of batteries, e-waste, busted bulbs, chemicals, and medical waste in Marinduque — these must never go into regular trash.
 
----
+## Who can use this
 
-## 1) What Counts as Hazardous & E-Waste?
+Households, businesses, clinics, and schools with hazardous or electronic waste.
 
-| Category                       | Examples                                                                           | Notes                                                       |
-| ------------------------------ | ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **Household Hazardous Waste**  | Batteries, fluorescent bulbs, used paints/solvents, pesticides, cleaning chemicals | Toxic and can pollute soil/water                            |
-| **Electronic Waste (E-Waste)** | Old cellphones, computers, printers, TVs, chargers, cables                         | May contain lead, mercury, cadmium                          |
-| **Medical Waste (Household)**  | Used syringes, sharps, soiled bandages                                             | Should be turned over to health centers for proper disposal |
+## Where to go
 
----
+- **Your barangay hall** — ask if they run periodic e-waste or hazardous waste collection drives, or have a designated drop-off.
+- **MENRO / Municipal Hall** — for guidance on licensed haulers and scheduled special collections.
+- **DENR PENRO Marinduque** (Boac) — the provincial environment office of DENR can point you to licensed hazardous-waste transporters and treatment facilities, especially for business or clinic-scale waste.
 
-## 2) How to Request Special Collection
+See the municipal contact table on the [collection schedules page](/services/garbage-waste-disposal/check-garbage-collection-schedules-and-request-pickup).
 
-1. **Contact your Barangay Hall**
-   - Ask for the **Barangay Environment Committee** or Solid Waste desk.
-   - Provide details: type of waste, approximate volume, and your address.
+## What to prepare
 
-2. **Barangay forwards request to CENRO**
-   - CENRO schedules a **special truck pickup** or directs you to the next citywide collection event.
-   - Some barangays coordinate with **accredited junkshops/recyclers**.
+- [ ] A list and rough quantity of the items for disposal
+- [ ] For businesses: your business permit details (haulier documents may be needed)
 
-3. **Prepare items for pickup/drop-off**
-   - Store in sealed, clearly labeled containers or boxes.
-   - Do not mix hazardous waste with household garbage.
+## Steps
 
-4. **Follow the scheduled collection**
-   - Place items outside only when instructed, or bring them to the barangay/CENRO drop-off point.
+1. Store the items safely, separate from regular waste — keep batteries and bulbs in a sealed container.
+2. Ask your barangay or MENRO about the next special collection or accredited drop-off point.
+3. For larger volumes (offices, clinics), coordinate with MENRO or DENR PENRO for a licensed transporter.
+4. Never burn, bury, or throw hazardous waste into waterways.
 
----
+## Fees
 
-## 3) Other Disposal Options
+Fees depend on the type and volume of waste and the transporter — confirm with MENRO or the hauler.
 
-- **Barangay E-Waste Drives** — many barangays organize quarterly e-waste collection campaigns.
-- **School/NGO Drives** — occasionally schools or civic groups run e-waste donation drives in coordination with the City.
-- **Accredited Junkshops/Collectors** — some accept electronics for recycling; ask CENRO for the accredited list.
+## Related links
 
----
-
-## 4) Contact Information
-
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
-
-- **Barangay Halls** — Environment/Solid Waste desk for barangay-level pickup scheduling.
-
----
-
-## 5) Tips for Households
-
-- Keep a **separate box** for batteries, bulbs, and small electronics.
-- Do not break bulbs or dismantle devices — this increases risk of contamination.
-- Join **barangay or school e-waste drives** regularly to avoid stockpiling.
-- Encourage neighbors to **bundle requests together** — barangays often schedule collection faster for group requests.
-
----
-
-### Reminder
-
-✅ Never dispose of hazardous waste or e-waste with your regular garbage.  
-✅ Always coordinate with your **Barangay Hall** or **CENRO** for proper and safe collection.
+- [Learn proper waste segregation and disposal methods](/services/garbage-waste-disposal/learn-proper-waste-segregation-and-disposal-methods)
+- [Check garbage collection schedules](/services/garbage-waste-disposal/check-garbage-collection-schedules-and-request-pickup)

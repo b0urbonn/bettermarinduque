@@ -1,41 +1,38 @@
-# Lapu-Lapu City Government: Free Health Services
+# Get Free Check-ups, Basic Medicines, and Vaccines
 
-The Lapu-Lapu City Government offers free **check-ups, medicines, and vaccines** through the City Health Office (CHO), barangay health centers, and partner programs.
+Where to get free consultations, medicines, and immunizations in Marinduque — through your Rural Health Unit and barangay health stations.
 
----
+Every municipality in Marinduque has a **Rural Health Unit (RHU)** / Municipal Health Office and barangay health stations that provide free or low-cost basic services: consultations, immunization, prenatal care, and TB-DOTS treatment.
 
-## 1. Free Medical Check-ups
+## Who can use this
 
-| Service              | Where                        | Schedule                                     | Requirements                                              |
-| -------------------- | ---------------------------- | -------------------------------------------- | --------------------------------------------------------- |
-| General consultation | City/Barangay Health Centers | Mon–Fri, 8 AM–5 PM (varies by health center) | Individual Treatment Record (ITR) — issued on first visit |
+All residents — especially children needing immunizations, pregnant women, TB patients, and anyone who needs a basic check-up or common medicines.
 
----
+## Where to go
 
-## 2. Free Basic Medicines
+- **Your barangay health station** — first stop for basic care, run by midwives and barangay health workers.
+- **Your municipality's RHU** — free consultations, immunization schedules, prenatal check-ups, and TB-DOTS. Located in or near the Municipal Hall area of each town.
+- **Provincial Health Office and Provincial Nutrition Office** — at the Capitol Compound, Brgy. Santol, Boac, for province-wide health programs.
 
-| Service                                          | Where                                    | Schedule           | Requirements                                                                                     |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------ |
-| Free basic medicines                             | City Health Office (CHO) pharmacy        | Mon–Fri, 8 AM–5 PM | Doctor’s prescription and/or referral from hospital/clinic                                       |
-| Medicines for indigent seniors (MAIFIPP program) | Partner pharmacies (Basak, Carajay, Ibo) | Pharmacy hours     | Must be an indigent senior citizen, bona fide resident; coverage caps (e.g., ₱3,000 out-patient) |
+## What to bring
 
----
+- [ ] Valid ID and proof of residency
+- [ ] Child's immunization record (for vaccines)
+- [ ] PhilHealth ID or Member Data Record, if you have one
+- [ ] Previous medical records or prescriptions, if any
 
-## 3. Free Vaccines & Immunization
+## Steps
 
-| Beneficiary       | Vaccine/Service                                          | Where                        | Schedule                        | Requirements                                             |
-| ----------------- | -------------------------------------------------------- | ---------------------------- | ------------------------------- | -------------------------------------------------------- |
-| Children          | BCG, Pentavalent, OPV/IPV, MMR, Hepatitis B, PCV13 (EPI) | Barangay Health Centers      | Typically Wednesdays, 8 AM–4 PM | ECCD card (first-timers can get one onsite)              |
-| Pregnant women    | Tetanus Toxoid vaccine + supplements                     | Barangay Health Centers      | During prenatal services        | Proof of pregnancy, ECCD/record                          |
-| Animal bite cases | Anti-rabies vaccine (first dose free)                    | Animal Bite Treatment Center | Clinic hours                    | Proof of Lapu-Lapu residency (e.g., voter’s certificate) |
+1. Go to your barangay health station or RHU during consultation hours — ask your barangay hall for the schedule.
+2. Register with the midwife or nurse on duty.
+3. For medicines, availability depends on the RHU's stock — ask what is free and what needs a prescription purchase.
+4. For conditions beyond basic care, the RHU will refer you to a district or provincial hospital — see [local hospitals](/services/health-services/go-to-the-local-hospital-for-treatment-or-confinement).
 
----
+## Fees
 
-## How to Avail
+Consultations, routine immunizations, prenatal care, and TB-DOTS at the RHU are free. Some medicines or lab tests may cost a small amount depending on availability.
 
-1. **Check-ups** → Go to your Barangay Health Center or City Health Office; first-timers will be issued an ITR.
-2. **Medicines** → Bring a doctor’s prescription/referral; submit at CHO pharmacy window.
-3. **Child immunization** → Visit your barangay health center on immunization day with ECCD card.
-4. **Pregnancy services** → Attend prenatal visits at the barangay health center for free vaccine and supplements.
-5. **Anti-rabies** → Report to the Animal Bite Treatment Center; bring proof of residency.
-6. **Senior citizen medicines** → Visit participating partner pharmacies; follow MAIFIPP guidelines.
+## Related links
+
+- [Access maternal care and child immunization](/services/health-services/access-maternal-care-and-child-immunization)
+- [Join health programs (nutrition, dengue control, TB treatment)](/services/health-services/join-health-programs-nutrition-dengue-control-tb-treatment)

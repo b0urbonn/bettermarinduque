@@ -1,98 +1,45 @@
-# Go to the Local Hospital for Treatment or Confinement — Lapu-Lapu City
+# Go to the Local Hospital for Treatment or Confinement
 
-This guide covers **where to go**, **what to bring**, and **how admission works** at local hospitals in Lapu-Lapu City, including the city-run facility and nearby private hospitals.
+Marinduque's public hospitals — where they are, what they offer, and what to bring for treatment or confinement.
 
----
+Marinduque has **three government-owned hospitals**: the provincial hospital in Boac and district/municipal hospitals in Santa Cruz and Torrijos.
 
-## A) Government Hospital (City-Run)
+## Who can use this
 
-### Sta. Rosa Community Hospital (Lapu-Lapu City)
+Anyone needing hospital treatment, admission, laboratory tests, or emergency care in Marinduque.
 
-**Services & Hours**
+## Public hospitals
 
-- **Emergency (Medical & Medico-legal):** 24/7
-- **Ward (In-patient confinement):** 24/7
-- **Out-Patient:** Mon–Fri, 8:00 AM–5:00 PM (except holidays)
+| Hospital                             | Location                                         | Services                                                                                                          | Contact                                                                                                                                                                          |
+| ------------------------------------ | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dr. Damian Reyes Provincial Hospital | Brgy. Santol, Boac (near the Provincial Capitol) | Level 1 general hospital — internal medicine, OB-GYN, pediatrics, surgery, laboratory, ECG; PhilHealth-accredited | Published numbers vary — call the hospital's published line or visit the ER; verify the current number on the [provincial government's official page](https://marinduque.gov.ph) |
+| Santa Cruz District Hospital         | Santa Cruz                                       | District hospital services                                                                                        | (042) 754-4306                                                                                                                                                                   |
+| Torrijos Municipal Hospital          | Torrijos                                         | Municipal hospital services                                                                                       | (042) 753-0322                                                                                                                                                                   |
 
-**Emergency (Medical cases) – Quick Steps**
-| Step | What you do | Hospital does | Typical time |
-|---|---|---|---|
-| 1 | Seek care at ER | Triage, vitals, initial MD orders | ~10–25 min |
-| 2 | Sign consent (treatment/admission if needed) | Prepare meds/tests; set for transfer to ward if admitted | ~20–25 min |
-| 3 | Transfer to ward (if for confinement) | ER endorses to Ward Nurse on duty | ~10 min |
+Phone numbers come from public directories (November 2026) — verify before relying on them. For emergencies anywhere in the province, dial **911** or the **Philippine Red Cross at 143**.
 
-**Requirements (bring if available):** Registration data sheet (onsite), **PhilHealth ID/MDR (optional)**, doctor’s referral/admitting orders (if coming from clinic).
+For basic care that does not need a hospital, start at your **Rural Health Unit** or barangay health station — see [free check-ups](/services/health-services/get-free-check-ups-basic-medicines-and-vaccines).
 
-**Ward (In-patient) – What to expect**
+## What to bring
 
-- Follow doctor’s orders; nurses administer meds/tests; dietary issued as ordered.
-- For discharge: instructions & schedule for follow-ups are given; proceed to Billing for clearance; release at Ward/Nurse station.
-- **Fees:** Posted at Billing.
-- **Note:** If not enrolled in PhilHealth, staff will guide processing if a relative can provide documents.
+- [ ] Valid ID
+- [ ] PhilHealth ID / Member Data Record and contributions record, if enrolled — ask the hospital's PhilHealth desk about coverage
+- [ ] Referral letter from the RHU, if you were referred
+- [ ] Previous medical records, lab results, and current medications
+- [ ] For minors: birth certificate and a parent/guardian
 
----
+## Steps
 
-## B) Private Hospitals Nearby
+1. For emergencies, go straight to the hospital emergency room — or dial 911.
+2. For non-emergencies, consider an RHU consultation first; they can refer you to the right hospital.
+3. At the hospital, register at admission or the ER, and present your PhilHealth documents.
+4. Before discharge, ask the billing section about PhilHealth deductions and any remaining balance.
 
-| Hospital                                     | Where                 | Beds/Notes                            | Admissions basics                                                                                                                     |
-| -------------------------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mactan Doctors’ Hospital (CebuDoc Group)** | Basak, Lapu-Lapu City | **151-bed tertiary** private hospital | Bring valid ID; company/HMO authorization if applicable; PhilHealth forms; fill out admission forms and submit to Admissions/Billing. |
-| **ARC Hospitals**                            | Lapu-Lapu City        | **~100-bed** private hospital         | Standard private-hospital admission flow; coordinate with Admissions/HMO/PhilHealth desk.                                             |
+## Fees
 
-> Private hospitals typically require **initial deposits** (varies by case/room) unless fully covered by HMO/PhilHealth arrangements. Confirm at the **Billing/Admissions** desk.
+Public hospitals charge subsidized rates; PhilHealth-accredited services are covered partly or fully depending on the case rate. Ask the billing office or the medical social service desk if you cannot pay — indigent patients may qualify for assistance.
 
----
+## Related links
 
-## C) What to Bring (All Hospitals)
-
-- **Valid ID** (with photo & signature)
-- **PhilHealth** ID and **MDR** (Member Data Record); if a dependent, bring proof of dependency
-- **Doctor’s referral/admitting order** (if elective admission)
-- **HMO/Company**: LOA/guarantee letter, membership/ID cards (if applicable)
-- **Personal necessities** (for confinement)
-
----
-
-## D) Costs & PhilHealth Coverage
-
-- **City hospital:** Fees are posted at **Billing**; **PhilHealth** benefits may apply at admission/discharge processing.
-- **No Balance Billing (NBB):** For **indigent/sponsored**, **senior citizens**, and certain categories in **government hospitals**, no other fees beyond PhilHealth package should be charged during confinement (subject to policy and facility capacity).
-
----
-
-## E) How to Avail — At a Glance
-
-### Emergency (any hospital)
-
-1. **Go straight to ER** (24/7).
-2. **Triage & initial orders** → stabilization/tests.
-3. **If admitted:** sign consent → transfer to ward → submit IDs/PhilHealth/HMO at Admissions/Billing.
-
-### Elective Admission (planned confinement/procedure)
-
-1. Obtain **doctor’s admitting order** & **referral**.
-2. Prepare **IDs, PhilHealth, HMO/LOA** (if any).
-3. Proceed to **Admissions** for room assignment, forms, and initial billing arrangements.
-
----
-
-## F) Useful Contacts
-
-- **Lapu-Lapu City Hospital / District Hospital (Gov’t)**
-  - A. Tumulak St., Gun-ob, Lapu-Lapu City
-  - **Tel:** (032) 340-0249 / 340-0248
-  - **Email:** lapulapucityhospital@yahoo.com
-
-- **Mactan Doctors’ Hospital (Private, CebuDoc Group)**
-  - Basak, Lapu-Lapu City
-  - **Trunkline:** +63 (32) 239-7002 to 7016
-
-- **ARC Hospitals (Private)**
-  - Lapu-Lapu City (100-bed facility)
-
----
-
-### Notes
-
-- Bring your **PhilHealth** documents even for emergencies; if unavailable, the hospital can guide you on follow-up submission.
-- Schedules and processes can change; confirm by calling the hospital **Admissions/Billing** desk before a planned confinement.
+- [Access maternal care and child immunization](/services/health-services/access-maternal-care-and-child-immunization)
+- [Provincial Citizen's Charter](https://marinduque.gov.ph/citizens-charter/)

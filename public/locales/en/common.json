@@ -1,9 +1,9 @@
 {
-  "site_name": "Lapu Lapu City Portal",
-  "site_description": "A community-run portal for the Lapu Lapu City",
+  "site_name": "Better Marinduque",
+  "site_description": "A community-run portal for the Province of Marinduque",
   "hero": {
-    "title": "Welcome to BetterGov.ph",
-    "subtitle": "A community-run portal to find information of the Lapu Lapu City Government",
+    "title": "Province of Marinduque",
+    "subtitle": "Find provincial services, offices, and information — all in one place, in plain language.",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
@@ -11,13 +11,13 @@
   "services": {
     "title": "Services & Information",
     "governmentServices": "Government Services",
-    "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",
+    "description": "Find services from the Province of Marinduque — permits, health, social welfare, and more — explained in plain language.",
     "viewAll": "View All Services",
     "viewAllCategory": "View All"
   },
   "governmentActivity": {
-    "title": "Government Activity",
-    "description": "Stay updated with the latest government activities and announcements."
+    "title": "Provincial Government",
+    "description": "Offices, departments, and officials of the Province of Marinduque."
   },
   "weather": {
     "title": "Weather Updates"
@@ -29,7 +29,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2025 BetterGov. All content is public domain unless otherwise specified."
+    "copyright": "© 2025 Better Marinduque. Community-run; not an official government website unless stated."
   },
   "navbar": {
     "government": "Government",

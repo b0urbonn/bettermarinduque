@@ -1,49 +1,41 @@
-# Access Maternal Care & Child Immunization — Lapu-Lapu City
+# Access Maternal Care and Child Immunization
 
-The City Health Office (CHO) and barangay health centers provide **prenatal care**, **family planning**, and **free routine child immunization** for residents.
+Free prenatal care and child immunization in Marinduque through your Rural Health Unit, barangay health stations, and public hospitals.
 
----
+## Who can use this
 
-## Maternal Care (Prenatal & Related Services)
+Pregnant women and children under five in any of the six municipalities.
 
-| Service                                                             | Where                       | Schedule                                                               | Requirements                                    | Cost                                                       |
-| ------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------- |
-| Prenatal check-ups (by midwife/nurse; physician referral as needed) | **Barangay Health Centers** | Mon–Fri (typical clinic hours; varies by center)                       | Prenatal record (issued/updated at first visit) | **Free**                                                   |
-| Family Planning counseling & methods                                | **Barangay Health Centers** | Mon–Fri **8:00 AM–4:00 PM**; Sat **8:00 AM–1:00 PM** (except holidays) | Personal appearance for counseling              | **Free** counseling (methods per DOH program availability) |
+## Where to go
 
-**Tip:** Bring any previous prenatal card/records and a valid ID. If you’re new, staff will register you and issue the needed record at the health center.
+- **Barangay health station** — regular prenatal check-ups and immunization days with the midwife.
+- **Rural Health Unit (RHU)** — each municipality's RHU runs scheduled prenatal and immunization services; ask your barangay hall or the Municipal Hall for the schedule.
+- **Public hospitals for delivery and complications**:
+  - Dr. Damian Reyes Provincial Hospital, Brgy. Santol, Boac (near the Provincial Capitol) — Level 1 general hospital with OB-GYN and pediatrics; PhilHealth-accredited.
+  - Santa Cruz District Hospital, Santa Cruz — (042) 754-4306
+  - Torrijos Municipal Hospital, Torrijos — (042) 753-0322
 
----
+Hospital phone numbers come from public directories (November 2026) — verify before relying on them, or check the provincial government's official page.
 
-## Child Immunization (EPI)
+## What to bring
 
-Routine childhood vaccines are provided **free** under the Expanded Program on Immunization (EPI).
+- [ ] Mother's ID and PhilHealth details, if enrolled
+- [ ] Home-based mother's record or prenatal booklet (issued on first visit)
+- [ ] Child's immunization card
+- [ ] Proof of residency
 
-| Age/Visit                          | Vaccines (examples)                                                        | Where                       | Regular Day/Time                                  | Requirements                          | Cost     |
-| ---------------------------------- | -------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------- | ------------------------------------- | -------- |
-| Birth–12 months (per DOH schedule) | **BCG**, **Pentavalent**, **OPV/IPV**, **MMR**, **Hepatitis B**, **PCV13** | **Barangay Health Centers** | **Wednesdays, 8:00 AM–4:00 PM** (except holidays) | **ECCD card** (issued on first visit) | **Free** |
+## Steps
 
-> First time? The health worker will **issue an ECCD card** and guide you on next-dose return dates.
+1. **Early in pregnancy**, visit your barangay health station or RHU to register and get a prenatal check-up schedule.
+2. Attend scheduled check-ups; get the recommended vaccines and supplements given at the RHU.
+3. Plan your delivery at a hospital or accredited birthing facility — ask the midwife where you will be referred.
+4. After birth, bring your child to the RHU on immunization days per the national schedule (BCG at birth; follow-up doses for polio, measles, and others).
 
----
+## Fees
 
-## How to Avail (Quick Steps)
+Prenatal check-ups, immunizations, and TB-DOTS at the RHU are free. Hospital services are charged but PhilHealth coverage applies for accredited services — ask the hospital's billing or PhilHealth desk.
 
-1. **Go to your Barangay Health Center** during clinic hours (or the posted EPI day for vaccines).
-2. **Register/Update your record:** Prenatal record for mothers, **ECCD card** for children (issued if first time).
-3. **Receive service:** Prenatal assessment, counseling (and TT vaccine/supplements per program), or child vaccination per EPI schedule.
-4. **Book your return date** for follow-ups and next vaccine doses as advised by the health staff.
+## Related links
 
----
-
-## Notes & Extras
-
-- **Medical consultations** at health centers are **free** (Mon–Fri, 8:00 AM–5:00 PM; center schedules apply). Useful if you need a doctor’s assessment alongside prenatal care.
-- The CHO and health centers also run **mother’s classes** and promote **facility-based delivery**; ask your midwife for schedules.
-
----
-
-**References**
-
-- [Lapu-Lapu City Government – Services](https://lapulapucity.gov.ph)
-- [Department of Health – Expanded Program on Immunization](https://doh.gov.ph)
+- [Get free check-ups, basic medicines, and vaccines](/services/health-services/get-free-check-ups-basic-medicines-and-vaccines)
+- [Go to the local hospital for treatment or confinement](/services/health-services/go-to-the-local-hospital-for-treatment-or-confinement)
