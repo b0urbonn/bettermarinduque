@@ -1,8 +1,50 @@
 import { Search } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { populationSource, provincePSGC } from '../../data/province';
+import islandAerial from '../../assets/marinduque-island-aerial.jpg';
+import maniwayaShore from '../../assets/maniwaya-island-shore.jpg';
+import morionesParade from '../../assets/marinduque-moriones-parade.jpg';
+import mountMalindig from '../../assets/mount-malindig.jpg';
 import HomeHeroGraphic from '../brand/HomeHeroGraphic';
+
+const heroBackgrounds = [
+  islandAerial,
+  maniwayaShore,
+  mountMalindig,
+  morionesParade,
+];
+
+function HeroBackground() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const interval = window.setInterval(() => {
+      setActiveIndex(index => (index + 1) % heroBackgrounds.length);
+    }, 6500);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      {heroBackgrounds.map((image, index) => (
+        <img
+          key={image}
+          src={image}
+          alt=""
+          className={`absolute inset-0 size-full object-cover opacity-0 transition-opacity duration-[1600ms] ease-in-out motion-reduce:transition-none ${
+            index === activeIndex ? 'opacity-40' : ''
+          }`}
+        />
+      ))}
+      <div className="absolute inset-0 bg-primary-900/45" />
+    </div>
+  );
+}
 
 const statistics = [
   { label: 'population', value: '226,522' },
@@ -25,9 +67,10 @@ export default function Hero() {
     <section
       aria-labelledby="home-heading"
       lang={i18n.resolvedLanguage}
-      className="bg-primary-800 text-white"
+      className="relative isolate overflow-hidden bg-primary-800 text-white"
     >
-      <div className="portal-container grid items-center gap-5 py-9 motion-safe:animate-fade-in sm:py-12 md:grid-cols-[minmax(0,1fr)_minmax(15rem,0.6fr)] md:gap-8 lg:py-14">
+      <HeroBackground />
+      <div className="portal-container relative grid items-center gap-5 py-9 motion-safe:animate-fade-in sm:py-12 md:grid-cols-[minmax(0,1fr)_minmax(15rem,0.6fr)] md:gap-8 lg:py-14">
         <div className="min-w-0">
           <h1
             id="home-heading"
