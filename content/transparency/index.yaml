@@ -8,6 +8,32 @@ trackers:
       Marcopper mining disasters — payments received, scheduled installments,
       contested claims, and how the money is used.
     icon: Scale
+  - slug: circumferential-road
+    name: Circumferential Road Funds
+    description: >-
+      National budget items and DPWH contracts identified for rehabilitating
+      the Marinduque Circumferential Road — enacted amounts, proposals, and
+      contracted works.
+    icon: Route
+  - slug: disaster-fund
+    name: Provincial Disaster Fund
+    description: >-
+      The Local Disaster Risk Reduction and Management Fund — the 5% of
+      revenue the province must set aside each year, and what is known about
+      its use.
+    icon: CloudRainWind
+  - slug: national-tax-allotment
+    name: National Tax Allotment
+    description: >-
+      The province's share of national taxes — what Marinduque received, and
+      the annual allotments published by DBM.
+    icon: Landmark
+  - slug: flood-control
+    name: Flood Control Projects
+    description: >-
+      DPWH flood mitigation works in the province — planned budgets, awards,
+      and where to report problems.
+    icon: Waves
 
 # Official places to look for documents that are not yet tracked here.
 officialSources:
@@ -23,3 +49,18 @@ officialSources:
   - name: Freedom of Information
     description: Request documents that have not been published.
     url: https://www.foi.gov.ph
+  - name: DPWH Infrastructure Projects Portal
+    description: Contracts and progress reports for national public works.
+    url: https://transparency.dpwh.gov.ph/
+  - name: Sumbong sa Pangulo
+    description: Report and inspect flood control projects nationwide.
+    url: https://sumbongsapangulo.ph
+  - name: BetterGov.ph Transparency
+    description: Independent browsable records of DPWH projects and budgets.
+    url: https://transparency.bettergov.ph
+  - name: Love the Philippines
+    description: Civic mirror of DPWH, PhilGEPS, and DBM records by place.
+    url: https://lovethephilippines.com/places/marinduque
+  - name: Provincial Government of Marinduque
+    description: Official site; publishes annual accomplishment reports.
+    url: https://marinduque.gov.ph

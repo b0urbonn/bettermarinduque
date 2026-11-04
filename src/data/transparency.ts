@@ -2,6 +2,11 @@ import * as yaml from 'js-yaml';
 import transparencyIndexYaml from '../../content/transparency/index.yaml?raw';
 import disclosureTopicsYaml from '../../content/transparency/disclosures.yaml?raw';
 import marcopperFundYaml from '../../content/transparency/marcopper-fund.yaml?raw';
+import circumferentialRoadYaml from '../../content/transparency/circumferential-road.yaml?raw';
+import disasterFundYaml from '../../content/transparency/disaster-fund.yaml?raw';
+import nationalTaxAllotmentYaml from '../../content/transparency/national-tax-allotment.yaml?raw';
+import floodControlYaml from '../../content/transparency/flood-control.yaml?raw';
+import nationalBudgetYaml from '../../content/transparency/national-budget.yaml?raw';
 
 interface TopicSummary {
   slug: string;
@@ -64,11 +69,20 @@ export interface DisclosureTopic extends TopicSummary {
   directories: OfficialSource[];
 }
 
+export interface TrackerLabels {
+  total?: string;
+  received?: string;
+  scheduled?: string;
+  spent?: string;
+  disputed?: string;
+}
+
 export interface FundTracker {
   title: string;
   lastUpdated: string;
   currency: string;
   total: number;
+  labels?: TrackerLabels;
   summary: string;
   summaryTl?: string;
   inflows: LedgerEntry[];
@@ -87,8 +101,51 @@ export const disclosureTopics = yaml.load(
   disclosureTopicsYaml
 ) as DisclosureTopic[];
 
+export interface BudgetItem {
+  name: string;
+  dept: string;
+  amount: number;
+}
+
+export interface HouseBillProject {
+  title: string;
+  program: string;
+  group: 'unchanged' | 'house_only' | 'nep_only';
+  nep: number | null;
+  house: number | null;
+}
+
+export interface NationalBudget {
+  title: string;
+  lastUpdated: string;
+  asOf: string;
+  district: {
+    label: string;
+    office: string;
+    tier: string;
+    representative: string;
+  };
+  envelope: { year: string; stage: string; amount: number }[];
+  byCongress: { congress: string; amount: number; years: string }[];
+  fy2027: {
+    nep: number;
+    houseBill: number;
+    nepRecords: number;
+    houseRecords: number;
+    bridge: { unchanged: number; houseOnly: number; nepOnly: number };
+    projects: HouseBillProject[];
+  };
+  yearly: { year: string; total: number; items: BudgetItem[] }[];
+}
+
+export const nationalBudget = yaml.load(nationalBudgetYaml) as NationalBudget;
+
 const trackerMap: Record<string, string> = {
   'marcopper-fund': marcopperFundYaml,
+  'circumferential-road': circumferentialRoadYaml,
+  'disaster-fund': disasterFundYaml,
+  'national-tax-allotment': nationalTaxAllotmentYaml,
+  'flood-control': floodControlYaml,
 };
 
 export function getFundTracker(slug: string): FundTracker | undefined {

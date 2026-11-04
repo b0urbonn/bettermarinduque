@@ -1,0 +1,219 @@
+# Marinduque Circumferential Road funds tracker.
+# Rules: every figure and event must cite at least one entry in `sources`.
+# Quote all dates ('YYYY', 'YYYY-MM', or 'YYYY-MM-DD') so YAML keeps them as text.
+# Update `lastUpdated` whenever anything changes.
+
+title: Marinduque Circumferential Road Funds
+lastUpdated: '2026-11-04'
+currency: PHP
+total: 725064533.85
+
+labels:
+  total: Tracked funding and contracts
+  received: Enacted appropriations
+  scheduled: Proposed
+  spent: Reported complete (contract value)
+  disputed: Contested items
+
+summary: >-
+  The Marinduque Circumferential Road is rehabilitated in sections through
+  annual national appropriations implemented by DPWH. Identified items include
+  ₱141.67 million in two FY 2026 appropriations, ₱264.82 million of FY 2027
+  House bill items — ₱124.83 million under the district office (three road
+  sections and five bridges) plus ₱139.999 million under the Central Office,
+  of which ₱70 million appears in the House bill only — and four recorded
+  contracts totaling about ₱318.5 million: two FY 2025 road-widening
+  contracts that passed their November 2025 target dates at about
+  three-quarters progress, a completed FY 2019 landslip rehabilitation, and a
+  small FY 2025 slope contract. Appropriations and contract values may
+  overlap; earlier-year funding is not yet tracked.
+
+summaryTl: >-
+  Binabantayan ang mga inilaang pondo ng pambansang gobyerno para sa
+  rehabilitasyon ng Marinduque Circumferential Road: ₱141.67 milyon sa dalawang
+  FY 2026 na budget item, ₱264.82 milyon sa FY 2027 House bill, at apat
+  na kontratang may kabuuang ~₱318.5 milyon. Dalawang FY 2025 na
+  road-widening contract ang lumampas sa target na Nobyembre 2025 nang mga
+  75% pa lang ang tapos.
+
+# National budget items identified for the road.
+inflows:
+  - label: FY 2026 appropriation (section K0090+865–K0091+130)
+    amount: 92386000
+    status: received
+    date: '2026'
+    note: >-
+      Enacted in the FY 2026 General Appropriations Act under DPWH MIMAROPA.
+      Procurement status has not been published here.
+    sources: [gaa-2026-vol-1c]
+  - label: FY 2026 appropriation (sections K0004+600–K0005+200, K0006+682–K0008+000)
+    amount: 49286000
+    status: received
+    date: '2026'
+    note: >-
+      Second FY 2026 GAA line item for the road identified in BetterGov.ph's
+      GAA mirror under DPWH. Procurement status has not been published here.
+    sources: [bettergov-gaa-2026]
+  - label: FY 2027 House bill — road sections (3 items)
+    amount: 56302000
+    status: scheduled
+    due: FY 2027 budget — pending Senate and bicameral approval
+    note: >-
+      House Bill 10858 third-reading items for sections K0016+522–K0016+727
+      (₱31M), K0017+500–K0017+577 (₱16.15M) and K0093+930–K0094+285 (₱9.152M)
+      under the Marinduque District Engineering Office. Same amounts as the
+      NEP proposal; not yet enacted into law.
+    sources: [bettergov-hgab-mq]
+  - label: FY 2027 House bill — bridges along the road (5 items)
+    amount: 68523000
+    status: scheduled
+    due: FY 2027 budget — pending Senate and bicameral approval
+    note: >-
+      Bridge Program items in House Bill 10858: Ihatub ₱26.91M, Matandang
+      Gasan ₱13.524M, Landy ₱11.96M, Cawit ₱8.855M and Caganhao ₱7.274M —
+      all along the Marinduque Circumferential Road. Same amounts as the NEP.
+    sources: [bettergov-hgab-mq]
+  - label: FY 2027 House bill — section K0032+423–K0032+873 (Central Office)
+    amount: 70000000
+    status: scheduled
+    due: FY 2027 budget — pending Senate and bicameral approval
+    note: >-
+      Appears only in the House bill, not the NEP — an insertion candidate
+      under the Asset Preservation Program run by DPWH Central Office, not
+      the district office. Not yet enacted into law.
+    sources: [bettergov-hgab-2027-714]
+  - label: FY 2027 House bill — section K0053+000–K0054+000 (Central Office)
+    amount: 69999000
+    status: scheduled
+    due: FY 2027 budget — pending Senate and bicameral approval
+    note: >-
+      Network Development Program item under DPWH Central Office. Same
+      amount in the NEP and the House bill; not yet enacted.
+    sources: [bettergov-hgab-1659]
+
+# Recorded DPWH contracts for the circumferential road.
+outflows:
+  - label: Contract 25EA0017 — road widening, K0081+598 to K0087+398
+    amount: 108042890.23
+    status: allocated
+    date: '2025'
+    note: >-
+      Contractor: Amethyst Horizon Builders and Gen Contractor and Development
+      Corp. Reported 74% complete and past its November 25, 2025 target date.
+    sources: [ltp-25ea0017]
+  - label: Contract 25EA0018 — road widening, K0095+526 to K0097+812
+    amount: 103031377.14
+    status: allocated
+    date: '2025'
+    note: >-
+      Contractor: Square Cube Construction (confirmed PhilGEPS award
+      25EA0018-R1). Reported 76% complete and past its November 22, 2025
+      target date.
+    sources: [ltp-25ea0018]
+  - label: Contract 19EA0090 — landslip rehabilitation, Torrijos
+    amount: 99010173.28
+    status: spent
+    date: '2019'
+    note: >-
+      Contractor: Sunwest Inc. Reported complete; contract covered sections
+      K0052+690–K0052+940 and K0052+980–K0053+100.
+    sources: [ltp-19ea0090]
+  - label: Contract 25EA0006 — slope and landslide repairs
+    amount: 8484093.2
+    status: allocated
+    date: '2025'
+    note: >-
+      Contract cost in the DPWH procurement monitoring report; contractor and
+      progress not yet published here.
+    sources: [dpwh-pmr-2024-2ndsem, bettergov-dpwh-25ea0006]
+
+claims: []
+
+timeline:
+  - date: '2019-08-30'
+    title: Landslip rehabilitation contract begins
+    description: >-
+      19EA0090 — ₱99.01M to Sunwest Inc for road slips at K0052+690–K0053+100,
+      Torrijos; later reported complete.
+    sources: [ltp-19ea0090]
+  - date: '2025-03-21'
+    title: Two FY 2025 widening contracts begin
+    description: >-
+      25EA0017 (₱108.04M, Amethyst Horizon) and 25EA0018 (₱103.03M, Square
+      Cube) cover several kilometers of the circumferential road.
+    sources: [ltp-25ea0017, ltp-25ea0018]
+  - date: '2025-11'
+    title: Both widening contracts pass target dates
+    description: >-
+      Reported at 74% and 76% progress when their November 2025 target dates
+      lapsed; still marked ongoing.
+    sources: [ltp-25ea0017, ltp-25ea0018]
+  - date: '2026'
+    title: FY 2026 GAA appropriates ₱141.67M in two items
+    description: >-
+      Sections K0090+865–K0091+130 (₱92.39M) and K0004+600–K0005+200,
+      K0006+682–K0008+000 (₱49.29M) under DPWH MIMAROPA.
+    sources: [gaa-2026-vol-1c, bettergov-gaa-2026]
+  - date: '2026'
+    title: House bill carries ₱124.83M for FY 2027
+    description: >-
+      House Bill 10858 (third reading) lists three road sections totaling
+      ₱56.30M and five bridges totaling ₱68.52M along the circumferential
+      road under the Marinduque District Engineering Office.
+    sources: [bettergov-hgab-mq]
+  - date: '2026'
+    title: House bill carries ₱139.999M more via Central Office
+    description: >-
+      Two Central Office items name the road for FY 2027: K0053+000–
+      K0054+000 (₱69.999M, same as NEP) and K0032+423–K0032+873 (₱70M — in
+      the House bill only, an insertion candidate not in the NEP).
+    sources: [bettergov-hgab-2027-714, bettergov-hgab-1659]
+
+openQuestions:
+  - Why contracts 25EA0017 and 25EA0018 passed their November 2025 target dates near 75% progress, and their current status.
+  - Which appropriations funded the four recorded contracts — earlier-year GAA items are not yet tracked.
+  - Whether the FY 2026 appropriation has been bid out or awarded, and to which contractor.
+  - The total estimated cost and completion target for the full road rehabilitation.
+  - Payment and disbursement records for the recorded contracts.
+
+sources:
+  gaa-2026-vol-1c:
+    title: FY 2026 General Appropriations Act, Volume I-C, p. 167 (PDF)
+    publisher: Department of Budget and Management
+    url: https://www.dbm.gov.ph/wp-content/uploads/GAA/GAA2026/DBM-OFFICIAL-GAZETTE-FY-2026_VOLUME-1-C.pdf
+  bettergov-hgab-2027-714:
+    title: 'House bill item: Marinduque Circumferential Rd K0032+423–K0032+873'
+    publisher: BetterGov.ph Budget
+    url: https://budget.bettergov.ph/hgab/2027/dpwh/p/house-reading%3A1494
+  bettergov-hgab-1659:
+    title: 'House bill item: Marinduque Circumferential Rd K0053+000–K0054+000'
+    publisher: BetterGov.ph Budget
+    url: https://budget.bettergov.ph/hgab/2027/dpwh/p/house-reading%3A1659
+  bettergov-gaa-2026:
+    title: GAA line item search — 'Marinduque Circumferential'
+    publisher: BetterGov.ph Budget
+    url: https://budget.bettergov.ph/api/v1/gaa/search?q=marinduque%20circumferential&year=2026
+  bettergov-hgab-mq:
+    title: Marinduque district card — FY 2027 House bill project list
+    publisher: BetterGov.ph Budget
+    url: https://budget.bettergov.ph/hgab/2027/districts/leg%3Amarinduque%3Alone
+  bettergov-dpwh-25ea0006:
+    title: DPWH project listing, search for 25EA0006
+    publisher: BetterGov.ph Transparency
+    url: https://transparency.bettergov.ph/dpwh/categories/GAA%202025%20OO-1
+  dpwh-pmr-2024-2ndsem:
+    title: DPWH procurement monitoring report, 2nd semester 2024 (PDF)
+    publisher: DPWH Marinduque District Engineering Office
+    url: https://www.dpwh.gov.ph/dpwh/sites/default/files/pmr/pmr20242ndsemcw.pdf
+  ltp-25ea0017:
+    title: Road widening K0081+598–K0087+398 — project record 25EA0017
+    publisher: Love the Philippines (DPWH records mirror)
+    url: https://lovethephilippines.com/projects/4d8ca7f3-1486-424e-8480-32df4d64ac2e
+  ltp-25ea0018:
+    title: Road widening K0095+526–K0097+812 — project record 25EA0018
+    publisher: Love the Philippines (DPWH records mirror)
+    url: https://lovethephilippines.com/projects/0bd29a3d-a03f-4cb7-8f1d-c0c80dbf8555
+  ltp-19ea0090:
+    title: Landslip rehabilitation, Torrijos — project record 19EA0090
+    publisher: Love the Philippines (DPWH records mirror)
+    url: https://lovethephilippines.com/projects/24d807b4-b735-4f3a-82dc-304a420d6d60

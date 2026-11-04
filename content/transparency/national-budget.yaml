@@ -1,0 +1,2735 @@
+# National budget data for Marinduque mirrored from the BetterGov.ph Budget API.
+# Snapshot of enacted GAA line items FY 2020-2026 whose names identify
+# Marinduque (province name, its towns, or Marinduque-coded bridges/roads),
+# plus the Marinduque District Engineering Office envelope and the FY 2027
+# House bill project list. Figures are appropriations, not spending.
+
+title: National Budget for Marinduque
+lastUpdated: '2026-11-04'
+asOf: 'BetterGov.ph API snapshot built 2026-10-26'
+
+district:
+  label: Marinduque, Lone District
+  office: Marinduque District Engineering Office
+  tier: 'Tier A — serves only this district'
+  representative: Salvacion, Reynaldo P.
+
+# Marinduque DEO whole-office envelope by budget stage (API district card).
+envelope:
+  - { year: '2020', stage: 'Enacted (GAA)', amount: 1117627000 }
+  - { year: '2021', stage: 'Enacted (GAA)', amount: 1649503000 }
+  - { year: '2022', stage: 'Enacted (GAA)', amount: 2301597000 }
+  - { year: '2023', stage: 'Enacted (GAA)', amount: 1073781000 }
+  - { year: '2024', stage: 'Enacted (GAA)', amount: 1029040000 }
+  - { year: '2025', stage: 'Enacted (GAA)', amount: 976843000 }
+  - { year: '2026', stage: 'Enacted (GAA)', amount: 590984000 }
+  - { year: '2027', stage: 'NEP', amount: 493218000 }
+  - { year: '2027', stage: 'House bill', amount: 456425000 }
+
+byCongress:
+  - { congress: '18th Congress', amount: 5068727000, years: '2020–2022' }
+  - { congress: '19th Congress', amount: 3079664000, years: '2023–2025' }
+  - { congress: '20th Congress', amount: 590984000, years: '2026–2026' }
+
+fy2027:
+  nep: 493218000
+  houseBill: 456425000
+  nepRecords: 25
+  houseRecords: 25
+  bridge:
+    unchanged: 442425000
+    houseOnly: 14000000
+    nepOnly: 14000000
+  projects:
+    - title: 'Rehabilitation of Road, Barangay Cawit, Boac, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 50000000
+      house: 50000000
+    - title: 'Construction of Permanent Bridges along Boac Access Road, Barangay Santol, Boac, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 45500000
+      house: 45500000
+    - title: 'Mogpog-Balanacan Port Rd - K0015 + 310 - K0015 + 360'
+      program: 'Asset Preservation Program'
+      group: unchanged
+      nep: 45400000
+      house: 45400000
+    - title: 'Marinduque Circumferential Rd - K0016 + 522 - K0016 + 727'
+      program: 'Asset Preservation Program'
+      group: unchanged
+      nep: 31000000
+      house: 31000000
+    - title: 'Rehabilitation of Road, Barangay Bocboc - Puting Buhangin, Mogpog, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 28000000
+      house: 28000000
+    - title: 'Ihatub Br. (B00029MQ) along Marinduque Circumferential Rd'
+      program: 'Bridge Program'
+      group: unchanged
+      nep: 26910000
+      house: 26910000
+    - title: 'Construction of Multi-Purpose Building (Coast Guard Station Building), Boac, Marinduque'
+      program: 'Local Program'
+      group: unchanged
+      nep: 25000000
+      house: 25000000
+    - title: 'Construction of Access Road, Barangay Matandang Gasan, Gasan, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 20000000
+      house: 20000000
+    - title: 'Rehabilitation of Road, Barangay Tapuyan, Gasan, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 20000000
+      house: 20000000
+    - title: 'Marinduque Circumferential Rd - K0017 + 500 - K0017 + 577'
+      program: 'Asset Preservation Program'
+      group: unchanged
+      nep: 16150000
+      house: 16150000
+    - title: 'Construction of Road, Barangay Mampaitan, Mogpog, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 16000000
+      house: 16000000
+    - title: 'Construction of Multi-purpose Building (Covered Court), Barangay Puyog, Boac, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: house_only
+      nep: null
+      house: 14000000
+    - title: 'Construction of Multi-Purpose Building (Covered Court), Barangay Tres, Gasan, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 14000000
+      house: 14000000
+    - title: 'Construction of Multi-Purpose Building, Barangay Libas, Buenavista, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 14000000
+      house: 14000000
+    - title: 'Matandang Gasan Br. (B00021MQ) along Marinduque Circumferential Rd'
+      program: 'Bridge Program'
+      group: unchanged
+      nep: 13524000
+      house: 13524000
+    - title: 'Landy Br. (B00004MQ) along Marinduque Circumferential Rd'
+      program: 'Bridge Program'
+      group: unchanged
+      nep: 11960000
+      house: 11960000
+    - title: 'Rehabilitation of Riverbank Protection, Barangay Mataas na Bayan, Boac, Marinduque'
+      program: 'Flood Management Program'
+      group: unchanged
+      nep: 10500000
+      house: 10500000
+    - title: 'Construction of Multi-Purpose Building (Covered Court), Barangay Market Site, Mogpog, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 10000000
+      house: 10000000
+    - title: 'Marinduque Circumferential Rd - K0093 + 930 - K0094 + 285'
+      program: 'Asset Preservation Program'
+      group: unchanged
+      nep: 9152000
+      house: 9152000
+    - title: 'Cawit Br. (B00025MQ) along Marinduque Circumferential Rd'
+      program: 'Bridge Program'
+      group: unchanged
+      nep: 8855000
+      house: 8855000
+    - title: 'Caganhao Br. (B00028MQ) along Marinduque Circumferential Rd'
+      program: 'Bridge Program'
+      group: unchanged
+      nep: 7274000
+      house: 7274000
+    - title: 'Rehabilitation of Multi-Purpose Building (Covered Court), Barangay Silangan, Mogpog, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 5000000
+      house: 5000000
+    - title: 'Construction of Road, Sitio Matahimik, Barangay Tungib, Buenavista, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 5000000
+      house: 5000000
+    - title: 'Rehabilitation of Road, Barangay Timbo, Buenavista, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 5000000
+      house: 5000000
+    - title: 'Marinduque District Engineering Office'
+      program: 'Convergence and Special Support Program'
+      group: unchanged
+      nep: 4200000
+      house: 4200000
+    - title: 'Construction of Multi-Purpose Building (Covered Court ), Barangay Sabong, Boac, Marinduque'
+      program: 'Convergence and Special Support Program'
+      group: nep_only
+      nep: 14000000
+      house: null
+
+# Enacted GAA line items naming Marinduque, per fiscal year.
+yearly:
+  - year: '2020'
+    total: 1308593000
+    items:
+      - { name: 'Boac Bypass Road, Marinduque', dept: DPWH, amount: 200000000 }
+      - {
+          name: 'Boac-Mogpog Bypass Road, Marinduque',
+          dept: DPWH,
+          amount: 110000000,
+        }
+      - {
+          name: 'Construction of Tabigue Flood Control along Boac River, Sta. 1+220  Sta. 1+860, Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0020 + 000 - K0020 + 525',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0008 + 000 - K0008 + 030, K0058 + 000 - K0058 + 773, K0062 + 126 - K0063 + 154, K0063 + 704 - K0066 + 855',
+          dept: DPWH,
+          amount: 94863000,
+        }
+      - {
+          name: 'Rehabilitation of Bolo - Pulang Lupa Road, Sta 1+076 to Sta 2+076, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 80000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0025 + 000 - K0025 + 760, K0026 + 300 - K0027 + 112',
+          dept: DPWH,
+          amount: 65000000,
+        }
+      - {
+          name: 'Construction of Torrijos Public Market (Phase II), Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0010 + 580 - K0011 + 900',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Bamban Flood Control Boac, Marinduque',
+          dept: DPWH,
+          amount: 49620000,
+        }
+      - {
+          name: 'Construction of Nangka I Flood Control Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 42000000,
+        }
+      - {
+          name: 'Construction of Nangka II Flood Control Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 40000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0077 + 000 - K0078 + 511',
+          dept: DPWH,
+          amount: 31066000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0090 + 400 - K0090 + 740, K0093 + 764 - K0093 + 851, K0095 + 000 - K0095 + 080',
+          dept: DPWH,
+          amount: 23611000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Torrijos Side) - K0041 + (-038) - K0041 + 064, K0041 + (-116) - K0041 + (-038), K0041 + (-523) - K0041 + (-410), K0041 + 536 - K0041 + 582, K0049 + 273 - K0049 + 323',
+          dept: DPWH,
+          amount: 21908000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building at Marinduque National High School, Brgy. Isok I, Boac Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Construction of Sabong to Sibuyao Road, Boac-Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Mogpog-Balanacan Port Rd - K0011 + 000 - K0011 + 400',
+          dept: DPWH,
+          amount: 17600000,
+        }
+      - {
+          name: 'Construction of Mahinhin to Puting Buhangin Road, Boac, Marinduque',
+          dept: DPWH,
+          amount: 15000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bangwayin FMR, Brgy. Bangwayin, Torrijos, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Dawis to Brgy. Kamandungan FMR, Brgy. Dawis and Brgy. Kamandungan, Gasan, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Access Road leading to Ulong Beach, Sitio Ulong, Barangay Capayang, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 11825000,
+        }
+      - {
+          name: 'Construction of Torrijos Public Market (Phase III) Torrijos, Marinduque Province',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Laon Bridge (B00032MQ) along Mogpog-Balanacan Road',
+          dept: DPWH,
+          amount: 8100000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Brgy. Candahon, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Brgy. Butansapa, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Concreting of Road, Brgy. Amoingon, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Concreting of Road, Brgy. Kasily, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Concreting of Road, Brgy. Balogo, Boac, Marinduque',
+          dept: DPWH,
+          amount: 2500000,
+        }
+      - {
+          name: 'Concreting of Road, Brgy. Bachao Ibaba, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 2500000,
+        }
+  - year: '2021'
+    total: 3158194000
+    items:
+      - {
+          name: 'Marinduque Circumferential Rd - K0021 + 000 - K0024 + 000, K0032 + 000 - K0034 + 000',
+          dept: DPWH,
+          amount: 255300000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0016 + 000 - K0018 + 000, K0018 + 000 - K0021 + 000',
+          dept: DPWH,
+          amount: 250200000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Phase III), Brgy. Poblacion, Torrijos,  Marinduque',
+          dept: DPWH,
+          amount: 120000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0017 + 000 - K0017 + 117, K0017 + 280 - K0017 + 415',
+          dept: DPWH,
+          amount: 113000000,
+        }
+      - {
+          name: 'Boac-Mogpog Bypass Road, Marinduque',
+          dept: DPWH,
+          amount: 110000000,
+        }
+      - {
+          name: 'Construction of Flood Control Along Boac River, Brgy. Sawi, Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0084 + 000 - K0086 + 000',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0015 + 799 - K0016 + 002',
+          dept: DPWH,
+          amount: 99592000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0037 + 000 - K0037 + 640, K0037 + 687 - K0039 + 000',
+          dept: DPWH,
+          amount: 97750000,
+        }
+      - {
+          name: 'Rehabilitation/Reconstruction of Roads with Slips, Slope Collapse and Landslide, Marinduque Circumferential Road, KO051+329 - KO051+602, Marinduque',
+          dept: DPWH,
+          amount: 95000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0014 + 886 - K0015 + 861, K0016 + 010 - K0019 + 300',
+          dept: DPWH,
+          amount: 79637000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0078 + 511 - K0082 + 000, K0087 + 000 - K0087 + 523',
+          dept: DPWH,
+          amount: 75745000,
+        }
+      - {
+          name: 'Construction of Talawan - Sabong Road, Torrijos/Boac, Marinduque',
+          dept: DPWH,
+          amount: 75000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0010 + 386 - K0010 + 996',
+          dept: DPWH,
+          amount: 70150000,
+        }
+      - {
+          name: 'Rehabilitation of Bolo - Pulang Lupa Road, Sta 1+076 to Sta 2+076, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 68000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure (including rechanneling), Lupac-Tabigue, Boac, Marinduque',
+          dept: DPWH,
+          amount: 65000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure (including rechanneling), Santol-Tabigue, Boac, Marinduque',
+          dept: DPWH,
+          amount: 60000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structures along Boac River, Barangay Santol, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0050 + 240 - K0050 + 660',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0075 + 130 - K0075 + 320',
+          dept: DPWH,
+          amount: 43700000,
+        }
+      - {
+          name: 'Construction of Torrijos Public Market (Phase II), Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 42500000,
+        }
+      - { name: 'Boac Bypass Road, Marinduque', dept: DPWH, amount: 42000000 }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0020 + 000 - K0020 + 525',
+          dept: DPWH,
+          amount: 42000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0082 + 570 - K0082 + 750',
+          dept: DPWH,
+          amount: 41400000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0008 + 000 - K0008 + 030, K0058 + 000 - K0058 + 773, K0062 + 126 - K0063 + 154, K0063 + 704 - K0066 + 855',
+          dept: DPWH,
+          amount: 39842000,
+        }
+      - {
+          name: 'Mogpog-Balanacan Port Rd - K0011 + 000 - K0011 + 600',
+          dept: DPWH,
+          amount: 31200000,
+        }
+      - {
+          name: 'Construction of Balimbing Flood Control, Boac, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Construction of Mainit Flood Control, Boac, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Construction of Candahon-Bintakay Road, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Mogpog-Balanacan Port Rd - K0016 + 232 - K0016 + 732',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0025 + 000 - K0025 + 760, K0026 + 300 - K0027 + 112',
+          dept: DPWH,
+          amount: 27300000,
+        }
+      - {
+          name: 'Completion of Pulong Parang Bridge and approaches, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 25000000,
+        }
+      - {
+          name: 'Yamug Br. (B00012MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 25000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0002 + 000 - K0003 + 077',
+          dept: DPWH,
+          amount: 21890000,
+        }
+      - {
+          name: 'Construction of Balagasan Flood Control, Boac, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Construction of Nangka II Flood Control Structure along Mogpog River, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Repair/Restoration of Road with slips, soil collapse and landslide, Marinduque Circumferential Road- K0022+080 - K0022+140, Lamesa, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0015 + 423 - K0015 + 585, K0019 + 000 - K0019 + 300',
+          dept: DPWH,
+          amount: 19778000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bintakay FMR, Brgy. Bintakay, Mogpog, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bolo FMR, Brgy. Bolo, Torrijos, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tiguion FMR, Brgy. Tiguion, Gasan, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Construction of Sabong to Sibuyao Road, Boac-Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 15400000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0006 + 720 - K0007 + 230',
+          dept: DPWH,
+          amount: 15210000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0042 + 000 - K0042 + 331',
+          dept: DPWH,
+          amount: 14297000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0042 + 494 - K0043 + 263',
+          dept: DPWH,
+          amount: 14233000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0023 + 000 - K0023 + 685',
+          dept: DPWH,
+          amount: 13855000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0010 + 102 - K0010 + 462',
+          dept: DPWH,
+          amount: 13680000,
+        }
+      - {
+          name: 'Cawit Br. (B00025MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 13090000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0017 + 000 - K0017 + 634',
+          dept: DPWH,
+          amount: 12820000,
+        }
+      - {
+          name: 'Trozo Br. (B00034MQ) along Mogpog-Balanacan Port Rd',
+          dept: DPWH,
+          amount: 12623000,
+        }
+      - {
+          name: 'Concreting of Brgy. Agumaymayan FMR, Brgy. Agumaymayan, Boac, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Dolores to Brgy. Dating Bayan FMR, Brgy. Dolores and Brgy. Dating Bayan, Sta. Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Mainit-Binunga FMR, Brgy. Mainit-Binunga, Boac, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Malbog FMR, Brgy. Malbog, Buenavista, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Puting Buhangin FMR, Brgy. Puting Buhangin, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tambangan FMR, Brgy. Tambangan, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tungib FMR, Brgy. Tungib, Buenavista, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Sitio Banabang Malaki, Brgy. Yook, FMR, Brgy. Yook, Buenavista, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Sitio Ilava, Brgy. Balanacan FMR, Brgy. Balanacan, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0030 + 627 - K0031 + 000',
+          dept: DPWH,
+          amount: 11872000,
+        }
+      - {
+          name: 'Construction of Mahinhin to Puting Buhangin Road, Boac, Marinduque',
+          dept: DPWH,
+          amount: 11550000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Argao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 11500000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0010 + 580 - K0011 + 900',
+          dept: DPWH,
+          amount: 11000000,
+        }
+      - {
+          name: 'Duongan Br. (B00033MQ) along Mogpog-Balanacan Port Rd',
+          dept: DPWH,
+          amount: 10370000,
+        }
+      - {
+          name: 'Construction of Bantay Flood Control, Boac, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Boac Municipal Police Station Building, Boac, Marinduque',
+          dept: DPWH,
+          amount: 9700000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Danao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 9000000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Kay Duke, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 9000000,
+        }
+      - {
+          name: 'Construction of Torrijos Public Market (Phase III) Torrijos, Marinduque Province',
+          dept: DPWH,
+          amount: 8300000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Anapog Sibucao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 8000000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Bocboc, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 8000000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Banuyo, Gasan,  Marinduque',
+          dept: DPWH,
+          amount: 8000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building  (Brgy. Hall), Brgy. Daypay, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Evacuation Center), Nangka II ,Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Covered Court) at Barangay Laon, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Covered Court), at Barangay Magapua, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Covered Court), at Silangan Elementary School, Barangay Silangan, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Covered Court) Brgy. Ino, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Matuyatuya, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Evacuation Center), Brgy. Bayakbakin, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5500000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building  (Covered Court), Brgy. Isok II, Boac, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-purpose Building Brgy. Malusak, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Eight (8)Units of Multi-purpose Building at Torrijos White Beach, Brgy. Poctoy, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Various Repair of Campus Facilities (Typhoon Damaged), MSC Banuyo Campus, Gasan',
+          dept: SUCs,
+          amount: 4066000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building  (Covered Court) at Marinduque National High School, Boac',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court), Barangay Laylay, Boac, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-purpose Building (Covered Court), Brgy. Mansiwat, Boac, Marinduque.',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court) Barangay Guisian, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: "Construction (Completion) of Multi-Purpose Building (Children's Library with Recreational Hall), Barangay Mahunig, Gasan, Marinduque",
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Completion of Multi-purpose Building (2nd Storey) at Torrijos White Beach, Brgy. Poctoy, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-purpose Building  (Brgy. Hall) Brgy. Balagasan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-purpose Building  (Brgy. Hall) Brgy. Tagwak, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Improvement) of Multi-Purpose Building (Barangay Hall) San Miguel, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Rehabilitation of Multi-Purpose Building (Covered Court) Barangay Malibago, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Barangay Hall), Brgy. Kamandungan, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Laon Bridge (B00032MQ) along Mogpog-Balanacan Road',
+          dept: DPWH,
+          amount: 2592000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0090 + 400 - K0090 + 740, K0093 + 764 - K0093 + 851, K0095 + 000 - K0095 + 080',
+          dept: DPWH,
+          amount: 2361000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Torrijos Side) - K0041 + (-038) - K0041 + 064, K0041 + (-116) - K0041 + (-038), K0041 + (-523) - K0041 + (-410), K0041 + 536 - K0041 + 582, K0049 + 273 - K0049 + 323',
+          dept: DPWH,
+          amount: 2191000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Barangay Hall), Barangay Malbog, Boac, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court), Barangay Balaring, Boac, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court), Barangay Bantay, Boac, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court), Barangay Tumagabok, Boac, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court) Barangay Lamesa, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Covered Court) Barangay Bangbang, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+      - {
+          name: 'Construction (Improvement) of Multi-Purpose Building (Barangay Hall) Barangay Poctoy, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 1500000,
+        }
+      - {
+          name: 'Concreting of Road, Barangay Balogo, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 1000000,
+        }
+      - {
+          name: 'Concreting of Road, Barangay Kinyaman, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 1000000,
+        }
+  - year: '2022'
+    total: 4272870000
+    items:
+      - {
+          name: 'Boac - Mogpog By-Pass Road, Package 1, Marinduque',
+          dept: DPWH,
+          amount: 150000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, (Boac Side), Package 1, Marinduque',
+          dept: DPWH,
+          amount: 130000000,
+        }
+      - {
+          name: 'Boac - Mogpog By-Pass Road, Package 2, Marinduque',
+          dept: DPWH,
+          amount: 120000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0039 + 633 - K0042 + 000',
+          dept: DPWH,
+          amount: 105000000,
+        }
+      - {
+          name: 'Bagtingon Small Reservoir Irrigation Project (SRIP), Marinduque',
+          dept: BSGC,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Phase IV), Brgy. Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Installation of Solar Street Lights along Marinduque Circumferential Rd (Package 1), Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Installation of Solar Street Lights along Marinduque Circumferential Rd (Package 2), Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Installation of Solar Street Lights along Marinduque Circumferential Rd (Package 3), Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0048 + 000 - K0050 + 000',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, (Phase 1), Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, (Phase 2), Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, (Phase 3), Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Sta. 33 + 150 - Sta. 34 + 150',
+          dept: DPWH,
+          amount: 99500000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Sta. 34 + 150 - Sta. 35 + 150',
+          dept: DPWH,
+          amount: 99500000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Sta. 35 + 150 - Sta. 36 + 150',
+          dept: DPWH,
+          amount: 99500000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Package 3, Marinduque',
+          dept: DPWH,
+          amount: 98850000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Package 2, Marinduque',
+          dept: DPWH,
+          amount: 98500000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Memorial Road, Sta. 32 + 150 - Sta. 33 + 150',
+          dept: DPWH,
+          amount: 97800000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Boac River, Sta. 0+000 - Sta. 0+670, Brgy. Sawi, Boac, Marinduque',
+          dept: DPWH,
+          amount: 90000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Boac River, Sta. 0+000 - Sta. 0+950, Brgy. Mainit, Boac, Marinduque',
+          dept: DPWH,
+          amount: 90000000,
+        }
+      - {
+          name: 'Construction/Improvement of Torrijos Commercial Complex including Site Development, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 90000000,
+        }
+      - {
+          name: 'Construction of Legislative Building including improvement of Municipal Hall, Torrijos Marinduque',
+          dept: DPWH,
+          amount: 70000000,
+        }
+      - {
+          name: 'Acquisition of Fire Trucks - Marinduque',
+          dept: DILG,
+          amount: 60000000,
+        }
+      - { name: 'Boac Bypass Road, Marinduque', dept: DPWH, amount: 60000000 }
+      - {
+          name: 'Marinduque Circumferential Rd - K0050 + 000 - K0050 + 240, K0050 + 660 - K0051 + 329',
+          dept: DPWH,
+          amount: 60000000,
+        }
+      - {
+          name: 'Construction of Candahon-Bintakay Road, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 55000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0105 + 400 - K0106 + 516',
+          dept: DPWH,
+          amount: 55000000,
+        }
+      - {
+          name: 'Construction of Bridge, Barangay Puyog, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Installation of Solar Street Lights along Dr Damian Reyes Rd (Torrijos Side), Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Rehabilitation of Brgy. Pakaskasan-Brgy. Bangwayin Road, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Installation of Solar Street Lights along Mogpog-Balanacan Port Rd, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Installation of Solar Street Lights along Dr Damian Reyes Rd (Boac Side), Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure at Brgy. Tigwi, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 48000000,
+        }
+      - {
+          name: 'Construction of Candahon Flood Control Structure, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 40000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Brgy. Ogbac, Boac, Marinduque',
+          dept: DPWH,
+          amount: 31000000,
+        }
+      - {
+          name: 'Construction of Lapote - Mangyan Mababad Road, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Rehabilitation of Matuyatuya - Suha Road, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0046 + 000 - K0046 + 683',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0002 + 210 - K0003 + 077',
+          dept: DPWH,
+          amount: 25920000,
+        }
+      - {
+          name: 'Rehabilitation of Maranlig - Nangka Road, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 25000000,
+        }
+      - {
+          name: 'Construction of Tabi Bridge along Boac Bypass Road, Boac, Marinduque',
+          dept: DPWH,
+          amount: 25000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Brgy. Bantay, Boac, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Construction of Road leading to Firefly and Bird Watching and Mangrove Tour Nangka II, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure at Brgy. Buangan, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Construction of Road, Bangwayin, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bayakbakin to Maranlig FMR, Brgy. Bayakbakin to Maranlig, Torrijos, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Cabuyo to Payanas FMR, Brgy. Cabuyo to Payanas, Torrijos, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Construction of Puting Buhangin Road, Mogpog-Boac, Marinduque',
+          dept: DPWH,
+          amount: 15000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure at Brgy. Marlangga, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 15000000,
+        }
+      - {
+          name: 'Construction of Road, Sitio Polo, Brgy. Malibago, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 15000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Mainit to Binunga FMR, Brgy. Mainit to Binunga, Boac, Marinduque',
+          dept: DA,
+          amount: 14000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Yook FMR, Brgy. Yook, Buenavista, Marinduque',
+          dept: DA,
+          amount: 14000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tarug FMR, Brgy. Tarug, Mogpog, Marinduque',
+          dept: DA,
+          amount: 13500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Alobo FMR, Brgy. Alobo, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Aturan FMR, Brgy. Aturan, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bocboc FMR, Brgy. Bocboc, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bognuyan FMR, Brgy. Bognuyan, Gasan, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy, Haguimit FMR, Brgy. Haguimit, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Kaganhao FMR, Brgy. Kaganhao, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Kalangkang FMR, Brgy. Kalangkang, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Lapu-lapu FMR, Brgy. Lapu-lapu, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Magapua, Brgy. Magapua, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Mangiliol FMR, Brgy. Mangiliol, Gasan, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Manlibunan FMR, Brgy. Manlibunan, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Maranlig to Nangka FMR, Brgy. Maranlig to Nangka, Torrijos, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Masalukot FMR, Brgy. Masalukot, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Mendez FMR, Brgy. Mendez, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Napo FMR, Brgy. Napo, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Pantayin FMR, Brgy. Pantayin, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. San Antonio FMR, Brgy. San Antonio, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tamayo FMR, Brgy. Tamayo, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Taytay FMR, Brgy. Taytay, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Purok 1-2 Brgy. Malayak FMR, Brgy. Malayak, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Purok Divisoria to Pasay Brgy. Matuyatuya FMR, Brgy. Matuyatuya, Torrijos, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Purok I Brgy. Banuyo FMR, Brgy. Banuyo, Gasan, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Purok Isok I, Brgy. Bacongbacong FMR, Brgy. Bacongbacong, Gasan, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Sitio Guintuan Brgy. Bintakay FMR, Brgy. Bintakay, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12500000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bahi FMR, Brgy. Bahi, Gasan, Marinduque',
+          dept: DA,
+          amount: 12000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tambangan FMR, Brgy. Tambangan, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 12000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Brgy. Bintakay, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 11000000,
+        }
+      - {
+          name: 'Bangbang Br. (B00023MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 10500000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0118 + 736 - K0118 + 1076',
+          dept: DPWH,
+          amount: 10200000,
+        }
+      - {
+          name: 'Implementation of a Livestock Development Project in  the Province of Marinduque',
+          dept: DA,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Argao Breakwater/Seawall, Barangay Argao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Nangka II Hanging Bridge, Barangay Nangka II, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Brgy, Pakaskasan, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Torrijos Fire Station Building, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 8000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Cagpo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7500000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Payanas, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7500000,
+        }
+      - {
+          name: 'Construction of Catubugan Flood Control, Barangay Catubugan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Agumaymayan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Balagasan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Balaring, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Balogo, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bamban, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bangbangalon, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bayuti, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Binunga, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Boi, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Lamesa, Mogpog',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Balanacan, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Boton, Mogpog Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Candahon, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Hinadharan, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Hinanggayon, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Janagdong, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Market Site, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Nangka I, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Puting Buhangin (ES), Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Sumangga, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Tarug, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Brgy. Butansapa, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Brgy. Mangyan Mababad, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Mogpog Central School, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Sitio Ibaba Barangay Capayang, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, at Purok 1, Barangay Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bangwayin, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bolo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Kay Duke, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Makawayan, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Malibago, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Maranlig, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Poctoy, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Talawan, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Evacuation Center), Barangay Bonliw, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Evacuation Center), Barangay Sibuyao, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Tigwi Elementary School, Brgy. Tigwi, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Buyabod, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Ihatub Flood Control, Barangay Ihatub, Boac, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Paye, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction of Road, Brgy. Anapog-Sibucao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction of Tourism Facility along Marlangga to Pulang Lupa Battle Site, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Bacong-Bacong Br. (B00020MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 5800000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building at Balanacan Elementary School, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Brgy. Guisian, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Pili Flood Control, Barangay Pili, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Road, Barangay Ino, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Road, Barangay Mampaitan, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction (Completion) of Evacuation Center at Barangay Banot, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-purpose Building at Torrijos white Beach, Brgy. Poctoy, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Buangan Health Center, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Road, Barangay Dampulan to Barangay Malibago, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Road, Barangay Marlangga, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Road, Brgy. Mabuhay, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Road, Brgy. Suha, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction (Completion) of Road, Marinduque Wildlife Sanctuary, Boac, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Bonliw Water System, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Kay Duke Water System, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Malibago Water System, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Malinao Water System, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Matuyatuya Water System, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Amoingon Flood Control, Barangay Amoingon, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Torrijos Side) - K0049 + 373 - K0049 + 423',
+          dept: DPWH,
+          amount: 2300000,
+        }
+  - year: '2023'
+    total: 3356702000
+    items:
+      - {
+          name: 'Construction of Torrijos Seawall, Barangay Marlangga Section, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Construction of Torrijos Seawall, Barangay Poblacion Section, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Road, Package 1, Marinduque',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Construction of Mogpog Shore Protection/Boulevard, Sitio Ulong, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Construction of Torrijos Shore Protection/Boulevard, Barangay Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Road (Boac Side) , Marinduque',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Bagtingon Small Reservoir Irrigation Project (SRIP), Marinduque',
+          dept: BSGC,
+          amount: 150000000,
+        }
+      - {
+          name: 'Boac - Mogpog By-Pass Road, Marinduque',
+          dept: DPWH,
+          amount: 110000000,
+        }
+      - {
+          name: 'Construction of Mainit - Balagbag Ridge Road (Package 1), Brgy. Mainit, Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Mainit - Balagbag Ridge Road (Package 2), Brgy. Mainit, Boac, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Malibago - Balagbag Ridge Road (Phase 1), Brgy. Malibago, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Malibago - Balagbag Ridge Road (Phase 2), Brgy. Malibago, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Installation of Road Safety Devices (SOLAR STUDS and CHEVRON SIGNS) along Marinduque Circumferential Road, Mogpog-Balanacan Port Road, Dr. Damian Reyes Memorial Road (Boac and Torrijos Side), Marinduque Circumferential Road K0003+000- K0112+600; Mogpog- Balanacan Port Road K0008+680 û K0016 +300; Dr. Damian Reyes Memorial Road (Boac Side) K0004+100- K0027 +200; Dr. Damian Reyes Memorial Road (Torrijos Side) K0048+500-K0062+450',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Mainit Flood Control Structure, Sta. 0 + 000 - Sta. 0 + 600, Boac, Marinduque',
+          dept: DPWH,
+          amount: 80000000,
+        }
+      - {
+          name: 'Construction of Laon Flood Control Structure, Sta. 0 + 000 - Sta. 0 + 960, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 80000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Phase 5, Barangay Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 77500000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0024 + 000 - K0026 + 000',
+          dept: DPWH,
+          amount: 69602000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0005 + 000 - K0005 + 609, K0011 + 261 - K0012 + 038, K0012 + 286 - K0012 + 336',
+          dept: DPWH,
+          amount: 50522000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Boac River, Barangay Balimbing, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Boac River, Barangay Boton, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Boac River, Barangay Tabigue, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Mogpog River, Barangay Banto, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Mogpog River, Barangay Mangyan Mababad, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Mogpog River, Barangay Sumangga, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Amphitheater), Pulang Lupa, Brgy. Bolo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Magapua to Brgy. Malayak FMR, Brgy. Magapua, Mogpog, Marinduque',
+          dept: DA,
+          amount: 47000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0005 + 000 - K0007 + 000',
+          dept: DPWH,
+          amount: 43601000,
+        }
+      - {
+          name: 'Libtangin Br. (B00024MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 40000000,
+        }
+      - {
+          name: 'Sto Ni±o de Buenavista Br. (B00015MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 40000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0093 + 876 - K0095 + 080',
+          dept: DPWH,
+          amount: 39562000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0103 + 810 - K0103 + 935, K0103 + 959 - K0104 + 510, K0118 + 1076 - K0119 + 000, K0118 + 205 - K0118 + 1076',
+          dept: DPWH,
+          amount: 34215000,
+        }
+      - {
+          name: 'Construction of DPWH Marinduque DEO Building (Phase II), Boac, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Construction of Damaged Flood Control Structure, Brgy. Balimbing, Boac, Marinduque',
+          dept: DPWH,
+          amount: 25000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Sumangga to Brgy. Mangyan-Mababad FMR, Brgy. Sumangga, Mogpog, Marinduque',
+          dept: DA,
+          amount: 21000000,
+        }
+      - {
+          name: 'Construction of Damaged Flood Control Structure, Brgy. Maligaya, Boac, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bahi to Brgy. Tapuyan FMR, Brgy. Bahi, Gasan, Marinduque',
+          dept: DA,
+          amount: 18000000,
+        }
+      - {
+          name: 'Construction of Road, llayang Bocboc to Barangay Puting Buhangin, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 15000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Cabuyo FMR, Brgy. Cabuyo, Torrijos, Marinduque',
+          dept: DA,
+          amount: 12000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Ino FMR, Brgy. Ino, Mogpog, Marinduque',
+          dept: DA,
+          amount: 12000000,
+        }
+      - {
+          name: 'Matuyatuya Br. (B00007MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 10200000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Brgy. Balagasan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Barangay Banto, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Road, llayang Bocboc to Sitio Paadyao, Barangay Bocboc, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Solar Water System, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Trozo Br. (B00034MQ) along Mogpog-Balanacan Port Rd (Phase II)',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Boac Municipal Police Station Building, Boac, Marinduque, Phase II',
+          dept: DPWH,
+          amount: 7500000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Bldg. (Covered Court) Brgy. Apitong, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7500000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Bldg. (Covered Court) Brgy. Ogbac, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7500000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Sayao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bayakbakin, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction (Rehabilitation) of Multi-Purpose Building, Barangay Bangwayin, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Barangay Banuyo, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 6000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building at Torrijos Fire Station, Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 5500000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Barangay Bintakay, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Poctoy, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4500000,
+        }
+      - {
+          name: 'Completion of Multi Purpose Bldg. (Brgy. Hall) Brgy. Balaring, Boac, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Masaguisi, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Completion of Multi Purpose Bldg (Evacuation Center) Brgy. Mainit, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Completion of Multi-Purpose Bldg. (Covered Court) Brgy. Mahinhin, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Completion) of Water Supply System, Barangay Bacongbacong, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+  - year: '2024'
+    total: 5977507000
+    items:
+      - {
+          name: 'Marinduque Circumferential Rd - K0021 + 500 - K0021 + 800',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0052 + 448 - K0052 + 581',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Mogpog - Balanacan Port Rd - K0012 + 763 - K0012 + 794, K0012 + 830 - K0012 + 850, K0013 + 200 - K0013 + 364, K0013 + 405 - K0013 + 500',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Mogpog - Balanacan Port Rd - K0013 + 516 - K0013 + 565, K0014 + 030 - K0014 + 100, K0014 + 320 - K0014 + 360, K0014 + 890 - K0014 + 943',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd  ( Boac Side )  - K0016 + 200 - K0016 + 556',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Construction of Mogpog Shore Protection / Boulevard, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Construction of Torrijos Shore Protection Structure, Barangay Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd  ( Boac Side )  - K0016 + 556 - K0016 + 912',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd  ( Boac Side )  - K0018 + 800 - K0019 + 050',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd  ( Boac Side )  - K0021 + 000 - K0021 + 250',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd  ( Boac Side )  - K0021 + 250 - K0021 + 500',
+          dept: DPWH,
+          amount: 250000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0051 + 602 - K0051 + 691',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0051 + 691 - K0051 + 781',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0051 + 870 - K0051 + 959',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0051 + 959 - K0052 + 000, K0052 + 400 - K0052 + 448',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0051+781 + K0051+870',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0058 + 789 - K0060 + 000, K0062 + 126.14 - K0063 + 325, K0063 + 345 - K0063 + 991',
+          dept: DPWH,
+          amount: 153584000,
+        }
+      - {
+          name: 'Boac - Mogpog By-Pass Road, Marinduque',
+          dept: DPWH,
+          amount: 105000000,
+        }
+      - {
+          name: 'Bagtingon Small Reservoir Irrigation Project (SRIP), Marinduque',
+          dept: BSGC,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Balanacan Coastal Road, Mogpog, Marinduque  ( Package 1 ) ',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Balanacan Coastal Road, Mogpog, Marinduque  ( Package 2 ) ',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure Along Mogpog River, Brgy. Magapua, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Bahi - Tapuyan Road, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Balagasan Flood Control, Boac, Marinduque',
+          dept: DPWH,
+          amount: 91000000,
+        }
+      - {
+          name: 'Construction of Balimbing Flood Control, Boac, Marinduque',
+          dept: DPWH,
+          amount: 91000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0000 + 000 - K0001 + 000, K0003 + 264 - K0004 + 000, K0027 + 786 - K0028 + 930',
+          dept: DPWH,
+          amount: 83587000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0011 + 000 - K0012 + 392, K0019 + 300 - K0021 + 205, K0032 + 000 - K0033 + 825, K0036 + 000 - K0037 + 640, K0037 + 687 - K0037 + 950',
+          dept: DPWH,
+          amount: 77717000,
+        }
+      - {
+          name: 'Construction of Bamban Flood Control Boac, Marinduque',
+          dept: DPWH,
+          amount: 70000000,
+        }
+      - {
+          name: 'Construction of Multi - Purpose Building  ( Amphitheater - Phase 2 )  of Pulang Lupa, Barangay Bolo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 70000000,
+        }
+      - {
+          name: 'Construction of Multi - Purpose Building  ( Amphitheater ) , Brgy. Bolo, Torrijos, Marinduque  ( Phase II ) ',
+          dept: DPWH,
+          amount: 60000000,
+        }
+      - {
+          name: 'Mogpog - Balanacan Port Rd - K0013 + 000 - K0013 + 168, K0013 + 642 - K0014 + 203, K0014 + 317 - K0015 + 335',
+          dept: DPWH,
+          amount: 58079000,
+        }
+      - {
+          name: 'Construction / Improvement of Road leading to Lambingan Falls, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure Along Bunganay River, Boac, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Bintakay - Capayang Road, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Water Supply System  ( Level III ) , Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0083 + 000 - K0084 + 000',
+          dept: DPWH,
+          amount: 37695000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0054 + 890 - K0056 + 640',
+          dept: DPWH,
+          amount: 37042000,
+        }
+      - {
+          name: 'Construction / Improvement of Kay Duke Road leading to Tourism Destination, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0001 + 832 - K0002 + 340',
+          dept: DPWH,
+          amount: 30000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0050 + 340 - K0051 + 329',
+          dept: DPWH,
+          amount: 28452000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0026 + 000 - K0026 + 300, K0033 + 845 - K0034 + 033, K0034 + 300 - K0034 + 627, K0041 + 300 - K0041 + 863',
+          dept: DPWH,
+          amount: 27154000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0047 + 589 - K0048 + 000',
+          dept: DPWH,
+          amount: 18054000,
+        }
+      - {
+          name: 'Concreting of Brgy. Cawit FMR, Brgy. Cawit, Boac, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Napo to Brgy. Pulong Parang FMR, Brgy. Napo and Brgy. Pulong Parang, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Concreting of Sitio Pawikan, Brgy. Tigwi FMR, Brgy. Tigwi, Torrijos, Marinduque',
+          dept: DA,
+          amount: 16000000,
+        }
+      - {
+          name: 'Concreting of Brgy. San Antonio to Brgy. Kilo-kilo FMR, Brgy. San Antonio and Brgy. Kilo-kilo, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 15500000,
+        }
+      - {
+          name: 'Concreting of Sitio Bahi, Brgy. Marlangga FMR Phase II, Marlangga, Torrijos, Marinduque',
+          dept: DA,
+          amount: 15333000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bognuyan FMR Phase II, Brgy. Bognuyan, Gasan, Marinduque',
+          dept: DA,
+          amount: 15000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd  ( Boac Side )  - K0006 + 171 - K0006 + 540',
+          dept: DPWH,
+          amount: 10404000,
+        }
+      - {
+          name: 'Construction of a Sub-surface Combined Drainage Systems, Phase II, Tanza, Boac, Marinduque',
+          dept: SUCs,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Laon Mataas na Bayan CIS Protection Works, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Bacong - Bacong Br.  ( B00020MQ )  along Marinduque Circumferential Rd  ( Phase II ) ',
+          dept: DPWH,
+          amount: 9000000,
+        }
+      - {
+          name: 'Construction of Multi - Purpose Building, Barangay Agot, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi - Purpose Building, Barangay Catubugan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi - Purpose Building, Barangay Tugos, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi - purpose Building, Brgy. Mendez, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Barangay Poblacion, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi - Purpose Building, Barangay Cagpo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Rehabilitation of Multi - purpose Building, Brgy. Nangka, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Installation / Application / Construction of Signage Warning, Advisory and Regulatory Signs, and Pavement Markings along Marinduque Circumferential Road  ( S00001MQ )  - K0105 + 000 - K0119 + 000, Gasan to Boac, Marinduque',
+          dept: DPWH,
+          amount: 6086000,
+        }
+      - {
+          name: 'Installation / Application / Construction of Signage Warning, Advisory and Regulatory Signs, and Pavement Markings along Marinduque Circumferential Road  ( S00001MQ )  - K0000 + 000 - K0012 + 000, Boac to Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 5820000,
+        }
+      - {
+          name: 'Construction of Flood Control, Brgy. Ihatub, Boac, Marinduque',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Mogpog - Balanacan Port Rd - K0010 + 557 - K0010 + 761',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction  ( Completion )  of Multi - Purpose Building, Barangay Buangan, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction  ( Completion )  of Multi - purpose Building, Brgy. Masiga, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 2000000,
+        }
+  - year: '2025'
+    total: 2931865000
+    items:
+      - {
+          name: 'Dr. Damian Reyes Road (Boac Side) - K0019+400.00 - K0019+557.00',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Road (Boac Side) - K0019+557.00 - K0019+715.00',
+          dept: DPWH,
+          amount: 300000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Boac River (Upstream-Leftside), Boac, Marinduque',
+          dept: DPWH,
+          amount: 230000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Boac River (Upstream-Rightside), Boac, Marinduque',
+          dept: DPWH,
+          amount: 200000000,
+        }
+      - {
+          name: 'Mogpog-Balanacan Port Rd - K0008 + (-147) - K0011 + 000',
+          dept: DPWH,
+          amount: 128700000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd K0027 + 112 - K0027 + 786, K0028 + 930 - K0032 + 000, K0034 + 627 - K0035 + 548',
+          dept: DPWH,
+          amount: 120000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0081 + 598 - K0082 + 000, K0082 + 761 - K0083 + 000, K0086 + 000 - K0087 + 398',
+          dept: DPWH,
+          amount: 115603000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0095 + 526 - K0097 + 077, K0097 + 137 - K0097 + 812',
+          dept: DPWH,
+          amount: 110392000,
+        }
+      - {
+          name: 'Bagtingon Small Reservoir Irrigation Project (SRIP), Marinduque',
+          dept: BSGC,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Balanacan-Ino Coastal Road leading to Balanacan Port, Barangay Balanacan, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of Road, Balanacan-Ino Coastal Road, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 100000000,
+        }
+      - {
+          name: 'Construction of SABO Dam at Mogpog River, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 99756000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0074 + 000 - K0075 + 130, K0075 + 320 - K0076 + 000',
+          dept: DPWH,
+          amount: 93200000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building at Balanacan Port Area, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 75000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0042 + 000 - K0043 + 480',
+          dept: DPWH,
+          amount: 70000000,
+        }
+      - {
+          name: 'Construction of Duyay Flood Control Structure, Barangay Duyay, Boac, Marinduque',
+          dept: DPWH,
+          amount: 58000000,
+        }
+      - {
+          name: 'Construction of DPWH Building, Marinduque District Engineering Office, Boac, Marinduque',
+          dept: DPWH,
+          amount: 55000000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Torrijos Side) - K0059 + 000 - K0059 + 982',
+          dept: DPWH,
+          amount: 52863000,
+        }
+      - {
+          name: 'Concreting of Brgy. Bahi-Tapuyan FMR, Gasan, Marinduque',
+          dept: DA,
+          amount: 50000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Labo FMR, Brgy. Labo, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 50000000,
+        }
+      - {
+          name: 'Concreting of Sitio Cawayan-Sitio Tanawan FMR, Brgy. Botilao, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure along Duongan River (Upstream), Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Construction of Boac Access Road, Boac, Marinduque',
+          dept: DPWH,
+          amount: 40000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Library), Mogpog Central School, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 40000000,
+        }
+      - {
+          name: 'Construction of Flood Control Structure, Barangay Maligaya, Boac, Marinduque',
+          dept: DPWH,
+          amount: 35000000,
+        }
+      - {
+          name: 'Construction of Marlangga Flood Control Structure, Barangay Marlangga, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 35000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Makulapnit FMR, Brgy. Makulapnit, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 25000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Masalukot FMR, Brgy. Masalukot, Santa Cruz, Marinduque',
+          dept: DA,
+          amount: 25000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd (Boac Side) - K0018 + 763 - K0018 + 827',
+          dept: DPWH,
+          amount: 25000000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd (Boac Side) - K0023 + 012 - K0023 + 0720',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Yamug Br. (B00012MQ) along Marinduque Circumferential Rd',
+          dept: DPWH,
+          amount: 18000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Agot FMR, Brgy. Agot, Boac, Marinduque',
+          dept: DA,
+          amount: 15000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Kay Duke FMR, Brgy. Kay Duke, Torrijos, Marinduque',
+          dept: DA,
+          amount: 15000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Labo to Brgy. San Antonio FMR, Brgy. Labo, Sta. Cruz, Marinduque',
+          dept: DA,
+          amount: 15000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Mampaitan FMR, Brgy. Mampaitan, Mogpog, Marinduque',
+          dept: DA,
+          amount: 15000000,
+        }
+      - {
+          name: 'Construction of Road at Brgy. Kay Duke, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 12000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0015 + 891 - K0015 + 931',
+          dept: DPWH,
+          amount: 11000000,
+        }
+      - {
+          name: 'Concreting of Brgy. Tagum to Angas FMR, Brgys. Tagum and Angas, Santa Cruz,   Marinduque',
+          dept: DA,
+          amount: 10845000,
+        }
+      - {
+          name: 'Construction of Road at Brgy. Mabuhay, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building at Sabong, Barangay Tambunan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Phase 2), Barangay Market Site, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 7000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Phase 2), Barangay Ogbac, Boac, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Completion of Multi-Purpose Building (Phase 2) , Barangay Ino, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Phase 2), Barangay Laon, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Phase 2) , Barangay Sayao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Phase 2), Barangay Bolo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 4000000,
+        }
+      - {
+          name: 'Regionwide / Nationwide - Roads and Bridges - Feasibility Studies/ Preliminary and Detailed Engineering/ Economic Analysis/ Technical Studies/ Traffic Impact Assessment - Region IV-A - Marinduque-Quezon Link Expressway (MQLEx)',
+          dept: DPWH,
+          amount: 3500000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Phase 2), Barangay Pawa, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Phase 2), Barangay Tambunan, Boac, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Completion of Multi-Purpose Building (Phase 2) , Barangay Bintakay, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Completion of Multi-Purpose Building (Phase 2), Barangay Anapog-Sibucao, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Libtangin, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building (Phase 2), Barangay Matuyatuya, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 3000000,
+        }
+      - {
+          name: 'Installation/Application of Road Safety Facilities (Road Signs, Pavement Markings) along Mogpog-Balanacan Port Rd - K0008 + (-1060) - K0016 + 732',
+          dept: DPWH,
+          amount: 1006000,
+        }
+  - year: '2026'
+    total: 1522123000
+    items:
+      - {
+          name: 'Mogpog-Balanacan Port Rd - K0011 + 603 - K0012 + 967',
+          dept: DPWH,
+          amount: 403268000,
+        }
+      - {
+          name: 'Mogpog-Balanacan Port Rd - K0013 + 168 - K0013 + 418',
+          dept: DPWH,
+          amount: 138579000,
+        }
+      - {
+          name: 'Bagtingon Small Reservoir Irrigation Project (SRIP), Marinduque',
+          dept: BSGC,
+          amount: 100000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0090 + 865 - K0091 + 130',
+          dept: DPWH,
+          amount: 92386000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd ( Torrijos Side) - K0042 + 130 - K0042 + 230',
+          dept: DPWH,
+          amount: 57732000,
+        }
+      - {
+          name: 'Construction of Public Health Facility (Rural Health Unit), Barangay Uno (Poblacion), Buenavista, Marinduque',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Mogpog - Balanacan Port Rd - K0009 + 084 - K0009 + 441, K0010 + 228 - K0010 + 749, K0010 + 765 - K0011 + 000',
+          dept: DPWH,
+          amount: 50000000,
+        }
+      - {
+          name: 'Marinduque Circumferential Rd - K0004 + 600 - K0005 + 200, K0006 + 682 - K0008 + 000',
+          dept: DPWH,
+          amount: 49286000,
+        }
+      - {
+          name: 'Construction of Road, Barangay Kasily to Barangay Kalangkang, Sta. 0 + 000 - Sta. 0 + 547.2, Sta. 0 + 875.70 - Sta. 1 + 012.20, Sta.1 + 037.50 - Sta. 1 + 078.50, Sta.1 + 114.90 - Sta. 1 + 262.40, Sta.1 + 309.20 - Sta. 1 + 347.00, Sta.1 + 448.00 - Sta. 1 + 537.00, Sta.1 + 618.00 - Sta. 1 + 723.00, Sta.1 + 764.00 - Sta. 1 +860.00, Santa Cruz, Marinduque ',
+          dept: DPWH,
+          amount: 48110000,
+        }
+      - {
+          name: 'Maranlig Br. 2 along Dr. Damian Reyes Rd (Torrijos Side), K0058+003 - K0058+028',
+          dept: DPWH,
+          amount: 48110000,
+        }
+      - {
+          name: 'Dr Damian Reyes Rd (Boac Side) - K0005 + 361 - K0005 + 987, K0024 + 1054 - K0025 + 131',
+          dept: DPWH,
+          amount: 46280000,
+        }
+      - {
+          name: 'Rehabilitation of Santa Cruz District Hospital, Barangay Lapu-lapu, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 45000000,
+        }
+      - {
+          name: 'Replacement of Tabi Bridge, Sta. 0+000 - Sta. 0+020.50, Barangay Tabi, Boac, Marinduque  ',
+          dept: DPWH,
+          amount: 41218000,
+        }
+      - {
+          name: 'Dr. Damian Reyes Rd (Boac Side) - K0014 + 850 - K0014 + 932',
+          dept: DPWH,
+          amount: 36954000,
+        }
+      - {
+          name: 'Regionwide / Nationwide - Roads and Bridges - Feasibility Studies/ Preliminary and Detailed Engineering/ Economic Analysis/ Technical Studies/ Traffic Impact Assessment - Region IV-A - Marinduque-Quezon Link Expressway (MQLEx)',
+          dept: DPWH,
+          amount: 35000000,
+        }
+      - {
+          name: 'Construction of Public Water Supply System, Lapote Water Source, Barangay Sumangga, Mogpog, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Rehabilitation of Multi-Purpose Facility, Barangay Laylay, Boac, Marinduque (121.817566°, 13.437896°)',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Rehabilitation of Public Water Supply System, Barangay Libjo, Santa Cruz, Marinduque',
+          dept: DPWH,
+          amount: 20000000,
+        }
+      - {
+          name: 'Rehabilitation of Road, Phase 1, Sta. 0+000 - Sta. 0+400, Sitio Sinambahan, Barangay Malibago, Torrijos Marinduque ',
+          dept: DPWH,
+          amount: 19244000,
+        }
+      - {
+          name: 'Rehabilitation of Road, Phase 2, Barangay Maranlig - Barangay Nangka, Sta. 0+000 - Sta. 0+061.50, Sta. 0+232 - Sta. 0+355, Sta. 0+660 - Sta. 0+715, Sta. 2+886 - Sta. 3+064, Sta. 3+290 - Sta. 3+426, Torrijos, Marinduque ',
+          dept: DPWH,
+          amount: 19244000,
+        }
+      - {
+          name: 'Construction of Road, Sta. 0+000 - Sta. 0+118, Barangay Tambunan,  Boac, Marinduque ',
+          dept: DPWH,
+          amount: 16604000,
+        }
+      - {
+          name: 'Construction of Road, Sta. 0+000 - Sta. 0+390, Sta. 0+000 - Sta. 0+060, Barangay Capayang, Mogpog, Marinduque   ',
+          dept: DPWH,
+          amount: 16604000,
+        }
+      - {
+          name: 'Rehabilitation of Road, Phase 1, Barangay Cabugao to Barangay Tapuyan, Sta. 0+000 - Sta. 0+325, Gasan, Marinduque ',
+          dept: DPWH,
+          amount: 15395000,
+        }
+      - {
+          name: 'Rehabilitation of Road, Phase 1, Barangay Libas to Barangay Bagacay, Sta. 0+000 - Sta. 0+325, Buenavista, Marinduque   ',
+          dept: DPWH,
+          amount: 15395000,
+        }
+      - {
+          name: 'Rehabilitation of Road, Phase 1, Barangay Libas to Barangay Bicas-bicas, Sta. 0+000 - Sta. 0+325, Buenavista, Marinduque ',
+          dept: DPWH,
+          amount: 15395000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Bantad, Boac, Marinduque (121.844924°, 13.451408°)',
+          dept: DPWH,
+          amount: 14000000,
+        }
+      - {
+          name: 'Rehabilitation of Road, Phase 1, Barangay Mendez to Barangay Sayao, Sta. 0+000 - Sta. 0+250, Mogpog, Marinduque ',
+          dept: DPWH,
+          amount: 11546000,
+        }
+      - {
+          name: 'Construction of Multi-purpose Building (Boac MDRRM Building with Command Center, Warehouse, and Garage) in Boac, Marinduque (13.457218N, 121.845954E)',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building (Evacuation Center), Bangbang National High School (301531), Phase II, Barangay Bangbang, Gasan, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Public Water Supply System, Barangay Cabuyo, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Public Water Supply System, Barangay Nangka, Torrijos, Marinduque',
+          dept: DPWH,
+          amount: 10000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Daig, Boac, Marinduque (121.847648°, 13.438606°)',
+          dept: DPWH,
+          amount: 8000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Barangay Mansiwat, Boac, Marinduque (121.845693°, 13.430513°)',
+          dept: DPWH,
+          amount: 8000000,
+        }
+      - {
+          name: 'Balanacan Br. (B00035MQ) along Mogpog-Balanacan Port Rd',
+          dept: DPWH,
+          amount: 5773000,
+        }
+      - {
+          name: 'Construction (Completion) of Multi-Purpose Building, Barangay Hupi, Santa Cruz, Marinduque (122.028416°, 13.501422°)',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Phase 1, Barangay Cabugao, Gasan, Marinduque (121.841636°, 13.352708°)',
+          dept: DPWH,
+          amount: 5000000,
+        }
+      - {
+          name: 'Construction of Multi-Purpose Building, Phase 1, Barangay Mangiliol, Gasan, Marinduque (121.835938°, 13.355175°)',
+          dept: DPWH,
+          amount: 5000000,
+        }

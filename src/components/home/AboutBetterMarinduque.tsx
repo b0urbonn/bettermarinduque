@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router';
-import { projectRepository } from '../../data/navigation';
+import { contactMailto } from '../../data/navigation';
 import { provincialWebsite } from '../../data/province';
 import SEO from '../SEO';
 import PageGraphic from '../brand/PageGraphic';
@@ -147,17 +147,17 @@ export default function AboutBetterMarinduque() {
           Help improve the portal by reporting outdated information, suggesting
           reliable sources, improving explanations, or contributing code. For
           corrections, include the page link and a supporting source if you have
-          one. Use GitHub for website feedback and contributions.
+          one. Email us for website feedback and contributions.
         </p>
         <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
           <a
-            href={projectRepository}
+            href={contactMailto}
             className="portal-link inline-flex items-center gap-1"
           >
-            Contribute on GitHub <ArrowUpRight size={15} aria-hidden="true" />
+            Email the team <ArrowUpRight size={15} aria-hidden="true" />
           </a>
           <a
-            href={projectRepository + '/issues'}
+            href={`${contactMailto}?subject=Correction`}
             className="portal-link inline-flex items-center gap-1"
           >
             Report a correction <ArrowUpRight size={15} aria-hidden="true" />

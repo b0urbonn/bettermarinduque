@@ -8,7 +8,8 @@ export const mainNavigation = [
   { label: 'About', href: '/about' },
 ];
 
-export const projectRepository = 'https://github.com/b0urbonn/bettermarinduque';
+export const contactEmail = 'bettermarinduque@proton.me';
+export const contactMailto = `mailto:${contactEmail}`;
 
 export const footerNavigation = [
   { title: 'Explore', links: mainNavigation },

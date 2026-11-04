@@ -8,6 +8,13 @@ lastUpdated: '2026-11-04'
 currency: USD
 total: 100000000
 
+labels:
+  total: Total settlement
+  received: Received by the Province
+  scheduled: Still scheduled
+  spent: Spent (officially reported)
+  disputed: Disputed claims
+
 summary: >-
   In April 2025 the Provincial Government of Marinduque and Barrick (which
   acquired Marcopper's former stakeholder Placer Dome) signed a US$100-million

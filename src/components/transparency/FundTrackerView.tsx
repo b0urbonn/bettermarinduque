@@ -10,6 +10,7 @@ import Section from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import MarinduqueMap from '../brand/MarinduqueMap';
 import type { FundTracker, LedgerEntry } from '../../data/transparency';
+import { contactMailto } from '../../data/navigation';
 import {
   formatMoney,
   formatPartialDate,
@@ -17,8 +18,12 @@ import {
 } from '../../lib/transparencyFormat';
 import { cn } from '../../lib/utils';
 import AmountBar from './AmountBar';
+import YearlyBarChart from './YearlyBarChart';
 
-const REPO_URL = 'https://github.com/b0urbonn/bettermarinduque';
+const currencyNames: Record<string, string> = {
+  USD: 'US dollars',
+  PHP: 'Philippine pesos',
+};
 
 const statusStyles: Record<LedgerEntry['status'], string> = {
   received: 'bg-success-50 text-success-700 border-success-200',
@@ -75,6 +80,14 @@ export default function FundTrackerView({
   const { currency } = tracker;
   const money = (n: number) => formatMoney(n, currency);
   const totals = fundTotals(tracker);
+  const labels = {
+    total: 'Total fund',
+    received: 'Received',
+    scheduled: 'Scheduled',
+    spent: 'Spent (officially reported)',
+    disputed: 'Disputed claims',
+    ...tracker.labels,
+  };
   const sourceIds = Object.keys(tracker.sources);
   const order = Object.fromEntries(sourceIds.map((id, i) => [id, i + 1]));
   const pipeline = totals.received + totals.scheduled || 1;
@@ -84,29 +97,58 @@ export default function FundTrackerView({
     ...tracker.inflows.map(entry => entry.amount)
   );
 
+  const yearTotals = new Map<number, { amount: number; received: boolean }>();
+  for (const e of tracker.inflows) {
+    const match = (e.date || e.due || '').match(/20\d{2}/);
+    if (match) {
+      const y = Number(match[0]);
+      const entry = yearTotals.get(y) ?? { amount: 0, received: false };
+      entry.amount += e.amount;
+      if (e.status === 'received') entry.received = true;
+      yearTotals.set(y, entry);
+    }
+  }
+  const yearKeys = [...yearTotals.keys()].sort((a, b) => a - b);
+  const yearlyData =
+    yearKeys.length >= 2
+      ? Array.from(
+          { length: yearKeys[yearKeys.length - 1] - yearKeys[0] + 1 },
+          (_, i) => {
+            const y = yearKeys[0] + i;
+            const entry = yearTotals.get(y);
+            return {
+              label: `FY ${y}`,
+              amount: entry?.amount ?? 0,
+              empty: entry === undefined,
+              proposed: entry !== undefined && !entry.received,
+            };
+          }
+        )
+      : null;
+
   const stats = [
     {
-      label: 'Total settlement',
+      label: labels.total,
       value: money(tracker.total),
       tone: 'text-primary-800',
     },
     {
-      label: 'Received by the Province',
+      label: labels.received,
       value: money(totals.received),
       tone: 'text-success-700',
     },
     {
-      label: 'Still scheduled',
+      label: labels.scheduled,
       value: money(totals.scheduled),
       tone: 'text-gray-900',
     },
     {
-      label: 'Spent (officially reported)',
+      label: labels.spent,
       value: totals.spent ? money(totals.spent) : 'No report yet',
       tone: totals.spent ? 'text-accent-700' : 'text-gray-500',
     },
     {
-      label: 'Disputed claims',
+      label: labels.disputed,
       value: money(totals.disputed),
       tone: 'text-secondary-600',
     },
@@ -148,7 +190,7 @@ export default function FundTrackerView({
         </dl>
 
         <div className="mb-2 flex justify-between text-sm text-gray-600">
-          <span>Payments received</span>
+          <span>{labels.received}</span>
           <span className="font-semibold text-gray-900">
             {money(totals.received)} of{' '}
             {money(totals.received + totals.scheduled)}
@@ -159,7 +201,7 @@ export default function FundTrackerView({
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={Math.round(receivedPct)}
-          aria-label="Share of settlement payments received"
+          aria-label="Share of tracked funds received"
         >
           <AmountBar
             amount={totals.received}
@@ -168,6 +210,16 @@ export default function FundTrackerView({
             fillClassName="bg-success-500"
           />
         </div>
+
+        {yearlyData && (
+          <div className="mt-6 max-w-4xl">
+            <YearlyBarChart
+              data={yearlyData}
+              title="Tracked funding items per fiscal year"
+              formatValue={n => money(n)}
+            />
+          </div>
+        )}
 
         <p className="mt-8 text-gray-700 leading-relaxed max-w-4xl">
           {tracker.summary}
@@ -188,8 +240,8 @@ export default function FundTrackerView({
               Money in
             </Heading>
             <p className="mb-3 text-sm text-gray-700">
-              Bars compare received and scheduled payments on the same US dollar
-              scale.
+              Bars compare all entries on the same{' '}
+              {currencyNames[currency] ?? currency} scale.
             </p>
             <ul className="space-y-3">
               {tracker.inflows.map(e => (
@@ -372,17 +424,15 @@ export default function FundTrackerView({
             <ul className="space-y-2">
               {tracker.openQuestions.map(q => (
                 <li
-                  key={q}
+                  key={String(q)}
                   className="rounded-lg bg-accent-50 border border-accent-100 px-4 py-3 text-sm text-gray-800"
                 >
-                  {q}
+                  {String(q)}
                 </li>
               ))}
             </ul>
             <a
-              href={`${REPO_URL}/blob/main/content/transparency/${slug}.yaml`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`${contactMailto}?subject=Suggest%20an%20update%20—%20${encodeURIComponent(slug)}`}
               className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-700 hover:underline"
             >
               Have an official document? Suggest an update
@@ -428,10 +478,11 @@ export default function FundTrackerView({
           })}
         </ol>
         <p className="mt-6 text-xs text-gray-500 max-w-3xl">
-          Compiled by the BetterMarinduque community from public news reports.
-          This is not an official government record. Amounts are in US dollars
-          as reported; peso figures are as quoted in the sources. Last updated{' '}
-          {formatPartialDate(tracker.lastUpdated)}.
+          Compiled by the BetterMarinduque community from public news reports
+          and official documents. This is not an official government record.
+          Amounts are in {currencyNames[currency] ?? currency} as reported
+          {currency === 'USD' && '; peso figures are as quoted in the sources'}.
+          Last updated {formatPartialDate(tracker.lastUpdated)}.
         </p>
       </Section>
     </>

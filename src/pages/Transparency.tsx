@@ -10,9 +10,10 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import PageGraphic, {
   type PageGraphicKind,
 } from '../components/brand/PageGraphic';
-import { projectRepository } from '../data/navigation';
+import { contactMailto } from '../data/navigation';
 import DisclosureView from '../components/transparency/DisclosureView';
 import FundTrackerView from '../components/transparency/FundTrackerView';
+import NationalBudgetView from '../components/transparency/NationalBudgetView';
 import TransparencyGraphic from '../components/transparency/TransparencyGraphic';
 import {
   disclosureTopics,
@@ -25,13 +26,20 @@ import {
   fundTotals,
 } from '../lib/transparencyFormat';
 
-const REPO_ISSUES_URL = projectRepository + '/issues';
+const SUGGEST_URL = `${contactMailto}?subject=Suggest%20a%20record`;
 const topics = [...transparencyIndex.trackers, ...disclosureTopics];
 const disclosureGraphics: Partial<Record<string, PageGraphicKind>> = {
   budgets: 'budgets',
   procurement: 'procurement',
   infrastructure: 'infrastructure',
   audits: 'audits',
+};
+const trackerGraphics: Partial<Record<string, PageGraphicKind>> = {
+  'marcopper-fund': 'settlement',
+  'circumferential-road': 'infrastructure',
+  'disaster-fund': 'budgets',
+  'national-tax-allotment': 'budgets',
+  'flood-control': 'infrastructure',
 };
 
 function TransparencyNavigation() {
@@ -78,7 +86,7 @@ function TransparencyHub() {
       <PageHeader
         title="Transparency portal"
         illustration={<TransparencyGraphic />}
-        description="Follow public money in Marinduque. Browse the Marcopper settlement tracker and selected records on local finances, contracts, infrastructure, and audits."
+        description="Follow public money in Marinduque. Browse fund trackers and selected records on local finances, contracts, infrastructure, and audits."
         breadcrumbItems={[
           { label: 'Home', href: '/' },
           { label: 'Transparency' },
@@ -186,8 +194,8 @@ function TransparencyHub() {
           >
             Provincial office contacts
           </a>
-          <a href={REPO_ISSUES_URL} className="underline underline-offset-2">
-            Suggest a record on GitHub
+          <a href={SUGGEST_URL} className="underline underline-offset-2">
+            Suggest a record by email
           </a>
         </div>
       </Section>
@@ -200,6 +208,25 @@ export default function Transparency() {
   if (!slug) return <TransparencyHub />;
 
   const topic = disclosureTopics.find(topic => topic.slug === slug);
+  if (topic?.slug === 'national-budget') {
+    return (
+      <>
+        <SEO title={topic.name} description={topic.description} />
+        <TransparencyNavigation />
+        <PageHeader
+          title={topic.name}
+          description={topic.description}
+          illustration={<PageGraphic key={slug} kind="budgets" />}
+          breadcrumbItems={[
+            { label: 'Home', href: '/' },
+            { label: 'Transparency', href: '/transparency' },
+            { label: topic.name },
+          ]}
+        />
+        <NationalBudgetView />
+      </>
+    );
+  }
   if (topic) {
     return (
       <>
@@ -245,12 +272,14 @@ export default function Transparency() {
       <SEO
         title={tracker.title}
         description={tracker.summary}
-        keywords="Marcopper settlement, Barrick, Marinduque, rehabilitation fund, transparency"
+        keywords={`Marinduque transparency, ${tracker.title}, public funds, local government`}
       />
       <TransparencyNavigation />
       <PageHeader
         title={tracker.title}
-        illustration={<PageGraphic kind="settlement" />}
+        illustration={
+          <PageGraphic key={slug} kind={trackerGraphics[slug] ?? 'document'} />
+        }
         description={`Where the money is, where it is going, and what is still not public. Last updated ${formatPartialDate(tracker.lastUpdated)}.`}
         breadcrumbItems={[
           { label: 'Home', href: '/' },

@@ -48,15 +48,29 @@
       period: FY 2027 House budget bill
       description: >-
         BetterGov.ph identifies this DPWH line item for the section from
-        K0032+423 to K0032+873 in House Bill 10858. The amount reflects
-        the House version of the national budget.
+        K0032+423 to K0032+873 in House Bill 10858. It runs through the
+        DPWH Central Office and appears in the House bill only — not in
+        the NEP proposal — making it an insertion candidate.
       figures:
         - label: Proposed amount in the House bill
           amount: 70000000
       source:
-        title: FY 2027 House budget bill comparison, item 714
+        title: 'House bill item: K0032+423–K0032+873'
         publisher: BetterGov.ph Budget
-        url: https://budget.bettergov.ph/hgab/2027/we-are-not-ignorant
+        url: https://budget.bettergov.ph/hgab/2027/dpwh/p/house-reading%3A1494
+    - title: Marcopper settlement initial payment
+      period: October 2026
+      description: >-
+        About US$50.71 million of the US$100-million Marcopper settlement was
+        transferred to the provincial trust fund. The peso figure is the
+        reported equivalent; see the settlement tracker for the full ledger.
+      figures:
+        - label: Reported peso equivalent received
+          amount: 3200000000
+      source:
+        title: Marinduque governor denies blocking ₱3.2B Marcopper payout
+        publisher: Daily Tribune
+        url: https://tribune.net.ph/2026/10/23/marinduque-governor-denies-blocking-32b-marcopper-payout
   nextSteps: >-
     For an approved annual budget or a statement of receipts and expenditures,
     search the DILG Full Disclosure Policy Portal by local government unit and year.
@@ -71,6 +85,25 @@
     - name: BetterGov.ph GAA Explorer
       description: Browse enacted national budget data published by DBM.
       url: https://budget.bettergov.ph/gaa
+
+- slug: national-budget
+  name: National budget for Marinduque
+  description: >-
+    Enacted national budget items naming Marinduque from FY 2020 to FY 2026,
+    the district engineering office's yearly appropriations, and the
+    FY 2027 House bill project list — mirrored from BetterGov.ph Budget.
+  icon: Landmark
+  records: []
+  nextSteps: >-
+    The BetterGov.ph GAA Explorer lets you search every enacted national
+    budget line item by name and year.
+  directories:
+    - name: BetterGov.ph GAA Explorer
+      description: Search enacted national budget line items.
+      url: https://budget.bettergov.ph/gaa
+    - name: Marinduque district card
+      description: DPWH district totals and the FY 2027 budget comparison.
+      url: https://budget.bettergov.ph/hgab/2027/districts/leg%3Amarinduque%3Alone
 
 - slug: procurement
   name: Bids and awards
@@ -105,6 +138,19 @@
         title: Procurement record 300-26-04-039
         publisher: Department of Agriculture, FFEDIS
         url: https://ffedis.da.gov.ph/negotiated-procurement/public/view/568
+    - title: Contracts awarded by the Municipality of Boac
+      period: Recorded to date
+      description: >-
+        PhilGEPS award notices where the municipality itself is the procuring
+        entity, consolidated from public records. Barangay-level awards are
+        listed separately on the same page.
+      figures:
+        - label: Total municipal awards on record
+          amount: 687718693.59
+      source:
+        title: Boac public records — PhilGEPS awards
+        publisher: Love the Philippines (PhilGEPS mirror)
+        url: https://lovethephilippines.com/lgu/1704001000-boac
   nextSteps: >-
     Search PhilGEPS by procuring entity or reference number. The notice of award
     identifies the winning supplier and price. Delivery and payment records show
@@ -113,6 +159,12 @@
     - name: PhilGEPS public notices
       description: Search bid opportunities and award notices.
       url: https://notices.philgeps.gov.ph/
+    - name: DA FFEDIS negotiated procurement
+      description: Awarded contracts under negotiated procurement programs.
+      url: https://ffedis.da.gov.ph
+    - name: Boac public records — PhilGEPS awards
+      description: Awards where a Boac LGU or barangay is the buyer.
+      url: https://lovethephilippines.com/lgu/1704001000-boac
 
 - slug: infrastructure
   name: Infrastructure projects
@@ -186,6 +238,37 @@
         title: DPWH project record 19EA0106
         publisher: BetterGov.ph Transparency
         url: https://transparency.bettergov.ph/dpwh/projects/19EA0106
+    - title: DPWH projects in Marinduque — recorded totals
+      period: 2016–2025 records
+      description: >-
+        Consolidated DPWH Transparency Portal records for the province: 1,120
+        public works with recorded contract values, of which 155 are flood
+        control works. Figures are as recorded by DPWH, not findings.
+      figures:
+        - label: Recorded contract values, all DPWH works
+          amount: 24121368925.64
+      source:
+        title: DPWH projects in Marinduque
+        publisher: Love the Philippines (DPWH records mirror)
+        url: https://lovethephilippines.com/places/marinduque
+      relatedSources:
+        - title: Flood control projects tracker
+          publisher: BetterMarinduque
+          url: /transparency/flood-control
+    - title: Dr. Damian Reyes Road landslip rehabilitation cluster
+      period: FY 2023–2024 contracts
+      description: >-
+        Five of the six largest recorded contracts on this road on the Boac
+        side each carry a value near ₱241.2 million, alongside one ₱289.5
+        million package — the same near-uniform pricing seen in the seawall
+        contracts. Recorded as asset preservation works for road slips.
+      figures:
+        - label: Largest package (2024)
+          amount: 289497642.92
+      source:
+        title: Boac public records — DPWH project list
+        publisher: Love the Philippines (DPWH records mirror)
+        url: https://lovethephilippines.com/lgu/1704001000-boac
   nextSteps: >-
     Search the DPWH portal by project ID for contract details and progress.
     For a provincial project, ask the implementing office for its latest
@@ -197,6 +280,9 @@
     - name: BetterGov.ph DPWH project browser
       description: Browse records under the Marinduque District Engineering Office.
       url: https://transparency.bettergov.ph/dpwh/provinces/Marinduque%20DEO
+    - name: Sumbong sa Pangulo
+      description: Report and inspect flood control projects.
+      url: https://sumbongsapangulo.ph
 
 - slug: audits
   name: Audits and reports
@@ -228,6 +314,39 @@
         title: 2024 Annual Accomplishment Report (PDF)
         publisher: Provincial Government of Marinduque
         url: https://marinduque.gov.ph/wp-content/uploads/2026/04/2024-PGM-Annual-Accomplishment-Report_compressed-1.pdf
+    - title: COA annual audit reports for LGUs
+      period: By year and region
+      description: >-
+        COA publishes full annual audit reports grouped by year. The province
+        and its six municipalities are filed under MIMAROPA; each report lists
+        audit observations and recommendations.
+      source:
+        title: Annual Audit Reports — Local Government Units
+        publisher: Commission on Audit
+        url: https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/
+    - title: COA special audit of DRRM funds
+      period: CY 2024 funds
+      description: >-
+        COA's nationwide audit of disaster funds calls out 70 LGUs for low
+        LDRRMF utilization — Marinduque is named among them. The published
+        range across LGUs is 1.41% to 67.16% utilization.
+      source:
+        title: 'Lost opportunity: COA calls out 70 LGUs over low disaster fund use'
+        publisher: Rappler
+        url: https://www.rappler.com/philippines/coa-special-audit-report-local-disaster-risk-reduction-management-fund-2024/
+    - title: Disallowed disaster fund cellphone purchase
+      period: CY 2014 audit, reported 2015
+      description: >-
+        COA's 2014 audit of the province found ₱909,675 in disaster funds was
+        spent on 1,300 cellphones for health workers without a valid
+        appropriation, and declared the transaction void.
+      figures:
+        - label: Disallowed amount
+          amount: 909675
+      source:
+        title: "COA: Marinduque used disaster fund for health workers' phones"
+        publisher: Rappler
+        url: https://www.rappler.com/philippines/102949-marinduque-disaster-fund-phones-coa-audit/
   nextSteps: >-
     In the COA archive, choose a year, then look under MIMAROPA for the
     province or municipality. Look for audit observations, recommendations,

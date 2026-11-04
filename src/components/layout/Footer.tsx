@@ -1,6 +1,6 @@
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import { Link } from 'react-router';
-import { footerNavigation, projectRepository } from '../../data/navigation';
+import { contactMailto, footerNavigation } from '../../data/navigation';
 import Logo from '../brand/Logo';
 
 export default function Footer() {
@@ -25,11 +25,11 @@ export default function Footer() {
               province.
             </p>
             <a
-              href={projectRepository}
-              aria-label="BetterMarinduque on GitHub"
+              href={contactMailto}
+              aria-label="Email BetterMarinduque"
               className="mt-4 inline-flex hover:text-primary-200"
             >
-              <Github size={20} aria-hidden="true" />
+              <Mail size={20} aria-hidden="true" />
             </a>
           </div>
           {footerNavigation.map(({ title, links }) => (

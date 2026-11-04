@@ -1,0 +1,123 @@
+# Provincial Disaster Fund (LDRRMF) tracker.
+# Rules: every figure and event must cite at least one entry in `sources`.
+# Quote all dates ('YYYY', 'YYYY-MM', or 'YYYY-MM-DD') so YAML keeps them as text.
+# Update `lastUpdated` whenever anything changes.
+
+title: Provincial Disaster Fund (LDRRMF)
+lastUpdated: '2026-11-04'
+currency: PHP
+total: 53508285.7
+
+labels:
+  total: Indicative annual minimum
+  received: Confirmed appropriation
+  scheduled: Indicative or unconfirmed
+  spent: Reported use
+  disputed: Questioned or disallowed
+
+summary: >-
+  Under Republic Act 10121, the province must set aside at least 5% of its
+  estimated revenue from regular sources as a Local Disaster Risk Reduction
+  and Management Fund each year — 70% for prevention and mitigation, up to 30%
+  as a Quick Response Fund. Based on the reported ₱1.07-billion estimated
+  General Fund income for CY 2024, the indicative minimum is about ₱53.5
+  million. COA has flagged the fund twice in public reports: a 2014 audit
+  voided a ₱909,675 cellphone purchase, and the 2024 special audit of DRRM
+  funds named Marinduque among provinces with low fund utilization.
+
+summaryTl: >-
+  Sa ilalim ng RA 10121, dapat magtabi ang lalawigan ng hindi bababa sa 5% ng
+  tinatayang kita bilang disaster fund taun-taon — humigit-kumulang ₱53.5
+  milyon batay sa 2024 na taya ng kita. Dalawang beses nang na-flag ng COA ang
+  pondo: noong 2014 audit, idineklarang void ang ₱909,675 na pagbili ng
+  cellphone, at sa 2024 special audit, kabilang ang Marinduque sa mga
+  lalawigan na mababa ang paggamit ng LDRRMF.
+
+# Money set aside for the fund. Confirmed entries require an appropriation
+# ordinance, AIP, or official report; indicative entries are estimates.
+inflows:
+  - label: Indicative LDRRMF minimum, CY 2024
+    amount: 53508285.7
+    status: scheduled
+    due: Set annually at no less than 5% of estimated regular revenue
+    note: >-
+      Indicative only — computed as 5% of the reported ₱1.07-billion
+      estimated General Fund income for CY 2024. The legally required base is
+      estimated revenue from regular sources, and the appropriated figure has
+      not been published here. Up to 30% (about ₱16.05 million on this basis)
+      may stand by as the Quick Response Fund.
+    sources: [ra-10121, pgm-aar-2024]
+
+# Reported use of the fund. Add entries only from appropriation ordinances,
+# LDRRMF utilization reports, SP resolutions, or COA audits.
+outflows: []
+
+# Amounts questioned or disallowed in published audit reports.
+claims:
+  - label: Cellphone purchase disallowed by COA (CY 2014 audit)
+    amount: 909675
+    status: disputed
+    note: >-
+      COA's 2014 audit found 1,300 cellphones worth ₱909,675 for health
+      workers were charged to the disaster fund without a valid
+      appropriation, and declared the transaction void. Whether the amount
+      was recovered or settled is not published here.
+    sources: [rappler-coa-2015]
+
+timeline:
+  - date: '2010-05-27'
+    title: Republic Act 10121 signed
+    description: >-
+      Creates the LDRRMF: at least 5% of estimated regular revenue, 70% for
+      pre-disaster measures and up to 30% as Quick Response Fund.
+    sources: [ra-10121, ndrrmc-jmc-2013-1]
+  - date: '2015-08-17'
+    title: COA 2014 audit voids cellphone purchase
+    description: >-
+      Auditors found ₱909,675 in disaster funds was used to buy cellphones
+      for health workers — an item outside allowed LDRRMF uses — and
+      declared the transaction void.
+    sources: [rappler-coa-2015]
+  - date: '2024'
+    title: Province reports ₱1.07B estimated income
+    description: >-
+      The 2024 Annual Accomplishment Report compares the estimated and actual
+      General Fund income used for the indicative 5% figure.
+    sources: [pgm-aar-2024]
+  - date: '2025'
+    title: COA flags low LDRRMF utilization
+    description: >-
+      COA's special audit of CY 2024 DRRM funds names Marinduque among 70
+      LGUs with low utilization rates — the published range across LGUs is
+      1.41% to 67.16%.
+    sources: [rappler-coa-2024]
+
+openQuestions:
+  - The appropriated LDRRMF amount for each year, not just the indicative minimum.
+  - The province's actual utilization rate — COA grouped it among low-utilizing LGUs without publishing the figure.
+  - Quick Response Fund releases and the calamity declarations behind them.
+  - 'Utilization reports: which preparedness and mitigation projects were funded.'
+  - Whether the 2014 cellphone disallowance was settled or recovered.
+  - The unspent balance carried over in the trust fund.
+
+sources:
+  ra-10121:
+    title: Republic Act No. 10121 — Philippine DRRM Act of 2010
+    publisher: Official Gazette
+    url: https://www.officialgazette.gov.ph/2010/05/27/republic-act-no-10121/
+  ndrrmc-jmc-2013-1:
+    title: JMC No. 2013-1 — Allocation and Utilization of the LDRRMF (PDF)
+    publisher: NDRRMC
+    url: https://ndrrmc.gov.ph/attachments/article/1320/JMC_No_2013-1_re_Allocation_and_Utilization_of_LDRRMF.pdf
+  pgm-aar-2024:
+    title: 2024 Annual Accomplishment Report, p. 7 (PDF)
+    publisher: Provincial Government of Marinduque
+    url: https://marinduque.gov.ph/wp-content/uploads/2026/04/2024-PGM-Annual-Accomplishment-Report_compressed-1.pdf
+  rappler-coa-2015:
+    title: "COA: Marinduque used disaster fund for health workers' phones"
+    publisher: Rappler
+    url: https://www.rappler.com/philippines/102949-marinduque-disaster-fund-phones-coa-audit/
+  rappler-coa-2024:
+    title: 'Lost opportunity: COA calls out 70 LGUs over low disaster fund use'
+    publisher: Rappler
+    url: https://www.rappler.com/philippines/coa-special-audit-report-local-disaster-risk-reduction-management-fund-2024/
