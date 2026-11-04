@@ -13,7 +13,7 @@ function LogoImage({ className }: { className?: string }) {
       <source srcSet={logoWebp} type="image/webp" />
       <img
         src={logoPng}
-        alt="Better Marinduque logo"
+        alt="BetterMarinduque logo"
         width={800}
         height={579}
         className={className}

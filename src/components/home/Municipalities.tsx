@@ -2,6 +2,7 @@ import Section from '../ui/Section';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { MapPin } from 'lucide-react';
+import MarinduqueMap from '../brand/MarinduqueMap';
 
 interface Municipality {
   name: string;
@@ -72,7 +73,12 @@ const municipalities: Municipality[] = [
 
 export default function Municipalities() {
   return (
-    <Section>
+    <Section
+      id="municipalities"
+      decoration={
+        <MarinduqueMap className="hidden md:block absolute -right-24 -top-10 h-[560px] w-[560px] text-primary-700/10 pointer-events-none" />
+      }
+    >
       <Heading level={2}>Municipalities</Heading>
       <Text className="text-gray-600 mb-6">
         The six municipalities of the Province of Marinduque. Populations from

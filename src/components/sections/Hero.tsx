@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, Link } from 'react-router';
 import { Search, Phone } from 'lucide-react';
 import { Heading } from '../ui/Heading';
-import HeartIsland from '../brand/HeartIsland';
+import MarinduqueMap from '../brand/MarinduqueMap';
 import { isMeilisearchEnabled } from '../../lib/meilisearch';
 import morionesBackground from '../../assets/moriones background.jpeg';
 import morionesParade from '../../assets/marinduque-moriones-parade.jpg';
@@ -60,7 +60,7 @@ export default function Hero() {
           }`}
         />
       ))}
-      <HeartIsland className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 h-[420px] w-[420px] text-white/10 pointer-events-none" />
+      <MarinduqueMap className="hidden lg:block absolute right-8 xl:right-24 top-1/2 -translate-y-1/2 h-[440px] w-[440px] text-white/15 pointer-events-none" />
       <div className="container mx-auto px-4 relative">
         <div className="max-w-2xl animate-fade-in">
           <span className="inline-flex items-center rounded-full border border-accent-400/40 bg-primary-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-300 mb-6">

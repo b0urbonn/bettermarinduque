@@ -1,9 +1,10 @@
 {
-  "site_name": "Better Marinduque",
-  "site_description": "A community-run portal for the Province of Marinduque",
+  "site_name": "BetterMarinduque",
+  "site_tagline": "Community portal",
+  "site_description": "Find service guides, government offices, and emergency contacts in one place.",
   "hero": {
-    "title": "Province of Marinduque",
-    "subtitle": "Find provincial services, offices, and information — all in one place, in plain language.",
+    "title": "BetterMarinduque",
+    "subtitle": "Find out how to apply for local services, what to bring, and which office to contact.",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
@@ -29,7 +30,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2025 Better Marinduque. Community-run; not an official government website unless stated."
+    "copyright": "© {{year}} BetterMarinduque. An independent community portal."
   },
   "navbar": {
     "government": "Government",

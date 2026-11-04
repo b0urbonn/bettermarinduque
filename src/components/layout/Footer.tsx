@@ -42,14 +42,11 @@ const Footer: React.FC = () => {
               <Logo variant="light" className="h-10 w-auto" />
               <div>
                 <div className="font-display font-bold">{t('site_name')}</div>
-                <div className="text-xs text-white/60">
-                  Province of Marinduque
-                </div>
+                <div className="text-xs text-white/60">{t('site_tagline')}</div>
               </div>
             </div>
             <p className="text-white/70 text-sm mb-4">
-              A community-run portal for the Province of Marinduque — the Heart
-              of the Philippines.
+              {t('site_description')}
             </p>
             {socialLinks.length > 0 && (
               <div className="flex space-x-4">
@@ -91,8 +88,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 text-sm mb-4 md:mb-0">
-              © {year} Better Marinduque. Community-run; not an official
-              government website unless stated.
+              {t('footer.copyright', { year })}
             </p>
             <div className="flex items-center gap-4">
               <a

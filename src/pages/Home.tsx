@@ -2,6 +2,7 @@ import Hero from '../components/sections/Hero';
 import QuickTasks from '../components/home/QuickTasks';
 import ServicesSection from '../components/home/ServicesSection';
 import AboutMarinduque from '../components/home/AboutMarinduque';
+import AboutBetterMarinduque from '../components/home/AboutBetterMarinduque';
 import Municipalities from '../components/home/Municipalities';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
 import Hotlines from '../components/home/Hotlines';
@@ -12,7 +13,7 @@ const Home: React.FC = () => {
     <>
       <SEO
         title="Home"
-        description="A community-run portal for the Province of Marinduque — the Heart of the Philippines. Find provincial services, offices, and information in one place."
+        description="BetterMarinduque is a community portal for local service guides, government offices, municipal contacts, and emergency hotlines."
         keywords="Marinduque, province, government services, MIMAROPA, Boac, Moryonan, Moriones Lenten Rites, Heart of the Philippines"
       />
       <main className="flex-grow">
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
         <QuickTasks />
         <ServicesSection />
         <AboutMarinduque />
+        <AboutBetterMarinduque />
         <Municipalities />
         <GovernmentActivitySection />
         <Hotlines />

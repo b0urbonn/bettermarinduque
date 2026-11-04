@@ -3,14 +3,32 @@ export default function Section({
   children,
   className,
   id,
+  decoration,
 }: {
   children: React.ReactNode;
   className?: string;
   id?: string;
+  decoration?: React.ReactNode;
 }) {
   return (
-    <section className={cn('py-12 bg-white', className)} id={id}>
-      <div className={cn('container mx-auto px-4', className)}>{children}</div>
+    <section
+      className={cn(
+        'py-12 bg-white',
+        decoration && 'relative overflow-hidden',
+        className
+      )}
+      id={id}
+    >
+      {decoration}
+      <div
+        className={cn(
+          'container mx-auto px-4',
+          decoration && 'relative',
+          className
+        )}
+      >
+        {children}
+      </div>
     </section>
   );
 }

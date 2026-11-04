@@ -17,12 +17,10 @@ export default function SEO({
   image,
   url,
   type = 'website',
-  siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
+  siteName = 'BetterMarinduque',
 }: SEOProps) {
-  const defaultTitle = `${siteName} - Official Government Website`;
-  const defaultDescription =
-    import.meta.env.VITE_SITE_DESCRIPTION ||
-    `Official website of ${siteName}. Access government services, information, and resources.`;
+  const defaultTitle = `${siteName} | Community Portal`;
+  const defaultDescription = `${siteName} is a community portal for local service guides, government offices, and emergency contacts.`;
   const defaultKeywords =
     import.meta.env.VITE_SITE_KEYWORDS ||
     'government, local government, services, public services, civic services';

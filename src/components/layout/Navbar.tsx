@@ -91,11 +91,9 @@ const Navbar: React.FC = () => {
               <Logo className="h-10 md:h-12 w-auto mr-3 shrink-0" />
               <div>
                 <div className="font-display font-bold text-primary-900 text-lg leading-tight">
-                  Province of Marinduque
+                  {t('site_name')}
                 </div>
-                <div className="text-xs text-gray-600">
-                  Better Marinduque · Community portal
-                </div>
+                <div className="text-xs text-gray-600">{t('site_tagline')}</div>
               </div>
             </Link>
           </div>
