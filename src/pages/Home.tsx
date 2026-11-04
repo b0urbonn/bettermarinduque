@@ -21,9 +21,9 @@ const Home: React.FC = () => {
         <QuickTasks />
         <ServicesSection />
         <AboutMarinduque />
-        <AboutBetterMarinduque />
         <Municipalities />
         <GovernmentActivitySection />
+        <AboutBetterMarinduque />
         <Hotlines />
       </main>
     </>

@@ -91,6 +91,7 @@ export default function AboutMarinduque() {
   return (
     <Section
       id="about-marinduque"
+      className="bg-gray-50"
       decoration={
         <MarinduqueMap className="hidden lg:block absolute -left-32 top-16 h-[620px] w-[620px] text-primary-700/[0.07] pointer-events-none" />
       }
