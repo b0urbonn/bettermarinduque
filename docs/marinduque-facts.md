@@ -214,3 +214,39 @@ listing steps, fees, processing time and responsible person for frontline servic
 - Provincial Government: https://marinduque.gov.ph ; Facebook: facebook.com/provincialgovernmentofmarinduque
 - Municipality of Mogpog: https://mogpog.gov.ph ; Boac: boac.gov.ph domain in use.
 - PDRRMO: facebook.com/PDRRMOMarinduqueOfficial
+
+## Municipal page photos and website links (checked 2026-11-05)
+
+Photo metadata and license URLs are recorded in `src/data/municipalityMedia.ts`
+and `public/image-credits.html`. The selected card and banner photos now use:
+
+- Boac Cathedral (ELRLogatoc, CC BY-SA 4.0).
+- Buenavista municipal building, 2012 (T3n60, CC BY-SA 3.0), explicitly described
+  as Buenavista, Marinduque in its Commons file page, rather than Buenavista in
+  Agusan del Norte. Source: https://commons.wikimedia.org/wiki/File:Municipality_Of_Buenavista.jpg
+- Gasan parish church (Joelaldor, CC BY 3.0).
+- Ancestral-house street in Mogpog, 2013 (Joelaldor, CC BY-SA 4.0).
+  Source: https://commons.wikimedia.org/wiki/File:Ancestral_Houses_in_Mogpog,_Marinduque.jpg
+- Santa Cruz municipal hall, 2013 (Joelaldor, CC BY-SA 4.0).
+  Source: https://commons.wikimedia.org/wiki/File:Municipal_Hall_of_Santa_Cruz,_Marinduque.jpg
+- Torrijos White Beach, displayed from the municipal tourism website:
+  https://hamossatorrijos.gov.ph/torrijos-tourist-attractions/
+  Image: https://hamossatorrijos.gov.ph/wp-content/uploads/2021/10/1-Torrijos-White-Beach-14.jpg
+  This is credited to the source website, with no invented photographer or CC license.
+
+Dates on archival building photographs are shown in the image credits. Do not
+use Poctoy Pier photos from Odiongan, Romblon as photos of Torrijos.
+
+- Boac: `https://www.boac.gov.ph/` is listed by the DBM municipal government
+  directory. It did not respond during this link check; label this limitation.
+  Source: https://www.dbm.gov.ph/wp-content/uploads/DBM%20Publications/Directory2014/Local%20Govt/LGU.pdf
+- Mogpog: `https://mogpog.gov.ph/` identifies itself as the official municipal
+  website for Mogpog, Marinduque.
+- Torrijos: `https://hamossatorrijos.gov.ph/` hosts municipal tourism information
+  and the municipal Citizen’s Charter. Label it as a tourism website, rather than
+  a general municipal portal. Source:
+  https://hamossatorrijos.gov.ph/wp-content/uploads/2023/06/CITIZENS-CHARTER-2022-1ST-EDITION-FULL.pdf
+- Standalone municipal government websites were not independently confirmed for
+  Buenavista, Gasan, and Santa Cruz in this pass. Link to the DILG MIMAROPA
+  directory and provincial municipal profiles as government references instead.
+  The `buenavista.gov.ph` result belongs to Buenavista, Agusan del Norte.

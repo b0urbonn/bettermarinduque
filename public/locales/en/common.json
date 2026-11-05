@@ -52,6 +52,7 @@
     "copyright": "© {{year}} BetterMarinduque. An independent community portal."
   },
   "navbar": {
+    "municipalities": "Municipalities",
     "government": "Government",
     "services": "Services",
     "transparency": "Transparency",
@@ -97,8 +98,15 @@
     }
   },
   "towns": {
+    "pageTitle": "Municipalities of Marinduque",
+    "pageDescription": "Explore all six towns, their barangays, local contacts, and places to visit.",
+    "overview": "Overview",
+    "jumpTo": "Jump to a town",
+    "incomeClass": "Income class",
+    "backToList": "Back to town list",
     "heading": "Find your town",
     "description": "Choose a town from the list or select it on the map. See local contacts, barangays, and places to visit.",
+    "viewAll": "View all towns",
     "selectLabel": "Choose a municipality",
     "provinceMap": "Marinduque on Google Maps",
     "openGuide": "View town guide",

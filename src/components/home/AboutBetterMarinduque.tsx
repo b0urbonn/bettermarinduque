@@ -23,7 +23,7 @@ const portalLinks = [
   },
   {
     label: 'Municipalities',
-    to: '/#municipalities',
+    to: '/municipalities',
     description: 'Explore Marinduque’s six towns.',
   },
 ];

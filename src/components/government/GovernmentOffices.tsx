@@ -197,7 +197,7 @@ export default function GovernmentOffices() {
                 <div className="mt-2 flex flex-wrap gap-x-4">
                   <PhoneLink number={town.municipalOffice} />
                   <Link
-                    to={`/?municipality=${slug}#town-guide`}
+                    to={`/municipalities/${slug}`}
                     className="portal-link inline-flex min-h-11 items-center gap-1 text-sm"
                   >
                     {t('towns.openGuide')}{' '}

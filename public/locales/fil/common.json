@@ -22,6 +22,7 @@
     "psgcSource": "Mga bayan at barangay · PSA"
   },
   "navbar": {
+    "municipalities": "Mga bayan",
     "home": "Tahanan",
     "services": "Mga Serbisyo",
     "transparency": "Transparensiya",
@@ -54,8 +55,15 @@
     }
   },
   "towns": {
+    "pageTitle": "Mga bayan ng Marinduque",
+    "pageDescription": "Tingnan ang anim na bayan, mga barangay, lokal na kontak, at mga lugar na maaaring puntahan.",
+    "overview": "Pangkalahatang impormasyon",
+    "jumpTo": "Pumunta sa bayan",
+    "incomeClass": "Klasipikasyon ng kita",
+    "backToList": "Bumalik sa listahan ng mga bayan",
     "heading": "Hanapin ang iyong bayan",
     "description": "Pumili ng bayan sa listahan o mapa. Tingnan ang mga numero ng tanggapan, barangay, at lugar na maaaring bisitahin.",
+    "viewAll": "Tingnan ang lahat ng bayan",
     "selectLabel": "Pumili ng bayan",
     "provinceMap": "Marinduque sa Google Maps",
     "openGuide": "Tingnan ang gabay sa bayan",

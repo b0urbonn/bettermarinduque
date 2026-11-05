@@ -2,6 +2,7 @@ import { provincialWebsite } from './province';
 
 export const mainNavigation = [
   { label: 'Home', href: '/' },
+  { label: 'Municipalities', href: '/municipalities' },
   { label: 'Services', href: '/services' },
   { label: 'Transparency', href: '/transparency' },
   { label: 'Government', href: '/government' },

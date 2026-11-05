@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const tasks = [
   { key: 'emergency', to: '/#hotlines', Icon: Phone },
-  { key: 'town', to: '/#municipalities', Icon: MapPin },
+  { key: 'town', to: '/municipalities', Icon: MapPin },
   { key: 'offices', to: '/government', Icon: Landmark },
   { key: 'funds', to: '/transparency', Icon: FileText },
 ];

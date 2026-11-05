@@ -11,6 +11,8 @@ import Document from './pages/Document';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import Transparency from './pages/Transparency';
+import MunicipalitiesPage from './pages/MunicipalitiesPage';
+import MunicipalityPage from './pages/MunicipalityPage';
 import { isMeilisearchEnabled } from './lib/meilisearch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
@@ -25,6 +27,14 @@ function App() {
             <main id="main-content" tabIndex={-1} className="flex-grow">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route
+                  path="/municipalities"
+                  element={<MunicipalitiesPage />}
+                />
+                <Route
+                  path="/municipalities/:slug"
+                  element={<MunicipalityPage />}
+                />
                 <Route path="/about" element={<AboutBetterMarinduque />} />
                 <Route path="/services/:category" element={<Services />} />
                 <Route path="/services" element={<Services />} />

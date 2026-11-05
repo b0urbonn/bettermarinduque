@@ -155,11 +155,47 @@ The Transparency page links all of these as "official sources" so visitors can v
 
 ## 🤝 Contributing
 
-Corrections and updates are welcome — especially from Marinduqueños.
+Corrections and updates are welcome — especially from Marinduqueños. No fix is too small.
 
-- **Wrong or outdated info?** Open an issue or a PR — even a one-line fix helps
-- **Content edits**: everything in `content/` is plain Markdown/YAML, editable right on GitHub — see [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md)
-- **Code**: run `npm run lint && npm run build` before opening a PR
+### What you'll need
+
+| Contribution type                                                        | What you need                                                                                                                                                            |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 📝 **Content** — service guides, government pages, transparency trackers | Just a GitHub account. Everything in `content/` is plain Markdown/YAML and editable right on GitHub. Non-technical guide: [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md) |
+| 💻 **Code** — UI, components, tooling                                    | Node.js 18+ and npm. Clone, `npm install`, `npm run dev` — see [Local Development](#-local-development)                                                                  |
+
+### Before opening a PR
+
+1. Fork the repo, create a branch, make your change.
+2. Run the checks:
+
+   ```bash
+   npm run lint      # ESLint
+   npm run build     # TypeScript check + production build
+   ```
+
+   Pre-commit runs ESLint + Prettier automatically on staged files via Husky, but running these first saves a round-trip.
+
+3. For content changes, also run `npm run dev` and click through the pages you touched — check titles, formatting, and that links work.
+
+### PR checklist
+
+In your PR description, tell reviewers:
+
+- **What changed or was added** — one or two sentences (e.g. _"Added bulk-buying guide under Services → Agriculture"_, _"Fixed outdated SP official results figure"_)
+- **Why** — link the issue or source this is based on
+- **Tested?** — check what you verified:
+  - [ ] `npm run lint` passes
+  - [ ] `npm run build` succeeds
+  - [ ] Checked the affected pages in `npm run dev`
+  - [ ] Screenshots included for UI or layout changes
+- **Sources** — for transparency figures or factual claims, cite the document/URL. Every tracker amount needs a citation and `lastUpdated` date — see [Data Provenance](#-data-provenance)
+
+### Guidelines
+
+- Keep PRs focused — one change per PR makes review faster
+- Cite official sources for facts and figures; when in doubt, the government publication prevails
+- Be respectful — this is a civic community project built for Marinduqueños
 
 ## 👥 Maintainer
 

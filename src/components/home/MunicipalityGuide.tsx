@@ -12,6 +12,8 @@ interface MunicipalityGuideProps {
   name: string;
   slug: keyof typeof municipalityGuides;
   code: keyof typeof municipalBarangays;
+  sectionId?: string;
+  expanded?: boolean;
 }
 
 const populationFormat = new Intl.NumberFormat('en-PH');
@@ -20,15 +22,22 @@ export default function MunicipalityGuide({
   name,
   slug,
   code,
+  sectionId = 'town-guide',
+  expanded = false,
 }: MunicipalityGuideProps) {
   const [query, setQuery] = useState('');
+  const [sortBy, setSortBy] = useState('name');
   const guide = municipalityGuides[slug];
   const barangays = municipalBarangays[code];
   const searchTerm = query.trim().toLowerCase();
-  const matches = barangays.filter(
-    ([barangay, psgc]) =>
-      barangay.toLowerCase().includes(searchTerm) || psgc.includes(searchTerm)
-  );
+  const matches = barangays
+    .filter(
+      ([barangay, psgc]) =>
+        barangay.toLowerCase().includes(searchTerm) || psgc.includes(searchTerm)
+    )
+    .sort((a, b) =>
+      sortBy === 'population' ? b[2] - a[2] : a[0].localeCompare(b[0])
+    );
   const contacts = [
     { label: 'Municipal government', number: guide.municipalOffice },
     guide.localResponse,
@@ -37,19 +46,22 @@ export default function MunicipalityGuide({
 
   return (
     <section
-      id="town-guide"
+      id={sectionId}
       lang="en"
-      aria-labelledby="town-guide-heading"
+      aria-labelledby={`town-guide-heading-${slug}`}
       className="mt-8"
     >
       <h3
-        id="town-guide-heading"
+        id={`town-guide-heading-${slug}`}
         className="mb-4 text-2xl font-bold tracking-tight"
       >
         {name} town guide
       </h3>
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="rounded border border-gray-300 p-5">
+        <div
+          id={`contacts-${slug}`}
+          className="scroll-mt-32 rounded-lg border border-gray-300 bg-white p-5"
+        >
           <h4 className="text-lg font-bold">Local contacts</h4>
           <dl className="mt-3 divide-y divide-gray-300 text-sm">
             {contacts.map(({ label, number }) => (
@@ -86,7 +98,10 @@ export default function MunicipalityGuide({
             .
           </p>
         </div>
-        <div className="rounded border border-gray-300 p-5">
+        <div
+          id={`places-${slug}`}
+          className="scroll-mt-32 rounded-lg border border-gray-300 bg-white p-5"
+        >
           <h4 className="text-lg font-bold">Places and culture</h4>
           <ul className="mt-3 space-y-3 text-sm">
             {guide.places.map(place => (
@@ -116,7 +131,11 @@ export default function MunicipalityGuide({
           </p>
         </div>
       </div>
-      <details className="group mt-4 rounded border border-gray-300">
+      <details
+        id={`barangays-${slug}`}
+        open={expanded}
+        className="group mt-4 scroll-mt-32 rounded-lg border border-gray-300 bg-white"
+      >
         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 font-bold [&::-webkit-details-marker]:hidden">
           Barangay directory{' '}
           <span className="mr-auto text-sm font-normal text-gray-700">
@@ -130,30 +149,50 @@ export default function MunicipalityGuide({
         </summary>
         <div className="border-t border-gray-300 px-4 py-4 sm:px-5">
           <label
-            htmlFor="barangay-search"
+            htmlFor={`barangay-search-${slug}`}
             className="block text-sm font-semibold"
           >
             Search by barangay name or code
           </label>
           <input
-            id="barangay-search"
+            id={`barangay-search-${slug}`}
             type="search"
             value={query}
             onChange={event => setQuery(event.target.value)}
             className="mt-2 min-h-11 w-full max-w-md rounded-md border border-gray-400 bg-white px-3 py-2 text-base"
           />
+          <label
+            htmlFor={`barangay-sort-${slug}`}
+            className="mt-3 block text-sm font-semibold"
+          >
+            Sort barangays
+          </label>
+          <select
+            id={`barangay-sort-${slug}`}
+            value={sortBy}
+            onChange={event => setSortBy(event.target.value)}
+            className="mt-2 min-h-11 rounded-md border border-gray-400 bg-white px-3 text-sm"
+          >
+            <option value="name">Name · A to Z</option>
+            <option value="population">Population · highest first</option>
+          </select>
           <p role="status" className="mt-2 text-sm text-gray-700">
             {searchTerm
               ? `${matches.length} of ${barangays.length} barangays shown`
               : `${barangays.length} barangays`}
           </p>
           {matches.length > 0 ? (
-            <div className="mt-3 overflow-x-auto">
+            <div
+              role="region"
+              aria-label={`${name} barangay directory`}
+              tabIndex={0}
+              className="mt-3 max-h-[28rem] overflow-auto rounded-md border border-gray-200"
+            >
               <table className="w-full text-left text-sm">
                 <caption className="sr-only">
                   {name} barangays and their 2024 census populations
                 </caption>
-                <thead className="border-y border-gray-300 bg-gray-50">
+                <thead className="sticky top-0 border-y border-gray-300 bg-gray-50">
                   <tr>
                     <th scope="col" className="px-2 py-2.5">
                       Barangay

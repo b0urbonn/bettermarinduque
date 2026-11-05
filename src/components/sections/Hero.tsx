@@ -8,6 +8,7 @@ import maniwayaShore from '../../assets/maniwaya-island-shore.jpg';
 import morionesParade from '../../assets/marinduque-moriones-parade.jpg';
 import mountMalindig from '../../assets/mount-malindig.jpg';
 import HomeHeroGraphic from '../brand/HomeHeroGraphic';
+import Wordmark from '../brand/Wordmark';
 
 const heroBackgrounds = [
   islandAerial,
@@ -72,9 +73,13 @@ export default function Hero() {
       <HeroBackground />
       <div className="portal-container relative grid items-center gap-5 py-9 motion-safe:animate-fade-in sm:py-12 md:grid-cols-[minmax(0,1fr)_minmax(15rem,0.6fr)] md:gap-8 lg:py-14">
         <div className="min-w-0">
+          <Wordmark
+            variant="dark"
+            className="mb-3 block text-4xl leading-none tracking-tight sm:text-5xl lg:text-6xl"
+          />
           <h1
             id="home-heading"
-            className="max-w-3xl text-[clamp(2.1rem,5.5vw,3.75rem)] leading-[1.08] font-bold tracking-tight"
+            className="max-w-3xl text-[clamp(1.5rem,3.2vw,2.25rem)] leading-[1.15] font-bold tracking-tight"
           >
             {t('hero.heading')}
           </h1>
