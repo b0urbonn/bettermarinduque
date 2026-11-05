@@ -22,7 +22,10 @@ function commonsPhoto(
   licenseUrl: string,
   path: string
 ): TownPhoto {
-  const name = encodeURIComponent(file).replaceAll('%2F', '/');
+  const name = encodeURIComponent(file.replaceAll(' ', '_')).replaceAll(
+    '%2F',
+    '/'
+  );
   return {
     src: `https://upload.wikimedia.org/wikipedia/commons/thumb/${path}/${name}/1280px-${name}`,
     sourceUrl: `https://commons.wikimedia.org/wiki/File:${name}`,
@@ -200,14 +203,6 @@ export const municipalityGalleries: Record<MunicipalitySlug, TownPhoto[]> = {
     ),
   ],
   torrijos: [
-    {
-      src: 'https://hamossatorrijos.gov.ph/wp-content/uploads/2021/10/1-Torrijos-White-Beach-14.jpg',
-      title: 'Torrijos White Beach',
-      alt: 'Palm trees and the shoreline of Torrijos White Beach in Marinduque, with Mount Malindig across the water',
-      author: 'Source: Municipality of Torrijos tourism website',
-      sourceUrl: 'https://hamossatorrijos.gov.ph/torrijos-tourist-attractions/',
-      objectPosition: 'center 50%',
-    },
     commonsPhoto(
       'Poctoy_Pier_2014.jpg',
       'Poctoy Pier',
@@ -226,6 +221,14 @@ export const municipalityGalleries: Record<MunicipalitySlug, TownPhoto[]> = {
       bySa4,
       '8/8a'
     ),
+    {
+      src: 'https://hamossatorrijos.gov.ph/wp-content/uploads/2021/10/1-Torrijos-White-Beach-14.jpg',
+      title: 'Torrijos White Beach',
+      alt: 'Palm trees and the shoreline of Torrijos White Beach in Marinduque, with Mount Malindig across the water',
+      author: 'Source: Municipality of Torrijos tourism website',
+      sourceUrl: 'https://hamossatorrijos.gov.ph/torrijos-tourist-attractions/',
+      objectPosition: 'center 50%',
+    },
   ],
 };
 

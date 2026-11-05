@@ -52,6 +52,7 @@
     "copyright": "© {{year}} BetterMarinduque. An independent community portal."
   },
   "navbar": {
+    "home": "Home",
     "municipalities": "Municipalities",
     "government": "Government",
     "services": "Services",
