@@ -12,12 +12,17 @@ export const mainNavigation = [
 export const contactEmail = 'bettermarinduque@proton.me';
 export const contactMailto = `mailto:${contactEmail}`;
 
+export const repoUrl = 'https://github.com/b0urbonn/bettermarinduque';
+export const contributorsUrl = `${repoUrl}/graphs/contributors`;
+
 export const footerNavigation = [
   { title: 'Explore', links: mainNavigation },
   {
     title: 'The project',
     links: [
       { label: 'About this project', href: '/about' },
+      { label: 'Source code on GitHub', href: repoUrl },
+      { label: 'Contributors', href: contributorsUrl },
       { label: 'Emergency hotlines', href: '/#hotlines' },
       { label: 'Photo credits', href: '/image-credits.html' },
     ],

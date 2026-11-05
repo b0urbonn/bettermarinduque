@@ -1,6 +1,11 @@
-import { ArrowUpRight, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Mail } from 'lucide-react';
 import { Link } from 'react-router';
-import { contactMailto, footerNavigation } from '../../data/navigation';
+import {
+  contactEmail,
+  contactMailto,
+  footerNavigation,
+  repoUrl,
+} from '../../data/navigation';
 import Logo from '../brand/Logo';
 
 export default function Footer() {
@@ -24,13 +29,22 @@ export default function Footer() {
               public records, and contacts for the offices that serve the
               province.
             </p>
-            <a
-              href={contactMailto}
-              aria-label="Email BetterMarinduque"
-              className="mt-4 inline-flex hover:text-primary-200"
-            >
-              <Mail size={20} aria-hidden="true" />
-            </a>
+            <div className="mt-4 flex items-center gap-3">
+              <a
+                href={contactMailto}
+                className="inline-flex items-center gap-2 text-sm hover:text-primary-200 hover:underline"
+              >
+                <Mail size={18} aria-hidden="true" />
+                {contactEmail}
+              </a>
+              <a
+                href={repoUrl}
+                aria-label="BetterMarinduque source code on GitHub"
+                className="hover:text-primary-200"
+              >
+                <Github size={20} aria-hidden="true" />
+              </a>
+            </div>
           </div>
           {footerNavigation.map(({ title, links }) => (
             <div key={title}>

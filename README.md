@@ -3,6 +3,7 @@
 A community-run civic information and transparency portal for the **Province of Marinduque**, Philippines — built by volunteers as part of the [BetterGov.ph](https://bettergov.ph) **Better LGU** movement.
 
 **Live site:** [bettermarinduque.vercel.app](https://bettermarinduque.vercel.app)
+**Repository:** [github.com/b0urbonn/bettermarinduque](https://github.com/b0urbonn/bettermarinduque) · [Contributors](https://github.com/b0urbonn/bettermarinduque/graphs/contributors)
 **Directory listing:** [better-lgu-directory](https://github.com/jmacj/better-lgu-directory) · [lgu.bettergov.ph](https://lgu.bettergov.ph)
 
 > BetterMarinduque is an **independent community initiative**. It is not the official website of the Provincial Government of Marinduque — for that, visit [marinduque.gov.ph](https://marinduque.gov.ph).
@@ -197,9 +198,10 @@ In your PR description, tell reviewers:
 - Cite official sources for facts and figures; when in doubt, the government publication prevails
 - Be respectful — this is a civic community project built for Marinduqueños
 
-## 👥 Maintainer
+## 👥 Maintainers & contributors
 
 - [@b0urbonn](https://github.com/b0urbonn) — maintainer of record for the Marinduque Province entry in the BetterGov.ph LGU Directory
+- [All contributors](https://github.com/b0urbonn/bettermarinduque/graphs/contributors) — everyone who has helped build this portal
 
 ## 📄 License
 
