@@ -1,5 +1,6 @@
 import Hero, { ProvinceFacts } from '../components/sections/Hero';
 import QuickTasks from '../components/home/QuickTasks';
+import ServiceCategories from '../components/home/ServiceCategories';
 import AboutMarinduque from '../components/home/AboutMarinduque';
 import Municipalities from '../components/home/Municipalities';
 import Hotlines from '../components/home/Hotlines';
@@ -15,6 +16,7 @@ export default function Home() {
       />
       <Hero />
       <QuickTasks />
+      <ServiceCategories />
       <Municipalities />
       <Hotlines />
       <ProvinceFacts />

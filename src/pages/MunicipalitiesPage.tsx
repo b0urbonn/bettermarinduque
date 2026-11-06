@@ -28,18 +28,21 @@ export default function MunicipalitiesPage() {
         ]}
       />
       <ul className="portal-container grid gap-4 py-7 sm:grid-cols-2 sm:py-9 lg:grid-cols-3">
-        {municipalities.map(town => (
+        {municipalities.map((town, index) => (
           <li
             key={town.slug}
-            className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-300 bg-white"
+            style={{ animationDelay: `${index * 70}ms` }}
+            className="flex h-full flex-col overflow-hidden rounded-xl border border-gray-300 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:fill-mode-backwards"
           >
             <Link
               to={`/municipalities/${town.slug}`}
-              className="group flex flex-1 flex-col p-5 hover:bg-primary-50"
+              className="group flex flex-1 flex-col p-5 transition-colors hover:bg-primary-50"
             >
               <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-md bg-primary-50">
-                <MunicipalityPhoto slug={town.slug} slideshow />
-                <div className="absolute bottom-2 right-2 rounded-md border border-primary-100 bg-white/95 p-1 shadow-sm">
+                <div className="size-full transition-transform duration-500 group-hover:scale-105">
+                  <MunicipalityPhoto slug={town.slug} slideshow />
+                </div>
+                <div className="absolute bottom-2 right-2 rounded-md border border-gray-300 bg-white/95 p-1 shadow-sm">
                   <svg
                     viewBox="0 0 440 440"
                     role="img"

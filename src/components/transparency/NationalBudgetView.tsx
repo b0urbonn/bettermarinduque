@@ -48,7 +48,7 @@ function Stat({
   sub?: string;
 }) {
   return (
-    <div className="rounded border border-gray-300 bg-white p-5">
+    <div className="rounded-xl border border-gray-300 bg-white p-5">
       <dt className="text-sm text-gray-700">{label}</dt>
       <dd className="mt-1 text-xl font-semibold tabular-nums text-gray-900">
         {value}
@@ -99,7 +99,7 @@ export default function NationalBudgetView() {
               setState({ status: 'loading' });
               setAttempt(n => n + 1);
             }}
-            className="mt-3 rounded border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-100"
+            className="mt-3 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-100"
           >
             Try again
           </button>
@@ -252,7 +252,7 @@ function LiveView({
                 rel="noopener noreferrer"
                 aria-disabled={!c.rows}
                 onClick={e => !c.rows && e.preventDefault()}
-                className={`group rounded border p-4 text-left transition-colors ${
+                className={`group rounded-xl border p-4 text-left transition-colors ${
                   c.rows
                     ? 'border-gray-300 bg-white text-gray-900 hover:border-primary-500 hover:bg-primary-50'
                     : 'border-gray-300 bg-white text-gray-400'
@@ -280,7 +280,7 @@ function LiveView({
               target="_blank"
               rel="noopener noreferrer"
               title="Projects whose title names none of the towns"
-              className="group rounded border border-gray-300 bg-white p-4 text-left text-gray-900 transition-colors hover:border-primary-500 hover:bg-primary-50"
+              className="group rounded-xl border border-gray-300 bg-white p-4 text-left text-gray-900 transition-colors hover:border-primary-500 hover:bg-primary-50"
             >
               <span className="block text-sm font-semibold">
                 No town named
@@ -299,7 +299,7 @@ function LiveView({
           )}
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 rounded border border-primary-200 bg-primary-50 p-5">
+        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 rounded-xl border border-primary-200 bg-primary-50 p-5">
           <div className="min-w-0 flex-1">
             <p className="font-semibold text-gray-900">
               Marinduque budget portal
@@ -415,7 +415,7 @@ function LiveView({
               role="tab"
               aria-selected={year === y.year}
               onClick={() => setYear(y.year)}
-              className={`rounded border px-4 py-2 text-sm font-semibold ${
+              className={`rounded-md border px-4 py-2 text-sm font-semibold ${
                 year === y.year
                   ? 'border-primary-700 bg-primary-700 text-white'
                   : 'border-gray-300 bg-white text-gray-800 hover:bg-gray-100'
@@ -434,7 +434,7 @@ function LiveView({
               across {active.items.length} line items in the FY {active.year}{' '}
               GAA naming Marinduque.
             </p>
-            <div className="overflow-x-auto rounded border border-gray-300">
+            <div className="overflow-x-auto rounded-lg border border-gray-300">
               <table className="min-w-full divide-y divide-gray-200 bg-white text-sm">
                 <thead className="bg-gray-50">
                   <tr>

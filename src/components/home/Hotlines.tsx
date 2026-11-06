@@ -40,7 +40,7 @@ export default function Hotlines() {
         {hotlines.map(({ name, description, number, Icon }) => (
           <li
             key={name}
-            className="flex gap-3 rounded-md border border-gray-300 p-4"
+            className="flex gap-3 rounded-xl border border-gray-300 p-4"
           >
             <span className="self-start rounded-lg bg-gray-50 p-2.5 text-primary-700">
               <Icon size={22} aria-hidden="true" />

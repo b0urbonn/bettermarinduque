@@ -165,6 +165,16 @@ footer[id] {
   color: var(--color-primary-900);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  details[open] .details-body {
+    animation: fadeIn 200ms ease-out;
+  }
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

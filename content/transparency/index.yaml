@@ -8,6 +8,7 @@ trackers:
       Marcopper mining disasters — payments received, scheduled installments,
       contested claims, and how the money is used.
     icon: Scale
+    level: provincial
 
 # Official places to look for documents that are not yet tracked here.
 officialSources:

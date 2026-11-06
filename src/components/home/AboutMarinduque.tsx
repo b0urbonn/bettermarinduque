@@ -93,7 +93,7 @@ export default function AboutMarinduque() {
               {heritage.map(({ Icon, title, detail, description, url }) => (
                 <article
                   key={title}
-                  className="rounded border border-gray-300 bg-white p-5 sm:p-6"
+                  className="rounded-xl border border-gray-300 bg-white p-5 sm:p-6"
                 >
                   <h4 className="flex items-center gap-2.5 font-bold">
                     <Icon

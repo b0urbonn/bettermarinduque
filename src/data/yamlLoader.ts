@@ -1,10 +1,13 @@
 import * as yaml from 'js-yaml';
+import type { LevelKey } from './levels';
 
 // Type definitions for the services data
 export interface Subcategory {
   name: string;
   slug: string;
   description?: string;
+  /** Government levels that deliver this service, nearest first. */
+  levels?: LevelKey[];
 }
 
 export interface Category {
@@ -117,9 +120,4 @@ export async function getCategorySubcategories(
   const result = await loadCategoryIndex(categorySlug);
   categoryCache.set(categorySlug, result);
   return result;
-}
-
-/** Returns true if a slug has a registered index in categoryIndexMap */
-export function isNestedCategory(slug: string): boolean {
-  return slug in categoryIndexMap;
 }

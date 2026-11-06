@@ -29,11 +29,32 @@
     "psgcSource": "Municipalities and barangays · PSA"
   },
   "services": {
-    "title": "Services & Information",
-    "governmentServices": "Government Services",
-    "description": "Find services from the Province of Marinduque — permits, health, social welfare, and more — explained in plain language.",
-    "viewAll": "View All Services",
-    "viewAllCategory": "View All"
+    "browse": "Browse service guides",
+    "browseDescription": "Choose a topic to see what to bring, where to go, and who to contact.",
+    "viewAll": "Search all service guides",
+    "guideCount_one": "{{count}} guide",
+    "guideCount_other": "{{count}} guides",
+    "online": {
+      "heading": "Online services and portals",
+      "description": "Official websites and online services, organized by level of government.",
+      "municipalNote": "Boac, Mogpog, and Torrijos publish official websites. For the other towns, the town guide lists municipal hall contacts.",
+      "townSite": "Official website.",
+      "townGuide": "No official website found — the town guide lists municipal hall contacts.",
+      "barangayNote": "Barangay services are handled in person. Barangay halls issue clearances, residency and indigency certificates, and hear community disputes through Katarungang Pambarangay.",
+      "findBarangay": "Find your barangay through the town guides"
+    }
+  },
+  "levels": {
+    "barangay": "Barangay",
+    "municipal": "Municipal",
+    "provincial": "Provincial",
+    "national": "National agencies"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page may have moved, or the link may be outdated. Pick a section below to keep browsing.",
+    "popular": "Browse the portal",
+    "searchHint": "Looking for a service? Search the directory"
   },
   "governmentActivity": {
     "title": "Provincial Government",
@@ -58,6 +79,7 @@
     "services": "Services",
     "transparency": "Transparency",
     "budget": "Budget",
+    "about": "About",
     "hotlines": "Hotlines",
     "holidays": "Holidays",
     "emergency": "Emergency contacts",
@@ -124,6 +146,38 @@
     "description": "See how the province is organized, who leads it, and where to find government offices.",
     "structure": "Government structure",
     "structureDescription": "Choose a branch to see the officials who serve in it.",
+    "levels": {
+      "title": "Levels of local government",
+      "description": "Services in Marinduque are delivered at three levels — start with the level closest to you.",
+      "provincial": {
+        "count": "1 province",
+        "description": "Province-wide programs — hospitals, roads, social welfare, and disaster response — led by the Governor and the Provincial Board.",
+        "link": "See the provincial structure"
+      },
+      "municipal": {
+        "count": "6 towns",
+        "description": "Municipal halls issue permits, keep civil registry records, run health units, and deliver welfare services.",
+        "link": "Browse the town guides"
+      },
+      "barangay": {
+        "count": "218 barangays",
+        "description": "The first stop for clearances, residency and indigency certificates, and community mediation (Katarungang Pambarangay).",
+        "link": "Find your barangay"
+      }
+    },
+    "tree": {
+      "heading": "Government structure and officials",
+      "description": "Meet the leadership and offices serving Marinduque — from the province down to each municipality.",
+      "hon": "Hon.",
+      "executiveTitle": "Provincial leadership",
+      "executiveSub": "The executive officials leading Marinduque's governance.",
+      "legislativeSub": "Board members serving the people of Marinduque.",
+      "officesTitle": "Departments and key offices",
+      "officesSub": "Provincial offices providing services to residents.",
+      "municipalTitle": "Municipal governments",
+      "municipalSub": "{{count}} municipalities serving our communities.",
+      "mayor": "Mayor"
+    },
     "executive": {
       "branch": "Executive branch",
       "title": "Office of the Governor",
@@ -280,12 +334,15 @@
     "description": "Find the right office, what to bring, and where to confirm current requirements.",
     "category": "Service category",
     "allCategories": "All categories",
+    "level": "Government level",
+    "allLevels": "All levels",
     "resultCount_one": "{{count}} guide found",
     "resultCount_other": "{{count}} guides found",
     "loading": "Loading guides…",
     "clear": "Clear filters",
     "guides": "Service guides",
     "noResults": "No guides match. Try a shorter term or choose a different category.",
+    "englishGuides": "Guide content and category names are in English.",
     "officialResources": "Official resources",
     "charter": "Provincial Citizen’s Charter",
     "officeDirectory": "Provincial office directory",

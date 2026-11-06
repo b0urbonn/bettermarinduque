@@ -2,13 +2,12 @@ import { provincialWebsite } from './province';
 import { PORTAL_URL } from '../lib/budgetApi';
 
 export const mainNavigation = [
-  { label: 'Home', href: '/' },
-  { label: 'Municipalities', href: '/municipalities' },
   { label: 'Services', href: '/services' },
+  { label: 'Municipalities', href: '/municipalities' },
+  { label: 'Government', href: '/government' },
   { label: 'Transparency', href: '/transparency' },
   // The dedicated budget portal (its own site, like budget.betterlaspinas.org).
   { label: 'Budget', href: PORTAL_URL },
-  { label: 'Government', href: '/government' },
   { label: 'About', href: '/about' },
 ];
 

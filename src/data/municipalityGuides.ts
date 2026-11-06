@@ -10,6 +10,8 @@ export const festivalSource =
   'https://pia.gov.ph/news/marinduque-offers-more-than-moryonan-says-tourism-office/';
 export const localGovernmentDirectory =
   'https://mimaropa.dilg.gov.ph/contact-us/field-office/';
+export const electedOfficialsDirectory =
+  'https://www.foi.gov.ph/agencies/dilg/list-of-elected-local-officials/';
 
 interface MunicipalityGuide {
   festival: string;

@@ -21,11 +21,40 @@
     "censusSource": "Senso 2024 · PSA",
     "psgcSource": "Mga bayan at barangay · PSA"
   },
+  "services": {
+    "browse": "Mga gabay sa serbisyo",
+    "browseDescription": "Pumili ng paksa para makita kung ano ang ihahanda, saan pupunta, at sino ang lalapitan.",
+    "viewAll": "Hanapin ang lahat ng gabay sa serbisyo",
+    "guideCount_one": "{{count}} gabay",
+    "guideCount_other": "{{count}} gabay",
+    "online": {
+      "heading": "Mga online na serbisyo at portal",
+      "description": "Mga opisyal na website at online na serbisyo, nakaayos ayon sa antas ng pamahalaan.",
+      "municipalNote": "May mga opisyal na website ang Boac, Mogpog, at Torrijos. Para sa ibang bayan, nasa gabay ng bayan ang mga kontak ng munisipyo.",
+      "townSite": "Opisyal na website.",
+      "townGuide": "Walang natagpuang opisyal na website — nasa gabay ng bayan ang mga kontak ng munisipyo.",
+      "barangayNote": "Personal na hinahandle ng barangay ang mga serbisyo nito. Nagbibigay ang barangay hall ng mga clearance, sertipiko ng paninirahan o indigency, at dinidinig ang mga alalaunang pangkomunidad sa Katarungang Pambarangay.",
+      "findBarangay": "Hanapin ang iyong barangay sa mga gabay sa bayan"
+    }
+  },
+  "levels": {
+    "barangay": "Barangay",
+    "municipal": "Munisipyo",
+    "provincial": "Panlalawigan",
+    "national": "Pambansang ahensya"
+  },
+  "notFound": {
+    "title": "Hindi matagpuan ang pahina",
+    "description": "Maaaring nailipat ang pahina o luma na ang link. Pumili ng seksyon sa ibaba para magpatuloy.",
+    "popular": "Mag-browse sa portal",
+    "searchHint": "May hinahanap na serbisyo? Maghanap sa direktoryo"
+  },
   "navbar": {
     "municipalities": "Mga bayan",
     "home": "Tahanan",
     "services": "Mga Serbisyo",
     "transparency": "Transparensiya",
+    "budget": "Badyet",
     "government": "Pamahalaan",
     "about": "Tungkol",
     "emergency": "Mga hotline",
@@ -79,6 +108,38 @@
     "description": "Alamin ang estruktura ng pamahalaang panlalawigan, kung sino ang mga namumuno rito, at kung saan makikita ang mga tanggapan.",
     "structure": "Estruktura ng pamahalaan",
     "structureDescription": "Pumili ng sangay upang makita ang mga opisyal nito.",
+    "levels": {
+      "title": "Mga antas ng lokal na pamahalaan",
+      "description": "Tatlong antas ang naghahatid ng serbisyo sa Marinduque — magsimula sa pinakamalapit sa iyo.",
+      "provincial": {
+        "count": "1 lalawigan",
+        "description": "Mga programang sakop ng buong lalawigan — ospital, kalsada, kagalingang panlipunan, at pagtugon sa sakuna — sa pamumuno ng gobernador at Sangguniang Panlalawigan.",
+        "link": "Tingnan ang estruktura ng lalawigan"
+      },
+      "municipal": {
+        "count": "6 na bayan",
+        "description": "Nagbibigay ang mga munisipyo ng mga permit, nag-iingat ng civil registry, nagpapatakbo ng mga health unit, at naghahatid ng serbisyong panlipunan.",
+        "link": "Tingnan ang mga gabay sa bayan"
+      },
+      "barangay": {
+        "count": "218 barangay",
+        "description": "Ang unang lalapitan para sa mga clearance, sertipiko ng paninirahan o indigency, at mediasyon ng komunidad (Katarungang Pambarangay).",
+        "link": "Hanapin ang iyong barangay"
+      }
+    },
+    "tree": {
+      "heading": "Istraktura ng pamahalaan at mga opisyal",
+      "description": "Kilalanin ang mga pinuno at tanggapan na naglilingkod sa Marinduque — mula sa lalawigan hanggang sa bawat bayan.",
+      "hon": "Kgg.",
+      "executiveTitle": "Pamunuan ng lalawigan",
+      "executiveSub": "Ang mga opisyal na tagapagpaganap na namumuno sa Marinduque.",
+      "legislativeSub": "Mga kagawad na naglilingkod sa mga mamamayan ng Marinduque.",
+      "officesTitle": "Mga kagawaran at pangunahing tanggapan",
+      "officesSub": "Mga tanggapan ng lalawigan na nagbibigay ng serbisyo sa mga residente.",
+      "municipalTitle": "Mga pamahalaang bayan",
+      "municipalSub": "{{count}} na bayan na naglilingkod sa ating mga komunidad.",
+      "mayor": "Alkalde"
+    },
     "executive": {
       "branch": "Sangay na tagapagpaganap",
       "title": "Tanggapan ng Gobernador",
@@ -235,6 +296,8 @@
     "description": "Alamin kung aling tanggapan ang lalapitan, ano ang ihahanda, at saan kukumpirmahin ang mga kinakailangan.",
     "category": "Uri ng serbisyo",
     "allCategories": "Lahat ng uri",
+    "level": "Antas ng pamahalaan",
+    "allLevels": "Lahat ng antas",
     "resultCount_one": "{{count}} gabay ang nahanap",
     "resultCount_other": "{{count}} gabay ang nahanap",
     "loading": "Kinukuha ang mga gabay…",

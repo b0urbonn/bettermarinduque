@@ -44,7 +44,7 @@ export default function GovernmentBoard() {
               <h2 id="board-presiding" className="mt-1 text-xl font-bold">
                 {presiding.name}
               </h2>
-              <p className="mt-1 text-sm text-slate-700">
+              <p className="mt-1 text-sm text-gray-700">
                 {t('government.roles.viceGovernor.description')}
               </p>
             </div>
@@ -59,7 +59,7 @@ export default function GovernmentBoard() {
             <Link
               key={group}
               to={`#board-${group}`}
-              className="inline-flex min-h-11 items-center rounded-md border border-primary-100 bg-white px-3 text-sm font-semibold text-primary-800 hover:bg-primary-50"
+              className="inline-flex min-h-11 items-center rounded-md border border-gray-300 bg-white px-3 text-sm font-semibold text-primary-800 hover:bg-primary-50"
             >
               {t(`government.boardGroups.${group}.title`)}
             </Link>
@@ -77,7 +77,7 @@ export default function GovernmentBoard() {
                 key={group}
                 id={`board-${group}`}
                 aria-labelledby={`board-${group}-heading`}
-                className="overflow-hidden rounded-xl border border-primary-100 bg-white shadow-sm"
+                className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm"
               >
                 <div className="border-b border-primary-100 bg-primary-50/75 p-4">
                   <h2
@@ -91,7 +91,7 @@ export default function GovernmentBoard() {
                     />
                     {t(`government.boardGroups.${group}.title`)}
                   </h2>
-                  <p className="mt-1 text-sm text-slate-700">
+                  <p className="mt-1 text-sm text-gray-700">
                     {t(`government.boardGroups.${group}.description`)}
                   </p>
                 </div>
@@ -100,7 +100,7 @@ export default function GovernmentBoard() {
                     <li key={member.name} className="py-3">
                       <p className="font-semibold">{member.name}</p>
                       {group === 'exOfficio' && (
-                        <p lang="en" className="mt-0.5 text-sm text-slate-700">
+                        <p lang="en" className="mt-0.5 text-sm text-gray-700">
                           {member.description}
                         </p>
                       )}

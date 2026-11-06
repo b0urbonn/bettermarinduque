@@ -66,13 +66,13 @@ export default function Municipalities() {
         )}
         <a
           href={googleMaps('Marinduque, Philippines')}
-          className="inline-flex min-h-11 items-center gap-2 rounded-md border border-gray-400 px-3 text-sm font-semibold text-primary-700 hover:bg-primary-50"
+          className="inline-flex min-h-11 items-center gap-2 rounded-md border border-gray-300 px-3 text-sm font-semibold text-primary-700 hover:bg-primary-50"
         >
           <MapPin size={17} aria-hidden="true" /> {t('towns.provinceMap')}
           <ArrowUpRight size={14} aria-hidden="true" />
         </a>
       </div>
-      <div className="rounded-lg border border-gray-300 bg-gray-50 p-4 sm:p-5">
+      <div className="rounded-xl border border-gray-300 bg-gray-50 p-4 sm:p-5">
         <div className="mb-4 sm:max-w-sm">
           <label
             htmlFor="municipality-picker"
@@ -84,7 +84,7 @@ export default function Municipalities() {
             id="municipality-picker"
             value={town.slug}
             onChange={event => selectTown(event.target.value)}
-            className="min-h-11 w-full rounded-md border border-gray-400 bg-white px-3 text-base text-gray-900"
+            className="min-h-11 w-full rounded-md border border-gray-300 bg-white px-3 text-base text-gray-900"
           >
             {municipalities.map(({ slug, name }) => (
               <option key={slug} value={slug}>
@@ -94,7 +94,7 @@ export default function Municipalities() {
           </select>
         </div>
         <div className="grid items-start gap-4 lg:grid-cols-[1.2fr_1fr]">
-          <div className="relative min-w-0 rounded-md bg-primary-50">
+          <div className="relative min-w-0 rounded-lg bg-primary-50">
             <span
               className="absolute left-3 top-3 text-xs font-medium text-gray-700"
               aria-label="North"
@@ -131,7 +131,7 @@ export default function Municipalities() {
                       fillRule="evenodd"
                       strokeWidth={2}
                       strokeLinejoin="round"
-                      className={`stroke-white group-focus-visible:stroke-primary-900 group-focus-visible:stroke-[3] ${isSelected ? 'fill-primary-700' : 'fill-slate-300 group-hover:fill-primary-200'}`}
+                      className={`stroke-white group-focus-visible:stroke-primary-900 group-focus-visible:stroke-[3] ${isSelected ? 'fill-primary-700' : 'fill-gray-300 group-hover:fill-primary-200'}`}
                     />
                     <text
                       x={label[0]}
@@ -139,7 +139,7 @@ export default function Municipalities() {
                       dominantBaseline="central"
                       textAnchor="middle"
                       aria-hidden="true"
-                      className={`pointer-events-none text-[15px] font-semibold ${isSelected ? 'fill-white' : 'fill-slate-900'}`}
+                      className={`pointer-events-none text-[15px] font-semibold ${isSelected ? 'fill-white' : 'fill-gray-900'}`}
                     >
                       {name}
                     </text>
@@ -149,7 +149,7 @@ export default function Municipalities() {
             </svg>
           </div>
           <div
-            className="rounded-md border border-gray-300 bg-white p-4 sm:p-5"
+            className="rounded-xl border border-gray-300 bg-white p-4 sm:p-5"
             aria-label="Municipality information"
           >
             <p className="font-mono text-xs uppercase tracking-widest text-primary-700">
@@ -191,7 +191,7 @@ export default function Municipalities() {
               </Link>
               <a
                 href={googleMaps(`${town.name}, Marinduque, Philippines`)}
-                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-gray-400 px-3 text-sm font-semibold text-primary-800 hover:bg-primary-50"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-gray-300 px-3 text-sm font-semibold text-primary-800 hover:bg-primary-50"
               >
                 <MapPin size={16} aria-hidden="true" /> {t('towns.openMap')}
                 <ArrowUpRight size={14} aria-hidden="true" />

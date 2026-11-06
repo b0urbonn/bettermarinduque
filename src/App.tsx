@@ -7,7 +7,7 @@ import AboutBetterMarinduque from './components/home/AboutBetterMarinduque';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import ServiceGuide from './pages/ServiceGuide';
-import Document from './pages/Document';
+import NotFound from './pages/NotFound';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import Transparency from './pages/Transparency';
@@ -53,8 +53,7 @@ function App() {
                 {isMeilisearchEnabled && (
                   <Route path="/search" element={<Search />} />
                 )}
-                <Route path="/:lang/:documentSlug" element={<Document />} />
-                <Route path="/:documentSlug" element={<Document />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
             <Footer />

@@ -22,12 +22,17 @@ This is a React 19 + TypeScript + Vite app for Philippine Local Government Units
 
 ### Routing
 
-`src/App.tsx` defines six routes:
+`src/App.tsx` defines these routes:
 
 - `/` — Home page
-- `/services` / `/services/:category` — Services listing
-- `/government` / `/government/:category` — Government section listing
-- `/:documentSlug` / `/:lang/:documentSlug` — Document viewer (markdown content, used by both services and government)
+- `/about` — About the portal
+- `/municipalities` / `/municipalities/:slug` — Town index and per-town guides
+- `/services` / `/services/:category` — Services listing (`:category` redirects to `?category=`)
+- `/services/:category/:documentSlug` — Service guide viewer (markdown content)
+- `/government` / `/government/:category` / `/government/:category/:documentSlug` — Government section
+- `/transparency` / `/transparency/:slug` — Transparency portal and fund trackers
+- `/search` — Only when `VITE_MEILISEARCH_HOST` is set
+- `*` — NotFound page
 
 ### Content System
 
@@ -36,7 +41,7 @@ Content is stored as YAML and Markdown files under `content/`. Two parallel cont
 #### Services (`content/services/`)
 
 1. **`src/data/services.yaml`** — Top-level service categories (name, slug, icon, description). The `icon` field must be a valid Lucide React icon name.
-2. **`content/services/{category-slug}/index.yaml`** — Lists pages under each category (`pages:` array with `name`, `slug`, `description`).
+2. **`content/services/{category-slug}/index.yaml`** — Lists pages under each category (`pages:` array with `name`, `slug`, `description`, `levels`). `levels` is a list of government levels that deliver the service — one or more of `barangay`, `municipal`, `provincial`, `national` (see `src/data/levels.ts`). These power the level filter and level badges on the services page.
 3. **`content/services/{category-slug}/{page-slug}.md`** — Actual markdown content for each service page.
 
 When adding a new service category, you must:

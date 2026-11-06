@@ -25,7 +25,7 @@ export default function DisclosureView({ topic }: { topic: DisclosureTopic }) {
             return (
               <li
                 key={record.title}
-                className="flex flex-col rounded border border-gray-300 bg-white p-5 sm:p-6"
+                className="flex flex-col rounded-xl border border-gray-300 bg-white p-5 sm:p-6"
               >
                 <p className="mb-2 text-sm font-semibold text-primary-700">
                   {record.period}
@@ -60,7 +60,7 @@ export default function DisclosureView({ topic }: { topic: DisclosureTopic }) {
                   </figure>
                 )}
                 {record.figures && (
-                  <dl className="mt-4 grid gap-3 rounded bg-primary-50 p-4 sm:grid-cols-2">
+                  <dl className="mt-4 grid gap-3 rounded-lg bg-primary-50 p-4 sm:grid-cols-2">
                     {record.figures.map(figure => (
                       <div key={figure.label}>
                         <dt className="text-sm text-gray-700">

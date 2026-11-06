@@ -37,6 +37,73 @@ const disclosureGraphics: Partial<Record<string, PageGraphicKind>> = {
 const trackerGraphics: Partial<Record<string, PageGraphicKind>> = {
   'marcopper-fund': 'settlement',
 };
+const levelGroups = [
+  { key: 'provincial', heading: 'Provincial records' },
+  { key: 'municipal', heading: 'Municipal and barangay records' },
+  { key: 'national', heading: 'National records' },
+] as const;
+
+type Topic = (typeof topics)[number];
+
+function TopicCard({ topic: t }: { topic: Topic }) {
+  const Icon =
+    (LucideIcons[t.icon as keyof typeof LucideIcons] as
+      React.ComponentType<{ className?: string }> | undefined) ??
+    LucideIcons.FileText;
+  const tracker = getFundTracker(t.slug);
+  const totals = tracker && fundTotals(tracker);
+  return (
+    <Link
+      to={`/transparency/${t.slug}`}
+      className="group rounded-xl bg-white border border-gray-300 border-t-4 border-t-primary-700 p-6 flex flex-col hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+    >
+      <div className="flex items-center gap-3 mb-3">
+        <span className="rounded-full bg-primary-50 p-3 text-primary-600">
+          <Icon className="h-6 w-6" aria-hidden="true" />
+        </span>
+        <h3 className="font-display text-xl font-semibold text-gray-900 group-hover:underline">
+          {t.name}
+        </h3>
+      </div>
+      <p className="text-sm text-gray-700 mb-4">{t.description}</p>
+      {tracker && totals && (
+        <dl className="grid grid-cols-3 gap-2 text-sm mb-4">
+          <div>
+            <dt className="text-gray-700">Total</dt>
+            <dd className="font-semibold text-gray-900">
+              {formatMoney(tracker.total, tracker.currency)}
+            </dd>
+          </div>
+          <div>
+            <dt className="text-gray-700">Received</dt>
+            <dd className="font-semibold text-success-700">
+              {formatMoney(totals.received, tracker.currency)}
+            </dd>
+          </div>
+          <div>
+            <dt className="text-gray-700">Spent</dt>
+            <dd className="font-semibold text-gray-700">
+              {totals.spent
+                ? formatMoney(totals.spent, tracker.currency)
+                : 'No report'}
+            </dd>
+          </div>
+        </dl>
+      )}
+      <div className="mt-auto flex items-center justify-between text-sm">
+        {tracker && (
+          <span className="text-gray-700">
+            Updated {formatPartialDate(tracker.lastUpdated)}
+          </span>
+        )}
+        <span className="inline-flex items-center gap-1 font-semibold text-primary-700">
+          {tracker ? 'View tracker' : 'Browse records'}
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </span>
+      </div>
+    </Link>
+  );
+}
 
 function TransparencyNavigation() {
   const items = [
@@ -90,68 +157,24 @@ function TransparencyHub() {
       />
       <Section>
         <Heading level={2}>Explore public records</Heading>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {topics.map(t => {
-            const Icon =
-              (LucideIcons[t.icon as keyof typeof LucideIcons] as
-                React.ComponentType<{ className?: string }> | undefined) ??
-              LucideIcons.FileText;
-            const tracker = getFundTracker(t.slug);
-            const totals = tracker && fundTotals(tracker);
-            return (
-              <Link
-                key={t.slug}
-                to={`/transparency/${t.slug}`}
-                className="group rounded bg-white border border-gray-300 border-t-4 border-t-primary-700 p-6 flex flex-col hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="rounded-full bg-primary-50 p-3 text-primary-600">
-                    <Icon className="h-6 w-6" aria-hidden="true" />
-                  </span>
-                  <h3 className="font-display text-xl font-semibold text-gray-900 group-hover:underline">
-                    {t.name}
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-700 mb-4">{t.description}</p>
-                {tracker && totals && (
-                  <dl className="grid grid-cols-3 gap-2 text-sm mb-4">
-                    <div>
-                      <dt className="text-gray-700">Total</dt>
-                      <dd className="font-semibold text-gray-900">
-                        {formatMoney(tracker.total, tracker.currency)}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="text-gray-700">Received</dt>
-                      <dd className="font-semibold text-success-700">
-                        {formatMoney(totals.received, tracker.currency)}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="text-gray-700">Spent</dt>
-                      <dd className="font-semibold text-gray-700">
-                        {totals.spent
-                          ? formatMoney(totals.spent, tracker.currency)
-                          : 'No report'}
-                      </dd>
-                    </div>
-                  </dl>
-                )}
-                <div className="mt-auto flex items-center justify-between text-sm">
-                  {tracker && (
-                    <span className="text-gray-700">
-                      Updated {formatPartialDate(tracker.lastUpdated)}
-                    </span>
-                  )}
-                  <span className="inline-flex items-center gap-1 font-semibold text-primary-700">
-                    {tracker ? 'View tracker' : 'Browse records'}
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+        {levelGroups.map(group => {
+          const groupTopics = topics.filter(
+            t => (t.level ?? 'provincial') === group.key
+          );
+          if (groupTopics.length === 0) return null;
+          return (
+            <div key={group.key} className="mt-7 first:mt-5">
+              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
+                {group.heading}
+              </h3>
+              <div className="mt-3 grid grid-cols-1 gap-6 md:grid-cols-2">
+                {groupTopics.map(t => (
+                  <TopicCard key={t.slug} topic={t} />
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </Section>
       <Section className="bg-gray-50">
         <Heading level={2}>Official sources</Heading>
@@ -162,7 +185,7 @@ function TransparencyHub() {
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded bg-white border border-gray-300 p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              className="group rounded-xl bg-white border border-gray-300 p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
             >
               <div className="flex items-start justify-between gap-2 font-semibold text-primary-800 group-hover:underline">
                 {s.name}

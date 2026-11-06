@@ -9,6 +9,8 @@ interface TopicSummary {
   name: string;
   description: string;
   icon: string;
+  /** Government level the records in this topic mainly cover. */
+  level?: 'provincial' | 'municipal' | 'national';
 }
 
 export interface OfficialSource {

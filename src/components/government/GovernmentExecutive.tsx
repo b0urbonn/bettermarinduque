@@ -73,7 +73,7 @@ export default function GovernmentExecutive() {
             {positions.map(({ key, name, Icon }) => (
               <li
                 key={key}
-                className="rounded-xl border border-primary-100 bg-white p-5 shadow-sm"
+                className="rounded-xl border border-gray-300 bg-white p-5 shadow-sm"
               >
                 <span className="mb-3 inline-flex rounded-lg bg-primary-50 p-2.5 text-primary-800">
                   <Icon size={22} aria-hidden="true" />
@@ -82,7 +82,7 @@ export default function GovernmentExecutive() {
                   {t(`government.roles.${key}.title`)}
                 </p>
                 <h3 className="mt-1 text-xl font-bold">{name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                <p className="mt-2 text-sm leading-relaxed text-gray-700">
                   {t(`government.roles.${key}.description`)}
                 </p>
               </li>
@@ -93,10 +93,10 @@ export default function GovernmentExecutive() {
         <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_19rem]">
           <article
             lang="en"
-            className="min-w-0 rounded-xl border border-primary-100 bg-white p-4 shadow-sm sm:p-6"
+            className="min-w-0 rounded-xl border border-gray-300 bg-white p-4 shadow-sm sm:p-6"
           >
             {article !== undefined ? (
-              <div className="prose prose-slate max-w-none motion-safe:animate-fade-in prose-headings:tracking-tight prose-h2:mt-7 prose-h2:mb-3 prose-a:text-primary-700 prose-table:my-0 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 [&>:first-child]:mt-0">
+              <div className="prose prose-gray max-w-none motion-safe:animate-fade-in prose-headings:tracking-tight prose-h2:mt-7 prose-h2:mb-3 prose-a:text-primary-700 prose-table:my-0 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 [&>:first-child]:mt-0">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
@@ -105,7 +105,7 @@ export default function GovernmentExecutive() {
                         role="region"
                         aria-label="Municipal mayors and vice mayors"
                         tabIndex={0}
-                        className="overflow-x-auto rounded-md border border-primary-100"
+                        className="overflow-x-auto rounded-lg border border-gray-200"
                       >
                         <table className="min-w-[25rem] text-left">
                           {children}
@@ -135,7 +135,7 @@ export default function GovernmentExecutive() {
 
           <aside
             aria-labelledby="government-executive-resources"
-            className="rounded-xl border border-primary-100 bg-white p-5 shadow-sm"
+            className="rounded-xl border border-gray-300 bg-white p-5 shadow-sm"
           >
             <span className="mb-3 inline-flex rounded-lg bg-primary-50 p-2.5 text-primary-800">
               <Building2 size={21} aria-hidden="true" />
@@ -146,7 +146,7 @@ export default function GovernmentExecutive() {
             >
               {t('government.capitol')}
             </h2>
-            <p className="mt-1 text-sm text-slate-700">
+            <p className="mt-1 text-sm text-gray-700">
               Capitol Compound, Brgy. Santol, Boac 4900
             </p>
             <ul role="list" className="mt-3 divide-y divide-primary-100">

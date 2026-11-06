@@ -29,7 +29,7 @@ export default function GovernmentPage({
   const { t, i18n } = useTranslation();
 
   return (
-    <div lang={i18n.resolvedLanguage} className="bg-slate-50">
+    <div lang={i18n.resolvedLanguage} className="bg-gray-50">
       <SEO title={title} description={description} />
       <header className="relative isolate overflow-hidden bg-linear-to-r from-primary-900 to-primary-800 text-white">
         <div className="portal-container flex items-start justify-between gap-3 py-8 sm:items-center sm:gap-8 sm:py-11">
@@ -57,7 +57,7 @@ export default function GovernmentPage({
           <PageGraphic key={title} kind="government" />
         </div>
       </header>
-      <div className="border-b border-primary-100 bg-white">
+      <div className="border-b border-gray-200 bg-white">
         <nav
           aria-label={t('government.navigation')}
           className="portal-container grid grid-cols-2 sm:flex sm:gap-5"
@@ -68,7 +68,7 @@ export default function GovernmentPage({
               key={key}
               to={governmentPaths[key]}
               className={({ isActive }) =>
-                `flex min-h-12 items-center gap-2 border-b-2 px-2 py-2 text-sm font-semibold sm:px-3 ${isActive ? 'border-primary-700 bg-primary-50 text-primary-900' : 'border-transparent text-slate-700 hover:bg-slate-50 hover:text-primary-800'}`
+                `flex min-h-12 items-center gap-2 border-b-2 px-2 py-2 text-sm font-semibold sm:px-3 ${isActive ? 'border-primary-700 bg-primary-50 text-primary-900' : 'border-transparent text-gray-700 hover:bg-gray-50 hover:text-primary-800'}`
               }
             >
               <Icon size={17} className="shrink-0" aria-hidden="true" />

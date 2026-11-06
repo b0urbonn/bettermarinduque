@@ -85,7 +85,7 @@ export default function AboutBetterMarinduque() {
       <section className="mt-10 border-t border-gray-300 pt-7">
         <h2 className="text-xl font-bold">Role of the portal</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="rounded border border-gray-300 p-5">
+          <div className="rounded-xl border border-gray-300 p-5">
             <h3 className="text-lg font-bold">What we do</h3>
             <p className="mt-2 leading-relaxed text-gray-700">
               We organize public information into service guides, directories,
@@ -94,7 +94,7 @@ export default function AboutBetterMarinduque() {
               where records are missing.
             </p>
           </div>
-          <div className="rounded border border-gray-300 p-5">
+          <div className="rounded-xl border border-gray-300 p-5">
             <h3 className="text-lg font-bold">Our limits</h3>
             <p className="mt-2 leading-relaxed text-gray-700">
               Government offices are responsible for issuing official records
@@ -189,7 +189,7 @@ export default function AboutBetterMarinduque() {
             <Link
               key={to}
               to={to}
-              className="group rounded border border-gray-300 p-5 hover:border-primary-500 hover:bg-primary-50"
+              className="group rounded-xl border border-gray-300 p-5 hover:border-primary-500 hover:bg-primary-50"
             >
               <h3 className="flex items-center justify-between gap-2 text-lg font-bold text-primary-700">
                 {label} <ArrowRight size={18} aria-hidden="true" />

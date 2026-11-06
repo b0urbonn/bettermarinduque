@@ -10,7 +10,7 @@ import Logo from '../brand/Logo';
 
 export default function Footer() {
   return (
-    <footer id="about" className="bg-neutral-950 text-white">
+    <footer className="bg-neutral-950 text-white">
       <div className="portal-container py-8 md:py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           <div>

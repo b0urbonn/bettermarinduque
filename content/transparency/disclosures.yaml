@@ -3,6 +3,7 @@
   name: Budgets and revenue
   description: Explore provincial revenue, national budget items for Marinduque, and local budget sources.
   icon: Wallet
+  level: provincial
   records:
     - title: Provincial General Fund revenue
       period: CY 2024
@@ -94,6 +95,7 @@
     plus the district office's yearly appropriations and selected enacted
     items naming the province.
   icon: Landmark
+  level: national
   records: []
   nextSteps: >-
     The BetterGov.ph GAA Explorer lets you search every enacted national
@@ -110,6 +112,7 @@
   name: Bids and awards
   description: Read selected provincial bid notices and contract award records.
   icon: ClipboardList
+  level: provincial
   records:
     - title: Maybo sanitary landfill improvements
       period: July 2026
@@ -171,6 +174,7 @@
   name: Infrastructure projects
   description: Look up selected public works, their locations and published costs.
   icon: HardHat
+  level: national
   records:
     - title: Caganhao–Amoingon–Maybo farm-to-market road
       period: June 2025
@@ -289,6 +293,7 @@
   name: Audits and reports
   description: Find COA audits and the province's annual accomplishment reports.
   icon: FileCheck
+  level: provincial
   records:
     - title: Marinduque annual audit executive summary
       period: CY 2024
@@ -359,3 +364,60 @@
     - name: Marinduque provincial annual reports
       description: Browse the province's accomplishment reports by year.
       url: https://marinduque.gov.ph/provincial-annual-report/
+
+- slug: municipal-barangay-records
+  name: Municipal and barangay records
+  description: >-
+    Find budgets, procurement notices, and audit reports for Marinduque's six
+    towns and 218 barangays.
+  icon: Building2
+  level: municipal
+  records:
+    - title: Full Disclosure Policy filings by LGU
+      period: Updated regularly
+      description: >-
+        Municipalities and barangays must post their budgets, procurement
+        plans, and special fund reports on the DILG portal. Choose MIMAROPA,
+        then Marinduque, then the town or barangay.
+      source:
+        title: DILG Full Disclosure Policy Portal
+        publisher: Department of the Interior and Local Government
+        url: https://fdpp.dilg.gov.ph
+    - title: COA annual audit reports for municipalities
+      period: By year
+      description: >-
+        The Commission on Audit files each town's annual audit under MIMAROPA.
+        Barangay accounts are examined as part of the municipal audit.
+      source:
+        title: Annual Audit Reports — Local Government Units
+        publisher: Commission on Audit
+        url: https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/
+    - title: PhilGEPS awards with municipal and barangay buyers
+      period: Recorded to date
+      description: >-
+        Procurement award notices where a Marinduque municipality or barangay
+        is the procuring entity, consolidated from public records. Boac's
+        consolidated listing is available; other towns can be checked on
+        PhilGEPS directly.
+      source:
+        title: Boac public records — PhilGEPS awards
+        publisher: Love the Philippines (PhilGEPS mirror)
+        url: https://lovethephilippines.com/lgu/1704001000-boac
+  nextSteps: >-
+    On the Full Disclosure Policy Portal, choose MIMAROPA, then Marinduque,
+    then the municipality or barangay. For a record that is not posted, ask the
+    municipal hall or barangay hall directly — LGUs are required to provide
+    public documents on request.
+  directories:
+    - name: DILG Full Disclosure Policy Portal
+      description: Budgets and reports every LGU must publish.
+      url: https://fdpp.dilg.gov.ph
+    - name: DILG MIMAROPA local government directory
+      description: Municipal office phone numbers and email addresses.
+      url: https://mimaropa.dilg.gov.ph/contact-us/field-office/
+    - name: COA annual audit reports
+      description: Municipal audit reports filed under MIMAROPA.
+      url: https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/
+    - name: PhilGEPS public notices
+      description: Search bids and awards by procuring entity.
+      url: https://notices.philgeps.gov.ph/

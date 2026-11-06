@@ -87,7 +87,7 @@ export default function GovernmentOffices() {
           <div
             role="search"
             aria-label={t('government.searchOffices')}
-            className="mt-5 rounded-xl border border-primary-100 bg-white p-4 sm:p-5"
+            className="mt-5 rounded-xl border border-gray-300 bg-white p-4 sm:p-5"
           >
             <label
               htmlFor="provincial-office-search"
@@ -107,15 +107,15 @@ export default function GovernmentOffices() {
                 value={query}
                 placeholder={t('government.officePlaceholder')}
                 onChange={event => setQuery(event.target.value)}
-                className="min-h-11 w-full rounded-md border border-slate-300 bg-white pr-3 pl-10 text-base text-slate-900"
+                className="min-h-11 w-full rounded-md border border-gray-300 bg-white pr-3 pl-10 text-base text-gray-900"
               />
             </div>
-            <p role="status" className="mt-2 text-sm text-slate-700">
+            <p role="status" className="mt-2 text-sm text-gray-700">
               {t('government.officeCount', { count: offices.length })}
             </p>
           </div>
           {offices.length === 0 ? (
-            <p className="mt-4 rounded-xl border border-primary-100 bg-white p-5 text-slate-700">
+            <p className="mt-4 rounded-xl border border-gray-300 bg-white p-5 text-gray-700">
               {t('government.noOffices')}
             </p>
           ) : (
@@ -126,20 +126,20 @@ export default function GovernmentOffices() {
               {offices.map(({ key, name, description, phone, email }) => (
                 <li
                   key={key}
-                  className="flex min-w-0 flex-col rounded-xl border border-primary-100 bg-white p-4 shadow-sm"
+                  className="flex min-w-0 flex-col rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
                 >
                   <div className="mb-3 flex items-start gap-3">
                     <span className="rounded-lg bg-primary-50 p-2 text-primary-800">
                       <Building2 size={18} aria-hidden="true" />
                     </span>
                     <div>
-                      <h3 className="font-bold text-slate-900">{name}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                      <h3 className="font-bold text-gray-900">{name}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-gray-700">
                         {description}
                       </p>
                     </div>
                   </div>
-                  <div className="mt-auto flex flex-wrap gap-x-4 border-t border-primary-100">
+                  <div className="mt-auto flex flex-wrap gap-x-4 border-t border-gray-200">
                     {phone && <PhoneLink number={phone} />}
                     <a
                       href={`mailto:${email}`}
@@ -159,7 +159,7 @@ export default function GovernmentOffices() {
         <section
           id="municipal-offices"
           aria-labelledby="municipal-offices-heading"
-          className="border-t border-primary-100 pt-7"
+          className="border-t border-gray-200 pt-7"
         >
           <h2
             id="municipal-offices-heading"
@@ -167,9 +167,7 @@ export default function GovernmentOffices() {
           >
             {t('government.links.towns.title')}
           </h2>
-          <p className="mt-2 text-slate-700">
-            {t('government.municipalIntro')}
-          </p>
+          <p className="mt-2 text-gray-700">{t('government.municipalIntro')}</p>
           <a
             href={localGovernmentDirectory}
             className="portal-link mt-1 inline-flex min-h-11 items-center gap-1 text-sm font-semibold"
@@ -184,7 +182,7 @@ export default function GovernmentOffices() {
             {Object.entries(municipalityGuides).map(([slug, town]) => (
               <li
                 key={slug}
-                className="rounded-xl border border-primary-100 bg-white p-4 shadow-sm"
+                className="rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
               >
                 <h3 className="flex items-center gap-2 font-bold capitalize">
                   <MapPin
@@ -217,7 +215,7 @@ export default function GovernmentOffices() {
             <h2 id="government-service-help" className="font-bold">
               {t('government.serviceHelp')}
             </h2>
-            <p className="mt-1 text-sm text-slate-700">
+            <p className="mt-1 text-sm text-gray-700">
               {t('government.links.charter.description')}
             </p>
           </div>
