@@ -109,19 +109,31 @@ export default function Navbar() {
           })}
           className={`${isOpen ? 'flex' : 'hidden'} w-full flex-col gap-1 border-t border-gray-200 pt-2 mt-2 lg:m-0 lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-3 lg:border-0 lg:pt-0`}
         >
-          {mainNavigation.map(({ label, href }) => (
-            <NavLink
-              key={href}
-              to={href}
-              end={href === '/'}
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `inline-flex min-h-11 items-center rounded-sm px-2 text-sm hover:bg-primary-50 hover:text-primary-800 ${isActive ? 'bg-primary-50 font-bold text-primary-900 underline underline-offset-4' : 'font-medium text-gray-700'}`
-              }
-            >
-              {t(`navbar.${label.toLowerCase()}`, { defaultValue: label })}
-            </NavLink>
-          ))}
+          {mainNavigation.map(({ label, href }) =>
+            href.startsWith('https://') ? (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className="inline-flex min-h-11 items-center gap-1 rounded-sm px-2 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-800"
+              >
+                {t(`navbar.${label.toLowerCase()}`, { defaultValue: label })}
+                <ArrowUpRight size={13} aria-hidden="true" />
+              </a>
+            ) : (
+              <NavLink
+                key={href}
+                to={href}
+                end={href === '/'}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `inline-flex min-h-11 items-center rounded-sm px-2 text-sm hover:bg-primary-50 hover:text-primary-800 ${isActive ? 'bg-primary-50 font-bold text-primary-900 underline underline-offset-4' : 'font-medium text-gray-700'}`
+                }
+              >
+                {t(`navbar.${label.toLowerCase()}`, { defaultValue: label })}
+              </NavLink>
+            )
+          )}
           {isMeilisearchEnabled && (
             <NavLink
               to="/search"

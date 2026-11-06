@@ -36,10 +36,6 @@ const disclosureGraphics: Partial<Record<string, PageGraphicKind>> = {
 };
 const trackerGraphics: Partial<Record<string, PageGraphicKind>> = {
   'marcopper-fund': 'settlement',
-  'circumferential-road': 'infrastructure',
-  'disaster-fund': 'budgets',
-  'national-tax-allotment': 'budgets',
-  'flood-control': 'infrastructure',
 };
 
 function TransparencyNavigation() {

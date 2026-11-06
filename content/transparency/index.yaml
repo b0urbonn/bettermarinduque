@@ -8,32 +8,6 @@ trackers:
       Marcopper mining disasters — payments received, scheduled installments,
       contested claims, and how the money is used.
     icon: Scale
-  - slug: circumferential-road
-    name: Circumferential Road Funds
-    description: >-
-      National budget items and DPWH contracts identified for rehabilitating
-      the Marinduque Circumferential Road — enacted amounts, proposals, and
-      contracted works.
-    icon: Route
-  - slug: disaster-fund
-    name: Provincial Disaster Fund
-    description: >-
-      The Local Disaster Risk Reduction and Management Fund — the 5% of
-      revenue the province must set aside each year, and what is known about
-      its use.
-    icon: CloudRainWind
-  - slug: national-tax-allotment
-    name: National Tax Allotment
-    description: >-
-      The province's share of national taxes — what Marinduque received, and
-      the annual allotments published by DBM.
-    icon: Landmark
-  - slug: flood-control
-    name: Flood Control Projects
-    description: >-
-      DPWH flood mitigation works in the province — planned budgets, awards,
-      and where to report problems.
-    icon: Waves
 
 # Official places to look for documents that are not yet tracked here.
 officialSources:

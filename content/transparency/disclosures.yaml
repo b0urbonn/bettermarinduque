@@ -89,9 +89,10 @@
 - slug: national-budget
   name: National budget for Marinduque
   description: >-
-    Enacted national budget items naming Marinduque from FY 2020 to FY 2026,
-    the district engineering office's yearly appropriations, and the
-    FY 2027 House bill project list — mirrored from BetterGov.ph Budget.
+    Every FY 2027 national budget line found for Marinduque — by municipality,
+    NEP against the House bill — loaded live from the BetterGov.ph Budget API,
+    plus the district office's yearly appropriations and selected enacted
+    items naming the province.
   icon: Landmark
   records: []
   nextSteps: >-
