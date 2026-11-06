@@ -8,7 +8,6 @@ import UpdatesSection from '../components/home/UpdatesSection';
 import Leadership from '../components/home/Leadership';
 import Hotlines from '../components/home/Hotlines';
 import ContactCards from '../components/home/ContactCards';
-import AboutMarinduque from '../components/home/AboutMarinduque';
 import SEO from '../components/SEO';
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
       <Leadership />
       <Hotlines />
       <ContactCards />
-      <AboutMarinduque />
     </>
   );
 }

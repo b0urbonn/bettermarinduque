@@ -1,4 +1,4 @@
-import { BookOpen, MapPin, Mountain } from 'lucide-react';
+import { BookOpen, Drama, MapPin, Music } from 'lucide-react';
 import { provinceHistory } from '../../data/province';
 
 export default function HistorySection() {
@@ -62,18 +62,43 @@ export default function HistorySection() {
             </div>
             <div className="flex flex-1 items-start gap-3.5 rounded-xl border border-black/[0.06] bg-white p-5 transition hover:-translate-y-0.5 hover:border-primary-700 hover:shadow-[0_4px_16px_rgba(0,50,160,0.1)] max-lg:min-w-72">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-gradient-to-br from-primary-700 to-[#003d82] text-white">
-                <Mountain size={20} aria-hidden="true" />
+                <Drama size={20} aria-hidden="true" />
               </span>
               <div>
                 <h3 className="text-[0.9375rem] font-semibold text-gray-900">
                   Home of the Moriones
                 </h3>
                 <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-gray-500">
-                  The island is known for the Holy Week Moriones Lenten rites —
-                  masked &ldquo;Roman soldiers&rdquo; reenacting the story of
-                  Longinus — and for Mount Malindig, its highest peak at 1,157
-                  m.
+                  The island is known for the Holy Week Moryonan Lenten rites —
+                  masked &ldquo;Roman soldiers&rdquo; taken on as a panata, or
+                  personal vow.
                 </p>
+                <a
+                  href="https://www.nationalmuseum.gov.ph/exhibitions/nm-marinduque-romblon-area-museum/moryonan/"
+                  className="portal-link mt-2 inline-block text-[0.8125rem]"
+                >
+                  National Museum · Moryonan
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-1 items-start gap-3.5 rounded-xl border border-black/[0.06] bg-white p-5 transition hover:-translate-y-0.5 hover:border-primary-700 hover:shadow-[0_4px_16px_rgba(0,50,160,0.1)] max-lg:min-w-72">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-gradient-to-br from-primary-700 to-[#003d82] text-white">
+                <Music size={20} aria-hidden="true" />
+              </span>
+              <div>
+                <h3 className="text-[0.9375rem] font-semibold text-gray-900">
+                  Kalutang music
+                </h3>
+                <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-gray-500">
+                  Musicians strike pairs of wooden sticks to make melodies — a
+                  tradition closely associated with Gasan.
+                </p>
+                <a
+                  href="https://www.nationalmuseum.gov.ph/2022/04/29/kalutang-marinduques-traditional-musical-instrument/"
+                  className="portal-link mt-2 inline-block text-[0.8125rem]"
+                >
+                  National Museum · Kalutang
+                </a>
               </div>
             </div>
           </div>

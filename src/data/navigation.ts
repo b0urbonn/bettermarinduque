@@ -30,7 +30,6 @@ export const footerNavigation = [
       { label: 'Transparency portal', href: '/transparency' },
       { label: 'News & updates', href: '/news' },
       { label: 'FAQs', href: '/faq' },
-      { label: 'Source code on GitHub', href: repoUrl },
       { label: 'Photo credits', href: '/image-credits.html' },
     ],
   },
