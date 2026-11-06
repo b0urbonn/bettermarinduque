@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
-import { Menu, Search, X } from 'lucide-react';
+import { ArrowUpRight, Globe, Menu, Phone, Search, X } from 'lucide-react';
 import { Link, NavLink } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { mainNavigation } from '../../data/navigation';
+import { provincialWebsite } from '../../data/province';
 import { isMeilisearchEnabled } from '../../lib/meilisearch';
 import Logo from '../brand/Logo';
 
@@ -14,7 +15,7 @@ export default function Navbar() {
   return (
     <header
       lang={i18n.resolvedLanguage}
-      className="sticky top-0 z-50 bg-white shadow-[0_2px_4px_rgba(0,0,0,0.05)]"
+      className="relative z-50 border-b border-gray-300 bg-white lg:sticky lg:top-0"
       onKeyDown={event => {
         if (event.key === 'Escape' && isOpen) {
           setIsOpen(false);
@@ -37,14 +38,51 @@ export default function Navbar() {
       >
         {t('navbar.skip')}
       </a>
-      <div className="portal-container flex flex-wrap items-center justify-between gap-x-2 py-3 lg:gap-x-4">
+      <div className="border-b border-gray-200 bg-gray-50">
+        <div className="portal-container flex min-h-11 flex-wrap items-center justify-between gap-x-4 text-sm">
+          <Link
+            to="/#hotlines"
+            onClick={() => setIsOpen(false)}
+            className="inline-flex min-h-11 items-center gap-2 rounded-sm font-semibold text-secondary-700 hover:underline"
+          >
+            <Phone size={16} aria-hidden="true" />
+            {t('navbar.emergency')}
+          </Link>
+          <div className="flex flex-wrap items-center gap-x-4">
+            <a
+              href={provincialWebsite}
+              className="hidden min-h-11 items-center gap-1.5 rounded-sm text-gray-700 hover:underline lg:inline-flex"
+            >
+              {t('navbar.official')}{' '}
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+            <label className="inline-flex items-center gap-1 text-gray-700">
+              <Globe size={16} aria-hidden="true" />
+              <span className="sr-only">{t('navbar.language')}</span>
+              <select
+                value={i18n.resolvedLanguage === 'fil' ? 'fil' : 'en'}
+                onChange={event => void i18n.changeLanguage(event.target.value)}
+                className="min-h-11 rounded-sm bg-transparent px-1.5 text-sm font-medium"
+              >
+                <option value="en" lang="en">
+                  English
+                </option>
+                <option value="fil" lang="fil">
+                  Filipino
+                </option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className="portal-container flex flex-wrap items-center justify-between gap-x-2 py-2.5 lg:gap-x-6 lg:py-3">
         <Link
           to="/"
           aria-label="BetterMarinduque home"
           onClick={() => setIsOpen(false)}
-          className="inline-flex min-h-11 items-center gap-2 rounded-sm text-primary-700"
+          className="inline-flex min-h-11 items-center gap-2 rounded-sm text-primary-800"
         >
-          <Logo className="h-10 w-auto lg:h-12" />
+          <Logo className="h-9 w-auto lg:h-10" />
           <span className="text-base leading-none font-bold">
             Better<span className="block">Marinduque</span>
           </span>
@@ -69,7 +107,7 @@ export default function Navbar() {
           aria-label={t('navbar.mainNavigation', {
             defaultValue: 'Main navigation',
           })}
-          className={`${isOpen ? 'flex' : 'hidden'} w-full flex-col gap-1 border-t border-gray-200 pt-2 mt-2 lg:m-0 lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:pt-0`}
+          className={`${isOpen ? 'flex' : 'hidden'} w-full flex-col gap-1 border-t border-gray-200 pt-2 mt-2 lg:m-0 lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-3 lg:border-0 lg:pt-0`}
         >
           {mainNavigation.map(({ label, href }) => (
             <NavLink
@@ -78,7 +116,7 @@ export default function Navbar() {
               end={href === '/'}
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
-                `inline-flex min-h-11 items-center rounded-sm px-2.5 text-sm transition hover:bg-primary-50 hover:text-primary-800 ${isActive ? 'font-bold text-primary-700 underline underline-offset-4' : 'font-medium text-gray-700'}`
+                `inline-flex min-h-11 items-center rounded-sm px-2 text-sm hover:bg-primary-50 hover:text-primary-800 ${isActive ? 'bg-primary-50 font-bold text-primary-900 underline underline-offset-4' : 'font-medium text-gray-700'}`
               }
             >
               {t(`navbar.${label.toLowerCase()}`, { defaultValue: label })}
@@ -95,27 +133,6 @@ export default function Navbar() {
               <span className="lg:sr-only">Search the portal</span>
             </NavLink>
           )}
-          <div
-            role="group"
-            aria-label={t('navbar.language')}
-            className="mt-2 flex items-center gap-1.5 border-t border-gray-200 pt-3 lg:mt-0 lg:ml-3 lg:border-0 lg:pt-0"
-          >
-            {(['en', 'fil'] as const).map(lang => (
-              <button
-                key={lang}
-                type="button"
-                onClick={() => void i18n.changeLanguage(lang)}
-                aria-label={`Switch to ${lang === 'en' ? 'English' : 'Filipino'}`}
-                className={`rounded-md px-3 py-1.5 text-sm font-semibold transition ${
-                  i18n.resolvedLanguage === lang
-                    ? 'bg-primary-700 text-white'
-                    : 'border border-primary-700 bg-white text-primary-700 hover:bg-primary-50'
-                }`}
-              >
-                {lang === 'en' ? 'EN' : 'FIL'}
-              </button>
-            ))}
-          </div>
         </nav>
       </div>
     </header>

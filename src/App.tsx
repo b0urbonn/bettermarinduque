@@ -1,7 +1,5 @@
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
-import HotlineBar from './components/layout/HotlineBar';
-import InfoBar from './components/layout/InfoBar';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -15,11 +13,6 @@ import Search from './pages/Search';
 import Transparency from './pages/Transparency';
 import MunicipalitiesPage from './pages/MunicipalitiesPage';
 import MunicipalityPage from './pages/MunicipalityPage';
-import Statistics from './pages/Statistics';
-import Legislative from './pages/Legislative';
-import News from './pages/News';
-import Contact from './pages/Contact';
-import Faq from './pages/Faq';
 import { isMeilisearchEnabled } from './lib/meilisearch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
@@ -29,9 +22,7 @@ function App() {
       <Router>
         <NuqsAdapter>
           <div className="min-h-screen flex flex-col">
-            <HotlineBar />
             <Navbar />
-            <InfoBar />
             <ScrollToTop />
             <main id="main-content" tabIndex={-1} className="flex-grow">
               <Routes>
@@ -59,11 +50,6 @@ function App() {
                 />
                 <Route path="/transparency" element={<Transparency />} />
                 <Route path="/transparency/:slug" element={<Transparency />} />
-                <Route path="/statistics" element={<Statistics />} />
-                <Route path="/legislative" element={<Legislative />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/faq" element={<Faq />} />
                 {isMeilisearchEnabled && (
                   <Route path="/search" element={<Search />} />
                 )}

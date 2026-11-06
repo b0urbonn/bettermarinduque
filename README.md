@@ -1,113 +1,67 @@
-# BetterMarinduque
+# 🏝️ BetterMarinduque
 
 A community-run civic information and transparency portal for the **Province of Marinduque**, Philippines — built by volunteers as part of the [BetterGov.ph](https://bettergov.ph) **Better LGU** movement.
 
-![Version](https://img.shields.io/badge/version-0.3.0-green)
-![License](https://img.shields.io/badge/license-CC0-blue)
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+**Live site:** [bettermarinduque.vercel.app](https://bettermarinduque.vercel.app)
+**Repository:** [github.com/b0urbonn/bettermarinduque](https://github.com/b0urbonn/bettermarinduque) · [Contributors](https://github.com/b0urbonn/bettermarinduque/graphs/contributors)
+**Directory listing:** [better-lgu-directory](https://github.com/jmacj/better-lgu-directory) · [lgu.bettergov.ph](https://lgu.bettergov.ph)
 
 > BetterMarinduque is an **independent community initiative**. It is not the official website of the Provincial Government of Marinduque — for that, visit [marinduque.gov.ph](https://marinduque.gov.ph).
 
-## About
+---
 
-BetterMarinduque organizes public information — service guides, government offices, municipal data, emergency hotlines, and public spending records — into one accessible portal for the people of Marinduque.
+## 📋 What's Inside
 
-**Cost to the People of Marinduque = ₱0**
+| Section             | Route           | Contents                                                                                                                |
+| ------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| 🏠 **Home**         | `/`             | Province overview, municipalities, emergency hotlines, quick links to common tasks                                      |
+| ℹ️ **About**        | `/about`        | What this portal is, who runs it, and how it relates to the official government                                         |
+| 🛎️ **Services**     | `/services`     | Plain-language guides to local services — permits, health programs, scholarships, public markets, disaster preparedness |
+| 🏛️ **Government**   | `/government`   | Provincial departments and offices, executive officials, Sangguniang Panlalawigan                                       |
+| 💰 **Transparency** | `/transparency` | Provincial disclosures, national budget line items, and fund trackers                                                   |
+| 🔍 **Search**       | `/search`       | Full-text search across portal content                                                                                  |
 
-## Open Source for LGUs
+### Transparency trackers
 
-This repository is open source under the **CC0** public domain dedication and is freely available for use, modification, and redistribution by anyone who wishes to build a portal for their own local government unit (LGU) across the Philippines.
+| Tracker                    | What it covers                                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------------------------ |
+| Marcopper Settlement Fund  | The US$100M Barrick settlement — payments received, installments, contested claims, use of funds |
+| Circumferential Road Funds | National budget items and DPWH contracts for the Marinduque Circumferential Road                 |
+| Provincial Disaster Fund   | The Local DRRM Fund — the mandated 5% of revenue and documented use                              |
+| National Tax Allotment     | Marinduque's share of national taxes, per DBM allotments                                         |
+| Flood Control Projects     | DPWH flood mitigation budgets, awards, and reporting channels                                    |
 
-To adapt this project for your LGU, fork the repository and customize the content, styling, and data sources to match your locality's requirements.
+Each figure links to its source document — see [Data Provenance](#-data-provenance).
 
-## Live Demo
+## 🛠️ Tech Stack
 
-Visit the live website: [bettermarinduque.vercel.app](https://bettermarinduque.vercel.app)
+- **React 19 + TypeScript + Vite** — SPA frontend
+- **Tailwind CSS v4** — styling, with [@bettergov/kapwa](https://github.com/bettergov/kapwa) components
+- **React Router** — client-side routing (`vercel.json` rewrites all paths to `index.html`)
+- **i18next** — English and Filipino (`en`, `fil`) translations in `public/locales/`
+- **YAML + Markdown** — file-based content, compiled at build time (no CMS, no backend)
+- **Vercel** — hosting and CDN
 
-| Resource          | Link                                                                                                                 |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Website           | [bettermarinduque.vercel.app](https://bettermarinduque.vercel.app)                                                   |
-| Source Code       | [b0urbonn/bettermarinduque](https://github.com/b0urbonn/bettermarinduque)                                            |
-| Contributors      | [All contributors](https://github.com/b0urbonn/bettermarinduque/graphs/contributors)                                 |
-| Directory listing | [better-lgu-directory](https://github.com/jmacj/better-lgu-directory) · [lgu.bettergov.ph](https://lgu.bettergov.ph) |
-| License           | CC0 (public domain)                                                                                                  |
+## 🚀 Local Development
 
-## Key Features
+### Prerequisites
 
-| Feature                      | Description                                                                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Service Guides Directory** | Plain-language guides to provincial services — permits, health programs, scholarships, public markets, disaster preparedness      |
-| **Municipalities**           | Per-town pages for all six municipalities — population, barangays, elected officials, photo galleries, and interactive boundaries |
-| **Government Directory**     | Provincial departments, offices, and elected officials with contact information                                                   |
-| **Transparency Trackers**    | Source-cited fund trackers: Marcopper settlement, circumferential road, disaster fund, national tax allotment, flood control      |
-| **Provincial Statistics**    | Census figures, per-municipality population, barangay counts, and land area — all sourced to PSA                                  |
-| **Legislative Section**      | Index of Sangguniang Panlalawigan ordinances and resolutions (in progress)                                                        |
-| **Real-time Information**    | Live weather for Boac (Open-Meteo), USD→PHP exchange rate, and Philippine date/time                                               |
-| **Emergency Hotline Bar**    | Always-visible emergency contacts; scrolling marquee on mobile and tablet with pause-on-hover                                     |
-| **History Timeline**         | Animated provincial history from the Battle of Pulang Lupa (1900) to the present                                                  |
-| **Multi-language Support**   | English and Filipino (`en`, `fil`) via i18next with fallback                                                                      |
-| **Search**                   | Service-guide search across portal content                                                                                        |
-| **Mobile Responsive**        | Card-based layouts that adapt from desktop to small phones                                                                        |
-| **Accessibility**            | Skip links, ARIA labels, semantic HTML, keyboard navigation                                                                       |
-| **SEO**                      | Per-page meta tags, Open Graph, and social cards via react-helmet                                                                 |
+- Node.js 18+
+- npm
 
-## Technology Stack
-
-| Category         | Technologies                                                                       |
-| ---------------- | ---------------------------------------------------------------------------------- |
-| **Frontend**     | React 19, TypeScript                                                               |
-| **Build**        | Vite, rolldown                                                                     |
-| **Styling**      | Tailwind CSS v4, [@bettergov/kapwa](https://github.com/bettergov/kapwa) components |
-| **Routing**      | React Router (`vercel.json` rewrites all paths to `index.html`)                    |
-| **Icons**        | [Lucide](https://lucide.dev/)                                                      |
-| **Fonts**        | Google Fonts (Inter)                                                               |
-| **Content**      | YAML + Markdown files compiled at build time — no CMS, no backend                  |
-| **i18n**         | i18next + HttpBackend (`public/locales/{en,fil}`)                                  |
-| **Maps**         | OpenStreetMap embed, municipal boundary GeoJSON                                    |
-| **APIs**         | Open-Meteo (weather), open.er-api.com (exchange rate), BetterGov.ph Budget API     |
-| **Code Quality** | ESLint, Prettier (auto-format on commit via Husky + lint-staged)                   |
-| **Hosting**      | Vercel                                                                             |
-
-## Quick Start
+### Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/b0urbonn/bettermarinduque.git
-
-# Navigate to project directory
 cd bettermarinduque
-
-# Install dependencies
 npm install
-
-# Configure environment (optional for local dev)
-cp env.example .env.local
-
-# Start development server
+cp env.example .env.local   # then fill in values
 npm run dev
-
-# Open in browser
-# http://localhost:5173
 ```
 
-## Development Commands
+Open `http://localhost:5173`.
 
-| Command                             | Description                            |
-| ----------------------------------- | -------------------------------------- |
-| `npm run dev`                       | Vite dev server at `localhost:5173`    |
-| `npm run build`                     | `tsc -b` + production build to `dist/` |
-| `npm run preview`                   | Serve the production build locally     |
-| `npm run lint` / `npm run lint:fix` | ESLint check / autofix                 |
-| `npm run format`                    | Format all files with Prettier         |
-| `npm run dev:yaml`                  | Convert YAML to JSON, then start dev   |
-| `npm run setup`                     | Interactive starter-kit setup prompts  |
-
-Pre-commit runs `lint-staged` (ESLint + Prettier on staged files) via Husky.
-
-## Environment Variables
+### Environment variables
 
 All variables are optional for local dev — the site builds with sensible fallbacks. Set them in `.env.local` (gitignored) or in the Vercel project settings for production.
 
@@ -125,41 +79,46 @@ All variables are optional for local dev — the site builds with sensible fallb
 
 See `env.example` for the full template.
 
-## Project Structure
+### Scripts
+
+| Command                             | What it does                           |
+| ----------------------------------- | -------------------------------------- |
+| `npm run dev`                       | Vite dev server at `localhost:5173`    |
+| `npm run build`                     | `tsc -b` + production build to `dist/` |
+| `npm run preview`                   | Serve the production build locally     |
+| `npm run lint` / `npm run lint:fix` | ESLint check / autofix                 |
+| `npm run format`                    | Prettier                               |
+| `npm run setup`                     | Interactive starter-kit setup prompts  |
+
+Pre-commit runs `lint-staged` (ESLint + Prettier on staged files) via Husky.
+
+## 📁 Project Structure
 
 ```
-bettermarinduque/
-├── content/                # File-based content (Markdown + YAML)
-│   ├── government/         # Government pages: {category}/index.yaml + {page}.md
-│   ├── services/           # Service guides:  {category}/index.yaml + {page}.md
-│   └── transparency/       # Trackers & disclosures (YAML, source-cited)
-├── public/
-│   └── locales/{en,fil}/   # UI translations (common.json)
-├── src/
-│   ├── assets/             # Hero and section images
-│   ├── components/
-│   │   ├── brand/          # Logo, Marinduque map, hero graphics, motion CSS
-│   │   ├── government/     # Government section views
-│   │   ├── home/           # Home sections (HeroV2, ServicesGrid, StatsCards,
-│   │   │                   #  WeatherMap, HistorySection, UpdatesSection,
-│   │   │                   #  Leadership, ContactCards, Hotlines, Municipalities)
-│   │   ├── layout/         # HotlineBar, Navbar, InfoBar, Footer
-│   │   ├── sections/       # Shared sections (Hero)
-│   │   ├── transparency/   # Tracker views, charts (AmountBar, YearlyBarChart)
-│   │   └── ui/             # Primitives (Section, Heading, Card, PageHeader…)
-│   ├── data/               # Static data + YAML loaders (province, municipalities,
-│   │                       #  hotlines, news, navigation, transparency)
-│   ├── lib/                # markdownLoader, yamlLoader, formatters
-│   ├── pages/              # Route pages (Home, Statistics, Legislative, News,
-│   │                       #  Contact, Faq, Services, Government, Transparency…)
-│   └── types/              # Shared TypeScript types
-├── index.html              # SPA entry
-├── vercel.json             # SPA rewrites for Vercel
-├── package.json            # Node.js configuration
-└── README.md               # Project documentation
+content/
+├── government/            # Government pages: {category}/index.yaml + {page}.md
+├── services/              # Service guides:  {category}/index.yaml + {page}.md
+└── transparency/          # Trackers & disclosures (YAML, source-cited)
+
+public/
+└── locales/{en,fil}/      # UI translations (common.json)
+
+src/
+├── components/
+│   ├── brand/             # Logo, Marinduque map, hero graphics, motion CSS
+│   ├── government/        # Government section views
+│   ├── home/              # Home sections (municipalities, hotlines, about…)
+│   ├── layout/            # Navbar, Footer
+│   ├── sections/          # Shared sections (Hero)
+│   ├── transparency/      # Tracker views, charts (AmountBar, YearlyBarChart)
+│   └── ui/                # Primitives (Section, Heading, Card, PageHeader…)
+├── data/                  # Static data + YAML loaders (see Content System)
+├── lib/                   # markdownLoader, yamlLoader, formatters
+├── pages/                 # Route pages
+└── types/                 # Shared TypeScript types
 ```
 
-## Content System
+## ✏️ Content System
 
 Content is plain Markdown and YAML committed to this repo — no CMS, no database.
 
@@ -171,20 +130,21 @@ Content is plain Markdown and YAML committed to this repo — no CMS, no databas
 
 Guides: [CONTENT-GUIDE.md](CONTENT-GUIDE.md) · [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md) (non-technical editing)
 
-## Data Provenance
+## 📚 Data Provenance
 
 Transparency figures are **appropriations and public-record amounts**, not audited spending. Every amount shown on the portal carries a citation in its YAML file — the document title, publisher, and URL — plus a snapshot/`lastUpdated` date.
 
-| Source                                                                                                                                           | Used for                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
-| [marinduque.gov.ph](https://marinduque.gov.ph)                                                                                                   | Provincial reports, emergency directory, officials    |
-| [PSA](https://rssomimaropa.psa.gov.ph)                                                                                                           | 2024 census population, PSGC codes, land area         |
-| [BetterGov.ph Budget API](https://data.bettergov.ph/)                                                                                            | Enacted GAA line items naming Marinduque              |
-| [DBM](https://www.dbm.gov.ph)                                                                                                                    | National Tax Allotment / Local Budget Memoranda       |
-| [DILG FDPP](https://fdpp.dilg.gov.ph)                                                                                                            | Budgets, procurement, financial reports               |
-| [COA](https://www.coa.gov.ph), [PhilGEPS](https://www.philgeps.gov.ph), [DPWH](https://transparency.dpwh.gov.ph/), [FOI](https://www.foi.gov.ph) | Audits, awards, project disclosures, records requests |
+**Primary sources used:**
 
-## Disclosures & Disclaimers
+- [marinduque.gov.ph](https://marinduque.gov.ph) — provincial reports and accomplishment reports
+- [BetterGov.ph Budget API](https://data.bettergov.ph/) — enacted GAA line items naming Marinduque
+- [DBM](https://www.dbm.gov.ph) — National Tax Allotment / Local Budget Memoranda
+- [DILG Full Disclosure Policy Portal](https://fdpp.dilg.gov.ph) — budgets, procurement, financial reports
+- [Commission on Audit](https://www.coa.gov.ph), [PhilGEPS](https://www.philgeps.gov.ph), [DPWH Transparency](https://transparency.dpwh.gov.ph/), [FOI](https://www.foi.gov.ph)
+
+The Transparency page links all of these as "official sources" so visitors can verify or request documents not yet tracked.
+
+## ⚖️ Disclosures & Disclaimers
 
 - **Independence.** BetterMarinduque is a volunteer-run community project. It is **not operated by, affiliated with, endorsed by, or officially connected to** the Provincial Government of Marinduque or any government agency. The official provincial website is [marinduque.gov.ph](https://marinduque.gov.ph).
 - **Informational purpose only.** Content is provided for civic information and convenience. It is **not legal advice** and is not a channel for official transactions — permits, payments, filings, and records requests must be done through the proper government offices.
@@ -194,14 +154,16 @@ Transparency figures are **appropriations and public-record amounts**, not audit
 - **Privacy.** The site is static: no accounts, no forms collecting personal data, no cookies set by the app itself. Optional analytics are off unless configured via env vars.
 - **No warranty.** Provided "as is", without warranty of any kind, to the extent permitted by law.
 
-## Contributing
+## 🤝 Contributing
 
 Corrections and updates are welcome — especially from Marinduqueños. No fix is too small.
 
-| Contribution type                                                     | What you need                                                                                                                                                         |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Content** — service guides, government pages, transparency trackers | Just a GitHub account. Everything in `content/` is plain Markdown/YAML, editable right on GitHub. Non-technical guide: [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md) |
-| **Code** — UI, components, tooling                                    | Node.js 18+ and npm. Clone, `npm install`, `npm run dev` — see [Quick Start](#quick-start)                                                                            |
+### What you'll need
+
+| Contribution type                                                        | What you need                                                                                                                                                            |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 📝 **Content** — service guides, government pages, transparency trackers | Just a GitHub account. Everything in `content/` is plain Markdown/YAML and editable right on GitHub. Non-technical guide: [CONTENT-MANAGEMENT.md](CONTENT-MANAGEMENT.md) |
+| 💻 **Code** — UI, components, tooling                                    | Node.js 18+ and npm. Clone, `npm install`, `npm run dev` — see [Local Development](#-local-development)                                                                  |
 
 ### Before opening a PR
 
@@ -213,37 +175,44 @@ Corrections and updates are welcome — especially from Marinduqueños. No fix i
    npm run build     # TypeScript check + production build
    ```
 
+   Pre-commit runs ESLint + Prettier automatically on staged files via Husky, but running these first saves a round-trip.
+
 3. For content changes, also run `npm run dev` and click through the pages you touched — check titles, formatting, and that links work.
 
 ### PR checklist
 
 In your PR description, tell reviewers:
 
-- **What changed or was added** — one or two sentences
+- **What changed or was added** — one or two sentences (e.g. _"Added bulk-buying guide under Services → Agriculture"_, _"Fixed outdated SP official results figure"_)
 - **Why** — link the issue or source this is based on
 - **Tested?** — check what you verified:
   - [ ] `npm run lint` passes
   - [ ] `npm run build` succeeds
   - [ ] Checked the affected pages in `npm run dev`
   - [ ] Screenshots included for UI or layout changes
-- **Sources** — for transparency figures or factual claims, cite the document/URL
+- **Sources** — for transparency figures or factual claims, cite the document/URL. Every tracker amount needs a citation and `lastUpdated` date — see [Data Provenance](#-data-provenance)
 
-## Maintainers & Contributors
+### Guidelines
+
+- Keep PRs focused — one change per PR makes review faster
+- Cite official sources for facts and figures; when in doubt, the government publication prevails
+- Be respectful — this is a civic community project built for Marinduqueños
+
+## 👥 Maintainers & contributors
 
 - [@b0urbonn](https://github.com/b0urbonn) — maintainer of record for the Marinduque Province entry in the BetterGov.ph LGU Directory
 - [All contributors](https://github.com/b0urbonn/bettermarinduque/graphs/contributors) — everyone who has helped build this portal
 
-## Acknowledgments
-
-- Design and content inspiration from [BetterSolano.org](https://github.com/BetterSolano/bettersolano)
-- Built on the BetterGov.ph LGU starter kit by [iyanski](https://github.com/iyanski) and contributors
-- UI components from [@bettergov/kapwa](https://github.com/bettergov/kapwa)
-- Icons by [Lucide](https://lucide.dev/)
-
-## License
+## 📄 License
 
 - **Code**: [CC0](LICENSE) — public domain. Fork it, reuse it, build a portal for your own LGU.
 - **Third-party data**: government documents and budget data remain the property of their publishers and are cited under fair informational use.
+
+## 🙏 Acknowledgments
+
+- Built on the BetterGov.ph LGU starter kit by [iyanski](https://github.com/iyanski) and contributors
+- UI components from [@bettergov/kapwa](https://github.com/bettergov/kapwa)
+- Icons by [Lucide](https://lucide.dev/)
 
 ---
 

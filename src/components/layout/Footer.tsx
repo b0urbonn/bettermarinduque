@@ -1,90 +1,71 @@
-import { ArrowUpRight, Github, Globe, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Mail } from 'lucide-react';
 import { Link } from 'react-router';
 import {
   contactEmail,
   contactMailto,
-  contributorsUrl,
   footerNavigation,
   repoUrl,
 } from '../../data/navigation';
 import Logo from '../brand/Logo';
 
-const currentYear = new Date().getFullYear();
-
 export default function Footer() {
   return (
-    <footer
-      id="about"
-      className="bg-gradient-to-b from-[#1a1a1a] to-[#111111] text-white"
-    >
-      <div className="portal-container">
-        <div className="grid gap-12 border-b border-white/[0.08] py-14 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-8">
-          <div className="max-w-xs">
+    <footer id="about" className="bg-neutral-950 text-white">
+      <div className="portal-container py-8 md:py-10">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
+          <div>
             <Link
               to="/"
               aria-label="BetterMarinduque home"
               className="inline-flex items-center gap-3"
             >
-              <Logo variant="light" className="h-12 w-auto" />
+              <Logo variant="light" className="h-9 w-auto" />
+              <span className="text-lg font-bold leading-none">
+                Better<span className="block">Marinduque</span>
+              </span>
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-neutral-300">
               A community portal for Marinduque. Find local service guides,
               public records, and contacts for the offices that serve the
               province.
             </p>
-            <div className="mt-6 flex gap-3">
-              <a
-                href={repoUrl}
-                aria-label="BetterMarinduque on GitHub"
-                className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-white/[0.08] text-white/70 transition hover:-translate-y-0.5 hover:bg-primary-700 hover:text-white"
-              >
-                <Github size={18} aria-hidden="true" />
-              </a>
+            <div className="mt-4 flex items-center gap-3">
               <a
                 href={contactMailto}
-                aria-label={`Email ${contactEmail}`}
-                className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-white/[0.08] text-white/70 transition hover:-translate-y-0.5 hover:bg-primary-700 hover:text-white"
+                className="inline-flex items-center gap-2 text-sm hover:text-primary-200 hover:underline"
               >
                 <Mail size={18} aria-hidden="true" />
+                {contactEmail}
               </a>
               <a
-                href="https://bettergov.ph/"
-                aria-label="BetterGov.ph"
-                className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-white/[0.08] text-white/70 transition hover:-translate-y-0.5 hover:bg-primary-700 hover:text-white"
+                href={repoUrl}
+                aria-label="BetterMarinduque source code on GitHub"
+                className="hover:text-primary-200"
               >
-                <Globe size={18} aria-hidden="true" />
+                <Github size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
           {footerNavigation.map(({ title, links }) => (
             <div key={title}>
-              <h2 className="mb-5 text-[0.8125rem] font-semibold tracking-wider text-white/50 uppercase">
+              <h2 className="mb-3 font-mono text-xs uppercase tracking-widest text-neutral-400">
                 {title}
               </h2>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5 text-sm">
                 {links.map(({ label, href }) => (
                   <li key={href}>
-                    {href.startsWith('https://') ||
-                    href.startsWith('mailto:') ||
-                    href.endsWith('.html') ? (
+                    {href.startsWith('https://') || href.endsWith('.html') ? (
                       <a
                         href={href}
-                        className="inline-flex items-center gap-1 text-[0.8125rem] text-white/80 transition hover:text-white hover:no-underline"
+                        className="inline-flex items-center gap-1 hover:underline"
                       >
                         {label}
                         {href.startsWith('https://') && (
-                          <ArrowUpRight
-                            size={12}
-                            aria-hidden="true"
-                            className="opacity-60"
-                          />
+                          <ArrowUpRight size={13} aria-hidden="true" />
                         )}
                       </a>
                     ) : (
-                      <Link
-                        to={href}
-                        className="text-[0.8125rem] text-white/80 transition hover:text-white hover:no-underline"
-                      >
+                      <Link to={href} className="hover:underline">
                         {label}
                       </Link>
                     )}
@@ -93,64 +74,10 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-          <div>
-            <span
-              role="status"
-              aria-label="Cost to the people of Marinduque: zero pesos"
-              className="inline-flex items-center gap-1.5 rounded-md bg-success-500/[0.08] px-3 py-1.5 text-xs whitespace-nowrap text-white/80"
-            >
-              Cost to the people of Marinduque ={' '}
-              <span className="font-bold text-success-400">₱0</span>
-            </span>
-            <div className="mt-3 flex flex-col items-start gap-3">
-              <a
-                href={contactMailto}
-                className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70 transition hover:bg-white/10 hover:text-white hover:no-underline"
-              >
-                <Mail
-                  size={14}
-                  aria-hidden="true"
-                  className="text-accent-500"
-                />
-                Volunteer with us
-              </a>
-              <a
-                href={repoUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70 transition hover:bg-white/10 hover:text-white hover:no-underline"
-              >
-                <Github
-                  size={14}
-                  aria-hidden="true"
-                  className="text-accent-500"
-                />
-                Contribute on GitHub
-              </a>
-              <a
-                href={contributorsUrl}
-                className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-[0.8125rem] text-white/70 transition hover:bg-white/10 hover:text-white hover:no-underline"
-              >
-                <Github
-                  size={14}
-                  aria-hidden="true"
-                  className="text-accent-500"
-                />
-                Contributors
-              </a>
-            </div>
-          </div>
         </div>
-        <div className="flex flex-wrap items-center gap-1.5 py-6 text-[0.8125rem] text-white/50">
-          <span className="text-white/60">
-            &copy; {currentYear} BetterMarinduque
-          </span>
-          <span className="text-white/45">· CC0</span>
-          <span className="text-white/40">
-            · An independent community initiative — not an official government
-            website.
-          </span>
-          <span className="ml-auto inline-flex items-center gap-1.5 whitespace-nowrap text-white/50 max-sm:ml-0">
-            For the people of Marinduque.
-          </span>
+        <div className="mt-8 flex flex-wrap justify-between gap-2 border-t border-neutral-700 pt-5 text-sm text-neutral-300">
+          <p>An independent community initiative.</p>
+          <p>For the people of Marinduque.</p>
         </div>
       </div>
     </footer>

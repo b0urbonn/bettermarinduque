@@ -8,19 +8,18 @@
 @theme {
   --font-serif: Georgia, 'Times New Roman', serif;
 
-  --font-display: 'Inter', var(--font-kapwa-sans);
+  --font-display: var(--font-kapwa-sans);
 
-  --color-primary-50: #eef3fc;
-  --color-primary-100: #dbe4f9;
-  --color-primary-200: #b3c5f2;
-  --color-primary-300: #7f9de8;
-  --color-primary-400: #4a76dd;
-  --color-primary-500: #1f55cf;
-  --color-primary-600: #0d43bb;
-  --color-primary-700: #0032a0;
-  --color-primary-800: #002a86;
-  --color-primary-900: #002170;
-  --color-primary-950: #00184d;
+  --color-primary-50: #eef4ff;
+  --color-primary-100: #dbe7fe;
+  --color-primary-200: #bbd2fd;
+  --color-primary-300: #90b5fa;
+  --color-primary-400: #6194f2;
+  --color-primary-500: #3272de;
+  --color-primary-600: #1758cc;
+  --color-primary-700: #1246af;
+  --color-primary-800: #14398d;
+  --color-primary-900: #122c64;
 
   --color-secondary-50: #fdecec;
   --color-secondary-100: #f9d0d0;
@@ -33,16 +32,16 @@
   --color-secondary-800: #5a1015;
   --color-secondary-900: #3a0a0d;
 
-  --color-accent-50: #fff6ea;
-  --color-accent-100: #ffeacc;
-  --color-accent-200: #ffd694;
-  --color-accent-300: #ffbe5c;
-  --color-accent-400: #ffa733;
-  --color-accent-500: #f77f00;
-  --color-accent-600: #d96e00;
-  --color-accent-700: #b35b00;
-  --color-accent-800: #8c4700;
-  --color-accent-900: #663300;
+  --color-accent-50: #fdf8e7;
+  --color-accent-100: #faefc4;
+  --color-accent-200: #f5df8a;
+  --color-accent-300: #efcb4f;
+  --color-accent-400: #e5b52a;
+  --color-accent-500: #c99a14;
+  --color-accent-600: #a07a0f;
+  --color-accent-700: #7a5d0c;
+  --color-accent-800: #54400a;
+  --color-accent-900: #2f2405;
 
   --color-success-50: #e6f7ef;
   --color-success-100: #ccefdf;
@@ -117,33 +116,10 @@
       opacity: 0.55;
     }
   }
-
-  --animate-hotline-scroll: hotline-scroll 25s linear infinite;
-  --animate-fade-in-up: fade-in-up 0.5s ease forwards;
-
-  @keyframes hotline-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(16px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 }
 
 @theme inline {
-  --font-sans: 'Inter', var(--font-kapwa-sans);
+  --font-sans: var(--font-kapwa-sans);
   --font-mono: var(--font-kapwa-mono);
 }
 
@@ -161,7 +137,7 @@
 main[id],
 section[id],
 footer[id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 1rem;
 }
 
 @media (min-width: 1024px) {

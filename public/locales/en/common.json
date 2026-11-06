@@ -18,8 +18,6 @@
     "searchLabel": "Search service guides",
     "searchPlaceholder": "Try hospital or business permit",
     "searchButton": "Search",
-    "browseServices": "Browse services",
-    "contactUs": "Contact us",
     "popular": "Popular service topics",
     "topics": {
       "business": "Business permits",
@@ -58,9 +56,6 @@
     "municipalities": "Municipalities",
     "government": "Government",
     "services": "Services",
-    "statistics": "Statistics",
-    "legislative": "Legislative",
-    "contact": "Contact",
     "transparency": "Transparency",
     "hotlines": "Hotlines",
     "holidays": "Holidays",

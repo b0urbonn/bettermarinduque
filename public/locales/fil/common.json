@@ -19,9 +19,7 @@
     },
     "provinceFacts": "Mga pangunahing datos ng Marinduque",
     "censusSource": "Senso 2024 · PSA",
-    "psgcSource": "Mga bayan at barangay · PSA",
-    "browseServices": "Tingnan ang mga serbisyo",
-    "contactUs": "Makipag-ugnayan"
+    "psgcSource": "Mga bayan at barangay · PSA"
   },
   "navbar": {
     "municipalities": "Mga bayan",
@@ -29,9 +27,6 @@
     "services": "Mga Serbisyo",
     "transparency": "Transparensiya",
     "government": "Pamahalaan",
-    "statistics": "Estadistika",
-    "legislative": "Lehislatibo",
-    "contact": "Kontak",
     "about": "Tungkol",
     "emergency": "Mga hotline",
     "menu": "Menu",
