@@ -82,7 +82,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="inline-flex min-h-11 items-center gap-2 rounded-sm text-primary-800"
         >
-          <Logo className="h-9 w-auto lg:h-10" />
+          <Logo className="h-12 w-auto lg:h-14" />
           <span className="text-base leading-none font-bold">
             Better<span className="block">Marinduque</span>
           </span>

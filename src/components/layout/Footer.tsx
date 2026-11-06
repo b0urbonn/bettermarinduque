@@ -19,7 +19,7 @@ export default function Footer() {
               aria-label="BetterMarinduque home"
               className="inline-flex items-center gap-3"
             >
-              <Logo variant="light" className="h-9 w-auto" />
+              <Logo variant="light" className="h-12 w-auto" />
               <span className="text-lg font-bold leading-none">
                 Better<span className="block">Marinduque</span>
               </span>

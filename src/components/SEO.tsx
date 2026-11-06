@@ -72,11 +72,16 @@ export default function SEO({
       <link rel="canonical" href={fullUrl} />
 
       {/* Favicon */}
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32.png?v=2"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/apple-touch-icon.png"
+        href="/apple-touch-icon.png?v=2"
       />
 
       {/* Preconnect to external domains */}
