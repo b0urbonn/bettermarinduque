@@ -2,21 +2,21 @@
 """Export the approved logo for the website. Requires Pillow.
 
 Run: python scripts/export-approved-logo.py
-The crop excludes only the preview's wordmark and surrounding whitespace.
+The approved square artwork is fitted into each export without cropping.
 The artwork and its white background are preserved without recoloring.
 """
 from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / 'design/brand/approved-logo.png'
+SOURCE = ROOT / 'design/brand/morion-reference-preview.png'
 BRAND = ROOT / 'src/assets/brand'
 PUBLIC = ROOT / 'public'
 
 source = Image.open(SOURCE).convert('RGB')
-# Approved 1536 x 1024 board: retain the full sun, island and offshore islets.
-assert source.size == (1536, 1024), 'Recheck crop for a different source size'
-emblem = source.crop((290, 30, 1130, 840))
+# Retain the full approved sun, island, offshore islets and reference Morion.
+assert source.width == source.height, 'Expected the approved square artwork'
+emblem = source
 
 def square(size: int) -> Image.Image:
     padding = max(1, round(size * 0.025))

@@ -1,0 +1,9 @@
+Created with the built-in image generation tool.
+
+Use case: logo-brand. Edit target: supplied BetterMarinduque Facebook profile picture.
+Create an updated square Facebook profile picture. Replace the ivory textured background with perfectly solid opaque pure white #FFFFFF, no texture, gradient or shadows. Keep the same blue Marinduque silhouette, white Morion face and golden Philippine sun identity faithfully, with clean crisp edges.
+Add the brand name on exactly TWO centered lines:
+"Better"
+"Marinduque"
+Make these words BIG, heavy bold royal-blue modern sans-serif, with tight attractive line spacing, perfectly spelled and highly legible at avatar size. Position the emblem above and the two-line wordmark below in a balanced compact centered vertical lockup. Let the emblem fill the upper roughly 60% and wordmark the lower 25%. The word Marinduque should occupy almost the full available safe width; Better may be slightly larger in point size to create strong hierarchy. Maximize the overall logo-and-text lockup size while keeping everything inside a centered circular crop safe area: leave sufficient corner clearance and bottom clearance, no clipping of sun rays, text or island tips. White background continues to all four edges. Retain emblem details and colors; no additional graphics, slogans, border, mockup, watermark. Output single finished square artwork.
+Critical layout correction: fit the entire design inside a centered invisible circle, not just the square. The lower word Marinduque must be centered at 76% canvas height and occupy at most 72% canvas width, with all lettering ending above 82% canvas height. Better on line one at 65% height. Emblem fits within x=23–77%, y=9–59%. All external background must be solid pure RGB 255,255,255 with absolutely no texture. Use bold lettering filling the specified safe area. No actual circle outline.

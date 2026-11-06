@@ -1,8 +1,10 @@
 # Approved BetterMarinduque logo
 
-`approved-logo.png` is the user-approved concept: the larger Philippine sun
-behind the upper-left of Marinduque, with a white side-view Morion inside.
-It was created with the built-in imagegen tool and approved in conversation.
+`morion-reference-preview.png` is the current user-approved artwork: the gold
+Philippine sun behind the upper-left of Marinduque, with a white Morion mask
+inspired by the central figure in the user's `images.jpeg` reference. It was
+created with the built-in imagegen tool and approved in conversation.
+`approved-logo.png` preserves the earlier side-view concept.
 
 The production exports preserve the approved artwork on white. Transparent
 imagegen exports introduced edge artifacts and were not used.
@@ -26,12 +28,11 @@ Outputs:
 - `public/apple-touch-icon.png`
 - `public/icon-512.png`
 
-The crop only removes the presentation wordmark and outside whitespace. It does
-not redraw the coastline, Morion, or sun. The approved concept remains a raster
+Exports fit the full square artwork with a small white margin without cropping
+or redrawing the coastline, Morion, or sun. The approved concept remains a raster
 identity, not a survey-grade geographic map.
 
-Final approved generation instruction: enlarge the gold Philippine flag sun
-approximately 25 percent, keep it behind the upper-left of the blue island,
-adjust its overlap for balance, and preserve the map, offshore islets, white
-side-view Morion, BetterGov blue, and wordmark from the previous revision.
-Meaning: local heritage looking toward hope and progress.
+Final approved generation instruction: replace the generic Roman soldier with
+a white Morion mask inspired by the reference's wide eyes, curled moustache,
+rounded beard and ornate helmet; preserve the blue island, offshore islets,
+gold Philippine sun and white background.
