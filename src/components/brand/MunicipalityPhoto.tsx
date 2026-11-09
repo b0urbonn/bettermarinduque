@@ -40,7 +40,7 @@ export default function MunicipalityPhoto({
       <div
         role="img"
         aria-label={`Photo unavailable: ${photos[0].title}`}
-        className="flex size-full flex-col items-center justify-center gap-2 bg-primary-50 p-4 text-center text-primary-800"
+        className="flex size-full flex-col items-center justify-center gap-2 bg-linear-to-br from-primary-800 to-primary-950 p-4 text-center text-white/80"
       >
         <ImageOff size={28} aria-hidden="true" />
         <span className="text-sm font-semibold">{photos[0].title}</span>
@@ -73,7 +73,7 @@ export default function MunicipalityPhoto({
       {live.map((photo, index) => {
         const position =
           index === activeIndex % live.length
-            ? 'translate-x-0 opacity-40'
+            ? 'translate-x-0 opacity-100'
             : index ===
                 ((activeIndex % live.length) - 1 + live.length) % live.length
               ? '-translate-x-full opacity-0'
@@ -97,17 +97,18 @@ export default function MunicipalityPhoto({
           />
         );
       })}
-      <div className="absolute inset-0 bg-primary-900/45" />
       {live.length > 1 && (
         <div
           aria-hidden="true"
-          className="absolute bottom-2.5 left-1/2 flex -translate-x-1/2 gap-1.5"
+          className="absolute top-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5"
         >
           {live.map((photo, index) => (
             <span
               key={photo.src}
-              className={`size-1.5 rounded-full transition-colors duration-500 ${
-                index === activeIndex % live.length ? 'bg-white' : 'bg-white/40'
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                index === activeIndex % live.length
+                  ? 'w-5 bg-white'
+                  : 'w-1.5 bg-white/50'
               }`}
             />
           ))}

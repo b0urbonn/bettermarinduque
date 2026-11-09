@@ -19,7 +19,9 @@
     },
     "provinceFacts": "Mga pangunahing datos ng Marinduque",
     "censusSource": "Senso 2024 · PSA",
-    "psgcSource": "Mga bayan at barangay · PSA"
+    "psgcSource": "Mga bayan at barangay · PSA",
+    "eyebrow": "Ang Puso ng Pilipinas · MIMAROPA",
+    "factsEyebrow": "Ang lalawigan"
   },
   "services": {
     "browse": "Mga gabay sa serbisyo",
@@ -34,8 +36,13 @@
       "townSite": "Opisyal na website.",
       "townGuide": "Walang natagpuang opisyal na website — nasa gabay ng bayan ang mga kontak ng munisipyo.",
       "barangayNote": "Personal na hinahandle ng barangay ang mga serbisyo nito. Nagbibigay ang barangay hall ng mga clearance, sertipiko ng paninirahan o indigency, at dinidinig ang mga alalaunang pangkomunidad sa Katarungang Pambarangay.",
-      "findBarangay": "Hanapin ang iyong barangay sa mga gabay sa bayan"
-    }
+      "findBarangay": "Hanapin ang iyong barangay sa mga gabay sa bayan",
+      "eyebrow": "Mga e-serbisyo at direktoryo"
+    },
+    "eyebrow": "Mga gabay sa serbisyo",
+    "openCategory": "Buksan ang mga gabay",
+    "cantFind": "Hindi alam kung saan magsisimula?",
+    "cantFindBody": "Hanapin ang lahat ng gabay ayon sa salita, paksa, o antas ng pamahalaan."
   },
   "levels": {
     "barangay": "Barangay",
@@ -62,7 +69,8 @@
     "skip": "Lumaktaw sa pangunahing nilalaman",
     "official": "Opisyal na website ng lalawigan",
     "language": "Wika ng interface",
-    "mainNavigation": "Pangunahing menu"
+    "mainNavigation": "Pangunahing menu",
+    "emergencyHint": "Tumawag sa 911"
   },
   "quickTasks": {
     "heading": "Mga madalas hanapin",
@@ -100,7 +108,9 @@
     "capital": "Kabisera ng lalawigan",
     "municipality": "Bayan",
     "details": "Mga halal na opisyal at detalye ng bayan",
-    "selected": "Napiling bayan: {{name}}, may {{population}} residente at {{barangays}} barangay."
+    "selected": "Napiling bayan: {{name}}, may {{population}} residente at {{barangays}} barangay.",
+    "eyebrow": "Anim na bayan",
+    "area": "Lawak ng lupa"
   },
   "government": {
     "province": "Lalawigan ng Marinduque",
@@ -125,7 +135,8 @@
         "count": "218 barangay",
         "description": "Ang unang lalapitan para sa mga clearance, sertipiko ng paninirahan o indigency, at mediasyon ng komunidad (Katarungang Pambarangay).",
         "link": "Hanapin ang iyong barangay"
-      }
+      },
+      "eyebrow": "Sino ang namumuno"
     },
     "tree": {
       "heading": "Istraktura ng pamahalaan at mga opisyal",
@@ -289,7 +300,11 @@
     "unavailableTitle": "Hindi makita ang pahina ng pamahalaan",
     "unavailableDescription": "Tingnan ang estruktura ng pamahalaan, maghanap ng tanggapan, o kilalanin ang mga pinuno.",
     "backToGovernment": "Bumalik sa pahina ng pamahalaan",
-    "serviceGuides": "Mga gabay sa serbisyo"
+    "serviceGuides": "Mga gabay sa serbisyo",
+    "structureEyebrow": "Organisasyon",
+    "electedEyebrow": "Pamumuno",
+    "provincialEyebrow": "Panlalawigan",
+    "directoryEyebrow": "Mga kinauukulan"
   },
   "directory": {
     "heading": "Maghanap ng serbisyo ng pamahalaan",

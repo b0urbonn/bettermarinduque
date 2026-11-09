@@ -171,17 +171,17 @@ export default function FundTrackerView({
           </div>
         )}
 
-        <dl className="grid grid-cols-2 lg:grid-cols-5 gap-3 mb-6">
+        <dl className="mb-6 grid grid-cols-2 gap-3 lg:grid-cols-5">
           {stats.map(s => (
-            <div
-              key={s.label}
-              className="rounded-xl bg-white/90 border border-gray-200 p-4"
-            >
-              <dt className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+            <div key={s.label} className="card p-4">
+              <dt className="text-xs font-semibold tracking-wider text-gray-500 uppercase">
                 {s.label}
               </dt>
               <dd
-                className={cn('font-display text-2xl font-bold mt-1', s.tone)}
+                className={cn(
+                  'font-display mt-1 text-2xl font-extrabold tabular-nums',
+                  s.tone
+                )}
               >
                 {s.value}
               </dd>
@@ -226,7 +226,7 @@ export default function FundTrackerView({
         </p>
       </Section>
 
-      <Section className="bg-gray-50">
+      <Section className="bg-sand-50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <Heading
@@ -245,17 +245,14 @@ export default function FundTrackerView({
             </p>
             <ul className="space-y-3">
               {tracker.inflows.map(e => (
-                <li
-                  key={e.label}
-                  className="rounded-xl bg-white border border-gray-200 p-4"
-                >
+                <li key={e.label} className="card p-4">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <div className="font-semibold text-gray-900">
                         {e.label}
                         <Citations ids={e.sources} order={order} />
                       </div>
-                      <div className="text-sm text-gray-500 mt-0.5">
+                      <div className="mt-0.5 text-sm text-gray-500">
                         {e.date ? formatPartialDate(e.date) : e.due}
                       </div>
                     </div>
@@ -307,7 +304,7 @@ export default function FundTrackerView({
                   {tracker.outflows.map(e => (
                     <li
                       key={e.label}
-                      className="rounded-xl bg-white border border-gray-200 p-4 flex justify-between gap-3"
+                      className="card flex justify-between gap-3 p-4"
                     >
                       <div>
                         <div className="font-semibold text-gray-900">
@@ -344,10 +341,7 @@ export default function FundTrackerView({
                 </Heading>
                 <ul className="space-y-3">
                   {tracker.claims.map(e => (
-                    <li
-                      key={e.label}
-                      className="rounded-xl bg-white border border-secondary-100 p-4"
-                    >
+                    <li key={e.label} className="card border-secondary-200 p-4">
                       <div className="flex items-start justify-between gap-3">
                         <div className="font-semibold text-gray-900">
                           {e.label}
@@ -442,7 +436,7 @@ export default function FundTrackerView({
         </div>
       </Section>
 
-      <Section className="bg-gray-50 border-t border-gray-200">
+      <Section className="border-t border-gray-200 bg-sand-50">
         <Heading level={4} className="text-gray-900">
           Sources
         </Heading>

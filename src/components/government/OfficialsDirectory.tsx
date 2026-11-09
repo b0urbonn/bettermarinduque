@@ -52,7 +52,7 @@ function SectionLabel({
   children: string;
 }) {
   return (
-    <p className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
+    <p className="eyebrow flex items-center gap-2">
       <Icon size={15} aria-hidden="true" className="text-primary-700" />
       {children}
     </p>
@@ -94,13 +94,16 @@ export default function OfficialsDirectory() {
       className="portal-container space-y-10 pb-10"
     >
       <div>
+        <p className="eyebrow">
+          {t('government.directoryEyebrow', 'Who’s who')}
+        </p>
         <h2
           id="officials-directory-heading"
-          className="text-2xl font-bold tracking-tight"
+          className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900"
         >
           {t('government.tree.heading')}
         </h2>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-gray-700">
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-gray-600">
           {t('government.tree.description')}
         </p>
       </div>
@@ -111,11 +114,11 @@ export default function OfficialsDirectory() {
         </SectionLabel>
         <h3
           id="officials-executive"
-          className="mt-2 text-xl font-bold tracking-tight"
+          className="mt-1 font-display text-xl font-extrabold tracking-tight text-gray-900"
         >
           {t('government.tree.executiveTitle')}
         </h3>
-        <p className="mt-1 text-sm text-gray-700">
+        <p className="mt-1 text-sm text-gray-600">
           {t('government.tree.executiveSub')}
         </p>
         <ul
@@ -123,10 +126,7 @@ export default function OfficialsDirectory() {
           className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {executives.map(({ role, name, description, phone, email }) => (
-            <li
-              key={role}
-              className="flex min-w-0 flex-col rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
-            >
+            <li key={role} className="card flex min-w-0 flex-col p-4">
               <p className="font-mono text-xs font-bold uppercase tracking-widest text-gray-600">
                 {role}
               </p>
@@ -153,11 +153,11 @@ export default function OfficialsDirectory() {
         </SectionLabel>
         <h3
           id="officials-legislative"
-          className="mt-2 text-xl font-bold tracking-tight"
+          className="mt-1 font-display text-xl font-extrabold tracking-tight text-gray-900"
         >
           {t('government.legislative.title')}
         </h3>
-        <p className="mt-1 text-sm text-gray-700">
+        <p className="mt-1 text-sm text-gray-600">
           {t('government.tree.legislativeSub')}
         </p>
         <ul
@@ -165,10 +165,7 @@ export default function OfficialsDirectory() {
           className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {boardMembers.map(({ name, description }) => (
-            <li
-              key={name}
-              className="rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
-            >
+            <li key={name} className="card p-4">
               <h4 className="font-bold text-gray-900">
                 {hon} {name}
               </h4>
@@ -184,15 +181,15 @@ export default function OfficialsDirectory() {
         <SectionLabel Icon={ContactRound}>
           {t('government.provincialOffices')}
         </SectionLabel>
-        <div className="mt-2 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+        <div className="mt-1 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
           <div>
             <h3
               id="officials-offices"
-              className="text-xl font-bold tracking-tight"
+              className="font-display text-xl font-extrabold tracking-tight text-gray-900"
             >
               {t('government.tree.officesTitle')}
             </h3>
-            <p className="mt-1 text-sm text-gray-700">
+            <p className="mt-1 text-sm text-gray-600">
               {t('government.tree.officesSub')}
             </p>
           </div>
@@ -211,10 +208,7 @@ export default function OfficialsDirectory() {
           {provincialOffices.map(({ key, phone, email }) => {
             const name = t(`government.office.${key}.name`);
             return (
-              <li
-                key={key}
-                className="flex min-w-0 flex-col rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
-              >
+              <li key={key} className="card flex min-w-0 flex-col p-4">
                 <h4 className="flex-1 font-bold text-gray-900">{name}</h4>
                 <div className="mt-2 flex flex-wrap gap-x-4 border-t border-gray-200">
                   {phone && <PhoneLink number={phone} />}
@@ -230,11 +224,11 @@ export default function OfficialsDirectory() {
         <SectionLabel Icon={MapPin}>{t('levels.municipal')}</SectionLabel>
         <h3
           id="officials-municipal"
-          className="mt-2 text-xl font-bold tracking-tight"
+          className="mt-1 font-display text-xl font-extrabold tracking-tight text-gray-900"
         >
           {t('government.tree.municipalTitle')}
         </h3>
-        <p className="mt-1 text-sm text-gray-700">
+        <p className="mt-1 text-sm text-gray-600">
           {t('government.tree.municipalSub', {
             count: municipalities.length,
           })}
@@ -247,11 +241,10 @@ export default function OfficialsDirectory() {
             const guide =
               municipalityGuides[town.slug as keyof typeof municipalityGuides];
             return (
-              <li
-                key={town.slug}
-                className="flex min-w-0 flex-col rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
-              >
-                <h4 className="font-bold text-primary-900">{town.name}</h4>
+              <li key={town.slug} className="card flex min-w-0 flex-col p-4">
+                <h4 className="font-display font-extrabold tracking-tight text-primary-900">
+                  {town.name}
+                </h4>
                 <p className="mt-0.5 text-xs text-gray-600">
                   {town.slug === 'boac' && <>{t('towns.capital')} · </>}
                   {town.barangays} {t('hero.stats.barangays').toLowerCase()}

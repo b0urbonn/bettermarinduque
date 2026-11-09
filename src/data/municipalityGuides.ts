@@ -19,6 +19,8 @@ interface MunicipalityGuide {
   municipalOffice: string;
   fireStation: string;
   localResponse: { label: string; number: string };
+  // PNP municipal police station mobile line (directory and station posts).
+  police: string;
 }
 
 export const municipalityGuides = {
@@ -41,7 +43,11 @@ export const municipalityGuides = {
     ],
     municipalOffice: '(042) 311-1378',
     fireStation: '(042) 332-0255',
-    localResponse: { label: 'Police station', number: '(042) 332-0166' },
+    localResponse: {
+      label: 'Police station landline',
+      number: '(042) 332-0166',
+    },
+    police: '0998-598-5802',
   },
   buenavista: {
     festival: 'Tubaan Festival',
@@ -66,6 +72,7 @@ export const municipalityGuides = {
       label: 'Municipal disaster response',
       number: '0918-441-0544',
     },
+    police: '0998-598-5804',
   },
   gasan: {
     festival: 'Gasang-gasang Festival',
@@ -89,6 +96,7 @@ export const municipalityGuides = {
       label: 'Municipal disaster response',
       number: '(042) 332-0833',
     },
+    police: '0998-598-5803',
   },
   mogpog: {
     festival: 'Kangga Festival',
@@ -113,6 +121,7 @@ export const municipalityGuides = {
       label: 'Municipal disaster response',
       number: '0917-813-7880',
     },
+    police: '0998-598-5807',
   },
   'santa-cruz': {
     festival: 'Seafood Festival',
@@ -132,10 +141,12 @@ export const municipalityGuides = {
     ],
     municipalOffice: '(042) 5047-001',
     fireStation: '0915-603-1487',
+    // MDRRMO emergency hotline as posted by the office (November 2026).
     localResponse: {
       label: 'Municipal disaster response',
-      number: '0949-996-7911',
+      number: '0920-455-4034',
     },
+    police: '0998-598-5806',
   },
   torrijos: {
     festival: 'Torrijos Festival',
@@ -160,5 +171,6 @@ export const municipalityGuides = {
       label: 'Municipal disaster response',
       number: '0919-523-7119',
     },
+    police: '0998-598-5805',
   },
 } satisfies Record<string, MunicipalityGuide>;

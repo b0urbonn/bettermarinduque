@@ -48,12 +48,12 @@ function Stat({
   sub?: string;
 }) {
   return (
-    <div className="rounded-xl border border-gray-300 bg-white p-5">
-      <dt className="text-sm text-gray-700">{label}</dt>
-      <dd className="mt-1 text-xl font-semibold tabular-nums text-gray-900">
+    <div className="card p-5">
+      <dt className="text-sm text-gray-600">{label}</dt>
+      <dd className="font-display mt-1 text-xl font-extrabold tabular-nums text-gray-900">
         {value}
       </dd>
-      {sub && <dd className="mt-1 text-xs text-gray-600">{sub}</dd>}
+      {sub && <dd className="mt-1 text-xs text-gray-500">{sub}</dd>}
     </div>
   );
 }
@@ -234,7 +234,7 @@ function LiveView({
         )}
       </Section>
 
-      <Section className="border-t border-gray-300 bg-gray-50">
+      <Section className="border-t border-gray-200 bg-sand-50">
         <Heading level={2}>By municipality</Heading>
         <p className="mb-4 max-w-3xl text-sm text-gray-700">
           The documents record no municipality; a project is counted under a
@@ -387,7 +387,7 @@ function LiveView({
         </Section>
       )}
 
-      <Section className="border-t border-gray-300 bg-gray-50">
+      <Section className="border-t border-gray-200 bg-sand-50">
         <Heading level={2}>Selected enacted items naming Marinduque</Heading>
         <p className="mb-6 max-w-3xl text-sm text-gray-700">
           A curated set of line items in the enacted General Appropriations Act

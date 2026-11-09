@@ -72,7 +72,7 @@ export default function Search() {
         <div className="max-w-3xl">
           <div className="relative mb-8">
             <SearchIcon
-              className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500"
               aria-hidden="true"
             />
             <input
@@ -80,7 +80,7 @@ export default function Search() {
               value={query}
               onChange={e => setQuery(e.target.value || null)}
               placeholder="Search services, departments, guides..."
-              className="w-full min-h-11 pl-10 pr-4 py-3 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              className="field pl-11"
               autoFocus
             />
           </div>
@@ -111,23 +111,23 @@ export default function Search() {
               </p>
               {results.map(hit => (
                 <Link key={hit.id} to={hit.url} className="block group">
-                  <div className="rounded-xl border border-gray-300 bg-white p-4 hover:border-primary-500 hover:bg-primary-50 motion-safe:transition motion-safe:duration-150">
+                  <div className="card card-hover p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <span
-                        className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                        className={`chip ${
                           hit.type === 'service'
-                            ? 'bg-primary-100 text-primary-700'
-                            : 'bg-accent-100 text-accent-800'
+                            ? 'border-primary-200 bg-primary-50 text-primary-700'
+                            : 'border-accent-200 bg-accent-50 text-accent-800'
                         }`}
                       >
                         {hit.category}
                       </span>
                     </div>
-                    <h2 className="font-bold text-gray-900 group-hover:text-primary-700">
+                    <h2 className="font-display font-extrabold tracking-tight text-gray-900 group-hover:text-primary-800">
                       {hit.title}
                     </h2>
                     {hit.description && (
-                      <p className="text-sm text-gray-700 mt-1 line-clamp-2">
+                      <p className="mt-1 text-sm leading-relaxed text-gray-600 line-clamp-2">
                         {hit.description}
                       </p>
                     )}

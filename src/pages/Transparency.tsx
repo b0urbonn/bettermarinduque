@@ -55,34 +55,42 @@ function TopicCard({ topic: t }: { topic: Topic }) {
   return (
     <Link
       to={`/transparency/${t.slug}`}
-      className="group rounded-xl bg-white border border-gray-300 border-t-4 border-t-primary-700 p-6 flex flex-col hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+      className="group card card-hover flex flex-col p-6"
     >
-      <div className="flex items-center gap-3 mb-3">
-        <span className="rounded-full bg-primary-50 p-3 text-primary-600">
-          <Icon className="h-6 w-6" aria-hidden="true" />
+      <div className="flex items-center gap-3">
+        <span className="icon-tile">
+          <Icon className="size-6" aria-hidden="true" />
         </span>
-        <h3 className="font-display text-xl font-semibold text-gray-900 group-hover:underline">
+        <h3 className="font-display text-xl font-extrabold tracking-tight text-gray-900 group-hover:text-primary-800">
           {t.name}
         </h3>
       </div>
-      <p className="text-sm text-gray-700 mb-4">{t.description}</p>
+      <p className="mt-3 text-sm leading-relaxed text-gray-600">
+        {t.description}
+      </p>
       {tracker && totals && (
-        <dl className="grid grid-cols-3 gap-2 text-sm mb-4">
+        <dl className="mt-4 grid grid-cols-3 gap-2 rounded-xl bg-gray-50 p-3 text-sm ring-1 ring-gray-100">
           <div>
-            <dt className="text-gray-700">Total</dt>
-            <dd className="font-semibold text-gray-900">
+            <dt className="text-xs font-semibold tracking-wide text-gray-500 uppercase">
+              Total
+            </dt>
+            <dd className="font-semibold text-gray-900 tabular-nums">
               {formatMoney(tracker.total, tracker.currency)}
             </dd>
           </div>
           <div>
-            <dt className="text-gray-700">Received</dt>
-            <dd className="font-semibold text-success-700">
+            <dt className="text-xs font-semibold tracking-wide text-gray-500 uppercase">
+              Received
+            </dt>
+            <dd className="font-semibold text-success-700 tabular-nums">
               {formatMoney(totals.received, tracker.currency)}
             </dd>
           </div>
           <div>
-            <dt className="text-gray-700">Spent</dt>
-            <dd className="font-semibold text-gray-700">
+            <dt className="text-xs font-semibold tracking-wide text-gray-500 uppercase">
+              Spent
+            </dt>
+            <dd className="font-semibold text-gray-700 tabular-nums">
               {totals.spent
                 ? formatMoney(totals.spent, tracker.currency)
                 : 'No report'}
@@ -90,15 +98,18 @@ function TopicCard({ topic: t }: { topic: Topic }) {
           </div>
         </dl>
       )}
-      <div className="mt-auto flex items-center justify-between text-sm">
+      <div className="mt-auto flex items-center justify-between pt-4 text-sm">
         {tracker && (
-          <span className="text-gray-700">
+          <span className="text-xs text-gray-500">
             Updated {formatPartialDate(tracker.lastUpdated)}
           </span>
         )}
-        <span className="inline-flex items-center gap-1 font-semibold text-primary-700">
+        <span className="inline-flex items-center gap-1.5 font-semibold text-primary-700">
           {tracker ? 'View tracker' : 'Browse records'}
-          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          <ArrowRight
+            className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
+            aria-hidden="true"
+          />
         </span>
       </div>
     </Link>
@@ -164,9 +175,7 @@ function TransparencyHub() {
           if (groupTopics.length === 0) return null;
           return (
             <div key={group.key} className="mt-7 first:mt-5">
-              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
-                {group.heading}
-              </h3>
+              <h3 className="eyebrow">{group.heading}</h3>
               <div className="mt-3 grid grid-cols-1 gap-6 md:grid-cols-2">
                 {groupTopics.map(t => (
                   <TopicCard key={t.slug} topic={t} />
@@ -176,25 +185,27 @@ function TransparencyHub() {
           );
         })}
       </Section>
-      <Section className="bg-gray-50">
+      <Section className="bg-sand-50">
         <Heading level={2}>Official sources</Heading>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {transparencyIndex.officialSources.map(s => (
             <a
               key={s.url}
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-xl bg-white border border-gray-300 p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              className="card card-hover group p-5"
             >
-              <div className="flex items-start justify-between gap-2 font-semibold text-primary-800 group-hover:underline">
+              <div className="flex items-start justify-between gap-2 font-semibold text-primary-800">
                 {s.name}
                 <ExternalLink
-                  className="h-4 w-4 shrink-0 mt-1 text-gray-400"
+                  className="mt-0.5 size-4 shrink-0 text-gray-400 transition-colors group-hover:text-primary-600"
                   aria-hidden="true"
                 />
               </div>
-              <p className="text-sm text-gray-700 mt-1">{s.description}</p>
+              <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                {s.description}
+              </p>
             </a>
           ))}
         </div>
@@ -206,15 +217,19 @@ function TransparencyHub() {
           name, year, and project or reference number if available. If you have
           a public document that belongs here, share the source link with us.
         </p>
-        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-primary-800">
+        <div className="flex flex-wrap gap-3 text-sm font-semibold">
           <a
             href="https://marinduque.gov.ph/contact-us/"
-            className="underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
           >
             Provincial office contacts
+            <ExternalLink size={15} aria-hidden="true" />
           </a>
-          <a href={SUGGEST_URL} className="underline underline-offset-2">
+          <a href={SUGGEST_URL} className="btn btn-secondary">
             Suggest a record by email
+            <ArrowRight size={15} aria-hidden="true" />
           </a>
         </div>
       </Section>

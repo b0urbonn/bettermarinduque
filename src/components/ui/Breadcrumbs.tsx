@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
 import { ChevronRight, Home } from 'lucide-react';
+import { cn } from '../../lib/utils';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,10 +11,16 @@ interface BreadcrumbItem {
 interface BreadcrumbsProps {
   items?: BreadcrumbItem[];
   className?: string;
+  tone?: 'light' | 'dark';
 }
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
+  items,
+  className = '',
+  tone = 'light',
+}) => {
   const location = useLocation();
+  const dark = tone === 'dark';
 
   // Generate breadcrumbs from current path if no items provided
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
@@ -43,28 +50,57 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
   const breadcrumbItems = items || generateBreadcrumbs();
 
   return (
-    <nav
-      className={`flex items-center space-x-1 text-sm text-gray-600 ${className}`}
-      aria-label="Breadcrumb"
-    >
-      {breadcrumbItems.map((item, index) => (
-        <React.Fragment key={index}>
-          {index === 0 && <Home className="h-4 w-4" />}
-          {index > 0 && <ChevronRight className="h-4 w-4 text-gray-400" />}
-          {item.href ? (
-            <Link
-              to={item.href}
-              className="hover:text-primary-600 transition-colors duration-200"
-            >
-              {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-            </Link>
-          ) : (
-            <span className="text-gray-900 font-medium" aria-current="page">
-              {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
-            </span>
-          )}
-        </React.Fragment>
-      ))}
+    <nav aria-label="Breadcrumb" className={className}>
+      <ol
+        className={cn(
+          'flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm',
+          dark ? 'text-white/70' : 'text-gray-600'
+        )}
+      >
+        {breadcrumbItems.map((item, index) => {
+          const label =
+            item.label.charAt(0).toUpperCase() + item.label.slice(1);
+          return (
+            <li key={index} className="inline-flex items-center gap-1.5">
+              {index > 0 && (
+                <ChevronRight
+                  aria-hidden="true"
+                  className={cn(
+                    'size-3.5',
+                    dark ? 'text-white/40' : 'text-gray-400'
+                  )}
+                />
+              )}
+              {item.href ? (
+                <Link
+                  to={item.href}
+                  className={cn(
+                    'inline-flex items-center gap-1.5 rounded-sm transition-colors duration-150',
+                    dark
+                      ? 'hover:text-white focus-visible:outline-white'
+                      : 'hover:text-primary-700'
+                  )}
+                >
+                  {index === 0 && (
+                    <Home className="size-3.5" aria-hidden="true" />
+                  )}
+                  {label}
+                </Link>
+              ) : (
+                <span
+                  className={cn(
+                    'font-semibold',
+                    dark ? 'text-white' : 'text-gray-900'
+                  )}
+                  aria-current="page"
+                >
+                  {label}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ol>
     </nav>
   );
 };

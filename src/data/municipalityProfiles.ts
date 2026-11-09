@@ -16,7 +16,7 @@ export const municipalityProfiles: Record<
 > = {
   boac: {
     introduction: [
-      'Boac is the provincial capital and a center of government, commerce, and education in Marinduque. It is where residents find the Provincial Capitol as well as the municipal government, alongside the town’s commercial and educational institutions.',
+      'Boac is the provincial capital and a center of government, commerce, and education in Marinduque. It is where residents find the Provincial Capitol as well as the municipal government, alongside the town’s commercial and educational institutions, including the main campus of Marinduque State University in Barangay Tanza. The town’s name is often traced to biak (“divided”), as the Boac River splits the town.',
       'Its heritage landmarks include Boac Cathedral and the National Museum of the Philippines – Marinduque in Barangay Malusak. The museum introduces visitors to the island’s cultural traditions, maritime history, and natural heritage. Boac is also associated with the Bila-bila Festival and the Moriones Lenten Rites.',
     ],
     highlights: [
@@ -33,8 +33,8 @@ export const municipalityProfiles: Record<
   },
   buenavista: {
     introduction: [
-      'Buenavista lies at the foot of Mount Malindig, overlooking the Tablas Strait. Its name means “good view,” reflecting the southern town’s setting between the mountain and the sea.',
-      'The town is associated with Malbog Hot Spring and the Tubaan Festival. Mount Malindig is Marinduque’s highest point, while the hot spring in Barangay Malbog is a notable feature of the area’s volcanic landscape.',
+      'Buenavista, the smallest of Marinduque’s six towns, lies at the foot of Mount Malindig, overlooking the Tablas Strait. Its name means “good view,” reflecting the southern town’s setting between the mountain and the sea.',
+      'The town is associated with Malbog Hot Spring and the Tubaan Festival. Mount Malindig, a potentially active stratovolcano, is Marinduque’s highest point at 1,157 meters, while the sulfur hot spring in Barangay Malbog is a notable feature of the area’s volcanic landscape.',
     ],
     highlights: ['Mount Malindig', 'Malbog Hot Spring', 'Tubaan Festival'],
     boardDistrict: '2nd',
@@ -45,7 +45,7 @@ export const municipalityProfiles: Record<
   },
   gasan: {
     introduction: [
-      'Gasan is closely associated with Marinduque’s kalutang musical tradition and local handicrafts. The kalutang uses paired wooden percussion instruments and is an important part of the town’s cultural identity.',
+      'Often called the cultural nerve center of Marinduque, Gasan is closely associated with the kalutang musical tradition and local handicrafts. The kalutang uses paired wooden percussion instruments and is an important part of the town’s cultural identity.',
       'The town faces the Tres Reyes Islands, which are part of Barangay Pinggan. St. Joseph Parish Church overlooks the town, and the Gasang-gasang Festival is one of its local celebrations. Marinduque Airport is in Barangay Masiga in Gasan.',
     ],
     highlights: [
@@ -55,16 +55,21 @@ export const municipalityProfiles: Record<
     ],
     boardDistrict: '1st',
     access:
-      'Marinduque Airport is located in Barangay Masiga. Confirm current flight availability directly with the airline. For the Tres Reyes Islands, ask locally about boat arrangements and weather before planning a crossing.',
+      'Marinduque Airport is located in Barangay Masiga but has no scheduled commercial flights as of 2026 — most visitors arrive by ferry. For the Tres Reyes Islands, ask locally about boat arrangements and weather before planning a crossing.',
     visitorNote:
       'Ask permission before photographing performers or cultural activities at close range. For island trips, confirm the return arrangement and current sea conditions with the boat operator.',
   },
   mogpog: {
     introduction: [
       'Mogpog is an important gateway to Marinduque through Balanacan Port. The port connects the island with Dalahican in Lucena, making the town a familiar arrival point for visitors traveling by sea.',
-      'Mogpog is also home to Station Balanacan on Mount Mataas in Barangay Hinanggayon. The station marks the origin of the Luzon Datum of 1911, a reference used for Philippine mapping and surveys. The Kangga Festival is one of the town’s cultural celebrations.',
+      'Mogpog is known as the home of the original Moriones, with local accounts tracing the tradition to 1807. It is also home to Station Balanacan on Mount Mataas in Barangay Hinanggayon, which marks the origin of the Luzon Datum of 1911, a reference used for Philippine mapping and surveys. The Kangga Festival and the Tarug Caves are among its other attractions.',
     ],
-    highlights: ['Balanacan Port', 'Luzon Datum of 1911', 'Kangga Festival'],
+    highlights: [
+      'Balanacan Port',
+      'Original Moriones',
+      'Luzon Datum of 1911',
+      'Kangga Festival',
+    ],
     boardDistrict: '1st',
     access:
       'Balanacan Port serves the sea connection with Dalahican Port in Lucena. Sailing times, fares, and service availability should be confirmed with the shipping operator. Arrange onward transport separately from the port.',
@@ -83,13 +88,13 @@ export const municipalityProfiles: Record<
     ],
     boardDistrict: '2nd',
     access:
-      'Buyabod is one of Marinduque’s seaports. For visits to Maniwaya or other nearby islands, confirm the departure point, boat availability, return trip, and weather with the operator before traveling.',
+      'Buyabod is one of Marinduque’s three major seaports, and a boat link connects Santa Cruz with General Luna, Quezon, via Maniwaya Island. For visits to Maniwaya or other nearby islands, confirm the departure point, boat availability, return trip, and weather with the operator before traveling.',
     visitorNote:
       'Island, cave, and waterfall visits may require different local arrangements. Ask about guides, site access, and any current restrictions with the tourism office or the site concerned.',
   },
   torrijos: {
     introduction: [
-      'Torrijos lies on Marinduque’s eastern coast and is known for Poctoy White Beach, with views toward Mount Malindig. The town’s coast and historical sites provide different ways to explore this part of the island.',
+      'Often called Marinduque’s summer capital, Torrijos lies on the eastern coast and is known for Poctoy White Beach, with views toward Mount Malindig. The town is also known for locally grown strawberries.',
       'Pulang Lupa Battlefield commemorates the September 13, 1900 battle during the Philippine-American War. Torrijos also has a Marinduque State University campus in Poctoy associated with agriculture, and celebrates the Torrijos Festival.',
     ],
     highlights: [

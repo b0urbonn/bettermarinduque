@@ -26,7 +26,9 @@
     },
     "provinceFacts": "Marinduque at a glance",
     "censusSource": "2024 census · PSA",
-    "psgcSource": "Municipalities and barangays · PSA"
+    "psgcSource": "Municipalities and barangays · PSA",
+    "eyebrow": "The Heart of the Philippines · MIMAROPA",
+    "factsEyebrow": "The province"
   },
   "services": {
     "browse": "Browse service guides",
@@ -41,8 +43,13 @@
       "townSite": "Official website.",
       "townGuide": "No official website found — the town guide lists municipal hall contacts.",
       "barangayNote": "Barangay services are handled in person. Barangay halls issue clearances, residency and indigency certificates, and hear community disputes through Katarungang Pambarangay.",
-      "findBarangay": "Find your barangay through the town guides"
-    }
+      "findBarangay": "Find your barangay through the town guides",
+      "eyebrow": "E-services & directories"
+    },
+    "eyebrow": "Service guides",
+    "openCategory": "Open guides",
+    "cantFind": "Not sure where to start?",
+    "cantFindBody": "Search every guide by keyword, topic, or level of government."
   },
   "levels": {
     "barangay": "Barangay",
@@ -87,7 +94,8 @@
     "skip": "Skip to main content",
     "official": "Official provincial website",
     "language": "Interface language",
-    "mainNavigation": "Main navigation"
+    "mainNavigation": "Main navigation",
+    "emergencyHint": "Dial 911"
   },
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
@@ -138,7 +146,9 @@
     "capital": "Provincial capital",
     "municipality": "Municipality",
     "details": "Elected officials and municipal details",
-    "selected": "Selected town {{name}}, population {{population}}, {{barangays}} barangays."
+    "selected": "Selected town {{name}}, population {{population}}, {{barangays}} barangays.",
+    "eyebrow": "Six towns",
+    "area": "Land area"
   },
   "government": {
     "province": "Province of Marinduque",
@@ -163,7 +173,8 @@
         "count": "218 barangays",
         "description": "The first stop for clearances, residency and indigency certificates, and community mediation (Katarungang Pambarangay).",
         "link": "Find your barangay"
-      }
+      },
+      "eyebrow": "Who governs"
     },
     "tree": {
       "heading": "Government structure and officials",
@@ -327,7 +338,11 @@
     "unavailableTitle": "Government page unavailable",
     "unavailableDescription": "Explore the government structure, find an office, or browse the leadership pages.",
     "backToGovernment": "Go to Government overview",
-    "serviceGuides": "Service guides"
+    "serviceGuides": "Service guides",
+    "structureEyebrow": "Organization",
+    "electedEyebrow": "Leadership",
+    "provincialEyebrow": "Provincial",
+    "directoryEyebrow": "Who’s who"
   },
   "directory": {
     "heading": "Find a government service",

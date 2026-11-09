@@ -23,17 +23,12 @@ export default function DisclosureView({ topic }: { topic: DisclosureTopic }) {
             );
 
             return (
-              <li
-                key={record.title}
-                className="flex flex-col rounded-xl border border-gray-300 bg-white p-5 sm:p-6"
-              >
-                <p className="mb-2 text-sm font-semibold text-primary-700">
-                  {record.period}
-                </p>
-                <h3 className="font-display text-xl font-semibold text-gray-900">
+              <li key={record.title} className="card flex flex-col p-5 sm:p-6">
+                <p className="eyebrow">{record.period}</p>
+                <h3 className="mt-1 font-display text-xl font-extrabold tracking-tight text-gray-900">
                   {record.title}
                 </h3>
-                <p className="mt-2 text-sm text-gray-700">
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
                   {record.description}
                 </p>
                 {comparison && (
@@ -97,9 +92,9 @@ export default function DisclosureView({ topic }: { topic: DisclosureTopic }) {
           })}
         </ul>
       </Section>
-      <Section className="border-t border-gray-300 bg-gray-50">
+      <Section className="border-t border-gray-200 bg-sand-50">
         <Heading level={2}>Find more records</Heading>
-        <p className="mb-4 max-w-3xl text-gray-700">{topic.nextSteps}</p>
+        <p className="mb-4 max-w-3xl text-gray-600">{topic.nextSteps}</p>
         <ul className="space-y-4">
           {topic.directories.map(directory => (
             <li key={directory.url}>

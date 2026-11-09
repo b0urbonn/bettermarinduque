@@ -69,10 +69,7 @@ export default function GovernmentOverview() {
       title={t('government.title')}
       description={t('government.description')}
       actions={
-        <Link
-          to={governmentPaths.offices}
-          className="inline-flex min-h-11 items-center gap-2 rounded-md bg-white px-4 py-2 font-semibold text-primary-900 hover:bg-primary-100 focus-visible:outline-white"
-        >
+        <Link to={governmentPaths.offices} className="btn btn-light">
           {t('government.findOffice')}
           <ArrowRight size={17} aria-hidden="true" />
         </Link>
@@ -81,13 +78,16 @@ export default function GovernmentOverview() {
       <div className="portal-container grid items-start gap-7 py-8 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-8 lg:py-10">
         <div className="min-w-0 space-y-8">
           <section aria-labelledby="government-levels">
+            <p className="eyebrow">
+              {t('government.levels.eyebrow', 'Who governs')}
+            </p>
             <h2
               id="government-levels"
-              className="text-2xl font-bold tracking-tight"
+              className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900"
             >
               {t('government.levels.title')}
             </h2>
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-gray-600">
               {t('government.levels.description')}
             </p>
             <ol className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -95,25 +95,29 @@ export default function GovernmentOverview() {
                 <li key={key}>
                   <Link
                     to={href}
-                    className="group flex h-full flex-col rounded-md border border-gray-300 bg-white p-4 hover:border-primary-500 hover:bg-primary-50"
+                    className="group card card-hover flex h-full flex-col p-4"
                   >
                     <span className="flex items-center gap-2.5">
-                      <span className="rounded-md bg-primary-50 p-2 text-primary-700 group-hover:bg-white">
+                      <span className="icon-tile size-10">
                         <Icon size={18} aria-hidden="true" />
                       </span>
-                      <span className="font-bold text-primary-900 group-hover:underline">
+                      <span className="font-display font-bold text-gray-900 group-hover:text-primary-800">
                         {t(`levels.${key}`)}
                       </span>
                     </span>
-                    <span className="mt-1.5 block font-mono text-xs uppercase tracking-widest text-gray-700">
+                    <span className="mt-3 font-mono text-xs font-semibold tracking-widest text-primary-700 uppercase">
                       {t(`government.levels.${key}.count`)}
                     </span>
-                    <span className="mt-2 block flex-1 text-sm leading-relaxed text-gray-700">
+                    <span className="mt-1.5 flex-1 text-sm leading-relaxed text-gray-600">
                       {t(`government.levels.${key}.description`)}
                     </span>
-                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary-700 group-hover:underline">
+                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary-700">
                       {t(`government.levels.${key}.link`)}
-                      <ArrowRight size={15} aria-hidden="true" />
+                      <ArrowRight
+                        size={15}
+                        aria-hidden="true"
+                        className="transition-transform duration-200 group-hover:translate-x-0.5"
+                      />
                     </span>
                   </Link>
                 </li>
@@ -121,19 +125,22 @@ export default function GovernmentOverview() {
             </ol>
           </section>
           <section aria-labelledby="government-structure">
+            <p className="eyebrow">
+              {t('government.structureEyebrow', 'Organization')}
+            </p>
             <h2
               id="government-structure"
-              className="text-2xl font-bold tracking-tight"
+              className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900"
             >
               {t('government.structure')}
             </h2>
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-gray-600">
               {t('government.structureDescription')}
             </p>
-            <div className="mt-5 rounded-xl border border-primary-100 bg-primary-50/80 p-3 sm:p-6">
+            <div className="mt-5 rounded-2xl border border-primary-100 bg-primary-50/80 p-3 sm:p-6">
               <ul role="list">
                 <li>
-                  <div className="inline-flex items-center gap-3 rounded-md bg-primary-900 px-4 py-3 font-bold text-white sm:mx-auto sm:flex sm:w-fit">
+                  <div className="inline-flex items-center gap-3 rounded-xl bg-primary-950 px-4 py-3 font-display font-bold text-white sm:mx-auto sm:flex sm:w-fit">
                     <Landmark
                       className="size-5 shrink-0 text-primary-200"
                       aria-hidden="true"
@@ -161,16 +168,16 @@ export default function GovernmentOverview() {
                           aria-hidden="true"
                           className="absolute -top-4 left-1/2 hidden h-4 border-l-2 border-primary-300 sm:block"
                         />
-                        <div className="flex w-full flex-col rounded-xl border border-primary-200 bg-white p-4 shadow-sm">
+                        <div className="card flex w-full flex-col p-4">
                           <div className="flex items-start gap-3">
-                            <span className="rounded-md bg-primary-50 p-2 text-primary-800">
+                            <span className="icon-tile">
                               <Icon className="size-5" aria-hidden="true" />
                             </span>
                             <div>
-                              <p className="text-xs font-semibold tracking-wide text-primary-800 uppercase">
+                              <p className="eyebrow">
                                 {t(`government.${key}.branch`)}
                               </p>
-                              <h3 className="mt-0.5 text-lg leading-snug font-bold">
+                              <h3 className="mt-0.5 font-display text-lg leading-snug font-extrabold tracking-tight text-gray-900">
                                 {t(`government.${key}.title`)}
                               </h3>
                             </div>
@@ -200,7 +207,7 @@ export default function GovernmentOverview() {
                           </ul>
                           <Link
                             to={governmentPaths[key]}
-                            className="mt-auto flex min-h-11 items-center justify-between gap-2 rounded-md bg-primary-50 px-3 py-2 text-sm font-semibold text-primary-800 hover:bg-primary-100"
+                            className="mt-auto flex min-h-11 items-center justify-between gap-2 rounded-xl bg-primary-50 px-3 py-2 text-sm font-semibold text-primary-800 transition-colors duration-150 hover:bg-primary-100"
                           >
                             {t(`government.${key}.link`)}
                             <ArrowRight
@@ -229,9 +236,12 @@ export default function GovernmentOverview() {
 
         <aside
           aria-labelledby="government-resources"
-          className="rounded-xl border border-gray-300 bg-white px-4 shadow-sm sm:px-5"
+          className="card self-start px-4 sm:px-5"
         >
-          <h2 id="government-resources" className="pt-4 text-lg font-bold">
+          <h2
+            id="government-resources"
+            className="pt-4 font-display text-lg font-extrabold tracking-tight text-gray-900"
+          >
             {t('government.resources')}
           </h2>
           <ul role="list" className="mt-2 divide-y divide-primary-100">

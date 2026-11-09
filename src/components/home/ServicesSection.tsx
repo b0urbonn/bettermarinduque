@@ -98,20 +98,20 @@ export default function ServicesSection() {
       />
       <div className="portal-container py-7 sm:py-9">
         {i18n.resolvedLanguage === 'fil' && (
-          <p className="mb-5 rounded-md border border-primary-100 bg-primary-50 px-4 py-3 text-sm text-primary-900">
+          <p className="mb-5 rounded-xl border border-primary-100 bg-primary-50 px-4 py-3 text-sm text-primary-900">
             {t('directory.englishGuides')}
           </p>
         )}
         <div
           role="search"
           aria-label={t('hero.searchLabel')}
-          className="rounded-lg border border-gray-300 bg-gray-50 p-4 sm:p-5"
+          className="card p-4 sm:p-6"
         >
           <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_minmax(12rem,0.5fr)]">
             <div>
               <label
                 htmlFor="service-search"
-                className="mb-1.5 block text-sm font-semibold"
+                className="mb-1.5 block text-sm font-semibold text-gray-800"
               >
                 {t('hero.searchLabel')}
               </label>
@@ -119,7 +119,7 @@ export default function ServicesSection() {
                 <Search
                   size={19}
                   aria-hidden="true"
-                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500"
                 />
                 <input
                   id="service-search"
@@ -127,14 +127,14 @@ export default function ServicesSection() {
                   value={query}
                   onChange={event => updateFilter('q', event.target.value)}
                   placeholder={t('hero.searchPlaceholder')}
-                  className="min-h-11 w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-base placeholder:text-gray-700"
+                  className="field pl-10"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="service-category"
-                className="mb-1.5 block text-sm font-semibold"
+                className="mb-1.5 block text-sm font-semibold text-gray-800"
               >
                 {t('directory.category')}
               </label>
@@ -142,7 +142,7 @@ export default function ServicesSection() {
                 id="service-category"
                 value={activeCategory?.slug ?? ''}
                 onChange={event => updateFilter('category', event.target.value)}
-                className="min-h-11 w-full rounded-md border border-gray-300 bg-white px-3 text-base"
+                className="field"
               >
                 <option value="">{t('directory.allCategories')}</option>
                 {categories.map(({ category, slug }) => (
@@ -156,18 +156,18 @@ export default function ServicesSection() {
           <div
             role="group"
             aria-label={t('directory.level')}
-            className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 border-t border-gray-200 pt-4"
+            className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-2 border-t border-gray-100 pt-4"
           >
-            <span className="text-sm font-semibold">
+            <span className="text-sm font-semibold text-gray-800">
               {t('directory.level')}
             </span>
             <button
               type="button"
               aria-pressed={!activeLevel}
               onClick={() => updateFilter('level', '')}
-              className={`min-h-9 rounded-full border px-3 text-sm font-semibold ${
+              className={`min-h-9 rounded-full border px-3.5 text-sm font-semibold transition-colors duration-150 ${
                 activeLevel
-                  ? 'border-gray-300 bg-white text-gray-800 hover:border-primary-500 hover:text-primary-800'
+                  ? 'border-gray-300 bg-white text-gray-700 hover:border-primary-400 hover:text-primary-800'
                   : 'border-primary-700 bg-primary-700 text-white'
               }`}
             >
@@ -181,18 +181,18 @@ export default function ServicesSection() {
                   type="button"
                   aria-pressed={activeLevel === level}
                   onClick={() => updateFilter('level', level)}
-                  className={`min-h-9 rounded-full border px-3 text-sm font-semibold ${
+                  className={`min-h-9 rounded-full border px-3.5 text-sm font-semibold transition-colors duration-150 ${
                     activeLevel === level
                       ? 'border-primary-700 bg-primary-700 text-white'
-                      : 'border-gray-300 bg-white text-gray-800 hover:border-primary-500 hover:text-primary-800'
+                      : 'border-gray-300 bg-white text-gray-700 hover:border-primary-400 hover:text-primary-800'
                   }`}
                 >
                   {t(`levels.${level}`)}
                 </button>
               ))}
           </div>
-          <div className="mt-2 flex min-h-11 flex-wrap items-center justify-between gap-x-3">
-            <p role="status" className="text-sm text-gray-700">
+          <div className="mt-1 flex min-h-11 flex-wrap items-center justify-between gap-x-3">
+            <p role="status" className="text-sm text-gray-600">
               {results
                 ? t('directory.resultCount', { count: results.length })
                 : t('directory.loading')}
@@ -212,7 +212,7 @@ export default function ServicesSection() {
           <section aria-labelledby="service-results-heading">
             <h2
               id="service-results-heading"
-              className="border-b border-gray-300 pb-3 text-xl font-bold tracking-tight"
+              className="font-display text-xl font-extrabold tracking-tight text-gray-900"
             >
               {t('directory.guides')}
             </h2>
@@ -238,15 +238,15 @@ export default function ServicesSection() {
                       aria-labelledby={`service-title-${guideKey}`}
                       to={`/services/${guideKey}`}
                       state={{ serviceSearch: params.toString() }}
-                      className="group flex min-h-14 items-center justify-between gap-3 rounded-md border border-gray-300 px-4 py-3.5 hover:border-primary-500 hover:bg-primary-50 active:bg-primary-100 motion-safe:transition-colors motion-safe:duration-150"
+                      className="group card card-hover flex min-h-14 items-center justify-between gap-3 p-4"
                     >
                       <div className="min-w-0">
-                        <p className="text-xs font-medium text-gray-700">
+                        <p className="text-xs font-semibold tracking-wide text-primary-700 uppercase">
                           {category.category}
                         </p>
                         <h3
                           id={`service-title-${guideKey}`}
-                          className="mt-1 text-base leading-snug font-bold text-primary-800 group-hover:underline"
+                          className="mt-0.5 text-base leading-snug font-bold text-gray-900 group-hover:text-primary-800"
                         >
                           {name}
                         </h3>
@@ -263,7 +263,7 @@ export default function ServicesSection() {
                             {levels.map(level => (
                               <span
                                 key={level}
-                                className="rounded-full border border-primary-200 bg-primary-50 px-2 py-0.5 text-xs font-semibold text-primary-800"
+                                className="chip px-2.5 py-0.5 text-xs"
                               >
                                 {t(`levels.${level}`)}
                               </span>
@@ -271,11 +271,13 @@ export default function ServicesSection() {
                           </p>
                         )}
                       </div>
-                      <ArrowRight
-                        size={19}
-                        className="shrink-0 text-primary-700"
-                        aria-hidden="true"
-                      />
+                      <span className="icon-tile size-9 shrink-0 bg-primary-50 text-primary-700 transition-colors duration-200 group-hover:bg-primary-700 group-hover:text-white">
+                        <ArrowRight
+                          size={16}
+                          aria-hidden="true"
+                          className="transition-transform duration-200 group-hover:translate-x-0.5"
+                        />
+                      </span>
                     </Link>
                   </li>
                 );
@@ -284,12 +286,15 @@ export default function ServicesSection() {
           </section>
           <aside
             aria-labelledby="official-resources-heading"
-            className="self-start rounded-md border border-gray-300 bg-gray-50 p-4"
+            className="card self-start p-5"
           >
-            <h2 id="official-resources-heading" className="font-bold">
+            <h2
+              id="official-resources-heading"
+              className="font-display text-lg font-extrabold tracking-tight text-gray-900"
+            >
               {t('directory.officialResources')}
             </h2>
-            <ul className="mt-2 text-sm">
+            <ul className="mt-1 text-sm">
               <li>
                 <a
                   href={citizenCharter}

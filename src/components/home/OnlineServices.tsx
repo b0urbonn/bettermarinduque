@@ -15,17 +15,17 @@ function ServiceLink({ name, description, url }: OnlineService) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-full flex-col rounded-xl border border-gray-300 bg-white p-4 hover:border-primary-500 hover:bg-primary-50 motion-safe:transition-colors motion-safe:duration-150"
+      className="group card card-hover flex h-full flex-col p-4"
     >
-      <span className="flex items-start justify-between gap-2 font-bold text-primary-800 group-hover:underline">
+      <span className="flex items-start justify-between gap-2 font-bold text-gray-900 group-hover:text-primary-800">
         {name}
         <ArrowUpRight
           size={16}
           aria-hidden="true"
-          className="mt-0.5 shrink-0 text-primary-700"
+          className="mt-0.5 shrink-0 text-primary-600 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
         />
       </span>
-      <span className="mt-1.5 block text-sm leading-relaxed text-gray-700">
+      <span className="mt-1.5 block flex-1 text-sm leading-relaxed text-gray-600">
         {description}
       </span>
     </a>
@@ -38,21 +38,20 @@ export default function OnlineServices() {
   return (
     <section
       aria-labelledby="online-services-heading"
-      className="mt-8 border-t border-gray-300 pt-7"
+      className="mt-10 border-t border-gray-200 pt-8"
     >
+      <p className="eyebrow">{t('services.online.eyebrow')}</p>
       <h2
         id="online-services-heading"
-        className="text-xl font-bold tracking-tight"
+        className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900"
       >
         {t('services.online.heading')}
       </h2>
-      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-gray-700">
+      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-gray-600">
         {t('services.online.description')}
       </p>
 
-      <h3 className="mt-6 font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
-        {t('levels.provincial')}
-      </h3>
+      <h3 className="eyebrow mt-7">{t('levels.provincial')}</h3>
       <ul lang="en" className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {provincialServices.map(service => (
           <li key={service.url}>
@@ -61,9 +60,7 @@ export default function OnlineServices() {
         ))}
       </ul>
 
-      <h3 className="mt-7 font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
-        {t('levels.municipal')}
-      </h3>
+      <h3 className="eyebrow mt-8">{t('levels.municipal')}</h3>
       <p className="mt-2 text-sm text-gray-700">
         {t('services.online.municipalNote')}
       </p>
@@ -81,17 +78,17 @@ export default function OnlineServices() {
               ) : (
                 <Link
                   to={`/municipalities/${town.slug}`}
-                  className="group flex h-full flex-col rounded-xl border border-gray-300 bg-white p-4 hover:border-primary-500 hover:bg-primary-50 motion-safe:transition-colors motion-safe:duration-150"
+                  className="group card card-hover flex h-full flex-col p-4"
                 >
-                  <span className="flex items-start justify-between gap-2 font-bold text-primary-800 group-hover:underline">
+                  <span className="flex items-start justify-between gap-2 font-bold text-gray-900 group-hover:text-primary-800">
                     {town.name}
                     <ArrowRight
                       size={16}
                       aria-hidden="true"
-                      className="mt-0.5 shrink-0 text-primary-700"
+                      className="mt-0.5 shrink-0 text-primary-600 transition-transform duration-200 group-hover:translate-x-0.5"
                     />
                   </span>
-                  <span className="mt-1.5 block text-sm leading-relaxed text-gray-700">
+                  <span className="mt-1.5 block flex-1 text-sm leading-relaxed text-gray-600">
                     {t('services.online.townGuide')}
                   </span>
                 </Link>
@@ -101,25 +98,21 @@ export default function OnlineServices() {
         })}
       </ul>
 
-      <h3 className="mt-7 font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
-        {t('levels.barangay')}
-      </h3>
-      <div className="mt-3 rounded-md border border-gray-300 bg-gray-50 p-4">
+      <h3 className="eyebrow mt-8">{t('levels.barangay')}</h3>
+      <div className="mt-3 rounded-2xl border border-dashed border-primary-200 bg-primary-50/50 p-4">
         <p className="text-sm leading-relaxed text-gray-700">
           {t('services.online.barangayNote')}
         </p>
         <Link
           to="/municipalities"
-          className="portal-link mt-2 inline-flex min-h-11 items-center gap-2 text-sm font-semibold"
+          className="portal-link mt-1 inline-flex min-h-11 items-center gap-2 text-sm font-semibold"
         >
           {t('services.online.findBarangay')}
           <ArrowRight size={15} aria-hidden="true" />
         </Link>
       </div>
 
-      <h3 className="mt-7 font-mono text-xs font-bold uppercase tracking-widest text-gray-700">
-        {t('levels.national')}
-      </h3>
+      <h3 className="eyebrow mt-8">{t('levels.national')}</h3>
       <ul lang="en" className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {nationalServices.map(service => (
           <li key={service.url}>

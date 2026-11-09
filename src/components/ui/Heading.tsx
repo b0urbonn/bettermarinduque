@@ -8,18 +8,19 @@ interface HeadingProps {
 }
 
 const headingStyles = {
-  1: 'text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-relaxed',
-  2: 'text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-relaxed',
-  3: 'text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-relaxed',
-  4: 'text-lg md:text-xl lg:text-2xl font-bold mb-4 leading-relaxed',
-  5: 'text-base md:text-lg lg:text-xl font-bold mb-4 leading-relaxed',
-  6: 'text-sm md:text-base lg:text-lg font-bold mb-4 leading-relaxed',
+  1: 'text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight tracking-tight',
+  2: 'text-2xl sm:text-3xl font-extrabold mb-5 leading-tight tracking-tight',
+  3: 'text-xl sm:text-2xl font-bold mb-4 leading-snug tracking-tight',
+  4: 'text-lg sm:text-xl font-bold mb-3 leading-snug',
+  5: 'text-base sm:text-lg font-bold mb-3 leading-snug',
+  6: 'text-sm sm:text-base font-bold mb-2 leading-snug',
 };
 
 export function Heading({ level = 1, children, className }: HeadingProps) {
   const baseClasses = cn(
     headingStyles[level],
-    level <= 2 && 'font-display text-gray-900'
+    'font-display',
+    level <= 2 && 'text-gray-900'
   );
   const combinedClasses = cn(baseClasses, className);
 

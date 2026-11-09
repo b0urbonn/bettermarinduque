@@ -202,15 +202,20 @@ export const municipalityGalleries: Record<MunicipalitySlug, TownPhoto[]> = {
       '2/2e'
     ),
   ],
+  // "Poctoy_Pier_2014.jpg" on Commons is Poctoy Pier in Odiongan, Romblon
+  // (Category:Poctoy Pier (Odiongan, Romblon)), not Torrijos. Do not use it.
+  // The Municipality of Torrijos tourism site blocks hotlinking
+  // (Cross-Origin-Resource-Policy: same-origin), so its White Beach photo
+  // cannot be embedded; use the licensed Commons photo instead.
   torrijos: [
     commonsPhoto(
-      'Poctoy_Pier_2014.jpg',
-      'Poctoy Pier',
-      'Poctoy Pier in Torrijos, Marinduque, photographed in 2014',
-      'Albert777MAX',
-      'CC0 1.0',
-      cc0,
-      'a/a8'
+      'Boac - Mogpog - Santa Cruz - Torrijos Rd, Torrijos, Marinduque, Philippines - panoramio.jpg',
+      'Torrijos coastal road',
+      'A view along the Boac–Torrijos road in Torrijos, Marinduque',
+      'Mozhar',
+      'CC BY-SA 3.0',
+      bySa3,
+      '9/9d'
     ),
     commonsPhoto(
       'Ang_Labanan_sa_Pulang_Lupa_historical_marker.jpg',
@@ -221,14 +226,6 @@ export const municipalityGalleries: Record<MunicipalitySlug, TownPhoto[]> = {
       bySa4,
       '8/8a'
     ),
-    {
-      src: 'https://hamossatorrijos.gov.ph/wp-content/uploads/2021/10/1-Torrijos-White-Beach-14.jpg',
-      title: 'Torrijos White Beach',
-      alt: 'Palm trees and the shoreline of Torrijos White Beach in Marinduque, with Mount Malindig across the water',
-      author: 'Source: Municipality of Torrijos tourism website',
-      sourceUrl: 'https://hamossatorrijos.gov.ph/torrijos-tourist-attractions/',
-      objectPosition: 'center 50%',
-    },
   ],
 };
 

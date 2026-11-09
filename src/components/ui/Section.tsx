@@ -13,7 +13,7 @@ export default function Section({
   return (
     <section
       className={cn(
-        'py-12 bg-white',
+        'py-12 bg-white md:py-16',
         decoration && 'relative overflow-hidden',
         className
       )}

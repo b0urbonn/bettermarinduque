@@ -52,10 +52,7 @@ export default function GovernmentExecutive() {
       description={t('government.executiveDescription')}
       term={`${leaders.YEAR_ELECTED}–2028`}
       actions={
-        <a
-          href={provincialWebsite + '/executive/'}
-          className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/45 px-4 py-2 font-semibold text-white hover:bg-white/15 focus-visible:outline-white"
-        >
+        <a href={provincialWebsite + '/executive/'} className="btn btn-on-dark">
           {t('government.officialExecutive')}{' '}
           <ArrowUpRight size={16} aria-hidden="true" />
         </a>
@@ -63,26 +60,28 @@ export default function GovernmentExecutive() {
     >
       <div className="portal-container space-y-7 py-8 lg:py-10">
         <section aria-labelledby="government-leadership">
+          <p className="eyebrow">
+            {t('government.electedEyebrow', 'Leadership')}
+          </p>
           <h2
             id="government-leadership"
-            className="mb-4 text-2xl font-bold tracking-tight"
+            className="mt-1 mb-4 font-display text-2xl font-extrabold tracking-tight text-gray-900"
           >
             {t('government.electedLeaders')}
           </h2>
           <ul role="list" className="grid gap-4 md:grid-cols-3">
             {positions.map(({ key, name, Icon }) => (
-              <li
-                key={key}
-                className="rounded-xl border border-gray-300 bg-white p-5 shadow-sm"
-              >
-                <span className="mb-3 inline-flex rounded-lg bg-primary-50 p-2.5 text-primary-800">
+              <li key={key} className="card p-5">
+                <span className="icon-tile mb-3">
                   <Icon size={22} aria-hidden="true" />
                 </span>
-                <p className="text-sm font-semibold text-primary-800">
+                <p className="text-sm font-semibold text-primary-700">
                   {t(`government.roles.${key}.title`)}
                 </p>
-                <h3 className="mt-1 text-xl font-bold">{name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-700">
+                <h3 className="mt-1 font-display text-xl font-extrabold tracking-tight text-gray-900">
+                  {name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
                   {t(`government.roles.${key}.description`)}
                 </p>
               </li>
@@ -91,10 +90,7 @@ export default function GovernmentExecutive() {
         </section>
 
         <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_19rem]">
-          <article
-            lang="en"
-            className="min-w-0 rounded-xl border border-gray-300 bg-white p-4 shadow-sm sm:p-6"
-          >
+          <article lang="en" className="card min-w-0 p-4 sm:p-6">
             {article !== undefined ? (
               <div className="prose prose-gray max-w-none motion-safe:animate-fade-in prose-headings:tracking-tight prose-h2:mt-7 prose-h2:mb-3 prose-a:text-primary-700 prose-table:my-0 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 [&>:first-child]:mt-0">
                 <ReactMarkdown
@@ -135,14 +131,14 @@ export default function GovernmentExecutive() {
 
           <aside
             aria-labelledby="government-executive-resources"
-            className="rounded-xl border border-gray-300 bg-white p-5 shadow-sm"
+            className="card p-5"
           >
-            <span className="mb-3 inline-flex rounded-lg bg-primary-50 p-2.5 text-primary-800">
+            <span className="icon-tile mb-3">
               <Building2 size={21} aria-hidden="true" />
             </span>
             <h2
               id="government-executive-resources"
-              className="text-lg font-bold"
+              className="font-display text-lg font-extrabold tracking-tight text-gray-900"
             >
               {t('government.capitol')}
             </h2>

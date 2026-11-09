@@ -21,7 +21,7 @@ export default function GovernmentBoard() {
       actions={
         <a
           href={provincialWebsite + '/legislative/'}
-          className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/45 px-4 py-2 font-semibold text-white hover:bg-white/15 focus-visible:outline-white"
+          className="btn btn-on-dark"
         >
           {t('government.officialRoster')}{' '}
           <ArrowUpRight size={16} aria-hidden="true" />
@@ -31,20 +31,21 @@ export default function GovernmentBoard() {
       <div className="portal-container py-8 lg:py-10">
         {presiding && (
           <section
-            className="flex items-start gap-4 rounded-xl border border-primary-100 bg-primary-50 p-5 sm:p-6"
+            className="card flex items-start gap-4 border-primary-200 bg-primary-50/70 p-5 sm:p-6"
             aria-labelledby="board-presiding"
           >
-            <span className="rounded-lg bg-white p-3 text-primary-800">
+            <span className="icon-tile bg-white">
               <Scale size={24} aria-hidden="true" />
             </span>
             <div>
-              <p className="text-sm font-semibold text-primary-800">
-                {t('government.presidingOfficer')}
-              </p>
-              <h2 id="board-presiding" className="mt-1 text-xl font-bold">
+              <p className="eyebrow">{t('government.presidingOfficer')}</p>
+              <h2
+                id="board-presiding"
+                className="mt-1 font-display text-xl font-extrabold tracking-tight text-gray-900"
+              >
                 {presiding.name}
               </h2>
-              <p className="mt-1 text-sm text-gray-700">
+              <p className="mt-1 text-sm text-gray-600">
                 {t('government.roles.viceGovernor.description')}
               </p>
             </div>
@@ -59,7 +60,7 @@ export default function GovernmentBoard() {
             <Link
               key={group}
               to={`#board-${group}`}
-              className="inline-flex min-h-11 items-center rounded-md border border-gray-300 bg-white px-3 text-sm font-semibold text-primary-800 hover:bg-primary-50"
+              className="chip inline-flex min-h-11 items-center px-4 py-2 text-sm font-semibold text-primary-800 transition-colors hover:border-primary-400 hover:bg-primary-50"
             >
               {t(`government.boardGroups.${group}.title`)}
             </Link>
@@ -77,12 +78,12 @@ export default function GovernmentBoard() {
                 key={group}
                 id={`board-${group}`}
                 aria-labelledby={`board-${group}-heading`}
-                className="overflow-hidden rounded-xl border border-gray-300 bg-white shadow-sm"
+                className="card overflow-hidden"
               >
                 <div className="border-b border-primary-100 bg-primary-50/75 p-4">
                   <h2
                     id={`board-${group}-heading`}
-                    className="flex items-center gap-2 text-lg font-bold"
+                    className="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight text-gray-900"
                   >
                     <Icon
                       size={19}
@@ -91,11 +92,11 @@ export default function GovernmentBoard() {
                     />
                     {t(`government.boardGroups.${group}.title`)}
                   </h2>
-                  <p className="mt-1 text-sm text-gray-700">
+                  <p className="mt-1 text-sm text-gray-600">
                     {t(`government.boardGroups.${group}.description`)}
                   </p>
                 </div>
-                <ul role="list" className="divide-y divide-primary-100 px-4">
+                <ul role="list" className="divide-y divide-gray-100 px-4">
                   {members.map(member => (
                     <li key={member.name} className="py-3">
                       <p className="font-semibold">{member.name}</p>

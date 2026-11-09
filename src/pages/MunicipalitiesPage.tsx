@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { municipalities } from '../data/municipalities';
 import { municipalityBoundaries } from '../data/municipalityBoundaries';
+import { provinceFacts } from '../data/province';
 import PageHeader from '../components/ui/PageHeader';
 import SEO from '../components/SEO';
 import MunicipalityPhoto, {
@@ -20,6 +21,7 @@ export default function MunicipalitiesPage() {
     <div lang={i18n.resolvedLanguage}>
       <SEO title={title} description={description} />
       <PageHeader
+        eyebrow={t('towns.eyebrow', 'Six towns')}
         title={title}
         description={description}
         breadcrumbItems={[
@@ -27,28 +29,58 @@ export default function MunicipalitiesPage() {
           { label: title },
         ]}
       />
-      <ul className="portal-container grid gap-4 py-7 sm:grid-cols-2 sm:py-9 lg:grid-cols-3">
+      <div className="border-b border-gray-200 bg-white">
+        <dl className="portal-container grid grid-cols-2 divide-gray-200 py-5 sm:grid-cols-4 sm:divide-x">
+          {[
+            {
+              label: t('hero.stats.population'),
+              value: provinceFacts.population,
+            },
+            {
+              label: t('hero.stats.municipalities'),
+              value: provinceFacts.municipalities,
+            },
+            {
+              label: t('hero.stats.barangays'),
+              value: provinceFacts.barangays,
+            },
+            {
+              label: t('towns.area', 'Land area'),
+              value: `${provinceFacts.area} km²`,
+            },
+          ].map(({ label, value }) => (
+            <div key={label} className="px-1 py-2 sm:px-6 sm:first:pl-0">
+              <dt className="text-sm text-gray-600">{label}</dt>
+              <dd className="font-display text-2xl font-extrabold tabular-nums tracking-tight text-primary-900">
+                {value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <ul className="portal-container grid gap-5 py-10 sm:grid-cols-2 sm:py-14 lg:grid-cols-3">
         {municipalities.map((town, index) => (
           <li
             key={town.slug}
             style={{ animationDelay: `${index * 70}ms` }}
-            className="flex h-full flex-col overflow-hidden rounded-xl border border-gray-300 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:fill-mode-backwards"
+            className="group card card-hover flex h-full flex-col overflow-hidden motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:fill-mode-backwards"
           >
             <Link
               to={`/municipalities/${town.slug}`}
-              className="group flex flex-1 flex-col p-5 transition-colors hover:bg-primary-50"
+              className="flex flex-1 flex-col"
             >
-              <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-md bg-primary-50">
-                <div className="size-full transition-transform duration-500 group-hover:scale-105">
-                  <MunicipalityPhoto slug={town.slug} slideshow />
+              <div className="relative aspect-[16/10] overflow-hidden bg-primary-900">
+                <div className="size-full transition-transform duration-700 ease-out group-hover:scale-105">
+                  <MunicipalityPhoto slug={town.slug} />
                 </div>
-                <div className="absolute bottom-2 right-2 rounded-md border border-gray-300 bg-white/95 p-1 shadow-sm">
+                <div className="absolute inset-0 bg-linear-to-t from-primary-950/90 via-primary-950/20 to-transparent" />
+                <div className="absolute top-3 right-3 rounded-xl bg-white/90 p-1 shadow-sm backdrop-blur-sm">
                   <svg
                     viewBox="0 0 440 440"
                     role="img"
                     aria-label={`${town.name} highlighted on the map of Marinduque`}
                     focusable="false"
-                    className="size-20"
+                    className="size-16"
                   >
                     {Object.entries(municipalityBoundaries).map(
                       ([code, boundary]) => (
@@ -60,7 +92,7 @@ export default function MunicipalitiesPage() {
                           strokeLinejoin="round"
                           className={
                             code === town.code
-                              ? 'fill-primary-700 stroke-white group-hover:fill-primary-800'
+                              ? 'fill-primary-700 stroke-white'
                               : 'fill-primary-200 stroke-white'
                           }
                         />
@@ -68,41 +100,70 @@ export default function MunicipalitiesPage() {
                     )}
                   </svg>
                 </div>
+                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                  <p className="eyebrow text-accent-200">
+                    {t(
+                      town.slug === 'boac'
+                        ? 'towns.capital'
+                        : 'towns.municipality'
+                    )}
+                  </p>
+                  <h2 className="mt-1 text-3xl font-extrabold tracking-tight">
+                    {town.name}
+                  </h2>
+                </div>
               </div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary-700">
-                {t(
-                  town.slug === 'boac' ? 'towns.capital' : 'towns.municipality'
-                )}
-              </p>
-              <h2 className="mt-2 text-2xl font-bold text-primary-900">
-                {town.name}
-              </h2>
-              <p
-                lang="en"
-                className="mt-2 flex-1 text-sm leading-relaxed text-gray-700"
-              >
-                {town.description}
-              </p>
-              <p className="mt-4 border-t border-gray-200 pt-3 text-sm text-gray-700">
-                {town.barangays} {t('hero.stats.barangays')}
-              </p>
-              <span className="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-700 group-hover:underline">
-                {t('towns.openGuide')}
-                <ArrowRight size={17} aria-hidden="true" />
-              </span>
+              <div className="flex flex-1 flex-col p-5">
+                <p lang="en" className="text-sm font-semibold text-primary-800">
+                  {town.tagline}
+                </p>
+                <p
+                  lang="en"
+                  className="mt-1 flex-1 text-sm leading-relaxed text-gray-700"
+                >
+                  {town.description}
+                </p>
+                <dl className="mt-4 grid grid-cols-3 gap-2 border-t border-gray-100 pt-4 text-center">
+                  {[
+                    {
+                      label: t('hero.stats.population'),
+                      value: town.population,
+                    },
+                    { label: t('hero.stats.barangays'), value: town.barangays },
+                    { label: 'km²', value: town.area.toFixed(2) },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="rounded-lg bg-gray-50 py-2">
+                      <dt className="text-[11px] font-medium text-gray-600 uppercase">
+                        {label}
+                      </dt>
+                      <dd className="font-display font-extrabold tabular-nums text-gray-900">
+                        {value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary-700">
+                  {t('towns.openGuide')}
+                  <ArrowRight
+                    size={16}
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:translate-x-1"
+                  />
+                </span>
+              </div>
             </Link>
-            <div className="border-t border-gray-200 px-5 py-3">
+            <div className="border-t border-gray-100 bg-gray-50/60 px-5 py-3">
               <a
                 href={
                   municipalWebsites[town.slug]?.url ?? localGovernmentDirectory
                 }
-                className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary-700 hover:underline"
+                className="inline-flex min-h-9 items-center gap-1.5 text-sm font-semibold text-primary-700 hover:underline"
               >
                 {municipalWebsites[town.slug]?.label ?? 'Government directory'}
                 <ArrowUpRight size={14} aria-hidden="true" />
               </a>
-              <p className="mt-1 text-xs leading-relaxed text-gray-700">
-                <MunicipalityPhotoCredit slug={town.slug} slideshow />
+              <p className="mt-0.5 text-xs leading-relaxed text-gray-600">
+                <MunicipalityPhotoCredit slug={town.slug} />
               </p>
             </div>
           </li>
@@ -110,10 +171,11 @@ export default function MunicipalitiesPage() {
       </ul>
       <p
         lang="en"
-        className="portal-container pb-8 text-xs leading-relaxed text-gray-700"
+        className="portal-container pb-12 text-xs leading-relaxed text-gray-600"
       >
-        Each map highlights the town within Marinduque. Simplified boundaries
-        from NAMRIA and PSA via OCHA COD-AB, prepared by{' '}
+        Population from the PSA 2024 Census (July 1, 2024). Each map highlights
+        the town within Marinduque. Simplified boundaries from NAMRIA and PSA
+        via OCHA COD-AB, prepared by{' '}
         <a
           href="https://github.com/faeldon/philippines-json-maps"
           className="portal-link"

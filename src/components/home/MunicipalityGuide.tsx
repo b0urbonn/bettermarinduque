@@ -124,19 +124,19 @@ export default function MunicipalityGuide({
       aria-labelledby={`town-guide-heading-${slug}`}
       className="mt-8"
     >
-      <h3
+      <h2
         id={`town-guide-heading-${slug}`}
-        className="mb-4 text-2xl font-bold tracking-tight"
+        className="mb-4 font-display text-2xl font-extrabold tracking-tight text-gray-900"
       >
         {name} town guide
-      </h3>
+      </h2>
       <div className="grid gap-4 md:grid-cols-2">
         <div
           id={`contacts-${slug}`}
-          className="scroll-mt-32 rounded-xl border border-gray-300 bg-white p-5"
+          className="scroll-mt-32 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
         >
-          <h4 className="text-lg font-bold">Local contacts</h4>
-          <dl className="mt-3 divide-y divide-gray-300 text-sm">
+          <h3 className="text-lg font-bold text-gray-900">Local contacts</h3>
+          <dl className="mt-3 divide-y divide-gray-200 text-sm">
             {contacts.map(({ label, number }) => (
               <div
                 key={label}
@@ -173,9 +173,11 @@ export default function MunicipalityGuide({
         </div>
         <div
           id={`places-${slug}`}
-          className="scroll-mt-32 rounded-xl border border-gray-300 bg-white p-5"
+          className="scroll-mt-32 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
         >
-          <h4 className="text-lg font-bold">Places and culture</h4>
+          <h3 className="text-lg font-bold text-gray-900">
+            Places and culture
+          </h3>
           <ul className="mt-3 space-y-3 text-sm">
             {guide.places.map(place => (
               <li key={place.name}>
@@ -207,7 +209,7 @@ export default function MunicipalityGuide({
       <details
         id={`barangays-${slug}`}
         open={expanded}
-        className="group mt-4 scroll-mt-32 rounded-xl border border-gray-300 bg-white"
+        className="group mt-4 scroll-mt-32 rounded-2xl border border-gray-200 bg-white shadow-sm"
       >
         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-t-xl p-4 font-bold transition-colors hover:bg-gray-50 group-open:rounded-b-none [&::-webkit-details-marker]:hidden">
           Barangay directory{' '}
@@ -220,7 +222,7 @@ export default function MunicipalityGuide({
             className="shrink-0 transition-transform duration-300 group-open:rotate-180"
           />
         </summary>
-        <div className="details-body border-t border-gray-300 px-4 py-4 sm:px-5">
+        <div className="details-body border-t border-gray-200 px-4 py-4 sm:px-5">
           <label
             htmlFor={`barangay-search-${slug}`}
             className="block text-sm font-semibold"
@@ -232,7 +234,7 @@ export default function MunicipalityGuide({
             type="search"
             value={query}
             onChange={event => setQuery(event.target.value)}
-            className="mt-2 min-h-11 w-full max-w-md rounded-md border border-gray-300 bg-white px-3 py-2 text-base"
+            className="field mt-2 max-w-md"
           />
           <label
             htmlFor={`barangay-sort-${slug}`}
@@ -244,7 +246,7 @@ export default function MunicipalityGuide({
             id={`barangay-sort-${slug}`}
             value={sortBy}
             onChange={event => setSortBy(event.target.value)}
-            className="mt-2 min-h-11 rounded-md border border-gray-300 bg-white px-3 text-sm"
+            className="field mt-2 w-auto text-sm"
           >
             <option value="name">Name · A to Z</option>
             <option value="population">Population · highest first</option>
@@ -259,14 +261,14 @@ export default function MunicipalityGuide({
               role="region"
               aria-label={`${name} barangay directory`}
               tabIndex={0}
-              className="mt-3 max-h-[28rem] overflow-auto rounded-lg border border-gray-200"
+              className="mt-3 max-h-[28rem] overflow-auto rounded-xl border border-gray-200"
             >
               <table className="w-full text-left text-sm">
                 <caption className="sr-only">
                   {name} barangays, their punong barangay, and 2024 census
                   populations
                 </caption>
-                <thead className="sticky top-0 border-y border-gray-300 bg-gray-50">
+                <thead className="sticky top-0 border-y border-gray-200 bg-gray-50">
                   <tr>
                     <th scope="col" className="px-2 py-2.5">
                       Barangay

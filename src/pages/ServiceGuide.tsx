@@ -103,16 +103,18 @@ function GuideArticle({
       {sections.length > 0 && (
         <nav
           aria-label="On this page"
-          className="rounded-md border border-gray-300 bg-gray-50 p-4 lg:sticky lg:top-32 lg:col-start-2 lg:row-start-1"
+          className="card h-fit p-4 lg:sticky lg:top-32 lg:col-start-2 lg:row-start-1"
         >
-          <h2 className="font-bold">On this page</h2>
+          <h2 className="font-display text-base font-extrabold tracking-tight text-gray-900">
+            On this page
+          </h2>
           <ul className="mt-2 grid grid-cols-2 gap-x-3 lg:grid-cols-1">
             {sections.map(({ id, title }) => (
               <li key={id}>
                 <Link
                   to={{ search, hash: `#${id}` }}
                   state={{ serviceSearch }}
-                  className="portal-link inline-flex min-h-10 items-center rounded-sm py-1 text-sm"
+                  className="portal-link inline-flex min-h-10 items-center rounded-md px-1.5 text-sm"
                 >
                   {title}
                 </Link>
@@ -123,7 +125,7 @@ function GuideArticle({
       )}
       <article
         aria-label="Service guide"
-        className="prose max-w-none min-w-0 break-words prose-headings:text-gray-900 prose-p:text-gray-800 prose-li:text-gray-800 prose-a:text-primary-700 prose-a:underline-offset-4 prose-h2:scroll-mt-5 prose-h2:border-t prose-h2:border-gray-300 prose-h2:pt-5 lg:col-start-1 lg:row-start-1 lg:prose-h2:scroll-mt-32 [&_li.task-list-item]:block [&_li.task-list-item]:pl-0 [&_li.task-list-item]:cursor-auto [&_li.task-list-item]:border-0 [&_ul.contains-task-list]:list-none [&_ul.contains-task-list]:pl-0 [&_input[type=checkbox]]:mr-2 [&_input[type=checkbox]]:accent-primary-700 [&>p:first-child]:mt-0 [&>p:first-child]:text-lg"
+        className="prose card max-w-none min-w-0 break-words p-5 sm:p-8 lg:col-start-1 lg:row-start-1 lg:prose-h2:scroll-mt-32 [&_li.task-list-item]:block [&_li.task-list-item]:pl-0 [&_li.task-list-item]:cursor-auto [&_li.task-list-item]:border-0 [&_ul.contains-task-list]:list-none [&_ul.contains-task-list]:pl-0 [&_input[type=checkbox]]:mr-2 [&_input[type=checkbox]]:accent-primary-700 [&>p:first-child]:mt-0 [&>p:first-child]:text-lg"
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
           {body}
@@ -183,18 +185,18 @@ function ServiceGuidePage({
       </Link>
       {result ? (
         <>
-          <header className="mb-7 flex items-start justify-between gap-3 border-b border-gray-300 pb-5 motion-safe:animate-fade-in sm:items-center sm:gap-8">
+          <header className="mb-7 flex items-start justify-between gap-3 border-b border-gray-200 pb-5 motion-safe:animate-fade-in sm:items-center sm:gap-8">
             <div className="min-w-0">
               <Link
                 to={{
                   pathname: '/services',
                   search: new URLSearchParams({ category }).toString(),
                 }}
-                className="portal-link inline-flex min-h-10 items-center rounded-sm text-sm font-semibold"
+                className="portal-link inline-flex min-h-10 items-center rounded-md text-sm font-semibold"
               >
                 {categoryName}
               </Link>
-              <h1 className="mt-1 max-w-4xl text-3xl leading-tight font-bold tracking-tight md:text-4xl">
+              <h1 className="mt-1 font-display max-w-4xl text-3xl leading-tight font-extrabold tracking-tight text-gray-900 md:text-4xl">
                 {title}
               </h1>
             </div>

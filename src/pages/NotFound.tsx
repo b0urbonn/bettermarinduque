@@ -27,7 +27,8 @@ export default function NotFound() {
         ]}
       />
       <div className="portal-container py-8 md:py-10">
-        <h2 className="text-xl font-bold tracking-tight">
+        <p className="eyebrow">{t('notFound.eyebrow', 'Page not found')}</p>
+        <h2 className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900">
           {t('notFound.popular')}
         </h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -35,12 +36,12 @@ export default function NotFound() {
             <li key={href}>
               <Link
                 to={href}
-                className="group flex min-h-14 items-center justify-between gap-3 rounded-xl border border-gray-300 px-4 py-3.5 font-semibold text-primary-800 hover:border-primary-500 hover:bg-primary-50"
+                className="group card card-hover flex min-h-14 items-center justify-between gap-3 p-4 font-semibold text-primary-800"
               >
                 {t(`navbar.${label.toLowerCase()}`, { defaultValue: label })}
                 <ArrowRight
                   size={17}
-                  className="shrink-0 text-primary-700"
+                  className="shrink-0 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
                   aria-hidden="true"
                 />
               </Link>

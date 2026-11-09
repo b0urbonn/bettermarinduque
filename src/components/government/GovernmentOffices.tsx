@@ -53,10 +53,7 @@ export default function GovernmentOffices() {
       title={t('government.officesTitle')}
       description={t('government.officesDescription')}
       actions={
-        <Link
-          to="#municipal-offices"
-          className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/45 px-4 py-2 font-semibold text-white hover:bg-white/15 focus-visible:outline-white"
-        >
+        <Link to="#municipal-offices" className="btn btn-on-dark">
           <MapPin size={18} aria-hidden="true" />
           {t('government.links.towns.title')}
         </Link>
@@ -66,13 +63,16 @@ export default function GovernmentOffices() {
         <section aria-labelledby="provincial-offices-heading">
           <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
             <div>
+              <p className="eyebrow">
+                {t('government.provincialEyebrow', 'Provincial')}
+              </p>
               <h2
                 id="provincial-offices-heading"
-                className="text-2xl font-bold tracking-tight"
+                className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900"
               >
                 {t('government.provincialOffices')}
               </h2>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-gray-600">
                 {t('government.officeIntro')}
               </p>
             </div>
@@ -87,18 +87,18 @@ export default function GovernmentOffices() {
           <div
             role="search"
             aria-label={t('government.searchOffices')}
-            className="mt-5 rounded-xl border border-gray-300 bg-white p-4 sm:p-5"
+            className="card mt-5 p-4 sm:p-5"
           >
             <label
               htmlFor="provincial-office-search"
-              className="block text-sm font-semibold"
+              className="block text-sm font-semibold text-gray-800"
             >
               {t('government.searchOffices')}
             </label>
             <div className="relative mt-2 max-w-xl">
               <Search
                 size={18}
-                className="pointer-events-none absolute top-3.5 left-3 text-primary-700"
+                className="pointer-events-none absolute top-1/2 left-3.5 -translate-y-1/2 text-gray-500"
                 aria-hidden="true"
               />
               <input
@@ -107,15 +107,15 @@ export default function GovernmentOffices() {
                 value={query}
                 placeholder={t('government.officePlaceholder')}
                 onChange={event => setQuery(event.target.value)}
-                className="min-h-11 w-full rounded-md border border-gray-300 bg-white pr-3 pl-10 text-base text-gray-900"
+                className="field pl-10"
               />
             </div>
-            <p role="status" className="mt-2 text-sm text-gray-700">
+            <p role="status" className="mt-2 text-sm text-gray-600">
               {t('government.officeCount', { count: offices.length })}
             </p>
           </div>
           {offices.length === 0 ? (
-            <p className="mt-4 rounded-xl border border-gray-300 bg-white p-5 text-gray-700">
+            <p className="card mt-4 p-5 text-gray-700">
               {t('government.noOffices')}
             </p>
           ) : (
@@ -126,15 +126,15 @@ export default function GovernmentOffices() {
               {offices.map(({ key, name, description, phone, email }) => (
                 <li
                   key={key}
-                  className="flex min-w-0 flex-col rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
+                  className="card card-hover flex min-w-0 flex-col p-4"
                 >
                   <div className="mb-3 flex items-start gap-3">
-                    <span className="rounded-lg bg-primary-50 p-2 text-primary-800">
+                    <span className="icon-tile">
                       <Building2 size={18} aria-hidden="true" />
                     </span>
                     <div>
                       <h3 className="font-bold text-gray-900">{name}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-gray-700">
+                      <p className="mt-1 text-sm leading-relaxed text-gray-600">
                         {description}
                       </p>
                     </div>
@@ -161,13 +161,14 @@ export default function GovernmentOffices() {
           aria-labelledby="municipal-offices-heading"
           className="border-t border-gray-200 pt-7"
         >
+          <p className="eyebrow">{t('levels.municipal')}</p>
           <h2
             id="municipal-offices-heading"
-            className="text-2xl font-bold tracking-tight"
+            className="mt-1 font-display text-2xl font-extrabold tracking-tight text-gray-900"
           >
             {t('government.links.towns.title')}
           </h2>
-          <p className="mt-2 text-gray-700">{t('government.municipalIntro')}</p>
+          <p className="mt-2 text-gray-600">{t('government.municipalIntro')}</p>
           <a
             href={localGovernmentDirectory}
             className="portal-link mt-1 inline-flex min-h-11 items-center gap-1 text-sm font-semibold"
@@ -180,11 +181,8 @@ export default function GovernmentOffices() {
             className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
           >
             {Object.entries(municipalityGuides).map(([slug, town]) => (
-              <li
-                key={slug}
-                className="rounded-xl border border-gray-300 bg-white p-4 shadow-sm"
-              >
-                <h3 className="flex items-center gap-2 font-bold capitalize">
+              <li key={slug} className="card p-4">
+                <h3 className="flex items-center gap-2 font-display font-bold text-gray-900 capitalize">
                   <MapPin
                     size={18}
                     className="text-primary-700"
@@ -208,14 +206,17 @@ export default function GovernmentOffices() {
         </section>
 
         <aside
-          className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 rounded-xl border border-primary-100 bg-primary-50 p-4 sm:p-5"
+          className="card flex flex-wrap items-center justify-between gap-x-5 gap-y-2 border-primary-200 bg-primary-50/70 p-4 sm:p-5"
           aria-labelledby="government-service-help"
         >
           <div>
-            <h2 id="government-service-help" className="font-bold">
+            <h2
+              id="government-service-help"
+              className="font-display font-extrabold tracking-tight text-gray-900"
+            >
               {t('government.serviceHelp')}
             </h2>
-            <p className="mt-1 text-sm text-gray-700">
+            <p className="mt-1 text-sm text-gray-600">
               {t('government.links.charter.description')}
             </p>
           </div>

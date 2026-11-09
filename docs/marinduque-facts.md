@@ -201,8 +201,8 @@ listing steps, fees, processing time and responsible person for frontline servic
   Operators: Starhorse Shipping Lines and Montenegro Shipping Lines; several daily trips;
   schedules change — check with the operator. Other ports: Cawit (Boac), Buyabod (Santa Cruz).
   Boat link General Luna (Quezon) ↔ Santa Cruz via Maniwaya Island.
-- Air: Marinduque Airport, Brgy. Masiga, Gasan. Cebu Pacific (CebGo) resumed Manila flights
-  in April 2019; check current schedules with the airline.
+- Air: Marinduque Airport, Brgy. Masiga, Gasan. Cebgo's Manila service ran April 2019–April 2023;
+  no scheduled commercial flights as of 2026 — sea travel is the practical option.
 
 ## Media
 
@@ -229,10 +229,12 @@ and `public/image-credits.html`. The selected card and banner photos now use:
   Source: https://commons.wikimedia.org/wiki/File:Ancestral_Houses_in_Mogpog,_Marinduque.jpg
 - Santa Cruz municipal hall, 2013 (Joelaldor, CC BY-SA 4.0).
   Source: https://commons.wikimedia.org/wiki/File:Municipal_Hall_of_Santa_Cruz,_Marinduque.jpg
-- Torrijos White Beach, displayed from the municipal tourism website:
-  https://hamossatorrijos.gov.ph/torrijos-tourist-attractions/
-  Image: https://hamossatorrijos.gov.ph/wp-content/uploads/2021/10/1-Torrijos-White-Beach-14.jpg
-  This is credited to the source website, with no invented photographer or CC license.
+- Torrijos: the municipal tourism website's White Beach photo
+  (https://hamossatorrijos.gov.ph/wp-content/uploads/2021/10/1-Torrijos-White-Beach-14.jpg)
+  cannot be embedded — the site returns 403 and sends
+  `Cross-Origin-Resource-Policy: same-origin`. The lead photo is instead the
+  Torrijos coastal road photo by Mozhar (CC BY-SA 3.0) on Wikimedia Commons:
+  https://commons.wikimedia.org/wiki/File:Boac_-_Mogpog_-_Santa_Cruz_-_Torrijos_Rd,_Torrijos,_Marinduque,_Philippines_-_panoramio.jpg
 
 Dates on archival building photographs are shown in the image credits. Do not
 use Poctoy Pier photos from Odiongan, Romblon as photos of Torrijos.
