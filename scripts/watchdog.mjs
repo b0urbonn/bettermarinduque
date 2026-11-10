@@ -158,31 +158,31 @@ for (const source of sources) {
 
   if (firstRun) continue;
 
-  const hadHash = Boolean(previous?.hash);
-  const wasFailing = previous && !previous.hash && previous.lastError;
+  const wasFailing = Boolean(previous?.lastError);
 
-  if (result.ok && result.hash !== previous?.hash) {
-    changes.push({
-      name: source.name,
-      url: source.url,
-      note: source.note ?? '',
-      kind: 'content changed',
-    });
-  } else if (!result.ok && hadHash && !wasFailing) {
-    changes.push({
-      name: source.name,
-      url: source.url,
-      note: source.note ?? '',
-      kind: `unreachable (${result.error})`,
-    });
-  } else if (result.ok && wasFailing) {
+  if (result.ok && wasFailing) {
     changes.push({
       name: source.name,
       url: source.url,
       note: source.note ?? '',
       kind: 'reachable again after failures',
     });
-  } else if (!result.ok && hadHash) {
+  } else if (result.ok && result.hash !== previous?.hash) {
+    changes.push({
+      name: source.name,
+      url: source.url,
+      note: source.note ?? '',
+      kind: 'content changed',
+    });
+  } else if (!result.ok && !wasFailing && previous?.hash) {
+    // First failure only — repeat outages are listed as warnings below.
+    changes.push({
+      name: source.name,
+      url: source.url,
+      note: source.note ?? '',
+      kind: `unreachable (${result.error})`,
+    });
+  } else if (!result.ok && previous?.hash) {
     warnings.push({ name: source.name, url: source.url, error: result.error });
   }
 }
