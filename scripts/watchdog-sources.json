@@ -1,0 +1,60 @@
+{
+  "comment": "Sources checked daily by scripts/watchdog.mjs. Add or remove entries freely — each needs a unique url. 'note' explains what a change might mean for the curated content.",
+  "sources": [
+    {
+      "name": "DILG Full Disclosure Policy Portal",
+      "url": "https://fdpp.dilg.gov.ph",
+      "note": "LGU budgets, procurement, and financial reports. New disclosures may need new records in content/transparency/disclosures.yaml."
+    },
+    {
+      "name": "Commission on Audit",
+      "url": "https://www.coa.gov.ph",
+      "note": "Annual audit reports (AFR) for the province and municipalities."
+    },
+    {
+      "name": "PhilGEPS",
+      "url": "https://www.philgeps.gov.ph",
+      "note": "Government procurement notices and contract awards."
+    },
+    {
+      "name": "Freedom of Information",
+      "url": "https://www.foi.gov.ph",
+      "note": "FOI requests and released documents."
+    },
+    {
+      "name": "DPWH Infrastructure Projects Portal",
+      "url": "https://transparency.dpwh.gov.ph/",
+      "note": "Contracts and progress reports for national public works."
+    },
+    {
+      "name": "Sumbong sa Pangulo",
+      "url": "https://sumbongsapangulo.ph",
+      "note": "Citizen reports and inspections of flood control projects."
+    },
+    {
+      "name": "BetterGov.ph Transparency",
+      "url": "https://transparency.bettergov.ph",
+      "note": "Independent records of DPWH projects and budgets."
+    },
+    {
+      "name": "Love the Philippines — Marinduque",
+      "url": "https://lovethephilippines.com/places/marinduque",
+      "note": "Civic mirror of DPWH, PhilGEPS, and DBM records by place."
+    },
+    {
+      "name": "Provincial Government of Marinduque",
+      "url": "https://marinduque.gov.ph",
+      "note": "Official site; publishes annual accomplishment reports and press releases."
+    },
+    {
+      "name": "DBM COMPASS National Tax Allotment",
+      "url": "https://compass.dbm.gov.ph/nta",
+      "note": "Published national tax allotment data by fiscal year."
+    },
+    {
+      "name": "BetterGov.ph Budget API (FY 2027)",
+      "url": "https://budget.bettergov.ph/api/v1/hgab/2027",
+      "note": "Live source for the national budget page. Changes here affect what visitors see at runtime; curated YAML only needs review when the budget moves from proposal to enactment."
+    }
+  ]
+}

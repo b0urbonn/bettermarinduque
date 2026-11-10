@@ -62,3 +62,6 @@ terraform.rc
 
 .vercel
 .env*
+
+# Data watchdog report (generated in CI)
+WATCHDOG-REPORT.md

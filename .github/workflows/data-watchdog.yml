@@ -1,0 +1,55 @@
+name: Data Watchdog
+
+# Checks the official sources listed in scripts/watchdog-sources.json every
+# day and opens (or updates) a GitHub issue when a source's content changes,
+# so a human can review and update content/transparency/ if needed.
+# The site pulls FY 2027 budget data live from the BetterGov.ph API, so no
+# data files are edited automatically.
+
+on:
+  schedule:
+    # 09:00 Philippine time (UTC+8), daily
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check sources for changes
+        id: watchdog
+        run: node scripts/watchdog.mjs
+      - name: Commit updated watchdog state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/watchdog-state.json
+          git diff --cached --quiet || git commit -m "chore: update watchdog state"
+          git push
+      - name: Open or update issue
+        if: steps.watchdog.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create data-watchdog \
+            --color FBCA04 \
+            --description "Automated data watchdog alerts" \
+            --force
+          EXISTING=$(gh issue list --label data-watchdog --state open \
+            --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file WATCHDOG-REPORT.md
+          else
+            gh issue create \
+              --title "Data watchdog: official source changes detected" \
+              --label data-watchdog \
+              --body-file WATCHDOG-REPORT.md
+          fi
