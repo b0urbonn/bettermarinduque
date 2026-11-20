@@ -4,77 +4,77 @@
       "name": "DILG Full Disclosure Policy Portal",
       "hash": "1bfb7d30a54c7fa441b7b07179fb600c34407923cf8aba6ceecb2421752cdb35",
       "httpStatus": 422,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
+      "checkedAt": "2026-11-20T07:53:40.192Z",
       "lastError": "HTTP 422"
     },
     "https://www.coa.gov.ph": {
       "name": "Commission on Audit",
       "hash": "6d7ca52cc67f7cddbd08f21fbd924fba12b51640bbe6961a310a746dfa6b61e6",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-20T07:53:40.192Z",
+      "lastError": null
     },
     "https://www.philgeps.gov.ph": {
       "name": "PhilGEPS",
-      "hash": "12b01b8479f2c24cf11d00db86727e037d19d2a727dc078782634d070c8d74a6",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
-      "lastError": "HTTP 401"
+      "hash": "1b3ce17878ae2f37ebc41cf926ff0212344995ec8ee34f67369ea7880e54be51",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-20T07:53:40.192Z",
+      "lastError": null
     },
     "https://www.foi.gov.ph": {
       "name": "Freedom of Information",
       "hash": "e57d307b09fe3b74d8dd0f3976031d02b40e72df8e80685c0e33084b335c3fa1",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-20T07:53:40.192Z",
+      "lastError": null
     },
     "https://transparency.dpwh.gov.ph/": {
       "name": "DPWH Infrastructure Projects Portal",
-      "hash": "670484dd6ab878c0b1899685d362450c784b166b1018eb7a3b0a1fb09da9b69b",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
-      "lastError": "HTTP 401"
+      "hash": "1f71bc3fe6879e0e81b5695c138836292b1649b371a88dbcbf83b71b18e70316",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-20T07:53:40.192Z",
+      "lastError": null
     },
     "https://sumbongsapangulo.ph": {
       "name": "Sumbong sa Pangulo",
-      "hash": "9470c2b3a1cbc74b9a3bba22adec02a7de142d2b4332e1a82dc435698560f076",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
-      "lastError": "HTTP 401"
+      "hash": "6e7b9aebe35dfef67df1aefb8ff6c024265c84a808266ec4b874d6358034df9c",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-20T07:53:40.192Z",
+      "lastError": null
     },
     "https://transparency.bettergov.ph": {
       "name": "BetterGov.ph Transparency",
       "hash": "ba0ca5f6f2f42f59079212355adb8a0984851d3cb41cf1d326b1280f870c1cb3",
       "httpStatus": 200,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
+      "checkedAt": "2026-11-20T07:53:40.192Z",
       "lastError": null
     },
     "https://lovethephilippines.com/places/marinduque": {
       "name": "Love the Philippines — Marinduque",
-      "hash": "bc0789ad5a2f6de6bfc353cc3439ec5c6180d750b0ab3fc3bda00ce1181e6bdf",
+      "hash": "e33eca167207c2aecb4ad0c97db4fecfdac32ff15bda808f457f8693f35811d2",
       "httpStatus": 200,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
+      "checkedAt": "2026-11-20T07:53:40.192Z",
       "lastError": null
     },
     "https://marinduque.gov.ph": {
       "name": "Provincial Government of Marinduque",
       "hash": "23008fa70afb0891e65e606e1967e67f91170a025847dca8cb0f471bb38fa499",
       "httpStatus": 200,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
+      "checkedAt": "2026-11-20T07:53:40.192Z",
       "lastError": null
     },
     "https://compass.dbm.gov.ph/nta": {
       "name": "DBM COMPASS National Tax Allotment",
-      "hash": "a01af7aa9d88be2c351559d7fca79fe3e022113be0590ac7bc39e60baa363291",
+      "hash": "ae3c928cce60b351ed18f88b74aa1f2fc77377e447d91d0ac53e8862619fc06a",
       "httpStatus": 200,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
+      "checkedAt": "2026-11-20T07:53:40.192Z",
       "lastError": null
     },
     "https://budget.bettergov.ph/api/v1/hgab/2027": {
       "name": "BetterGov.ph Budget API (FY 2027)",
       "hash": "011db0724c9a37094c72cc8648e166aca5666e2a30aa7d43d2b9e0f85a55761c",
       "httpStatus": 200,
-      "checkedAt": "2026-11-19T08:10:58.844Z",
+      "checkedAt": "2026-11-20T07:53:40.192Z",
       "lastError": null
     }
   }
