@@ -11,3 +11,8 @@ pages:
     slug: 'report-illegal-logging-quarrying-or-fishing'
     description: 'How to report illegal environmental activities like logging, quarrying, or illegal fishing.'
     levels: [municipal, provincial]
+
+  - name: 'Report water, air, or marine pollution'
+    slug: 'report-water-or-air-pollution-and-contamination'
+    description: 'How to report polluted waterways, fish kills, red tide, smoke, or other contamination to your LGU, DENR, or BFAR.'
+    levels: [barangay, municipal, provincial]

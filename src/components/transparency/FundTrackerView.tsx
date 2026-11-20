@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import {
   CalendarClock,
+  ChevronDown,
+  ChevronUp,
   CircleHelp,
   ExternalLink,
   FileSearch,
@@ -70,6 +73,8 @@ function Citations({
   );
 }
 
+const TIMELINE_PREVIEW_COUNT = 6;
+
 export default function FundTrackerView({
   slug,
   tracker,
@@ -77,6 +82,10 @@ export default function FundTrackerView({
   slug: string;
   tracker: FundTracker;
 }) {
+  const [showAllTimeline, setShowAllTimeline] = useState(false);
+  const visibleTimeline = showAllTimeline
+    ? tracker.timeline
+    : tracker.timeline.slice(0, TIMELINE_PREVIEW_COUNT);
   const { currency } = tracker;
   const money = (n: number) => formatMoney(n, currency);
   const totals = fundTotals(tracker);
@@ -380,7 +389,7 @@ export default function FundTrackerView({
               Timeline
             </Heading>
             <ol className="relative border-l-2 border-primary-100 ml-2">
-              {tracker.timeline.map(ev => (
+              {visibleTimeline.map(ev => (
                 <li
                   key={`${ev.date}-${ev.title}`}
                   className="ml-6 pb-6 last:pb-0"
@@ -402,6 +411,23 @@ export default function FundTrackerView({
                 </li>
               ))}
             </ol>
+            {tracker.timeline.length > TIMELINE_PREVIEW_COUNT && (
+              <button
+                type="button"
+                onClick={() => setShowAllTimeline(v => !v)}
+                aria-expanded={showAllTimeline}
+                className="portal-link mt-4 inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-primary-700"
+              >
+                {showAllTimeline
+                  ? 'Show less'
+                  : `Show all ${tracker.timeline.length} events`}
+                {showAllTimeline ? (
+                  <ChevronUp className="h-4 w-4" aria-hidden="true" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" aria-hidden="true" />
+                )}
+              </button>
+            )}
           </div>
 
           <aside>

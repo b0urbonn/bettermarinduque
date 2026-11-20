@@ -76,7 +76,7 @@ Example: `{MAYOR}` in the markdown is replaced with the `MAYOR` value from `exec
 - Language detection order: `localStorage` → `navigator` → `htmlTag`
 - Fallback language: `en`
 - Supported languages are defined in `src/types/index.ts` (`LanguageType`)
-- Currently only `public/locales/en/common.json` exists
+- `en` and `fil` locales exist under `public/locales/`; `en` is the fallback and most complete
 
 ### Environment Variables
 

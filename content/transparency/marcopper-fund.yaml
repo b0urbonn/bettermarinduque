@@ -4,7 +4,7 @@
 # Update `lastUpdated` whenever anything changes.
 
 title: Marcopper Settlement Fund
-lastUpdated: '2026-11-04'
+lastUpdated: '2026-11-20'
 currency: USD
 total: 100000000
 
@@ -78,72 +78,23 @@ claims:
 outflows: []
 
 timeline:
-  - date: '1993-12-06'
-    title: Maguila-guila siltation dam collapses
-    description: Flooding in Mogpog; two children were killed.
-    sources: [rva-denr-release]
-  - date: '1996-03-24'
-    title: Marcopper tailings spill
-    description: Mine tailings flood the Boac River system.
-    sources: [inquirer-rally]
-  - date: '2006'
-    title: Barrick acquires Placer Dome
-    description: Placer Dome was a major stakeholder of Marcopper Mining Corporation.
-    sources: [inquirer-denr-release]
-  - date: '2011'
-    title: Writ of Kalikasan filed
+  - date: '2026-11-13'
+    title: New Ombudsman complaint against Governor and legal officer
     description: >-
-      Petitioners Eliza Hernandez, Godofredo Manoy, and Mamerto Lanete; the
-      Province later joined as intervenor.
-    sources: [inquirer-escrow, tribune-2026-10-23-rehab]
-  - date: '2022-03-23'
-    title: Legal services agreement signed
-    description: The Province engages SEDALAW on a 25% contingency fee.
-    sources: [tribune-2026-10-16-sc]
-  - date: '2025-04-04'
-    title: Settlement signed
-    description: US$100 million over three years, without admission of liability.
-    sources: [tribune-2026-09-28]
-  - date: '2025-05-30'
-    title: Fee arrangement in provincial ordinance
+      Three residents file a 65-page complaint alleging gross neglect and
+      violations of the Anti-Graft law, accusing Gov. Go and Provincial
+      Legal Officer Benedict Cartagena of obstructing the settlement —
+      including the delayed joint instructions for the escrow release and
+      Cartagena's reported request to keep the escrow account open.
+    sources: [tribune-2026-11-19-ombudsman, businessmirror-2026-11-18-ombudsman]
+  - date: '2026-11-09'
+    title: MACEC urges rehabilitation oversight committee
     description: >-
-      According to the Province, the previous Sangguniang Panlalawigan passed an
-      ordinance incorporating the 25% fee.
-    sources: [tribune-2026-10-16-sc]
-  - date: '2025-10-03'
-    title: Court of Appeals approves settlement
-    description: The Writ of Kalikasan case is dismissed with prejudice.
-    sources: [inquirer-ca-approval]
-  - date: '2026-04'
-    title: US$50 million placed in escrow
-    description: Barrick deposits half of the settlement with the escrow agent.
-    sources: [tribune-2026-09-28]
-  - date: '2026-04-27'
-    title: Province contests legal fee
-    description: The Provincial Legal Officer contests the fee at a Court of Appeals hearing.
-    sources: [tribune-2026-10-16-sc]
-  - date: '2026-09-28'
-    title: Rally at the Provincial Capitol
-    description: >-
-      More than 1,000 residents, church, and civil society groups urge DENR to
-      issue its required communication before the October 4 deadline.
-    sources: [inquirer-rally]
-  - date: '2026-10-02'
-    title: DENR communication released
-    description: Reported by MACEC; its contents have not been made public.
-    sources: [inquirer-denr-release]
-  - date: '2026-10-04'
-    title: Escrow termination date
-    description: After this date, release required only Barrick's instruction.
-    sources: [tribune-2026-10-23-payout]
-  - date: '2026-10'
-    title: Supreme Court petition on legal fee
-    description: The Province says it filed; case number and filing date not disclosed.
-    sources: [tribune-2026-10-16-sc]
-  - date: '2026-10-16'
-    title: Initial payment transferred
-    description: About US$50.71 million reaches the provincial trust fund account.
-    sources: [tribune-2026-10-23-payout]
+      The Marinduque Council for Environmental Concerns urges Gov. Go to
+      convene the Provincial Rehabilitation and Remediation Oversight
+      Committee to fast-track a rehabilitation master plan, naming the
+      Maguila-guila and Makulapnit dams as priority concerns.
+    sources: [inquirer-2026-11-10-macec]
   - date: '2026-11-04'
     title: Ombudsman complaints filed
     description: >-
@@ -151,6 +102,72 @@ timeline:
       Provincial Board members over the legal fee deal. No finding of wrongdoing
       has been made.
     sources: [tribune-2026-11-04-ombudsman]
+  - date: '2026-10-16'
+    title: Initial payment transferred
+    description: About US$50.71 million reaches the provincial trust fund account.
+    sources: [tribune-2026-10-23-payout]
+  - date: '2026-10'
+    title: Supreme Court petition on legal fee
+    description: The Province says it filed; case number and filing date not disclosed.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2026-10-04'
+    title: Escrow termination date
+    description: After this date, release required only Barrick's instruction.
+    sources: [tribune-2026-10-23-payout]
+  - date: '2026-10-02'
+    title: DENR communication released
+    description: Reported by MACEC; its contents have not been made public.
+    sources: [inquirer-denr-release]
+  - date: '2026-09-28'
+    title: Rally at the Provincial Capitol
+    description: >-
+      More than 1,000 residents, church, and civil society groups urge DENR to
+      issue its required communication before the October 4 deadline.
+    sources: [inquirer-rally]
+  - date: '2026-04-27'
+    title: Province contests legal fee
+    description: The Provincial Legal Officer contests the fee at a Court of Appeals hearing.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2026-04'
+    title: US$50 million placed in escrow
+    description: Barrick deposits half of the settlement with the escrow agent.
+    sources: [tribune-2026-09-28]
+  - date: '2025-10-03'
+    title: Court of Appeals approves settlement
+    description: The Writ of Kalikasan case is dismissed with prejudice.
+    sources: [inquirer-ca-approval]
+  - date: '2025-05-30'
+    title: Fee arrangement in provincial ordinance
+    description: >-
+      According to the Province, the previous Sangguniang Panlalawigan passed an
+      ordinance incorporating the 25% fee.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2025-04-04'
+    title: Settlement signed
+    description: US$100 million over three years, without admission of liability.
+    sources: [tribune-2026-09-28]
+  - date: '2022-03-23'
+    title: Legal services agreement signed
+    description: The Province engages SEDALAW on a 25% contingency fee.
+    sources: [tribune-2026-10-16-sc]
+  - date: '2011'
+    title: Writ of Kalikasan filed
+    description: >-
+      Petitioners Eliza Hernandez, Godofredo Manoy, and Mamerto Lanete; the
+      Province later joined as intervenor.
+    sources: [inquirer-escrow, tribune-2026-10-23-rehab]
+  - date: '2006'
+    title: Barrick acquires Placer Dome
+    description: Placer Dome was a major stakeholder of Marcopper Mining Corporation.
+    sources: [inquirer-denr-release]
+  - date: '1996-03-24'
+    title: Marcopper tailings spill
+    description: Mine tailings flood the Boac River system.
+    sources: [inquirer-rally]
+  - date: '1993-12-06'
+    title: Maguila-guila siltation dam collapses
+    description: Flooding in Mogpog; two children were killed.
+    sources: [rva-denr-release]
 
 # Things residents should be able to see but that are not yet public.
 openQuestions:
@@ -160,6 +177,7 @@ openQuestions:
   - The contents of the DENR communication.
   - The Supreme Court case number and status of the legal fee dispute.
   - Who will oversee the fund, including the role of civil society groups such as MACEC.
+  - Outcome of the November 2026 Ombudsman complaint against the Governor and Provincial Legal Officer.
 
 sources:
   inquirer-ca-approval:
@@ -207,3 +225,18 @@ sources:
     publisher: Daily Tribune
     date: '2026-11-04'
     url: https://tribune.net.ph/2026/11/04/marinduque-governor-files-graft-raps-over-p15-b-legal-fee-deal
+  inquirer-2026-11-10-macec:
+    title: Marinduque governor urged to fast-track $100M Marcopper settlement
+    publisher: Philippine Daily Inquirer
+    date: '2026-11-10'
+    url: https://newsinfo.inquirer.net/2338770/marinduque-governor-urged-to-fast-track-100m-marcopper-settlement
+  tribune-2026-11-19-ombudsman:
+    title: Marcopper Settlement Dispute Sparks New Ombudsman Case
+    publisher: Daily Tribune
+    date: '2026-11-19'
+    url: https://tribune.net.ph/2026/11/19/marcopper-settlement-dispute-sparks-new-ombudsman-case
+  businessmirror-2026-11-18-ombudsman:
+    title: Marinduque residents file complaint vs governor, legal officer before Ombudsman
+    publisher: BusinessMirror
+    date: '2026-11-18'
+    url: https://businessmirror.com.ph/2026/11/18/marinduque-residents-file-complaint-vs-governor-legal-officer-before-ombudsman/
