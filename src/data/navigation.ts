@@ -2,6 +2,7 @@ import { provincialWebsite } from './province';
 import { PORTAL_URL } from '../lib/budgetApi';
 
 export const mainNavigation = [
+  { label: 'Stories', href: '/stories' },
   { label: 'Services', href: '/services' },
   { label: 'Municipalities', href: '/municipalities' },
   { label: 'Government', href: '/government' },

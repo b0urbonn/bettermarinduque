@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import Transparency from './pages/Transparency';
+import Stories from './pages/Stories';
 import MunicipalitiesPage from './pages/MunicipalitiesPage';
 import MunicipalityPage from './pages/MunicipalityPage';
 import { isMeilisearchEnabled } from './lib/meilisearch';
@@ -64,6 +65,7 @@ function App() {
                     element={<Government />}
                   />
                   <Route path="/transparency" element={<Transparency />} />
+                  <Route path="/stories" element={<Stories />} />
                   <Route
                     path="/transparency/:slug"
                     element={<Transparency />}
