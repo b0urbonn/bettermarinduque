@@ -4,77 +4,77 @@
       "name": "DILG Full Disclosure Policy Portal",
       "hash": "1bfb7d30a54c7fa441b7b07179fb600c34407923cf8aba6ceecb2421752cdb35",
       "httpStatus": 422,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
+      "checkedAt": "2026-11-23T08:26:29.192Z",
       "lastError": "HTTP 422"
     },
     "https://www.coa.gov.ph": {
       "name": "Commission on Audit",
       "hash": "6d7ca52cc67f7cddbd08f21fbd924fba12b51640bbe6961a310a746dfa6b61e6",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-23T08:26:29.192Z",
+      "lastError": null
     },
     "https://www.philgeps.gov.ph": {
       "name": "PhilGEPS",
-      "hash": "1a94c932e03a44e7632158acf792a0e6fc157370c0c59ca30233737118327545",
+      "hash": "3c4d708d5673acddf65c7b2b5e2ecaa9cf52a6ae2d5d2594f09d10cf86809c3f",
       "httpStatus": 200,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
+      "checkedAt": "2026-11-23T08:26:29.192Z",
       "lastError": null
     },
     "https://www.foi.gov.ph": {
       "name": "Freedom of Information",
-      "hash": "62833ebd3ace0335218152b000634474461bbde2176a4ce8dfda0f39c57ffd70",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
-      "lastError": "HTTP 401"
+      "hash": "e57d307b09fe3b74d8dd0f3976031d02b40e72df8e80685c0e33084b335c3fa1",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-23T08:26:29.192Z",
+      "lastError": null
     },
     "https://transparency.dpwh.gov.ph/": {
       "name": "DPWH Infrastructure Projects Portal",
-      "hash": "dce7af8e8a92bab9de300282fad130d7e5f1dd690050258bed17a25cded3990d",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
-      "lastError": "HTTP 401"
+      "hash": "ddf876b242ef9ca2001a206b0fec6dbff05ca8a4f5f02ae78a4edbafd48a6ed1",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-23T08:26:29.192Z",
+      "lastError": null
     },
     "https://sumbongsapangulo.ph": {
       "name": "Sumbong sa Pangulo",
       "hash": "6e7b9aebe35dfef67df1aefb8ff6c024265c84a808266ec4b874d6358034df9c",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-23T08:26:29.192Z",
+      "lastError": null
     },
     "https://transparency.bettergov.ph": {
       "name": "BetterGov.ph Transparency",
       "hash": "ba0ca5f6f2f42f59079212355adb8a0984851d3cb41cf1d326b1280f870c1cb3",
       "httpStatus": 200,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
+      "checkedAt": "2026-11-23T08:26:29.192Z",
       "lastError": null
     },
     "https://lovethephilippines.com/places/marinduque": {
       "name": "Love the Philippines — Marinduque",
       "hash": "56159d15d88922a1786f7fb81b28f48f8b5c3ebdf8480a420231dd67e69e311b",
       "httpStatus": 200,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
+      "checkedAt": "2026-11-23T08:26:29.192Z",
       "lastError": null
     },
     "https://marinduque.gov.ph": {
       "name": "Provincial Government of Marinduque",
       "hash": "23008fa70afb0891e65e606e1967e67f91170a025847dca8cb0f471bb38fa499",
-      "httpStatus": 200,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
-      "lastError": null
+      "httpStatus": 422,
+      "checkedAt": "2026-11-23T08:26:29.192Z",
+      "lastError": "HTTP 422"
     },
     "https://compass.dbm.gov.ph/nta": {
       "name": "DBM COMPASS National Tax Allotment",
-      "hash": "173d22e6eed127a1fc0525713e9cfdde2d1f3e108e3e017c945d83bab2158871",
+      "hash": "95a82bbdd7d229fc6d5ac4d86e891691678f1e9254173ff15b0cf87e445a1a08",
       "httpStatus": 200,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
+      "checkedAt": "2026-11-23T08:26:29.192Z",
       "lastError": null
     },
     "https://budget.bettergov.ph/api/v1/hgab/2027": {
       "name": "BetterGov.ph Budget API (FY 2027)",
       "hash": "011db0724c9a37094c72cc8648e166aca5666e2a30aa7d43d2b9e0f85a55761c",
       "httpStatus": 200,
-      "checkedAt": "2026-11-22T07:38:30.326Z",
+      "checkedAt": "2026-11-23T08:26:29.192Z",
       "lastError": null
     }
   }
