@@ -4,77 +4,77 @@
       "name": "DILG Full Disclosure Policy Portal",
       "hash": "1bfb7d30a54c7fa441b7b07179fb600c34407923cf8aba6ceecb2421752cdb35",
       "httpStatus": 422,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": "HTTP 422"
     },
     "https://www.coa.gov.ph": {
       "name": "Commission on Audit",
       "hash": "6d7ca52cc67f7cddbd08f21fbd924fba12b51640bbe6961a310a746dfa6b61e6",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-25T09:24:13.018Z",
+      "lastError": null
     },
     "https://www.philgeps.gov.ph": {
       "name": "PhilGEPS",
-      "hash": "f54844b60989cfa6c22d0d583ea467358910c3aaca77a0413a617c2f6140ea5c",
+      "hash": "b31220afaaa813565a5dd848d431492dc787c908787628ddefbbaf4ada6f35a3",
       "httpStatus": 200,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": null
     },
     "https://www.foi.gov.ph": {
       "name": "Freedom of Information",
       "hash": "e57d307b09fe3b74d8dd0f3976031d02b40e72df8e80685c0e33084b335c3fa1",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-25T09:24:13.018Z",
+      "lastError": null
     },
     "https://transparency.dpwh.gov.ph/": {
       "name": "DPWH Infrastructure Projects Portal",
-      "hash": "ddf876b242ef9ca2001a206b0fec6dbff05ca8a4f5f02ae78a4edbafd48a6ed1",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
-      "lastError": "HTTP 401"
+      "hash": "19b87357d44a4cb34d447334a785bf532541187378757460d1b0eb731277d890",
+      "httpStatus": 200,
+      "checkedAt": "2026-11-25T09:24:13.018Z",
+      "lastError": null
     },
     "https://sumbongsapangulo.ph": {
       "name": "Sumbong sa Pangulo",
       "hash": "6e7b9aebe35dfef67df1aefb8ff6c024265c84a808266ec4b874d6358034df9c",
-      "httpStatus": 401,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
-      "lastError": "HTTP 401"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-25T09:24:13.018Z",
+      "lastError": null
     },
     "https://transparency.bettergov.ph": {
       "name": "BetterGov.ph Transparency",
       "hash": "ba0ca5f6f2f42f59079212355adb8a0984851d3cb41cf1d326b1280f870c1cb3",
       "httpStatus": 200,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": null
     },
     "https://lovethephilippines.com/places/marinduque": {
       "name": "Love the Philippines — Marinduque",
-      "hash": "f61f06af7a176dcc22f4322897948bb3004c84f54e0dd4e5a431492f541fad84",
+      "hash": "d20303b34eeb357bf95343b4f3706337c5bbde424d8eb47951c2a8f56adf5909",
       "httpStatus": 200,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": null
     },
     "https://marinduque.gov.ph": {
       "name": "Provincial Government of Marinduque",
       "hash": "23008fa70afb0891e65e606e1967e67f91170a025847dca8cb0f471bb38fa499",
       "httpStatus": 200,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": null
     },
     "https://compass.dbm.gov.ph/nta": {
       "name": "DBM COMPASS National Tax Allotment",
-      "hash": "5858d9201614b624cede39b2327d6aab3ce2eba187c858ec5cd4ec7408a4c4cc",
+      "hash": "d72e5fff426d12c324a4d81315adb4af183848a9d51a1e8bd66f9912ac741a99",
       "httpStatus": 200,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": null
     },
     "https://budget.bettergov.ph/api/v1/hgab/2027": {
       "name": "BetterGov.ph Budget API (FY 2027)",
       "hash": "011db0724c9a37094c72cc8648e166aca5666e2a30aa7d43d2b9e0f85a55761c",
       "httpStatus": 200,
-      "checkedAt": "2026-11-24T10:34:15.060Z",
+      "checkedAt": "2026-11-25T09:24:13.018Z",
       "lastError": null
     }
   }
