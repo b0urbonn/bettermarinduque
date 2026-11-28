@@ -4,77 +4,77 @@
       "name": "DILG Full Disclosure Policy Portal",
       "hash": "1bfb7d30a54c7fa441b7b07179fb600c34407923cf8aba6ceecb2421752cdb35",
       "httpStatus": 422,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": "HTTP 422"
     },
     "https://www.coa.gov.ph": {
       "name": "Commission on Audit",
       "hash": "6d7ca52cc67f7cddbd08f21fbd924fba12b51640bbe6961a310a746dfa6b61e6",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://www.philgeps.gov.ph": {
       "name": "PhilGEPS",
-      "hash": "af2b89956f00df81abc5fb5b0b66f335be5d7718a55276fa8029760404002470",
+      "hash": "3dd741173205db15fe2d71fb4c1c110b767fa03bd0a7c96b4932f9c31f9f4869",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://www.foi.gov.ph": {
       "name": "Freedom of Information",
       "hash": "e57d307b09fe3b74d8dd0f3976031d02b40e72df8e80685c0e33084b335c3fa1",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://transparency.dpwh.gov.ph/": {
       "name": "DPWH Infrastructure Projects Portal",
-      "hash": "4b126f84c2742c95465fe920931a4f01fedfde92f142ebf852ddba91437f9168",
+      "hash": "670484dd6ab878c0b1899685d362450c784b166b1018eb7a3b0a1fb09da9b69b",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://sumbongsapangulo.ph": {
       "name": "Sumbong sa Pangulo",
-      "hash": "1b67cc1d5924c23417eba61124eb96b0624f406194c0d2777cf10398c2645454",
+      "hash": "5a88aef209a4e490197668fe93f768787b6c6cd9cdfb50531de4f851d8160952",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://transparency.bettergov.ph": {
       "name": "BetterGov.ph Transparency",
       "hash": "ba0ca5f6f2f42f59079212355adb8a0984851d3cb41cf1d326b1280f870c1cb3",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://lovethephilippines.com/places/marinduque": {
       "name": "Love the Philippines — Marinduque",
       "hash": "ff8b3346b031f010a2fb701619e5bce807950bce593012057cff5c2bfd0bd947",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://marinduque.gov.ph": {
       "name": "Provincial Government of Marinduque",
       "hash": "23008fa70afb0891e65e606e1967e67f91170a025847dca8cb0f471bb38fa499",
-      "httpStatus": 422,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
-      "lastError": "HTTP 422"
+      "httpStatus": 200,
+      "checkedAt": "2026-11-28T08:35:03.392Z",
+      "lastError": null
     },
     "https://compass.dbm.gov.ph/nta": {
       "name": "DBM COMPASS National Tax Allotment",
-      "hash": "c3a7a31b1bbdade1a2e04a4af4f9c934c7d58780037fe03ba916fd5a6aa7b802",
+      "hash": "62c3666a3a59100b1c47f96971739a04055b0aa3c8253ac81c54252109242527",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     },
     "https://budget.bettergov.ph/api/v1/hgab/2027": {
       "name": "BetterGov.ph Budget API (FY 2027)",
       "hash": "011db0724c9a37094c72cc8648e166aca5666e2a30aa7d43d2b9e0f85a55761c",
       "httpStatus": 200,
-      "checkedAt": "2026-11-27T09:18:06.421Z",
+      "checkedAt": "2026-11-28T08:35:03.392Z",
       "lastError": null
     }
   }
